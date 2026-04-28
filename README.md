@@ -1,7 +1,7 @@
 # RDIP — Research Data Intelligence Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Documentation](https://img.shields.io/badge/docs-widoco-blue)](https://open-rdip.github.io/core-ontology/)
+[![Documentation](https://img.shields.io/badge/docs-widoco-blue)](https://open-rdip.github.io/rdip-ontology/)
 
 **A project-centric integration profile for FAIR research lifecycle provenance.**
 
