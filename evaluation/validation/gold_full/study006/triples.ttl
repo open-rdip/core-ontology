@@ -1,0 +1,244 @@
+# RDIP Triples — study006
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study006_Project a rdip:ResearchProject ;
+    rdip:title "Scalable Decision-Making in Stochastic Environments through Learned Temporal Abstraction" ;
+    .
+
+ex:study006_Org1 a vivo:Organization ;
+    rdfs:label "Vanderbilt University" .
+ex:study006_Org2 a vivo:Organization ;
+    rdfs:label "Pennsylvania State University" .
+ex:study006_Org3 a vivo:Organization ;
+    rdfs:label "Nissan Advanced Technology Center" .
+ex:study006_Project rdip:hasLeadOrganization ex:study006_Org1 .
+
+ex:study006_Person1 a vivo:Person ;
+    rdfs:label "Baiting Luo" .
+ex:study006_Project rdip:hasParticipant ex:study006_Person1 .
+ex:study006_Person2 a vivo:Person ;
+    rdfs:label "Ava Pettet" .
+ex:study006_Project rdip:hasParticipant ex:study006_Person2 .
+ex:study006_Person3 a vivo:Person ;
+    rdfs:label "Aron Laszka" .
+ex:study006_Project rdip:hasParticipant ex:study006_Person3 .
+ex:study006_Person4 a vivo:Person ;
+    rdfs:label "Abhishek Dubey" .
+ex:study006_Project rdip:hasParticipant ex:study006_Person4 .
+ex:study006_Person5 a vivo:Person ;
+    rdfs:label "Ayan Mukhopadhyay" .
+ex:study006_Project rdip:hasParticipant ex:study006_Person5 .
+
+ex:study006_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "torch" ;
+    rdip:version "1.12.0+cu116" ;
+    .
+ex:study006_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "numpy" ;
+    rdip:version "1.23.2" ;
+    .
+ex:study006_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "gym" ;
+    rdip:version "0.18.0" ;
+    .
+ex:study006_Sw4 a rdip:SoftwareApplication ;
+    rdip:title "mujoco-py" ;
+    rdip:version "2.1.2.14" ;
+    .
+ex:study006_Sw5 a rdip:SoftwareApplication ;
+    rdip:title "matplotlib" ;
+    rdip:version "3.3.4" ;
+    .
+ex:study006_Sw6 a rdip:SoftwareApplication ;
+    rdip:title "typed-argument-parser" ;
+    .
+ex:study006_Sw7 a rdip:SoftwareApplication ;
+    rdip:title "gitpython" ;
+    .
+ex:study006_Sw8 a rdip:SoftwareApplication ;
+    rdip:title "einops" ;
+    .
+ex:study006_Sw9 a rdip:SoftwareApplication ;
+    rdip:title "wandb" ;
+    .
+ex:study006_Sw10 a rdip:SoftwareApplication ;
+    rdip:title "dm_control" ;
+    .
+ex:study006_Sw11 a rdip:SoftwareApplication ;
+    rdip:title "python" ;
+    rdip:version "3.9" ;
+    .
+ex:study006_Sw12 a rdip:SoftwareApplication ;
+    rdip:title "pip" ;
+    rdip:version "18.0" ;
+    .
+ex:study006_Sw13 a rdip:SoftwareApplication ;
+    rdip:title "conda" ;
+    rdip:version "4.5.9" ;
+    .
+ex:study006_Sw14 a rdip:SoftwareApplication ;
+    rdip:title "patchelf" ;
+    rdip:version "0.9" ;
+    .
+ex:study006_Sw15 a rdip:SoftwareApplication ;
+    rdip:title "scikit-image" ;
+    rdip:version "0.17.2" ;
+    .
+ex:study006_Sw16 a rdip:SoftwareApplication ;
+    rdip:title "scikit-video" ;
+    rdip:version "1.1.11" ;
+    .
+ex:study006_Sw17 a rdip:SoftwareApplication ;
+    rdip:title "d4rl" ;
+    rdip:version "c3dd04da02acbf4de6cbaa1141deb4f958f03ca9" ;
+    .
+ex:study006_Sw18 a rdip:SoftwareApplication ;
+    rdip:title "mjrl" ;
+    rdip:version "3871d93763d3b49c4741e6daeaebbc605fe140dc" ;
+    .
+
+ex:study006_Dataset1 a dcat:Dataset ;
+    rdip:title "D4RL MuJoCo" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study006_Dataset2 a dcat:Dataset ;
+    rdip:title "Adroit hand manipulation tasks" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study006_Dataset3 a dcat:Dataset ;
+    rdip:title "Stochastic MuJoCo" ;
+    rdip:accessLevel "open" ;
+    .
+
+ex:study006_Method1 a rdip:Method ;
+    rdip:title "Latent Macro Action Planner (L-MAP)" ;
+    rdip:description "A method that learns a set of temporally extended macro-actions through a state-conditional VQ-VAE and uses Monte Carlo tree search for planning." ;
+    .
+ex:study006_Method2 a rdip:Method ;
+    rdip:title "Vector Quantized Variational Autoencoder (VQ-VAE)" ;
+    rdip:description "A model used to learn a lower-dimensional discrete representation of temporally extended primitive actions (macro-actions)." ;
+    .
+ex:study006_Method3 a rdip:Method ;
+    rdip:title "Monte Carlo Tree Search (MCTS)" ;
+    rdip:description "A search algorithm used to navigate the latent space, integrated with progressive widening to address environment and behavior policy stochasticity." ;
+    .
+ex:study006_Method4 a rdip:Method ;
+    rdip:title "Progressive Widening" ;
+    rdip:description "A strategy used with MCTS to balance rapid planning using learned abstractions with exhaustive exploration when resources permit." ;
+    .
+ex:study006_Method5 a rdip:Method ;
+    rdip:title "Polling Control Mode" ;
+    rdip:description "A mode where MCTS returns only the first primitive action of the recommended macro-action, allowing for recovery from locally suboptimal decisions." ;
+    .
+
+ex:study006_Param1 a rdip:Parameter ;
+    rdip:parameterName "alpha" ;
+    rdip:parameterValue "0.1" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study006_Param2 a rdip:Parameter ;
+    rdip:parameterName "epsilon" ;
+    rdip:parameterValue "1" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study006_Param3 a rdip:Parameter ;
+    rdip:parameterName "MCTS iterations" ;
+    rdip:parameterValue "100" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study006_Param4 a rdip:Parameter ;
+    rdip:parameterName "M" ;
+    rdip:parameterValue "16" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study006_Param5 a rdip:Parameter ;
+    rdip:parameterName "N" ;
+    rdip:parameterValue "4" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study006_Param6 a rdip:Parameter ;
+    rdip:parameterName "B" ;
+    rdip:parameterValue "4" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study006_Param7 a rdip:Parameter ;
+    rdip:parameterName "lambda" ;
+    rdip:parameterValue "0.5" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study006_Param8 a rdip:Parameter ;
+    rdip:parameterName "gamma" ;
+    rdip:parameterValue "0.99" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study006_Seed1 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "10" ;
+    rdip:parameterDataType "xsd:integer" .
+
+ex:study006_Env1 a rdip:ComputingEnvironment ;
+    rdip:cudaVersion "11.6" ;
+    .
+
+ex:study006_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "Average Score" ;
+    rdip:metricValue "105.74 ± 2.24" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Medium-Expert Hopper (Deterministic)" ;
+    rdip:metricDataType "xsd:float" .
+ex:study006_Result2 a rdip:EvaluationResult ;
+    rdip:metricName "Average Score" ;
+    rdip:metricValue "73.90 ± 1.91" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Medium Hopper (Deterministic)" ;
+    rdip:metricDataType "xsd:float" .
+ex:study006_Result3 a rdip:EvaluationResult ;
+    rdip:metricName "Average Score" ;
+    rdip:metricValue "91.18 ± 0.56" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Medium-Replay Hopper (Deterministic)" ;
+    rdip:metricDataType "xsd:float" .
+ex:study006_Result4 a rdip:EvaluationResult ;
+    rdip:metricName "Average Score" ;
+    rdip:metricValue "106.11 ± 2.16" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Medium-Expert-Mod Hopper (Moderate Stochasticity)" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study006_Act1 a rdip:DataProcessingActivity ;
+    rdip:title "Temporal Abstraction Learning" ;
+    rdip:isPartOfProject ex:study006_Project ;
+    .
+ex:study006_Project rdip:hasActivity ex:study006_Act1 .
+ex:study006_Act2 a rdip:SoftwareDevelopmentActivity ;
+    rdip:title "Latent Transition Modeling" ;
+    rdip:isPartOfProject ex:study006_Project ;
+    .
+ex:study006_Project rdip:hasActivity ex:study006_Act2 .
+ex:study006_Act3 a rdip:DataAnalysisActivity ;
+    rdip:title "Planning and Evaluation" ;
+    rdip:isPartOfProject ex:study006_Project ;
+    .
+ex:study006_Project rdip:hasActivity ex:study006_Act3 .
+
+# ═══ RELATIONS ═══
+ex:study006_Act1 rdip:usedMethod ex:study006_Method2 .
+ex:study006_Act2 rdip:follows ex:study006_Act1 .
+ex:study006_Act3 rdip:usedMethod ex:study006_Method3 .
+ex:study006_Act3 rdip:usedMethod ex:study006_Method4 .
+ex:study006_Act3 rdip:follows ex:study006_Act2 .
+ex:study006_Act3 rdip:generatesResult ex:study006_Result4 .
+ex:study006_Act3 rdip:hasParameter ex:study006_Param3 .
+ex:study006_Act1 rdip:usedSoftware ex:study006_Sw1 .
+
+# ═══ END (8 resolved, 0 unresolved) ═══

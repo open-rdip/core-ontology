@@ -1,0 +1,163 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "PyTorch FSDP",
+        "version": "not specified"
+      },
+      {
+        "name": "FlashAttention",
+        "version": "2"
+      },
+      {
+        "name": "sentencepiece",
+        "version": "not specified"
+      },
+      {
+        "name": "lm-eval-harness",
+        "version": "not specified"
+      },
+      {
+        "name": "lighteval",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "OSCAR23.01 (German split)",
+        "format": "text/plain",
+        "access": "public"
+      },
+      {
+        "name": "CulturaX (German and Arabic)",
+        "format": "text/plain",
+        "access": "public"
+      },
+      {
+        "name": "MMLU",
+        "format": "benchmark",
+        "access": "public"
+      },
+      {
+        "name": "OALL benchmark suite",
+        "format": "benchmark",
+        "access": "public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Continued Pretraining"
+      },
+      {
+        "name": "Tokenizer Swapping"
+      },
+      {
+        "name": "Pure bfloat16 Training"
+      },
+      {
+        "name": "FOCUS embedding initialization"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Konstantin Dobler",
+        "role": "Lead Researcher"
+      },
+      {
+        "name": "Gerard de Melo",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Hasso Plattner Institute / University of Potsdam"
+      },
+      {
+        "name": "ELLIS Unit Potsdam"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Batch size",
+        "value": "256"
+      },
+      {
+        "name": "Learning rate",
+        "value": "4e-5"
+      },
+      {
+        "name": "Context length",
+        "value": "4,096"
+      },
+      {
+        "name": "Total training tokens",
+        "value": "8 billion"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "Nvidia A100 80GB/40GB, H100 80GB, A6000 48GB",
+        "cuda": "not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Average downstream task performance (German)",
+        "value": "47.2",
+        "split": "Main experiments, pure bfloat16"
+      },
+      {
+        "metric": "Macro Average (Arabic)",
+        "value": "53.6",
+        "split": "Hindsight study, pure bfloat16"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Main language adaptation experiments (German)",
+        "type": "Training and Evaluation"
+      },
+      {
+        "name": "Hindsight study (Arabic and German)",
+        "type": "Training and Evaluation"
+      },
+      {
+        "name": "Tokenizer training",
+        "type": "Data Processing"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Main language adaptation experiments (German)",
+      "predicate": "used",
+      "object": "OSCAR23.01 (German split)"
+    },
+    {
+      "subject": "Main language adaptation experiments (German)",
+      "predicate": "used",
+      "object": "PyTorch FSDP"
+    },
+    {
+      "subject": "Hindsight study (Arabic and German)",
+      "predicate": "used",
+      "object": "CulturaX (German and Arabic)"
+    },
+    {
+      "subject": "Main language adaptation experiments (German)",
+      "predicate": "wasAssociatedWith",
+      "object": "Konstantin Dobler"
+    },
+    {
+      "subject": "Hindsight study (Arabic and German)",
+      "predicate": "wasInformedBy",
+      "object": "Main language adaptation experiments (German)"
+    },
+    {
+      "subject": "Tokenizer training",
+      "predicate": "used",
+      "object": "sentencepiece"
+    }
+  ]
+}

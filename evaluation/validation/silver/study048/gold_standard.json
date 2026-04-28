@@ -1,0 +1,224 @@
+{
+  "study_id": "study048",
+  "project": {
+    "title": "Global Optimization by Basin-Hopping and the Lowest Energy Structures of Lennard-Jones Clusters Containing up to 110 Atoms",
+    "lead_organization": "University Chemical Laboratories, Cambridge",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "ase",
+        "version": "3.22.1"
+      },
+      {
+        "name": "contourpy",
+        "version": "1.2.1"
+      },
+      {
+        "name": "cycler",
+        "version": "0.12.1"
+      },
+      {
+        "name": "fonttools",
+        "version": "4.53.0"
+      },
+      {
+        "name": "joblib",
+        "version": "1.4.2"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.4.5"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.9.0"
+      },
+      {
+        "name": "networkx",
+        "version": "3.3"
+      },
+      {
+        "name": "nptyping",
+        "version": "2.5.0"
+      },
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "packaging",
+        "version": "24.1"
+      },
+      {
+        "name": "pillow",
+        "version": "10.3.0"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.1.2"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "rdkit",
+        "version": "2023.9.6"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.5.0"
+      },
+      {
+        "name": "scipy",
+        "version": "1.13.1"
+      },
+      {
+        "name": "six",
+        "version": "1.16.0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.5.0"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Lennard-Jones Clusters (N=1 to 110)",
+        "format": "XYZ",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Basin-hopping",
+        "description": "A global optimization technique that transforms the potential energy surface into a collection of interpenetrating staircases by associating any point with its local minimum."
+      },
+      {
+        "name": "Monte Carlo",
+        "description": "Used for exploring the transformed energy landscape via a series of random steps and an acceptance criterion."
+      },
+      {
+        "name": "Conjugate Gradient",
+        "description": "A local optimization method used to find the nearest minimum in the configuration space."
+      }
+    ],
+    "Person": [
+      {
+        "name": "David J. Wales",
+        "affiliation": "University Chemical Laboratories, Cambridge",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jonathan P. K. Doye",
+        "affiliation": "FOM Institute for Atomic and Molecular Physics",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University Chemical Laboratories, Cambridge"
+      },
+      {
+        "name": "FOM Institute for Atomic and Molecular Physics"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "step_size",
+        "value": "0.4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "temperature",
+        "value": "0.8",
+        "type": "xsd:float"
+      },
+      {
+        "name": "num_atoms",
+        "value": "110",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "lowest_energy",
+        "value": "-165.5383",
+        "split": "test",
+        "dataset": "LJ38"
+      },
+      {
+        "metric": "lowest_energy",
+        "value": "-443.9602",
+        "split": "test",
+        "dataset": "LJ98"
+      },
+      {
+        "metric": "lowest_energy",
+        "value": "-376.3601",
+        "split": "test",
+        "dataset": "LJ85"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Global Optimization Search",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "scipy",
+          "numpy"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Lennard-Jones Clusters (N=1 to 110)"
+        ]
+      },
+      {
+        "name": "Potential Energy Surface Transformation",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Global Optimization Search",
+      "predicate": "usedMethod",
+      "object": "Basin-hopping"
+    },
+    {
+      "subject": "Global Optimization Search",
+      "predicate": "usedMethod",
+      "object": "Monte Carlo"
+    },
+    {
+      "subject": "Global Optimization Search",
+      "predicate": "hasParameter",
+      "object": "step_size"
+    },
+    {
+      "subject": "Global Optimization Search",
+      "predicate": "hasParameter",
+      "object": "temperature"
+    },
+    {
+      "subject": "Lennard-Jones Clusters (N=1 to 110)",
+      "predicate": "generatesResult",
+      "object": "lowest_energy"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

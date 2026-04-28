@@ -1,0 +1,37 @@
+{
+  "study_id": "study047",
+  "repo_url": "https://github.com/saurjya/asteroid",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "python",
+        "version": "3.8"
+      },
+      {
+        "name": "Cython",
+        "version": ""
+      },
+      {
+        "name": "-r file:requirements.txt",
+        "version": ""
+      },
+      {
+        "name": "-e .",
+        "version": ""
+      }
+    ],
+    "source": "conda",
+    "env_name": "asteroid1"
+  },
+  "seeds": [
+    {
+      "value": "17",
+      "file": "egs/dns_challenge/baseline/train.py",
+      "context": "torch.manual_seed(17"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

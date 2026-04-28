@@ -1,0 +1,183 @@
+{
+  "study_id": "study072",
+  "project": {
+    "title": "SynerMix: Synergistic Mixup Solution for Enhanced Intra-Class Cohesion and Inter-Class Separability in Image Classification",
+    "lead_organization": "School of IoT Engineering, Wuxi Institute of Technology",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "MLclf",
+        "version": "0.2.14"
+      },
+      {
+        "name": "numpy",
+        "version": "1.23.5"
+      },
+      {
+        "name": "Pillow",
+        "version": "9.4.0"
+      },
+      {
+        "name": "scikit_learn",
+        "version": "1.2.1"
+      },
+      {
+        "name": "torch",
+        "version": "2.0.0"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.15.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "CIFAR-10",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CIFAR-100",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Tiny-ImageNet",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "SynerMix-Intra",
+        "description": "A mixup method targeting intra-class mixup to bolster intra-class cohesion by generating synthesized feature representations through random linear interpolation within the same class."
+      },
+      {
+        "name": "SynerMix",
+        "description": "A synergistic solution combining SynerMix-Intra with existing inter-class mixup approaches to enhance both intra-class cohesion and inter-class separability."
+      },
+      {
+        "name": "MixUp",
+        "description": "An existing mixup approach primarily focusing on inter-class mixup."
+      },
+      {
+        "name": "Manifold MixUp",
+        "description": "A variant of MixUp that performs mixing in the hidden layers."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Ye Xu",
+        "affiliation": "School of IoT Engineering, Wuxi Institute of Technology",
+        "role": null
+      },
+      {
+        "name": "Ya Gao",
+        "affiliation": "School of IoT Engineering, Wuxi Institute of Technology",
+        "role": null
+      },
+      {
+        "name": "Xiaorong Qiu",
+        "affiliation": "School of IoT Engineering, Wuxi Institute of Technology",
+        "role": null
+      },
+      {
+        "name": "Yang Chen",
+        "affiliation": "School of IoT Engineering, Wuxi Institute of Technology",
+        "role": null
+      },
+      {
+        "name": "Ying Ji",
+        "affiliation": "School of IoT Engineering, Wuxi Institute of Technology",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "School of IoT Engineering, Wuxi Institute of Technology"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Methodological Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Experimental Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "torch",
+          "torchvision",
+          "scikit_learn",
+          "MLclf"
+        ],
+        "dataset_used": [
+          "CIFAR-10",
+          "CIFAR-100",
+          "Tiny-ImageNet"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "SynerMix",
+      "predicate": "usedMethod",
+      "object": "SynerMix-Intra"
+    },
+    {
+      "subject": "SynerMix",
+      "predicate": "usedMethod",
+      "object": "MixUp"
+    },
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "usedDataset",
+      "object": "CIFAR-10"
+    },
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "usedDataset",
+      "object": "CIFAR-100"
+    },
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "usedDataset",
+      "object": "Tiny-ImageNet"
+    },
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "usedSoftware",
+      "object": "MLclf"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

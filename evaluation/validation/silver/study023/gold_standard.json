@@ -1,0 +1,232 @@
+{
+  "study_id": "study023",
+  "project": {
+    "title": "Mobile-Agent-v2: Mobile Device Operation Assistant with Effective Navigation via Multi-Agent Collaboration",
+    "lead_organization": "Beijing Jiaotong University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "GPT-4o",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "GPT-4V",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "Claude 3.5 Sonnet",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "Claude 3 Opus",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "Gemini 1.5 Pro",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "Qwen-VL-Max",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "Appium",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Mobile-Eval",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Multi-agent architecture",
+        "description": "A framework comprising planning, decision, and reflection agents to handle long token sequences and navigation challenges in mobile operation."
+      },
+      {
+        "name": "Visual Perception",
+        "description": "A module using MLLMs to detect and describe screenshot content for agent input."
+      },
+      {
+        "name": "Task Progress Navigation",
+        "description": "A navigation strategy where a planning agent condenses history to guide current operations."
+      },
+      {
+        "name": "Focus Content Navigation",
+        "description": "A strategy where a decision agent focuses on current screen details to generate specific actions."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Junyang Wang",
+        "affiliation": "Beijing Jiaotong University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Haiyang Xu",
+        "affiliation": "Alibaba Group",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Haitao Jia",
+        "affiliation": "Beijing Jiaotong University",
+        "role": "Data Collector"
+      },
+      {
+        "name": "Xi Zhang",
+        "affiliation": "Beijing Jiaotong University",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Ming Yan",
+        "affiliation": "Alibaba Group",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Weizhou Shen",
+        "affiliation": "Alibaba Group",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Ji Zhang",
+        "affiliation": "Alibaba Group",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Fei Huang",
+        "affiliation": "Alibaba Group",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jitao Sang",
+        "affiliation": "Beijing Jiaotong University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Beijing Jiaotong University"
+      },
+      {
+        "name": "Alibaba Group"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "temperature",
+        "value": "0",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "Success Rate",
+        "value": "88.3%",
+        "split": "test",
+        "dataset": "Mobile-Eval"
+      },
+      {
+        "metric": "Success Rate",
+        "value": "90%",
+        "split": "test",
+        "dataset": "Mobile-Eval"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "System Design",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Mobile-Agent-v2 Architecture"
+        ]
+      },
+      {
+        "name": "Multi-agent Collaboration",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "GPT-4o",
+          "Appium"
+        ],
+        "dataset_used": [
+          "Mobile-Eval"
+        ],
+        "dataset_produced": [
+          "Operation sequences"
+        ]
+      },
+      {
+        "name": "Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "Mobile-Agent-v2 Architecture"
+        ],
+        "dataset_used": [
+          "Mobile-Eval"
+        ],
+        "dataset_produced": [
+          "Success Rate metrics"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Mobile-Agent-v2 Architecture",
+      "predicate": "usedSoftware",
+      "object": "GPT-4o"
+    },
+    {
+      "subject": "Mobile-Agent-v2 Architecture",
+      "predicate": "usedSoftware",
+      "object": "Appium"
+    },
+    {
+      "subject": "Multi-agent Collaboration",
+      "predicate": "usedMethod",
+      "object": "Task Progress Navigation"
+    },
+    {
+      "subject": "Multi-agent Collaboration",
+      "predicate": "usedMethod",
+      "object": "Focus Content Navigation"
+    },
+    {
+      "subject": "Multi-agent Collaboration",
+      "predicate": "hasParameter",
+      "object": "temperature"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "generatesResult",
+      "object": "Success Rate"
+    },
+    {
+      "subject": "Multi-agent Collaboration",
+      "predicate": "follows",
+      "object": "System Design"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "follows",
+      "object": "Multi-agent Collaboration"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

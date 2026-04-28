@@ -1,0 +1,29 @@
+{
+  "study_id": "study012",
+  "repo_url": "https://github.com/open-mmlab/mmsegmentation",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "42",
+      "file": "mmseg/datasets/basesegdataset.py",
+      "context": "np.random.seed(42"
+    },
+    {
+      "value": "3",
+      "file": "tools/deployment/pytorch2torchscript.py",
+      "context": "torch.manual_seed(3"
+    },
+    {
+      "value": "304",
+      "file": "configs/pidnet/pidnet-s_2xb6-120k_1024x1024-cityscapes.py",
+      "context": "seed=304"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

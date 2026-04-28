@@ -1,0 +1,273 @@
+{
+  "study_id": "study003",
+  "project": {
+    "title": "Toward Realistic Camouflaged Object Detection: Benchmarks and Method",
+    "lead_organization": "Huazhong University of Science and Technology",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "LabelMe",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "PyTorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "mmdet",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "GLIP",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "Grounding DINO",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "YOLO-World",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COD10K-D",
+        "format": "images",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "COD10K-v2"
+      },
+      {
+        "name": "NC4K-D",
+        "format": "images",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "NC4K"
+      },
+      {
+        "name": "CAMO-D",
+        "format": "images",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "CAMO"
+      },
+      {
+        "name": "COD10K-v2",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "NC4K",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CAMO",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Camouflage-Aware Feature Refinement (CAFR)",
+        "description": "A fine-tuning strategy utilizing prior knowledge of large models to understand distinctions between background and foreground in RCOD tasks."
+      },
+      {
+        "name": "Adaptive Gradient Propagation (AGP)",
+        "description": "A module that fine-tunes all feature extractor layers by restricting the proportion of gradient return to refine class-specific features."
+      },
+      {
+        "name": "Sparse Feature Refinement (SFR)",
+        "description": "A module that optimizes transformer-based feature extractors by reducing the size of camouflaged objects to focus on local class-specific features."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhimeng Xin",
+        "affiliation": "Huazhong University of Science and Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Tianxu Wu",
+        "affiliation": "Huazhong University of Science and Technology",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Yufei Guo",
+        "affiliation": "Intelligent Science and Technology Academy of CASIC",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Huazhong University of Science and Technology"
+      },
+      {
+        "name": "Intelligent Science and Technology Academy of CASIC"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "box_crop_width",
+        "value": "200",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "box_crop_height",
+        "value": "200",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "batch_size_SFR_assumption",
+        "value": "16",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "training_images_COD10K-D",
+        "value": "6000",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "test_images_COD10K-D",
+        "value": "4000",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu",
+        "gpu": "null",
+        "cuda": "null",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "S_alpha",
+        "value": "77.0",
+        "split": "test",
+        "dataset": "SINet"
+      },
+      {
+        "metric": "S_alpha",
+        "value": "81.1",
+        "split": "test",
+        "dataset": "SegMaR"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Dataset Annotation",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [
+          "LabelMe"
+        ],
+        "dataset_used": [
+          "COD10K-v2",
+          "NC4K",
+          "CAMO"
+        ],
+        "dataset_produced": [
+          "COD10K-D",
+          "NC4K-D",
+          "CAMO-D"
+        ]
+      },
+      {
+        "name": "Model Fine-tuning",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "COD10K-D"
+        ],
+        "dataset_produced": [
+          "CAFR-refined model"
+        ]
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "mmdet"
+        ],
+        "dataset_used": [
+          "NC4K-D",
+          "CAMO-D"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Dataset Annotation",
+      "predicate": "usedSoftware",
+      "object": "LabelMe"
+    },
+    {
+      "subject": "Dataset Annotation",
+      "predicate": "usedDataset",
+      "object": "COD10K-v2"
+    },
+    {
+      "subject": "COD10K-D",
+      "predicate": "derivedFrom",
+      "object": "COD10K-v2"
+    },
+    {
+      "subject": "Model Fine-tuning",
+      "predicate": "usedMethod",
+      "object": "Adaptive Gradient Propagation (AGP)"
+    },
+    {
+      "subject": "Model Fine-tuning",
+      "predicate": "usedMethod",
+      "object": "Sparse Feature Refinement (SFR)"
+    },
+    {
+      "subject": "Model Fine-tuning",
+      "predicate": "follows",
+      "object": "Dataset Annotation"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "follows",
+      "object": "Model Fine-tuning"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "S_alpha"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

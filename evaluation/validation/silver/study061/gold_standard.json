@@ -1,0 +1,236 @@
+{
+  "study_id": "study061",
+  "project": {
+    "title": "SocNavBench: A Grounded Simulation Testing Framework for Evaluating Social Navigation",
+    "lead_organization": "Carnegie Mellon University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "python",
+        "version": "3.6.9"
+      },
+      {
+        "name": "pandas",
+        "version": "1.1.5"
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.2.*"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.3.4"
+      },
+      {
+        "name": "dotmap",
+        "version": "1.2.39"
+      },
+      {
+        "name": "pyopengl",
+        "version": "3.1.0"
+      },
+      {
+        "name": "pyassimp",
+        "version": "4.1.3"
+      },
+      {
+        "name": "scikit-image",
+        "version": "0.17.2"
+      },
+      {
+        "name": "scikit-fmm",
+        "version": "2019.1.30"
+      },
+      {
+        "name": "numpy",
+        "version": "1.19.2"
+      },
+      {
+        "name": "SocNavBench",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "ETH",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "UCY",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "SocNavBench Scenarios",
+        "format": "JSON",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "ETH, UCY"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Social Navigation Evaluation",
+        "description": "A grounded simulation framework using real-world pedestrian data to evaluate robot navigation algorithms."
+      },
+      {
+        "name": "TrajAir",
+        "description": "A social navigation method tested as a candidate algorithm within the benchmark."
+      },
+      {
+        "name": "Social-STGCNN",
+        "description": "A social navigation method tested as a candidate algorithm within the benchmark."
+      },
+      {
+        "name": "CADRL",
+        "description": "A collision avoidance method for multi-agent systems using deep reinforcement learning tested in the benchmark."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Abhijat Biswas",
+        "affiliation": "Carnegie Mellon University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Allan Wang",
+        "affiliation": "Carnegie Mellon University",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Gustavo Silvera",
+        "affiliation": "Carnegie Mellon University",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Aaron Steinfeld",
+        "affiliation": "Carnegie Mellon University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Henny Admoni",
+        "affiliation": "Carnegie Mellon University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Carnegie Mellon University"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "999",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "2",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Scenario Curation",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "SocNavBench"
+        ],
+        "dataset_used": [
+          "ETH",
+          "UCY"
+        ],
+        "dataset_produced": [
+          "SocNavBench Scenarios"
+        ]
+      },
+      {
+        "name": "Navigation Method Testing",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "SocNavBench",
+          "opencv-python",
+          "numpy"
+        ],
+        "dataset_used": [
+          "SocNavBench Scenarios"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Scenario Curation",
+      "predicate": "usedDataset",
+      "object": "ETH"
+    },
+    {
+      "subject": "Scenario Curation",
+      "predicate": "usedDataset",
+      "object": "UCY"
+    },
+    {
+      "subject": "Scenario Curation",
+      "predicate": "generatesDataset",
+      "object": "SocNavBench Scenarios"
+    },
+    {
+      "subject": "Navigation Method Testing",
+      "predicate": "usedSoftware",
+      "object": "SocNavBench"
+    },
+    {
+      "subject": "Navigation Method Testing",
+      "predicate": "usedMethod",
+      "object": "TrajAir"
+    },
+    {
+      "subject": "Navigation Method Testing",
+      "predicate": "usedMethod",
+      "object": "Social-STGCNN"
+    },
+    {
+      "subject": "Navigation Method Testing",
+      "predicate": "usedMethod",
+      "object": "CADRL"
+    },
+    {
+      "subject": "Navigation Method Testing",
+      "predicate": "follows",
+      "object": "Scenario Curation"
+    },
+    {
+      "subject": "SocNavBench Scenarios",
+      "predicate": "derivedFrom",
+      "object": "ETH"
+    },
+    {
+      "subject": "SocNavBench Scenarios",
+      "predicate": "derivedFrom",
+      "object": "UCY"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

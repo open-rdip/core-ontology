@@ -1,0 +1,81 @@
+{
+  "study_id": "study034",
+  "repo_url": "https://github.com/mlpc-ucsd/uni-3d",
+  "software_dependencies": [
+    {
+      "name": "cython",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "timm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opencv-python-headless",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pycocotools",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "git",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "plyfile",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "git",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "git",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "git",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:2.1.2-cuda11.8-cudnn8-devel",
+    "cuda_version": "11.8"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "3",
+      "file": "uni_3d/modeling/pixel_decoder/ops/test.py",
+      "context": "torch.manual_seed(3"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

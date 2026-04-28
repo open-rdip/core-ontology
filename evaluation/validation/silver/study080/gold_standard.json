@@ -1,0 +1,216 @@
+{
+  "study_id": "study080",
+  "project": {
+    "title": "CoWs on PASTURE: Baselines and Benchmarks for Language-Driven Zero-Shot Object Navigation",
+    "lead_organization": "Stanford University",
+    "funding": "This work was supported by the National Science Foundation, the Office of Naval Research, and the Toyota Research Institute."
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "habitat-sim",
+        "version": "0.2.1"
+      },
+      {
+        "name": "CLIP on Wheels (CoW)",
+        "version": null
+      },
+      {
+        "name": "PyTorch",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "PASTURE",
+        "format": "3D simulation environments",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      },
+      {
+        "name": "HABITAT",
+        "format": "3D simulation environments",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "ROBOTHOR",
+        "format": "3D simulation environments",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "CLIP on Wheels (CoW)",
+        "description": "A zero-shot framework for language-driven object navigation that adapts open-vocabulary models like CLIP without fine-tuning."
+      },
+      {
+        "name": "Classical Exploration",
+        "description": "A baseline navigation strategy used in conjunction with object localization for finding items in an environment."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Samir Yitzhak Gadre",
+        "affiliation": "Stanford University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Mitchell Wortsman",
+        "affiliation": "University of Washington",
+        "role": null
+      },
+      {
+        "name": "Gabriel Ilharco",
+        "affiliation": "University of Washington",
+        "role": null
+      },
+      {
+        "name": "Ludwig Schmidt",
+        "affiliation": "University of Washington",
+        "role": null
+      },
+      {
+        "name": "Shuran Song",
+        "affiliation": "Stanford University",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Stanford University"
+      },
+      {
+        "name": "University of Washington"
+      },
+      {
+        "name": "National Science Foundation"
+      },
+      {
+        "name": "Office of Naval Research"
+      },
+      {
+        "name": "Toyota Research Institute"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "0",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "SR",
+        "value": "20.0",
+        "split": "test",
+        "dataset": "PASTURE (GINGERBREADHOUSE)"
+      },
+      {
+        "metric": "SPL",
+        "value": "14.3",
+        "split": "test",
+        "dataset": "PASTURE (GINGERBREADHOUSE)"
+      },
+      {
+        "metric": "SR",
+        "value": "10.0",
+        "split": "test",
+        "dataset": "PASTURE (ESPRESSOMACHINE)"
+      },
+      {
+        "metric": "SPL",
+        "value": "7.7",
+        "split": "test",
+        "dataset": "PASTURE (ESPRESSOMACHINE)"
+      },
+      {
+        "metric": "SR",
+        "value": "26.7",
+        "split": "test",
+        "dataset": "PASTURE (SURFBOARD)"
+      },
+      {
+        "metric": "SPL",
+        "value": "20.6",
+        "split": "test",
+        "dataset": "PASTURE (SURFBOARD)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Benchmark Creation",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "HABITAT",
+          "ROBOTHOR"
+        ],
+        "dataset_produced": [
+          "PASTURE"
+        ]
+      },
+      {
+        "name": "Baseline Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "CLIP on Wheels (CoW)"
+        ],
+        "dataset_used": [
+          "PASTURE"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "CLIP on Wheels (CoW)",
+      "predicate": "usedMethod",
+      "object": "Classical Exploration"
+    },
+    {
+      "subject": "Baseline Evaluation",
+      "predicate": "usedSoftware",
+      "object": "CLIP on Wheels (CoW)"
+    },
+    {
+      "subject": "Baseline Evaluation",
+      "predicate": "usedDataset",
+      "object": "PASTURE"
+    },
+    {
+      "subject": "Baseline Evaluation",
+      "predicate": "generatesResult",
+      "object": "SR"
+    },
+    {
+      "subject": "Baseline Evaluation",
+      "predicate": "generatesResult",
+      "object": "SPL"
+    },
+    {
+      "subject": "PASTURE",
+      "predicate": "derivedFrom",
+      "object": "HABITAT"
+    },
+    {
+      "subject": "habitat_mp3d_runner.py",
+      "predicate": "hasParameter",
+      "object": "seed"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

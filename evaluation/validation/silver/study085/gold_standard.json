@@ -1,0 +1,271 @@
+{
+  "study_id": "study085",
+  "project": {
+    "title": "Generating 3D Molecules Conditional on Receptor Binding Sites with Deep Generative Models",
+    "lead_organization": "University of Pittsburgh",
+    "funding": "This work was supported by the National Institutes of Health (R01GM108340)."
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "gxx",
+        "version": "10"
+      },
+      {
+        "name": "cmake",
+        "version": "3.18"
+      },
+      {
+        "name": "cudatoolkit-dev",
+        "version": "11.3"
+      },
+      {
+        "name": "openbabel",
+        "version": "3"
+      },
+      {
+        "name": "pytorch",
+        "version": null
+      },
+      {
+        "name": "rdkit",
+        "version": null
+      },
+      {
+        "name": "numpy",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": null
+      },
+      {
+        "name": "scikit-image",
+        "version": null
+      },
+      {
+        "name": "pandas",
+        "version": null
+      },
+      {
+        "name": "boost",
+        "version": null
+      },
+      {
+        "name": "zlib",
+        "version": null
+      },
+      {
+        "name": "yaml",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Cross-docked2020",
+        "format": "PDB|SDF",
+        "access": "open",
+        "role": "used",
+        "derived_from": "PDBBind"
+      },
+      {
+        "name": "Generated Molecules",
+        "format": "SDF",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "Cross-docked2020"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Conditional Variational Autoencoder (CVAE)",
+        "description": "A deep generative model trained on atomic density grids to generate 3D molecular structures conditioned on receptor binding sites."
+      },
+      {
+        "name": "Atom fitting",
+        "description": "A procedure to construct valid molecular conformations from generated atomic densities."
+      },
+      {
+        "name": "Bond inference",
+        "description": "A procedure used to determine chemical bonds from the positions of fitted atoms."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Matthew Ragoza",
+        "affiliation": "University of Pittsburgh",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Tomohide Masuda",
+        "affiliation": "University of Pittsburgh",
+        "role": "Data Collector"
+      },
+      {
+        "name": "David Ryan Koes",
+        "affiliation": "University of Pittsburgh",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Pittsburgh"
+      },
+      {
+        "name": "National Institutes of Health"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "batch_size",
+        "value": "16",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "learning_rate",
+        "value": "0.0001",
+        "type": "xsd:float"
+      },
+      {
+        "name": "latent_dimension",
+        "value": "1024",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "grid_resolution",
+        "value": "0.5",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "NVIDIA",
+        "cuda": "11.3",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Vina energy",
+        "value": "-7.4",
+        "split": "test",
+        "dataset": "Cross-docked2020"
+      },
+      {
+        "metric": "CNN affinity",
+        "value": "6.2",
+        "split": "test",
+        "dataset": "Cross-docked2020"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Preprocessing",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "openbabel",
+          "rdkit"
+        ],
+        "dataset_used": [
+          "Cross-docked2020"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "Cross-docked2020"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Molecule Generation",
+        "type": "DataProductionActivity",
+        "order": 3,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Generated Molecules"
+        ]
+      },
+      {
+        "name": "Structure Refinement",
+        "type": "DataProcessingActivity",
+        "order": 4,
+        "software_used": [
+          "openbabel"
+        ],
+        "dataset_used": [
+          "Generated Molecules"
+        ],
+        "dataset_produced": [
+          "Generated Molecules"
+        ]
+      },
+      {
+        "name": "Property Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 5,
+        "software_used": [
+          "scipy",
+          "numpy"
+        ],
+        "dataset_used": [
+          "Generated Molecules"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "Conditional Variational Autoencoder (CVAE)"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedDataset",
+      "object": "Cross-docked2020"
+    },
+    {
+      "subject": "Molecule Generation",
+      "predicate": "usedSoftware",
+      "object": "pytorch"
+    },
+    {
+      "subject": "Molecule Generation",
+      "predicate": "generatesDataset",
+      "object": "Generated Molecules"
+    },
+    {
+      "subject": "Structure Refinement",
+      "predicate": "usedMethod",
+      "object": "Atom fitting"
+    },
+    {
+      "subject": "Property Evaluation",
+      "predicate": "generatesResult",
+      "object": "Vina energy"
+    },
+    {
+      "subject": "pytorch",
+      "predicate": "softwareDependency",
+      "object": "cudatoolkit-dev"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,22 @@
+# Necessity Proof Baseline — DCAT + PROV-O ONLY
+# Model 2 Gold papers using ONLY these vocabularies. No rdip: allowed.
+#
+# Allowed: dcat:Dataset, prov:Activity, prov:Entity, prov:Agent,
+#   prov:used, prov:wasGeneratedBy, prov:wasAssociatedWith,
+#   prov:wasInformedBy, prov:wasDerivedFrom,
+#   schema:ResearchProject, schema:SoftwareApplication,
+#   dcterms:*, foaf:Person
+#
+# Be GENEROUS to the baseline. Use every available property.
+
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix schema:  <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:      <https://w3id.org/rdip/eval/baseline/> .
+
+# TODO: Model 2 Gold papers here using ONLY the above vocabularies.
+# Then run comparison_queries.md against this graph vs combined_gold.ttl.

@@ -1,0 +1,332 @@
+{
+  "study_id": "study001",
+  "project": {
+    "title": "ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation",
+    "lead_organization": "Microsoft",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "DeepSpeed",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "pytorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "torchvision",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "torchaudio",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "cuda",
+        "version": "12.2.2"
+      },
+      {
+        "name": "pytorch-cuda",
+        "version": "11.8"
+      },
+      {
+        "name": "gcc",
+        "version": "11.4"
+      },
+      {
+        "name": "ninja",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "python",
+        "version": "3.10"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Wikitext-2",
+        "format": "text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "PTB",
+        "format": "text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "C4",
+        "format": "text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Calibration Set",
+        "format": "text",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "C4"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Round-to-nearest (RTN)",
+        "description": "A naive baseline quantization method that rounds floating point numbers to the nearest integer representation."
+      },
+      {
+        "name": "GPTQ",
+        "description": "A post-training quantization method that updates weights by solving a non-linear least square problem layer-by-layer."
+      },
+      {
+        "name": "ZeroQuant (ZQ-Global)",
+        "description": "A method that treats each layer as a subnetwork and uses distillation to optimize the quantized version."
+      },
+      {
+        "name": "Low-Rank Compensation (LoRC)",
+        "description": "A technique that uses low-rank matrix factorization to compensate for quantization errors in weights."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhewei Yao",
+        "affiliation": "Microsoft",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Xiaoxia Wu",
+        "affiliation": "Microsoft",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Cheng Li",
+        "affiliation": "Microsoft",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Stephen Youn",
+        "affiliation": "Microsoft",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Yuxiong He",
+        "affiliation": "Microsoft",
+        "role": "Software Engineer"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Microsoft"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "1e-3 to 5e-8",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "1",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "calibration_samples",
+        "value": "128",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "token_length",
+        "value": "2048",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "LoRC_dimension_m",
+        "value": "8",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "1234",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "123",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "456",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 20.04",
+        "gpu": "modern GPUs",
+        "cuda": "12.2.2",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "PPL",
+        "value": "10.90",
+        "split": "test",
+        "dataset": "BLOOM-176B"
+      },
+      {
+        "metric": "PPL",
+        "value": "10.33",
+        "split": "test",
+        "dataset": "OPT-66B"
+      },
+      {
+        "metric": "PPL",
+        "value": "11.02",
+        "split": "test",
+        "dataset": "BLOOM-176B (W4A16 GPTQ)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Sampling",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "DeepSpeed"
+        ],
+        "dataset_used": [
+          "C4"
+        ],
+        "dataset_produced": [
+          "Calibration Set"
+        ]
+      },
+      {
+        "name": "Post-Training Quantization",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "DeepSpeed"
+        ],
+        "dataset_used": [
+          "Calibration Set"
+        ],
+        "dataset_produced": [
+          "Quantized Model"
+        ]
+      },
+      {
+        "name": "Low-Rank Compensation",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 3,
+        "software_used": [
+          "DeepSpeed"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "LoRC Model"
+        ]
+      },
+      {
+        "name": "Perplexity Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 4,
+        "software_used": [
+          "DeepSpeed"
+        ],
+        "dataset_used": [
+          "Wikitext-2",
+          "PTB",
+          "C4"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Post-Training Quantization",
+      "predicate": "usedSoftware",
+      "object": "DeepSpeed"
+    },
+    {
+      "subject": "Post-Training Quantization",
+      "predicate": "usedDataset",
+      "object": "C4"
+    },
+    {
+      "subject": "Post-Training Quantization",
+      "predicate": "usedMethod",
+      "object": "GPTQ"
+    },
+    {
+      "subject": "Low-Rank Compensation",
+      "predicate": "usedMethod",
+      "object": "Low-Rank Compensation (LoRC)"
+    },
+    {
+      "subject": "Post-Training Quantization",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Post-Training Quantization",
+      "predicate": "hasParameter",
+      "object": "batch_size"
+    },
+    {
+      "subject": "Post-Training Quantization",
+      "predicate": "executedIn",
+      "object": "Ubuntu 20.04"
+    },
+    {
+      "subject": "Perplexity Evaluation",
+      "predicate": "generatesResult",
+      "object": "PPL"
+    },
+    {
+      "subject": "Calibration Set",
+      "predicate": "derivedFrom",
+      "object": "C4"
+    },
+    {
+      "subject": "Post-Training Quantization",
+      "predicate": "follows",
+      "object": "Data Sampling"
+    },
+    {
+      "subject": "Low-Rank Compensation",
+      "predicate": "follows",
+      "object": "Post-Training Quantization"
+    },
+    {
+      "subject": "DeepSpeed",
+      "predicate": "softwareDependency",
+      "object": "pytorch"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

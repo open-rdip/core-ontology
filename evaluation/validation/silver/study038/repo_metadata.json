@@ -1,0 +1,71 @@
+{
+  "study_id": "study038",
+  "repo_url": "https://github.com/theislab/trVAE",
+  "software_dependencies": [
+    {
+      "name": "anndata",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scanpy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "adjustText",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorflow",
+      "version": "2.5.3",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "keras",
+      "version": "2.2.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "seaborn",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

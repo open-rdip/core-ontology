@@ -1,0 +1,203 @@
+{
+  "study_id": "study079",
+  "project": {
+    "title": "Localizing and Mitigating Errors in Long-form Question Answering",
+    "lead_organization": "Technical University of Darmstadt",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "dkpro-cassis",
+        "version": "0.7.3"
+      },
+      {
+        "name": "inceptalytics",
+        "version": "0.1.1"
+      },
+      {
+        "name": "wordcloud",
+        "version": "1.8.2.2"
+      },
+      {
+        "name": "transformers",
+        "version": "4.34.0"
+      },
+      {
+        "name": "torch",
+        "version": "2.1.0"
+      },
+      {
+        "name": "accelerate",
+        "version": "0.23.0"
+      },
+      {
+        "name": "langchain",
+        "version": "0.0.312"
+      },
+      {
+        "name": "flash-attn",
+        "version": "2.2.2"
+      },
+      {
+        "name": "einops",
+        "version": "0.7.0"
+      },
+      {
+        "name": "deepspeed",
+        "version": "0.10.0"
+      },
+      {
+        "name": "peft",
+        "version": "0.4.0"
+      },
+      {
+        "name": "bitsandbytes",
+        "version": "0.41.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "HaluQuestQA",
+        "format": "JSON",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "ELI5"
+      },
+      {
+        "name": "ELI5",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Error-Informed Refinement",
+        "description": "A prompt-based approach that uses signals from a learned feedback model to refine generated long-form answers and reduce hallucinations."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Rachneet Sachdeva",
+        "affiliation": "Technical University of Darmstadt",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Yixiao Song",
+        "affiliation": "Technical University of Darmstadt",
+        "role": null
+      },
+      {
+        "name": "Mohit Iyyer",
+        "affiliation": "University of Massachusetts Amherst",
+        "role": null
+      },
+      {
+        "name": "Iryna Gurevych",
+        "affiliation": "Technical University of Darmstadt",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Technical University of Darmstadt"
+      },
+      {
+        "name": "University of Massachusetts Amherst"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "22",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "28",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "HaluQuestQA Dataset Creation",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "ELI5"
+        ],
+        "dataset_produced": [
+          "HaluQuestQA"
+        ]
+      },
+      {
+        "name": "Feedback Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "transformers",
+          "torch",
+          "deepspeed"
+        ],
+        "dataset_used": [
+          "HaluQuestQA"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Answer Refinement Analysis",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "accelerate"
+        ],
+        "dataset_used": [
+          "HaluQuestQA"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "HaluQuestQA",
+      "predicate": "derivedFrom",
+      "object": "ELI5"
+    },
+    {
+      "subject": "Error-Informed Refinement",
+      "predicate": "usedDataset",
+      "object": "HaluQuestQA"
+    },
+    {
+      "subject": "Feedback Model Training",
+      "predicate": "usedSoftware",
+      "object": "transformers"
+    },
+    {
+      "subject": "Answer Refinement Analysis",
+      "predicate": "usedMethod",
+      "object": "Error-Informed Refinement"
+    },
+    {
+      "subject": "HaluQuestQA Dataset Creation",
+      "predicate": "generatesDataset",
+      "object": "HaluQuestQA"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

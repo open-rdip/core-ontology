@@ -1,0 +1,262 @@
+# RDIP Triples — study005
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study005_Project a rdip:ResearchProject ;
+    rdip:title "eDiff-I: Text-to-Image Diffusion Models with an Ensemble of Expert Denoisers" ;
+    .
+
+ex:study005_Org1 a vivo:Organization ;
+    rdfs:label "NVIDIA Corporation" .
+ex:study005_Project rdip:hasLeadOrganization ex:study005_Org1 .
+
+ex:study005_Person1 a vivo:Person ;
+    rdfs:label "Yogesh Balaji" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person1 .
+ex:study005_Person2 a vivo:Person ;
+    rdfs:label "Seungjun Nah" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person2 .
+ex:study005_Person3 a vivo:Person ;
+    rdfs:label "Xun Huang" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person3 .
+ex:study005_Person4 a vivo:Person ;
+    rdfs:label "Arash Vahdat" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person4 .
+ex:study005_Person5 a vivo:Person ;
+    rdfs:label "Jiaming Song" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person5 .
+ex:study005_Person6 a vivo:Person ;
+    rdfs:label "Qinsheng Zhang" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person6 .
+ex:study005_Person7 a vivo:Person ;
+    rdfs:label "Karsten Kreis" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person7 .
+ex:study005_Person8 a vivo:Person ;
+    rdfs:label "Miika Aittala" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person8 .
+ex:study005_Person9 a vivo:Person ;
+    rdfs:label "Timo Aila" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person9 .
+ex:study005_Person10 a vivo:Person ;
+    rdfs:label "Samuli Laine" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person10 .
+ex:study005_Person11 a vivo:Person ;
+    rdfs:label "Bryan Catanzaro" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person11 .
+ex:study005_Person12 a vivo:Person ;
+    rdfs:label "Tero Karras" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person12 .
+ex:study005_Person13 a vivo:Person ;
+    rdfs:label "Ming-Yu Liu" .
+ex:study005_Project rdip:hasParticipant ex:study005_Person13 .
+
+ex:study005_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "python" ;
+    rdip:version "3.8.5" ;
+    .
+ex:study005_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "pip" ;
+    rdip:version "20.3" ;
+    .
+ex:study005_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "cudatoolkit" ;
+    rdip:version "11.3" ;
+    .
+ex:study005_Sw4 a rdip:SoftwareApplication ;
+    rdip:title "pytorch" ;
+    rdip:version "1.11.0" ;
+    .
+ex:study005_Sw5 a rdip:SoftwareApplication ;
+    rdip:title "torchvision" ;
+    rdip:version "0.12.0" ;
+    .
+ex:study005_Sw6 a rdip:SoftwareApplication ;
+    rdip:title "numpy" ;
+    rdip:version "1.19.2" ;
+    .
+ex:study005_Sw7 a rdip:SoftwareApplication ;
+    rdip:title "albumentations" ;
+    rdip:version "0.4.3" ;
+    .
+ex:study005_Sw8 a rdip:SoftwareApplication ;
+    rdip:title "diffusers" ;
+    .
+ex:study005_Sw9 a rdip:SoftwareApplication ;
+    rdip:title "opencv-python" ;
+    rdip:version "4.1.2.30" ;
+    .
+ex:study005_Sw10 a rdip:SoftwareApplication ;
+    rdip:title "pudb" ;
+    rdip:version "2019.2" ;
+    .
+ex:study005_Sw11 a rdip:SoftwareApplication ;
+    rdip:title "invisible-watermark" ;
+    .
+ex:study005_Sw12 a rdip:SoftwareApplication ;
+    rdip:title "imageio" ;
+    rdip:version "2.9.0" ;
+    .
+ex:study005_Sw13 a rdip:SoftwareApplication ;
+    rdip:title "imageio-ffmpeg" ;
+    rdip:version "0.4.2" ;
+    .
+ex:study005_Sw14 a rdip:SoftwareApplication ;
+    rdip:title "pytorch-lightning" ;
+    rdip:version "1.4.2" ;
+    .
+ex:study005_Sw15 a rdip:SoftwareApplication ;
+    rdip:title "omegaconf" ;
+    rdip:version "2.1.1" ;
+    .
+ex:study005_Sw16 a rdip:SoftwareApplication ;
+    rdip:title "test-tube" ;
+    rdip:version "0.7.5" ;
+    .
+ex:study005_Sw17 a rdip:SoftwareApplication ;
+    rdip:title "streamlit" ;
+    rdip:version "0.73.1" ;
+    .
+ex:study005_Sw18 a rdip:SoftwareApplication ;
+    rdip:title "einops" ;
+    rdip:version "0.3.0" ;
+    .
+ex:study005_Sw19 a rdip:SoftwareApplication ;
+    rdip:title "torch-fidelity" ;
+    rdip:version "0.3.0" ;
+    .
+ex:study005_Sw20 a rdip:SoftwareApplication ;
+    rdip:title "transformers" ;
+    rdip:version "4.19.2" ;
+    .
+ex:study005_Sw21 a rdip:SoftwareApplication ;
+    rdip:title "torchmetrics" ;
+    rdip:version "0.6.0" ;
+    .
+ex:study005_Sw22 a rdip:SoftwareApplication ;
+    rdip:title "kornia" ;
+    rdip:version "0.6" ;
+    .
+ex:study005_Sw23 a rdip:SoftwareApplication ;
+    rdip:title "taming-transformers" ;
+    rdip:version "master" ;
+    .
+ex:study005_Sw24 a rdip:SoftwareApplication ;
+    rdip:title "clip" ;
+    rdip:version "main" ;
+    .
+ex:study005_Sw25 a rdip:SoftwareApplication ;
+    rdip:title "Imaginaire" ;
+    .
+
+ex:study005_Dataset1 a dcat:Dataset ;
+    rdip:title "MS-COCO 2014" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study005_Dataset2 a dcat:Dataset ;
+    rdip:title "Visual Genome" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study005_Dataset3 a dcat:Dataset ;
+    rdip:title "Internal NVIDIA Dataset" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "restricted" ;
+    .
+
+ex:study005_Method1 a rdip:Method ;
+    rdip:title "Ensemble of Expert Denoisers" ;
+    rdip:description "Training specialized diffusion models for different stages of the iterative generation process to improve text alignment and visual quality." ;
+    .
+ex:study005_Method2 a rdip:Method ;
+    rdip:title "Paint-with-Words" ;
+    rdip:description "A technique allowing users to select words in a prompt and paint them on a canvas to control the specific spatial layout of objects." ;
+    .
+ex:study005_Method3 a rdip:Method ;
+    rdip:title "Binary-tree-based branching strategy" ;
+    rdip:description "A progressive training schedule where a single model is split into specialized models for specific noise level intervals." ;
+    .
+ex:study005_Method4 a rdip:Method ;
+    rdip:title "Classifier-free guidance" ;
+    rdip:description "A method to guide the diffusion process toward the conditioning signal without training a separate classifier." ;
+    .
+
+ex:study005_Param1 a rdip:Parameter ;
+    rdip:parameterName "learning_rate" ;
+    rdip:parameterValue "0.0001" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study005_Param2 a rdip:Parameter ;
+    rdip:parameterName "weight_decay" ;
+    rdip:parameterValue "0.01" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study005_Param3 a rdip:Parameter ;
+    rdip:parameterName "batch_size" ;
+    rdip:parameterValue "2048" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study005_Param4 a rdip:Parameter ;
+    rdip:parameterName "classifier-free guidance sweep" ;
+    rdip:parameterValue "0 to 10.0" ;
+    rdip:parameterDataType "xsd:string" ;
+    .
+ex:study005_Seed1 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "42" ;
+    rdip:parameterDataType "xsd:integer" .
+
+ex:study005_Env1 a rdip:ComputingEnvironment ;
+    rdip:osVersion "Linux" ;
+    rdip:gpuModel "NVIDIA A100" ;
+    rdip:cudaVersion "11.3" ;
+    .
+
+ex:study005_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "Zero-shot FID-30K" ;
+    rdip:metricValue "exact value varies by model size/cfg" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "MS-COCO 2014" ;
+    rdip:metricDataType "xsd:float" .
+ex:study005_Result2 a rdip:EvaluationResult ;
+    rdip:metricName "CLIP score" ;
+    rdip:metricValue "exact value varies by model size/cfg" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Visual Genome" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study005_Act1 a rdip:DataProcessingActivity ;
+    rdip:title "Pre-training shared model" ;
+    rdip:isPartOfProject ex:study005_Project ;
+    .
+ex:study005_Project rdip:hasActivity ex:study005_Act1 .
+ex:study005_Act2 a rdip:SoftwareDevelopmentActivity ;
+    rdip:title "Expert Specialization" ;
+    rdip:isPartOfProject ex:study005_Project ;
+    .
+ex:study005_Project rdip:hasActivity ex:study005_Act2 .
+ex:study005_Act3 a rdip:DataAnalysisActivity ;
+    rdip:title "Zero-shot Evaluation" ;
+    rdip:isPartOfProject ex:study005_Project ;
+    .
+ex:study005_Project rdip:hasActivity ex:study005_Act3 .
+
+# ═══ RELATIONS ═══
+ex:study005_Act1 rdip:usedSoftware ex:study005_Sw25 .
+ex:study005_Act2 rdip:follows ex:study005_Act1 .
+ex:study005_Act2 rdip:usedMethod ex:study005_Method3 .
+ex:study005_Act3 rdip:usedDataset ex:study005_Dataset1 .
+ex:study005_Act3 rdip:generatesResult ex:study005_Result1 .
+ex:study005_Act2 rdip:hasParameter ex:study005_Param1 .
+ex:study005_Act2 rdip:executedIn ex:study005_Env1 .
+
+# ═══ END (7 resolved, 0 unresolved) ═══

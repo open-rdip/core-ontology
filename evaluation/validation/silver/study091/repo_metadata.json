@@ -1,0 +1,13 @@
+{
+  "study_id": "study091",
+  "repo_url": "https://github.com/biazottoj/rp-sms-technical-debt-automation",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "mambaorg/micromamba:latest as mamba"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

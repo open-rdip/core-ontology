@@ -1,0 +1,384 @@
+{
+  "study_id": "study035",
+  "project": {
+    "title": "GAN Compression: Efficient Architectures for Interactive Conditional GANs",
+    "lead_organization": "MIT",
+    "funding": "NSF CAREER Award #1943349, MIT-IBM Watson AI Lab, Samsung, Adobe, and Facebook"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "absl-py",
+        "version": "0.9.0"
+      },
+      {
+        "name": "blessings",
+        "version": "1.7"
+      },
+      {
+        "name": "certifi",
+        "version": "2019.11.28"
+      },
+      {
+        "name": "dominate",
+        "version": "2.4.0"
+      },
+      {
+        "name": "grpcio",
+        "version": "1.16.1"
+      },
+      {
+        "name": "Markdown",
+        "version": "3.1.1"
+      },
+      {
+        "name": "numpy",
+        "version": "1.18.1"
+      },
+      {
+        "name": "nvidia-ml-py3",
+        "version": "7.352.0"
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.2.0.32"
+      },
+      {
+        "name": "Pillow",
+        "version": "7.0.0"
+      },
+      {
+        "name": "protobuf",
+        "version": "3.11.3"
+      },
+      {
+        "name": "psutil",
+        "version": "5.7.0"
+      },
+      {
+        "name": "pycocotools",
+        "version": null
+      },
+      {
+        "name": "scikit-image",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": "1.4.1"
+      },
+      {
+        "name": "six",
+        "version": "1.14.0"
+      },
+      {
+        "name": "tensorboard",
+        "version": "2.0.0"
+      },
+      {
+        "name": "tensorboardX",
+        "version": "2.0"
+      },
+      {
+        "name": "torch",
+        "version": "1.4.0"
+      },
+      {
+        "name": "torchprofile",
+        "version": "0.0.1"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.5.0"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.42.1"
+      },
+      {
+        "name": "Werkzeug",
+        "version": "1.0.0"
+      },
+      {
+        "name": "wget",
+        "version": "3.2"
+      },
+      {
+        "name": "ninja",
+        "version": "1.10.0"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "10.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Cityscapes",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "COCO-Stuff",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Map-to-Aerial Photo",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": "Google Maps"
+      },
+      {
+        "name": "Edge-to-Shoe",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": "UT Zappos50K"
+      }
+    ],
+    "Method": [
+      {
+        "name": "GAN Compression",
+        "description": "A general-purpose compression framework for reducing inference time and model size of generators in CGANs using NAS and knowledge distillation."
+      },
+      {
+        "name": "Fast GAN Compression",
+        "description": "An accelerated version of GAN compression that decouples model training and search via weight sharing."
+      },
+      {
+        "name": "Knowledge Distillation",
+        "description": "Transferring knowledge of multiple intermediate representations from a teacher model to a compressed student model."
+      },
+      {
+        "name": "Neural Architecture Search",
+        "description": "Automated search for efficient generator architectures within a predefined search space."
+      },
+      {
+        "name": "Once-for-all network",
+        "description": "A weight-sharing technique that allows extracting different sub-networks without retraining."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Muyang Li",
+        "affiliation": "MIT",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ji Lin",
+        "affiliation": "MIT",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Yaoyao Ding",
+        "affiliation": "SJTU",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zhijian Liu",
+        "affiliation": "MIT",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jun-Yan Zhu",
+        "affiliation": "CMU",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Song Han",
+        "affiliation": "MIT",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "MIT"
+      },
+      {
+        "name": "Adobe Research"
+      },
+      {
+        "name": "CMU"
+      },
+      {
+        "name": "SJTU"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate_G",
+        "value": "0.0002",
+        "type": "xsd:float"
+      },
+      {
+        "name": "learning_rate_D",
+        "value": "0.0002",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "1",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "lambda_distill",
+        "value": "0.01",
+        "type": "xsd:float"
+      },
+      {
+        "name": "num_epochs_search",
+        "value": "40",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "NVIDIA 2080Ti",
+        "cuda": null,
+        "ram": null
+      },
+      {
+        "os": null,
+        "gpu": "NVIDIA V100",
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "FID",
+        "value": "9.1",
+        "split": "test",
+        "dataset": "Cityscapes"
+      },
+      {
+        "metric": "mIoU",
+        "value": "41.5",
+        "split": "test",
+        "dataset": "Cityscapes"
+      },
+      {
+        "metric": "FID",
+        "value": "26.3",
+        "split": "test",
+        "dataset": "Edge-to-Shoe"
+      },
+      {
+        "metric": "mIoU",
+        "value": "42.1",
+        "split": "test",
+        "dataset": "COCO-Stuff"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Teacher Model Training",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "Cityscapes"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Supernet Training",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "Cityscapes"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Evolutionary Search",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "torch",
+          "numpy"
+        ],
+        "dataset_used": [
+          "Cityscapes"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Final Model Retraining",
+        "type": "DataAnalysisActivity",
+        "order": 4,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "Cityscapes"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "GAN Compression",
+      "predicate": "usedMethod",
+      "object": "Knowledge Distillation"
+    },
+    {
+      "subject": "GAN Compression",
+      "predicate": "usedMethod",
+      "object": "Neural Architecture Search"
+    },
+    {
+      "subject": "GAN Compression",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Supernet Training",
+      "predicate": "usedDataset",
+      "object": "Cityscapes"
+    },
+    {
+      "subject": "Evolutionary Search",
+      "predicate": "follows",
+      "object": "Supernet Training"
+    },
+    {
+      "subject": "Final Model Retraining",
+      "predicate": "hasParameter",
+      "object": "learning_rate_G"
+    },
+    {
+      "subject": "torch",
+      "predicate": "softwareDependency",
+      "object": "numpy"
+    },
+    {
+      "subject": "torch",
+      "predicate": "softwareDependency",
+      "object": "torchvision"
+    },
+    {
+      "subject": "Final Model Retraining",
+      "predicate": "generatesResult",
+      "object": "FID"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

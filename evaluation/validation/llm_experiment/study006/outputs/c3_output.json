@@ -1,0 +1,229 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Latent Macro Action Planner (L-MAP)",
+        "version": "v2"
+      },
+      {
+        "name": "Trajectory Transformer (TT)",
+        "version": "N/A"
+      },
+      {
+        "name": "Trajectory Autoencoding Planner (TAP)",
+        "version": "N/A"
+      },
+      {
+        "name": "Conservative Q-Learning (CQL)",
+        "version": "N/A"
+      },
+      {
+        "name": "Implicit Q-Learning (IQL)",
+        "version": "N/A"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Stochastic MuJoCo",
+        "format": "offline RL trajectories",
+        "access": "public"
+      },
+      {
+        "name": "D4RL MuJoCo",
+        "format": "offline RL trajectories",
+        "access": "public"
+      },
+      {
+        "name": "Adroit hand manipulation",
+        "format": "high-dimensional trajectories",
+        "access": "public"
+      },
+      {
+        "name": "HIV Treatment",
+        "format": "simulated healthcare data",
+        "access": "public"
+      },
+      {
+        "name": "Currency Exchange",
+        "format": "time-series",
+        "access": "public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Vector Quantized Variational Autoencoder (VQ-VAE)"
+      },
+      {
+        "name": "Monte Carlo Tree Search (MCTS)"
+      },
+      {
+        "name": "Progressive Widening"
+      },
+      {
+        "name": "Causal Transformer"
+      },
+      {
+        "name": "Upper Confidence Bounds for Trees (UCT)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Baiting Luo",
+        "role": "Lead Researcher"
+      },
+      {
+        "name": "Ava Pettet",
+        "role": "Researcher"
+      },
+      {
+        "name": "Aron Laszka",
+        "role": "Researcher"
+      },
+      {
+        "name": "Abhishek Dubey",
+        "role": "Researcher"
+      },
+      {
+        "name": "Ayan Mukhopadhyay",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Vanderbilt University"
+      },
+      {
+        "name": "Pennsylvania State University"
+      },
+      {
+        "name": "Nissan Advanced Technology Center"
+      },
+      {
+        "name": "National Science Foundation (NSF)"
+      },
+      {
+        "name": "DARPA"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "alpha (exploration rate)",
+        "value": "0.1"
+      },
+      {
+        "name": "epsilon (progressive widening)",
+        "value": "1"
+      },
+      {
+        "name": "MCTS iterations",
+        "value": "100"
+      },
+      {
+        "name": "M (latent code samples)",
+        "value": "16"
+      },
+      {
+        "name": "N (future samples)",
+        "value": "4"
+      },
+      {
+        "name": "B (branching factor)",
+        "value": "4"
+      },
+      {
+        "name": "lambda (expansion ratio)",
+        "value": "0.5"
+      },
+      {
+        "name": "gamma (discount factor)",
+        "value": "0.99"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "N/A",
+        "gpu": "N/A",
+        "cuda": "N/A",
+        "testbed": "Chameleon testbed"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Mean Score (Stochastic MuJoCo)",
+        "value": "68.70",
+        "split": "test"
+      },
+      {
+        "metric": "HIV Treatment Success",
+        "value": "59.08 ± 1.96",
+        "split": "test"
+      },
+      {
+        "metric": "Currency Exchange Score",
+        "value": "106.78 ± 5.00",
+        "split": "test"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Offline data collection",
+        "type": "DataCollectionActivity"
+      },
+      {
+        "name": "VQ-VAE discretization learning",
+        "type": "DataProcessingActivity"
+      },
+      {
+        "name": "L-MAP model training",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "MCTS Planning and Evaluation",
+        "type": "DataAnalysisActivity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "L-MAP model training",
+      "predicate": "usedMethod",
+      "object": "Vector Quantized Variational Autoencoder (VQ-VAE)"
+    },
+    {
+      "subject": "L-MAP model training",
+      "predicate": "usedMethod",
+      "object": "Causal Transformer"
+    },
+    {
+      "subject": "MCTS Planning and Evaluation",
+      "predicate": "usedMethod",
+      "object": "Monte Carlo Tree Search (MCTS)"
+    },
+    {
+      "subject": "MCTS Planning and Evaluation",
+      "predicate": "hasParameter",
+      "object": "alpha (exploration rate)"
+    },
+    {
+      "subject": "MCTS Planning and Evaluation",
+      "predicate": "usedDataset",
+      "object": "Stochastic MuJoCo"
+    },
+    {
+      "subject": "MCTS Planning and Evaluation",
+      "predicate": "generatesResult",
+      "object": "Mean Score (Stochastic MuJoCo)"
+    },
+    {
+      "subject": "MCTS Planning and Evaluation",
+      "predicate": "executedIn",
+      "object": "Chameleon testbed"
+    },
+    {
+      "subject": "Offline data collection",
+      "predicate": "generatesDataset",
+      "object": "D4RL MuJoCo"
+    }
+  ]
+}

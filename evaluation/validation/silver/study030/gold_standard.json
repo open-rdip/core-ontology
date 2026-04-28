@@ -1,0 +1,177 @@
+{
+  "study_id": "study030",
+  "project": {
+    "title": "OpenPifPaf: Composite Fields for Semantic Keypoint Detection and Spatio-Temporal Association",
+    "lead_organization": "Visual Intelligence for Transportation (VITA) lab, EPFL",
+    "funding": "Swiss NSF early and advanced researcher grants"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "PyTorch",
+        "version": "1.7.1"
+      },
+      {
+        "name": "OpenPifPaf",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COCO",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CrowdPose",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "PoseTrack 2017",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "PoseTrack 2018",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Composite Fields",
+        "description": "A method to detect and construct a spatio-temporal pose as a single connected graph of semantic keypoints."
+      },
+      {
+        "name": "Temporal Composite Association Field (TCAF)",
+        "description": "An extended network architecture for temporal associations in keypoint tracking."
+      },
+      {
+        "name": "PifPaf",
+        "description": "A bottom-up method for multi-person 2D human pose estimation."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Sven Kreiss",
+        "affiliation": "VITA lab, EPFL",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Lorenzo Bertoni",
+        "affiliation": "VITA lab, EPFL",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Alexandre Alahi",
+        "affiliation": "VITA lab, EPFL",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Visual Intelligence for Transportation (VITA) lab, EPFL"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "null",
+        "cuda": "11.0",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mAP",
+        "value": "67.4",
+        "split": "val",
+        "dataset": "COCO"
+      },
+      {
+        "metric": "MOTA",
+        "value": "57.6",
+        "split": "val",
+        "dataset": "PoseTrack 2017"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Keypoint Detection and Tracking",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "OpenPifPaf"
+        ],
+        "dataset_used": [
+          "COCO",
+          "PoseTrack 2017"
+        ],
+        "dataset_produced": [
+          "Spatio-temporal pose graphs"
+        ]
+      },
+      {
+        "name": "Performance Benchmarking",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "OpenPifPaf"
+        ],
+        "dataset_used": [
+          "Spatio-temporal pose graphs"
+        ],
+        "dataset_produced": [
+          "Accuracy metrics"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "OpenPifPaf",
+      "predicate": "usedMethod",
+      "object": "Composite Fields"
+    },
+    {
+      "subject": "OpenPifPaf",
+      "predicate": "usedMethod",
+      "object": "Temporal Composite Association Field (TCAF)"
+    },
+    {
+      "subject": "OpenPifPaf",
+      "predicate": "usedSoftware",
+      "object": "PyTorch"
+    },
+    {
+      "subject": "Keypoint Detection and Tracking",
+      "predicate": "usedDataset",
+      "object": "COCO"
+    },
+    {
+      "subject": "Performance Benchmarking",
+      "predicate": "generatesResult",
+      "object": "mAP"
+    },
+    {
+      "subject": "Performance Benchmarking",
+      "predicate": "follows",
+      "object": "Keypoint Detection and Tracking"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

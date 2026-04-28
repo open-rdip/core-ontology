@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      { "name": "Scikit-Learn", "version": "Not specified" },
+      { "name": "Python", "version": "Not specified" },
+      { "name": "YeastSpotter (mask-RCNN)", "version": "Not specified" }
+    ],
+    "Dataset": [
+      { "name": "COOS-7 (Cells Out Of Sample 7-Class)", "format": "16-bit tiff", "access": "https://zenodo.org/record/3386336" },
+      { "name": "Training Dataset", "format": "64x64 pixel crops", "access": "Zenodo" },
+      { "name": "Test1", "format": "64x64 pixel crops", "access": "Zenodo" },
+      { "name": "Test2", "format": "64x64 pixel crops", "access": "Zenodo" },
+      { "name": "Test3", "format": "64x64 pixel crops", "access": "Zenodo" },
+      { "name": "Test4", "format": "64x64 pixel crops", "access": "Zenodo" },
+      { "name": "ImageNet", "format": "RGB images", "access": "Public" }
+    ],
+    "Method": [
+      { "name": "DeepLoc (Fully Supervised CNN)" },
+      { "name": "PCI (Self-supervised Pairing Cell Inpainting)" },
+      { "name": "Haralick Texture Features" },
+      { "name": "VGG16 (Transfer Learning)" },
+      { "name": "Random Forest" },
+      { "name": "L1 Logistic Regression" },
+      { "name": "k-Nearest Neighbor" }
+    ],
+    "Person": [
+      { "name": "Alex X. Lu", "role": "Lead Researcher" },
+      { "name": "Wiebke Schormann", "role": "Biological Scientist" },
+      { "name": "David W. Andrews", "role": "Senior Author" },
+      { "name": "Amy X. Lu", "role": "Researcher" },
+      { "name": "Marzyeh Ghassemi", "role": "Researcher" },
+      { "name": "Alan M. Moses", "role": "Senior Author" }
+    ],
+    "Organization": [
+      { "name": "University of Toronto" },
+      { "name": "Sunnybrook Research Institute" },
+      { "name": "Vector Institute" }
+    ],
+    "Parameter": [
+      { "name": "Batch size (DeepLoc)", "value": "128" },
+      { "name": "Training iterations (DeepLoc)", "value": "10000" },
+      { "name": "k (k-Nearest Neighbor)", "value": "11" },
+      { "name": "Random search samples (RF)", "value": "100" }
+    ],
+    "ComputingEnvironment": [
+      { "os": "Not specified", "gpu": "Nvidia (donated)", "cuda": "Not specified" }
+    ],
+    "EvaluationResult": [
+      { "metric": "Class-Balanced Error (%)", "value": "1.2", "split": "DeepLoc End-to-End Test1" },
+      { "metric": "Class-Balanced Error (%)", "value": "7.4", "split": "DeepLoc End-to-End Test3" },
+      { "metric": "Class-Balanced Error (%)", "value": "5.4", "split": "DeepLoc End-to-End Test4" },
+      { "metric": "Sensitivity (Early Endosome)", "value": "0.684", "split": "DeepLoc Test4" }
+    ],
+    "Activity": [
+      { "name": "Cell Segmentation", "type": "Data Processing" },
+      { "name": "COOS-7 Creation", "type": "Data Collection" },
+      { "name": "Model Benchmarking", "type": "Evaluation" },
+      { "name": "Unsupervised Training (PCI)", "type": "Model Training" }
+    ]
+  },
+  "relations": [
+    { "subject": "COOS-7 (Cells Out Of Sample 7-Class)", "predicate": "wasGeneratedBy", "object": "COOS-7 Creation" },
+    { "subject": "COOS-7 Creation", "predicate": "used", "object": "YeastSpotter (mask-RCNN)" },
+    { "subject": "COOS-7 Creation", "predicate": "wasAssociatedWith", "object": "Alex X. Lu" },
+    { "subject": "Model Benchmarking", "predicate": "used", "object": "Training Dataset" },
+    { "subject": "Model Benchmarking", "predicate": "used", "object": "Test4" },
+    { "subject": "Model Benchmarking", "predicate": "used", "object": "Scikit-Learn" },
+    { "subject": "VGG16 (Transfer Learning)", "predicate": "wasDerivedFrom", "object": "ImageNet" },
+    { "subject": "Training Dataset", "predicate": "wasAssociatedWith", "object": "University of Toronto" },
+    { "subject": "Unsupervised Training (PCI)", "predicate": "used", "object": "Training Dataset" }
+  ]
+}

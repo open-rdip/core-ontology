@@ -1,0 +1,184 @@
+{
+  "study_id": "study071",
+  "project": {
+    "title": "Pick-a-Pic: An Open Dataset of User Preferences for Text-to-Image Generation",
+    "lead_organization": "Tel Aviv University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "accelerate",
+        "version": null
+      },
+      {
+        "name": "datasets",
+        "version": "2.10.1"
+      },
+      {
+        "name": "deepspeed",
+        "version": "0.8.3"
+      },
+      {
+        "name": "fire",
+        "version": "0.4.0"
+      },
+      {
+        "name": "hydra-core",
+        "version": "1.3.2"
+      },
+      {
+        "name": "rich",
+        "version": "13.3.2"
+      },
+      {
+        "name": "submitit",
+        "version": "1.4.5"
+      },
+      {
+        "name": "transformers",
+        "version": "4.27.3"
+      },
+      {
+        "name": "wandb",
+        "version": "0.12.21"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Pick-a-Pic",
+        "format": "images",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      },
+      {
+        "name": "MS-COCO",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "PickScore",
+        "description": "A CLIP-based scoring function trained to predict human preferences for text-to-image generation."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yuval Kirstain",
+        "affiliation": "Tel Aviv University",
+        "role": null
+      },
+      {
+        "name": "Adam Polyak",
+        "affiliation": "Stability AI",
+        "role": null
+      },
+      {
+        "name": "Uriel Singer",
+        "affiliation": "Tel Aviv University",
+        "role": null
+      },
+      {
+        "name": "Shahbuland Matiana",
+        "affiliation": "Stability AI",
+        "role": null
+      },
+      {
+        "name": "Joe Penna",
+        "affiliation": "Stability AI",
+        "role": null
+      },
+      {
+        "name": "Omer Levy",
+        "affiliation": "Tel Aviv University",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Tel Aviv University"
+      },
+      {
+        "name": "Stability AI"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "accuracy",
+        "value": "65.2",
+        "split": "test",
+        "dataset": "Pick-a-Pic"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Collection",
+        "type": "DataCollectionActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Pick-a-Pic"
+        ]
+      },
+      {
+        "name": "PickScore Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "transformers",
+          "accelerate",
+          "deepspeed"
+        ],
+        "dataset_used": [
+          "Pick-a-Pic"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [],
+        "dataset_used": [
+          "Pick-a-Pic",
+          "MS-COCO"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "PickScore Training",
+      "predicate": "usedDataset",
+      "object": "Pick-a-Pic"
+    },
+    {
+      "subject": "PickScore Training",
+      "predicate": "usedSoftware",
+      "object": "transformers"
+    },
+    {
+      "subject": "Model Evaluation",
+      "predicate": "usedMethod",
+      "object": "PickScore"
+    },
+    {
+      "subject": "Model Evaluation",
+      "predicate": "generatesResult",
+      "object": "accuracy"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

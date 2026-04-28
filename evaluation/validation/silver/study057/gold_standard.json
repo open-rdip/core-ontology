@@ -1,0 +1,275 @@
+{
+  "study_id": "study057",
+  "project": {
+    "title": "Mining for Strong Gravitational Lenses with Self-supervised Learning",
+    "lead_organization": "Berkeley Center For Cosmological Physics, University of California, Berkeley",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "alsa-lib",
+        "version": "h516909a_0"
+      },
+      {
+        "name": "asttokens",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "backcall",
+        "version": "pyh9f0ad1d_0"
+      },
+      {
+        "name": "backports",
+        "version": "py_2"
+      },
+      {
+        "name": "backports.functools_lru_cache",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "black",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "blas",
+        "version": "mkl"
+      },
+      {
+        "name": "blosc",
+        "version": "h9c3ff4c_0"
+      },
+      {
+        "name": "brotli",
+        "version": "h7f98852_6"
+      },
+      {
+        "name": "brotli-bin",
+        "version": "h7f98852_6"
+      },
+      {
+        "name": "brunsli",
+        "version": "h9c3ff4c_0"
+      },
+      {
+        "name": "bzip2",
+        "version": "h7f98852_4"
+      },
+      {
+        "name": "c-ares",
+        "version": "h7f98852_0"
+      },
+      {
+        "name": "c-blosc2",
+        "version": "h5f21a17_1"
+      },
+      {
+        "name": "ca-certificates",
+        "version": "ha878542_0"
+      },
+      {
+        "name": "cached-property",
+        "version": "hd8ed1ab_1"
+      },
+      {
+        "name": "cached_property",
+        "version": "pyha770c72_1"
+      },
+      {
+        "name": "certifi",
+        "version": "py39hf3d152e_1"
+      },
+      {
+        "name": "cfitsio",
+        "version": "h9a35b8e_0"
+      },
+      {
+        "name": "charls",
+        "version": "h9c3ff4c_0"
+      },
+      {
+        "name": "click",
+        "version": "py39hf3d152e_1"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "h2bc3f7f_2"
+      },
+      {
+        "name": "cycler",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "cytoolz",
+        "version": "py39h3811e60_1"
+      },
+      {
+        "name": "dask-core",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "dataclasses",
+        "version": "pyhc8e2a94_3"
+      },
+      {
+        "name": "dbus",
+        "version": "h5008d03_3"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Dark Energy Spectroscopic Instrument Legacy Imaging Surveys' Data Release 9",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "1192 new strong lens candidates",
+        "format": "images",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "Dark Energy Spectroscopic Instrument Legacy Imaging Surveys' Data Release 9"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Self-supervised representation learning",
+        "description": "Distilling information from a large unlabeled dataset of galaxy images into a compact representation space."
+      },
+      {
+        "name": "Similarity search",
+        "description": "A tool created to discover new strong lenses given only a single labeled example using self-supervised representations."
+      },
+      {
+        "name": "Linear classifier training",
+        "description": "Training a simple linear model on fixed self-supervised representations to automatically classify strong lenses."
+      }
+    ],
+    "Person": [
+      {
+        "name": "George Stein",
+        "affiliation": "Berkeley Center For Cosmological Physics, University of California, Berkeley; Lawrence Berkeley National Laboratory",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jacqueline Blaum",
+        "affiliation": "Department of Astronomy, University of California, Berkeley; Lawrence Berkeley National Laboratory",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Peter Harrington",
+        "affiliation": "Lawrence Berkeley National Laboratory",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Tomislav Medan",
+        "affiliation": "Berkeley Center For Cosmological Physics, University of California, Berkeley",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zarija Lukić",
+        "affiliation": "Lawrence Berkeley National Laboratory",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Berkeley Center For Cosmological Physics, University of California, Berkeley"
+      },
+      {
+        "name": "Lawrence Berkeley National Laboratory"
+      },
+      {
+        "name": "Department of Astronomy, University of California, Berkeley"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "13579",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "not specified",
+        "cuda": "not specified",
+        "ram": "not specified"
+      }
+    ],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Self-supervised representation learning",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "Dark Energy Spectroscopic Instrument Legacy Imaging Surveys' Data Release 9"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Similarity search discovery",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "1192 new strong lens candidates"
+        ]
+      },
+      {
+        "name": "Linear classifier classification",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Self-supervised representation learning",
+      "predicate": "usedDataset",
+      "object": "Dark Energy Spectroscopic Instrument Legacy Imaging Surveys' Data Release 9"
+    },
+    {
+      "subject": "Similarity search discovery",
+      "predicate": "usedMethod",
+      "object": "Similarity search"
+    },
+    {
+      "subject": "Similarity search discovery",
+      "predicate": "generatesDataset",
+      "object": "1192 new strong lens candidates"
+    },
+    {
+      "subject": "Linear classifier classification",
+      "predicate": "usedMethod",
+      "object": "Linear classifier training"
+    },
+    {
+      "subject": "Linear classifier classification",
+      "predicate": "follows",
+      "object": "Self-supervised representation learning"
+    },
+    {
+      "subject": "1192 new strong lens candidates",
+      "predicate": "derivedFrom",
+      "object": "Dark Energy Spectroscopic Instrument Legacy Imaging Surveys' Data Release 9"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,235 @@
+{
+  "study_id": "study022",
+  "project": {
+    "title": "TransAct: Transformer-based Realtime User Action Model for Recommendation at Pinterest",
+    "lead_organization": "Pinterest",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "polars",
+        "version": "1.0.0"
+      },
+      {
+        "name": "FuxiCTR",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "PyTorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "TensorFlow",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Pinterest Homefeed Dataset",
+        "format": "restricted",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "TransAct",
+        "description": "A sequential model based on a Transformer architecture that extracts users' short-term preferences from their realtime activities for recommendation."
+      },
+      {
+        "name": "End-to-end sequential modeling",
+        "description": "A method to learn user representations directly from raw action sequences during the ranking process."
+      },
+      {
+        "name": "Hybrid ranking approach",
+        "description": "A technique combining end-to-end sequential modeling with batch-generated user embeddings to capture both short-term and long-term interests."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Xue Xia",
+        "affiliation": "Pinterest",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Dhruvil Deven Badani",
+        "affiliation": "Pinterest",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Saurabh Vishwas Joshi",
+        "affiliation": "Pinterest",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Pong Eksombatchai",
+        "affiliation": "Pinterest",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Po-Wei Wang",
+        "affiliation": "Pinterest",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Nazanin Farahpour",
+        "affiliation": "Pinterest",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Andrew Zhai",
+        "affiliation": "Pinterest",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Pinterest"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "hidden_units",
+        "value": "256",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_heads",
+        "value": "4",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_layers",
+        "value": "2",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "sequence_length",
+        "value": "100",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "w_repin",
+        "value": "100",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "w_click",
+        "value": "100",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "null",
+        "cuda": "null",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "REPIN_GAINS",
+        "value": "5.2%",
+        "split": "test",
+        "dataset": "Pinterest Homefeed Dataset"
+      },
+      {
+        "metric": "CLICK_GAINS",
+        "value": "2.4%",
+        "split": "test",
+        "dataset": "Pinterest Homefeed Dataset"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Processing",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "polars",
+          "pandas"
+        ],
+        "dataset_used": [
+          "Pinterest Homefeed Dataset"
+        ],
+        "dataset_produced": [
+          "Processed user action sequences"
+        ]
+      },
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "PyTorch",
+          "TensorFlow"
+        ],
+        "dataset_used": [
+          "Processed user action sequences"
+        ],
+        "dataset_produced": [
+          "Trained TransAct model"
+        ]
+      },
+      {
+        "name": "Online A/B Testing",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "TransAct"
+        ],
+        "dataset_used": [
+          "Pinterest Homefeed Dataset"
+        ],
+        "dataset_produced": [
+          "Engagement metrics"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "End-to-end sequential modeling"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "num_heads"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "sequence_length"
+    },
+    {
+      "subject": "Online A/B Testing",
+      "predicate": "generatesResult",
+      "object": "REPIN_GAINS"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "follows",
+      "object": "Data Processing"
+    },
+    {
+      "subject": "Online A/B Testing",
+      "predicate": "follows",
+      "object": "Model Training"
+    },
+    {
+      "subject": "Data Processing",
+      "predicate": "usedSoftware",
+      "object": "polars"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

@@ -1,0 +1,194 @@
+{
+  "study_id": "study076",
+  "project": {
+    "title": "Flexible inference in heterogeneous and attributed multilayer networks",
+    "lead_organization": "Max Planck Institute for Intelligent Systems",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "numpy",
+        "version": "1.22.0"
+      },
+      {
+        "name": "torch",
+        "version": null
+      },
+      {
+        "name": "functorch",
+        "version": null
+      },
+      {
+        "name": "scikit-learn",
+        "version": null
+      },
+      {
+        "name": "scikit-tensor-py3",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": "1.10.0"
+      },
+      {
+        "name": "PyYAML",
+        "version": null
+      },
+      {
+        "name": "matplotlib",
+        "version": null
+      },
+      {
+        "name": "POT",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Alakapuram social support network",
+        "format": "multilayer network",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Synthetic datasets",
+        "format": "CSV",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Probabilistic generative model",
+        "description": "A Bayesian framework for inference in multilayer networks with arbitrary types of information using Laplace matching and automatic differentiation."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Martina Contisciani",
+        "affiliation": "Max Planck Institute for Intelligent Systems",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Marius Hobbhahn",
+        "affiliation": "Tübingen AI Center",
+        "role": null
+      },
+      {
+        "name": "Eleanor A. Power",
+        "affiliation": "London School of Economics and Political Sciences",
+        "role": null
+      },
+      {
+        "name": "Philipp Hennig",
+        "affiliation": "University of Tübingen",
+        "role": null
+      },
+      {
+        "name": "Caterina De Bacco",
+        "affiliation": "Max Planck Institute for Intelligent Systems",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Max Planck Institute for Intelligent Systems"
+      },
+      {
+        "name": "Tübingen AI Center"
+      },
+      {
+        "name": "London School of Economics and Political Sciences"
+      },
+      {
+        "name": "Santa Fe Institute"
+      },
+      {
+        "name": "University of Tübingen"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "10",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Synthetic Data Generation",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [
+          "numpy"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Synthetic datasets"
+        ]
+      },
+      {
+        "name": "Model Development and Implementation",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "torch",
+          "functorch"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Inference and Prediction Tasks",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "scikit-learn",
+          "scipy"
+        ],
+        "dataset_used": [
+          "Alakapuram social support network",
+          "Synthetic datasets"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Martina Contisciani",
+      "predicate": "hasActivityRole",
+      "object": "Model Development and Implementation"
+    },
+    {
+      "subject": "Inference and Prediction Tasks",
+      "predicate": "usedMethod",
+      "object": "Probabilistic generative model"
+    },
+    {
+      "subject": "Inference and Prediction Tasks",
+      "predicate": "usedDataset",
+      "object": "Alakapuram social support network"
+    },
+    {
+      "subject": "Inference and Prediction Tasks",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Synthetic Data Generation",
+      "predicate": "hasParameter",
+      "object": "random_seed"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

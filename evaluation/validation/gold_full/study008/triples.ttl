@@ -1,0 +1,203 @@
+# RDIP Triples — study008
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study008_Project a rdip:ResearchProject ;
+    rdip:title "Language Adaptation on a Tight Academic Compute Budget: Tokenizer Swapping Works and Pure bfloat16 Is Enough" ;
+    rdip:fundingReference "German Federal Ministry for Education and Research (BMBF) through the project «KI-Servicezentrum Berlin Brandenburg (011S22092)" ;
+    .
+
+ex:study008_Org1 a vivo:Organization ;
+    rdfs:label "Hasso Plattner Institute" .
+ex:study008_Org2 a vivo:Organization ;
+    rdfs:label "University of Potsdam" .
+ex:study008_Org3 a vivo:Organization ;
+    rdfs:label "ELLIS Unit Potsdam" .
+ex:study008_Org4 a vivo:Organization ;
+    rdfs:label "German Federal Ministry for Education and Research (BMBF)" .
+ex:study008_Project rdip:hasLeadOrganization ex:study008_Org1 .
+
+ex:study008_Person1 a vivo:Person ;
+    rdfs:label "Konstantin Dobler" .
+ex:study008_Project rdip:hasParticipant ex:study008_Person1 .
+ex:study008_Person2 a vivo:Person ;
+    rdfs:label "Gerard de Melo" .
+ex:study008_Project rdip:hasParticipant ex:study008_Person2 .
+
+ex:study008_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "Mistral-7B" ;
+    rdip:version "v0.1" ;
+    .
+ex:study008_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "AdamW" ;
+    .
+ex:study008_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "torch" ;
+    .
+ex:study008_Sw4 a rdip:SoftwareApplication ;
+    rdip:title "cuda" ;
+    rdip:version "12.1.1" ;
+    .
+
+ex:study008_Dataset1 a dcat:Dataset ;
+    rdip:title "OSCAR23.01" ;
+    rdip:dataFormat "text" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study008_Dataset2 a dcat:Dataset ;
+    rdip:title "CulturaX" ;
+    rdip:dataFormat "text" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study008_Dataset3 a dcat:Dataset ;
+    rdip:title "MMLU" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study008_Dataset4 a dcat:Dataset ;
+    rdip:title "HellaSwag" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study008_Dataset5 a dcat:Dataset ;
+    rdip:title "TruthfulQA" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study008_Dataset6 a dcat:Dataset ;
+    rdip:title "ARC" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study008_Dataset7 a dcat:Dataset ;
+    rdip:title "LAMBADA" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study008_Dataset8 a dcat:Dataset ;
+    rdip:title "PAWS-X" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study008_Dataset9 a dcat:Dataset ;
+    rdip:title "AlGhafa-T" ;
+    rdip:accessLevel "open" ;
+    .
+
+ex:study008_Method1 a rdip:Method ;
+    rdip:title "Pure bfloat16 training" ;
+    rdip:description "Training without full-precision optimizer states or a model weight copy to reduce memory usage and increase speed on limited GPUs." ;
+    .
+ex:study008_Method2 a rdip:Method ;
+    rdip:title "Tokenizer Swapping" ;
+    rdip:description "Replacing a base model's tokenizer with a specialized one for a target language to improve fertility and training efficiency." ;
+    .
+ex:study008_Method3 a rdip:Method ;
+    rdip:title "Continued Pretraining" ;
+    rdip:description "Adapting an existing LLM to a target language by further training on domain-specific or language-specific corpora." ;
+    .
+ex:study008_Method4 a rdip:Method ;
+    rdip:title "Embedding Initialization" ;
+    rdip:description "A technique to initialize new embeddings for a swapped tokenizer based on existing embeddings to facilitate faster re-learning." ;
+    .
+
+ex:study008_Param1 a rdip:Parameter ;
+    rdip:parameterName "learning_rate" ;
+    rdip:parameterValue "4e-5" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study008_Param2 a rdip:Parameter ;
+    rdip:parameterName "batch_size" ;
+    rdip:parameterValue "256" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study008_Param3 a rdip:Parameter ;
+    rdip:parameterName "training_steps" ;
+    rdip:parameterValue "7680" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study008_Param4 a rdip:Parameter ;
+    rdip:parameterName "warmup_steps" ;
+    rdip:parameterValue "76" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study008_Param5 a rdip:Parameter ;
+    rdip:parameterName "context_length" ;
+    rdip:parameterValue "4096" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study008_Param6 a rdip:Parameter ;
+    rdip:parameterName "weight_decay" ;
+    rdip:parameterValue "0.05" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study008_Param7 a rdip:Parameter ;
+    rdip:parameterName "total_training_tokens" ;
+    rdip:parameterValue "8 billion" ;
+    rdip:parameterDataType "xsd:string" ;
+    .
+ex:study008_Seed1 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "42" ;
+    rdip:parameterDataType "xsd:integer" .
+
+ex:study008_Env1 a rdip:ComputingEnvironment ;
+    rdip:osVersion "Ubuntu 22.04" ;
+    rdip:gpuModel "Nvidia A100 80GB" ;
+    rdip:cudaVersion "12.1.1" ;
+    .
+
+ex:study008_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "Avg. German test splits" ;
+    rdip:metricValue "47.2" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "German test splits (pure bfloat16)" ;
+    rdip:metricDataType "xsd:float" .
+ex:study008_Result2 a rdip:EvaluationResult ;
+    rdip:metricName "Avg. German test splits" ;
+    rdip:metricValue "46.1" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "German test splits (mixed precision)" ;
+    rdip:metricDataType "xsd:float" .
+ex:study008_Result3 a rdip:EvaluationResult ;
+    rdip:metricName "MMLU" ;
+    rdip:metricValue "59.7" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "German (pure bfloat16)" ;
+    rdip:metricDataType "xsd:float" .
+ex:study008_Result4 a rdip:EvaluationResult ;
+    rdip:metricName "HellaSwag" ;
+    rdip:metricValue "35.9" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "German (pure bfloat16)" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study008_Act1 a rdip:DataProcessingActivity ;
+    rdip:title "German Language Adaptation" ;
+    rdip:isPartOfProject ex:study008_Project ;
+    .
+ex:study008_Project rdip:hasActivity ex:study008_Act1 .
+ex:study008_Act2 a rdip:DataProcessingActivity ;
+    rdip:title "Arabic Hindsight Study" ;
+    rdip:isPartOfProject ex:study008_Project ;
+    .
+ex:study008_Project rdip:hasActivity ex:study008_Act2 .
+ex:study008_Act3 a rdip:DataAnalysisActivity ;
+    rdip:title "Downstream Evaluation" ;
+    rdip:isPartOfProject ex:study008_Project ;
+    .
+ex:study008_Project rdip:hasActivity ex:study008_Act3 .
+
+# ═══ RELATIONS ═══
+ex:study008_Act1 rdip:usedMethod ex:study008_Method1 .
+ex:study008_Act1 rdip:usedMethod ex:study008_Method2 .
+ex:study008_Act1 rdip:hasParameter ex:study008_Param1 .
+ex:study008_Act1 rdip:executedIn ex:study008_Env1 .
+ex:study008_Act3 rdip:generatesResult ex:study008_Result2 .
+ex:study008_Act3 rdip:follows ex:study008_Act1 .
+ex:study008_Act2 rdip:follows ex:study008_Act1 .
+
+# ═══ END (7 resolved, 0 unresolved) ═══

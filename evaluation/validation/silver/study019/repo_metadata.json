@@ -1,0 +1,19 @@
+{
+  "study_id": "study019",
+  "repo_url": "https://github.com/Res2Net/mmdetection",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "42",
+      "file": "mmdet/apis/inference.py",
+      "context": "np.random.seed(42"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

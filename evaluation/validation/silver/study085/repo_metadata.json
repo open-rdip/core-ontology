@@ -1,0 +1,83 @@
+{
+  "study_id": "study085",
+  "repo_url": "https://github.com/mattragoza/liGAN",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "gxx",
+        "version": "10"
+      },
+      {
+        "name": "zlib",
+        "version": ""
+      },
+      {
+        "name": "cmake",
+        "version": "3.18"
+      },
+      {
+        "name": "cudatoolkit-dev",
+        "version": "11.3"
+      },
+      {
+        "name": "python",
+        "version": ""
+      },
+      {
+        "name": "boost",
+        "version": ""
+      },
+      {
+        "name": "numpy",
+        "version": ""
+      },
+      {
+        "name": "scipy",
+        "version": ""
+      },
+      {
+        "name": "scikit-image",
+        "version": ""
+      },
+      {
+        "name": "pandas",
+        "version": ""
+      },
+      {
+        "name": "openbabel",
+        "version": "3"
+      },
+      {
+        "name": "rdkit",
+        "version": ""
+      },
+      {
+        "name": "pytorch::pytorch",
+        "version": ""
+      },
+      {
+        "name": "pytest",
+        "version": ""
+      },
+      {
+        "name": "psutil",
+        "version": ""
+      },
+      {
+        "name": "pynvml",
+        "version": ""
+      },
+      {
+        "name": "yaml",
+        "version": ""
+      }
+    ],
+    "source": "conda",
+    "env_name": "LiGAN"
+  },
+  "seeds": [],
+  "license": "GPL",
+  "errors": []
+}

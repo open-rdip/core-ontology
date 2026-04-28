@@ -1,0 +1,256 @@
+{
+  "study_id": "study093",
+  "project": {
+    "title": "PMC-CLIP: Contrastive Language-Image Pre-training using Biomedical Documents",
+    "lead_organization": "Shanghai Jiao Tong University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "torch",
+        "version": "2.4.0"
+      },
+      {
+        "name": "webdataset",
+        "version": "0.2.86"
+      },
+      {
+        "name": "torchvision",
+        "version": null
+      },
+      {
+        "name": "regex",
+        "version": null
+      },
+      {
+        "name": "ftfy",
+        "version": null
+      },
+      {
+        "name": "tqdm",
+        "version": null
+      },
+      {
+        "name": "pandas",
+        "version": null
+      },
+      {
+        "name": "braceexpand",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "PMC-OA",
+        "format": "image-caption pairs",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "PubMedCentral"
+      },
+      {
+        "name": "ROCO",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MedMNIST",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Medical VQA",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "PMC-CLIP",
+        "description": "A biomedical foundation model trained using contrastive language-image pre-training on the PMC-OA dataset."
+      },
+      {
+        "name": "Contrastive Language-Image Pre-training",
+        "description": "A training paradigm that aligns image and text representations in a shared latent space via a contrastive loss."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Weixiong Lin",
+        "affiliation": "Shanghai Jiao Tong University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ziheng Zhao",
+        "affiliation": "Shanghai Jiao Tong University",
+        "role": null
+      },
+      {
+        "name": "Xiaoman Zhang",
+        "affiliation": "Shanghai Jiao Tong University",
+        "role": null
+      },
+      {
+        "name": "Chaoyi Wu",
+        "affiliation": "Shanghai Jiao Tong University",
+        "role": null
+      },
+      {
+        "name": "Ya Zhang",
+        "affiliation": "Shanghai Jiao Tong University",
+        "role": null
+      },
+      {
+        "name": "Yanfeng Wang",
+        "affiliation": "Shanghai Jiao Tong University",
+        "role": null
+      },
+      {
+        "name": "Weidi Xie",
+        "affiliation": "Shanghai Jiao Tong University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Shanghai Jiao Tong University"
+      },
+      {
+        "name": "Shanghai AI Laboratory"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "batch_size",
+        "value": "2048",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "learning_rate",
+        "value": "5e-4",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": "8 NVIDIA A100 GPUs",
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "R@10",
+        "value": "8.1%",
+        "split": "test",
+        "dataset": "ROCO"
+      },
+      {
+        "metric": "accuracy",
+        "value": "3.9%",
+        "split": "test",
+        "dataset": "MedMNIST"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "PMC-OA Dataset Collection",
+        "type": "DataCollectionActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "PubMedCentral"
+        ],
+        "dataset_produced": [
+          "PMC-OA"
+        ]
+      },
+      {
+        "name": "PMC-CLIP Pre-training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "torch",
+          "webdataset"
+        ],
+        "dataset_used": [
+          "PMC-OA"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Downstream Task Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "ROCO",
+          "MedMNIST"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "PMC-CLIP",
+      "predicate": "usedDataset",
+      "object": "PMC-OA"
+    },
+    {
+      "subject": "PMC-CLIP",
+      "predicate": "usedMethod",
+      "object": "Contrastive Language-Image Pre-training"
+    },
+    {
+      "subject": "PMC-OA Dataset Collection",
+      "predicate": "generatesDataset",
+      "object": "PMC-OA"
+    },
+    {
+      "subject": "PMC-CLIP Pre-training",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Downstream Task Evaluation",
+      "predicate": "generatesResult",
+      "object": "accuracy"
+    },
+    {
+      "subject": "Downstream Task Evaluation",
+      "predicate": "generatesResult",
+      "object": "R@10"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,402 @@
+{
+  "study_id": "study035",
+  "repo_url": "https://github.com/mit-han-lab/gan-compression",
+  "software_dependencies": [
+    {
+      "name": "absl-py",
+      "version": "0.9.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "blessings",
+      "version": "1.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "certifi",
+      "version": "2019.11.28",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dominate",
+      "version": "2.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "grpcio",
+      "version": "1.16.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Markdown",
+      "version": "3.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.18.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-ml-py3",
+      "version": "7.352.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "olefile",
+      "version": "0.46",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opencv-python",
+      "version": "4.2.0.32",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Pillow",
+      "version": "7.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "protobuf",
+      "version": "3.11.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "psutil",
+      "version": "5.7.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pycocotools",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-image",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.4.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "six",
+      "version": "1.14.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard",
+      "version": "2.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboardX",
+      "version": "2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "1.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchprofile",
+      "version": "0.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.42.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Werkzeug",
+      "version": "1.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wget",
+      "version": "3.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "_libgcc_mutex",
+        "version": "main"
+      },
+      {
+        "name": "absl-py",
+        "version": "py38_0"
+      },
+      {
+        "name": "blas",
+        "version": "mkl"
+      },
+      {
+        "name": "c-ares",
+        "version": "h7b6447c_1001"
+      },
+      {
+        "name": "ca-certificates",
+        "version": "hecc5488_0"
+      },
+      {
+        "name": "certifi",
+        "version": "py38_0"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "h6bb024c_0"
+      },
+      {
+        "name": "freetype",
+        "version": "h8a8886c_1"
+      },
+      {
+        "name": "grpcio",
+        "version": "py38hf8bcb03_1"
+      },
+      {
+        "name": "intel-openmp",
+        "version": "166"
+      },
+      {
+        "name": "jpeg",
+        "version": "h024ee3a_2"
+      },
+      {
+        "name": "ld_impl_linux-64",
+        "version": "h53a641e_7"
+      },
+      {
+        "name": "libedit",
+        "version": "hc058e9b_0"
+      },
+      {
+        "name": "libffi",
+        "version": "hd88cf55_4"
+      },
+      {
+        "name": "libgcc-ng",
+        "version": "hdf63c60_0"
+      },
+      {
+        "name": "libgfortran-ng",
+        "version": "hdf63c60_0"
+      },
+      {
+        "name": "libpng",
+        "version": "hbc83047_0"
+      },
+      {
+        "name": "libprotobuf",
+        "version": "hd408876_0"
+      },
+      {
+        "name": "libstdcxx-ng",
+        "version": "hdf63c60_0"
+      },
+      {
+        "name": "libtiff",
+        "version": "h2733197_0"
+      },
+      {
+        "name": "markdown",
+        "version": "py38_0"
+      },
+      {
+        "name": "mkl",
+        "version": "166"
+      },
+      {
+        "name": "mkl-service",
+        "version": "py38he904b0f_0"
+      },
+      {
+        "name": "mkl_fft",
+        "version": "py38ha843d7b_0"
+      },
+      {
+        "name": "mkl_random",
+        "version": "py38h962f231_0"
+      },
+      {
+        "name": "ncurses",
+        "version": "he6710b0_1"
+      },
+      {
+        "name": "ninja",
+        "version": "py38hfd86e86_0"
+      },
+      {
+        "name": "numpy",
+        "version": "py38h4f9e942_0"
+      },
+      {
+        "name": "numpy-base",
+        "version": "py38hde5b4d6_1"
+      },
+      {
+        "name": "olefile",
+        "version": "py_0"
+      },
+      {
+        "name": "openssl",
+        "version": "h516909a_0"
+      },
+      {
+        "name": "pillow",
+        "version": "py38hb39fc2d_0"
+      },
+      {
+        "name": "pip",
+        "version": "py38_1"
+      },
+      {
+        "name": "protobuf",
+        "version": "py38he6710b0_0"
+      },
+      {
+        "name": "python",
+        "version": "h0371630_1"
+      },
+      {
+        "name": "pytorch",
+        "version": "py3.8_cuda10.1.243_cudnn7.6.3_0"
+      },
+      {
+        "name": "readline",
+        "version": "h7b6447c_5"
+      },
+      {
+        "name": "scipy",
+        "version": "py38h0b6359f_0"
+      },
+      {
+        "name": "setuptools",
+        "version": "py38_0"
+      },
+      {
+        "name": "six",
+        "version": "py38_0"
+      },
+      {
+        "name": "sqlite",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "tensorboard",
+        "version": "pyhb38c66f_1"
+      },
+      {
+        "name": "tensorboardx",
+        "version": "py_0"
+      },
+      {
+        "name": "tk",
+        "version": "hbc83047_0"
+      },
+      {
+        "name": "torchvision",
+        "version": "py38_cu101"
+      },
+      {
+        "name": "tqdm",
+        "version": "py_0"
+      },
+      {
+        "name": "werkzeug",
+        "version": "py_0"
+      },
+      {
+        "name": "wheel",
+        "version": "py38_0"
+      },
+      {
+        "name": "xz",
+        "version": "h14c3975_4"
+      },
+      {
+        "name": "zlib",
+        "version": "h7b6447c_3"
+      },
+      {
+        "name": "zstd",
+        "version": "h0b5b093_0"
+      },
+      {
+        "name": "blessings",
+        "version": "1.7"
+      },
+      {
+        "name": "dominate",
+        "version": "2.4.0"
+      },
+      {
+        "name": "gpustat",
+        "version": "0.6.0"
+      },
+      {
+        "name": "nvidia-ml-py3",
+        "version": "7.352.0"
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.2.0.32"
+      },
+      {
+        "name": "psutil",
+        "version": "5.7.0"
+      },
+      {
+        "name": "torchprofile",
+        "version": "0.0.1"
+      },
+      {
+        "name": "wget",
+        "version": "3.2"
+      }
+    ],
+    "source": "conda",
+    "env_name": "gan-compression"
+  },
+  "seeds": [],
+  "license": "Other",
+  "errors": []
+}

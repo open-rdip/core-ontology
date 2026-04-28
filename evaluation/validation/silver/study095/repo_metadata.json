@@ -1,0 +1,341 @@
+{
+  "study_id": "study095",
+  "repo_url": "https://github.com/studio-ousia/bpr",
+  "software_dependencies": [
+    {
+      "name": "absl-py",
+      "version": "0.11.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "attrs",
+      "version": "20.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cachetools",
+      "version": "4.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "certifi",
+      "version": "2020.12.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "chardet",
+      "version": "4.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "click",
+      "version": "7.1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "comet-ml",
+      "version": "3.2.9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "configobj",
+      "version": "5.0.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dulwich",
+      "version": "0.20.14",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "everett",
+      "version": "1.0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "faiss-cpu",
+      "version": "1.6.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "filelock",
+      "version": "3.0.12",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "future",
+      "version": "0.18.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "google-auth",
+      "version": "1.24.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "google-auth-oauthlib",
+      "version": "0.4.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "grpcio",
+      "version": "1.34.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "idna",
+      "version": "2.10",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "importlib-metadata",
+      "version": "3.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "joblib",
+      "version": "1.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jsonschema",
+      "version": "3.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "lmdb",
+      "version": "1.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "markdown",
+      "version": "3.3.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "netifaces",
+      "version": "0.10.9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.19.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-ml-py3",
+      "version": "7.352.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "oauthlib",
+      "version": "3.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "packaging",
+      "version": "20.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "protobuf",
+      "version": "3.14.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyasn1",
+      "version": "0.4.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyasn1-modules",
+      "version": "0.2.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyparsing",
+      "version": "2.4.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyrsistent",
+      "version": "0.17.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pytorch-lightning",
+      "version": "0.9.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyyaml",
+      "version": "5.3.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "regex",
+      "version": "2020.11.13",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "requests",
+      "version": "2.25.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "requests-oauthlib",
+      "version": "1.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "rsa",
+      "version": "4.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sacremoses",
+      "version": "0.0.43",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.1.94",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "six",
+      "version": "1.15.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard",
+      "version": "2.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard-plugin-wit",
+      "version": "1.7.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.7.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "1.6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.46.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "transformers",
+      "version": "2.11.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "3.7.4.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "urllib3",
+      "version": "1.26.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "websocket-client",
+      "version": "0.57.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "werkzeug",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wheel",
+      "version": "0.36.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wrapt",
+      "version": "1.12.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wurlitzer",
+      "version": "2.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "zipp",
+      "version": "3.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "Other",
+  "errors": []
+}

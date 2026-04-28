@@ -1,0 +1,364 @@
+{
+  "study_id": "study005",
+  "project": {
+    "title": "eDiff-I: Text-to-Image Diffusion Models with an Ensemble of Expert Denoisers",
+    "lead_organization": "NVIDIA Corporation",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "python",
+        "version": "3.8.5"
+      },
+      {
+        "name": "pip",
+        "version": "20.3"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "11.3"
+      },
+      {
+        "name": "pytorch",
+        "version": "1.11.0"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.12.0"
+      },
+      {
+        "name": "numpy",
+        "version": "1.19.2"
+      },
+      {
+        "name": "albumentations",
+        "version": "0.4.3"
+      },
+      {
+        "name": "diffusers",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.1.2.30"
+      },
+      {
+        "name": "pudb",
+        "version": "2019.2"
+      },
+      {
+        "name": "invisible-watermark",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "imageio",
+        "version": "2.9.0"
+      },
+      {
+        "name": "imageio-ffmpeg",
+        "version": "0.4.2"
+      },
+      {
+        "name": "pytorch-lightning",
+        "version": "1.4.2"
+      },
+      {
+        "name": "omegaconf",
+        "version": "2.1.1"
+      },
+      {
+        "name": "test-tube",
+        "version": "0.7.5"
+      },
+      {
+        "name": "streamlit",
+        "version": "0.73.1"
+      },
+      {
+        "name": "einops",
+        "version": "0.3.0"
+      },
+      {
+        "name": "torch-fidelity",
+        "version": "0.3.0"
+      },
+      {
+        "name": "transformers",
+        "version": "4.19.2"
+      },
+      {
+        "name": "torchmetrics",
+        "version": "0.6.0"
+      },
+      {
+        "name": "kornia",
+        "version": "0.6"
+      },
+      {
+        "name": "taming-transformers",
+        "version": "master"
+      },
+      {
+        "name": "clip",
+        "version": "main"
+      },
+      {
+        "name": "Imaginaire",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "MS-COCO 2014",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Visual Genome",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Internal NVIDIA Dataset",
+        "format": "images",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Ensemble of Expert Denoisers",
+        "description": "Training specialized diffusion models for different stages of the iterative generation process to improve text alignment and visual quality."
+      },
+      {
+        "name": "Paint-with-Words",
+        "description": "A technique allowing users to select words in a prompt and paint them on a canvas to control the specific spatial layout of objects."
+      },
+      {
+        "name": "Binary-tree-based branching strategy",
+        "description": "A progressive training schedule where a single model is split into specialized models for specific noise level intervals."
+      },
+      {
+        "name": "Classifier-free guidance",
+        "description": "A method to guide the diffusion process toward the conditioning signal without training a separate classifier."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yogesh Balaji",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Seungjun Nah",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Xun Huang",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Arash Vahdat",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jiaming Song",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Qinsheng Zhang",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Karsten Kreis",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Miika Aittala",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Timo Aila",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Samuli Laine",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Bryan Catanzaro",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Tero Karras",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ming-Yu Liu",
+        "affiliation": "NVIDIA Corporation",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "NVIDIA Corporation"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "0.0001",
+        "type": "xsd:float"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.01",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "2048",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "classifier-free guidance sweep",
+        "value": "0 to 10.0",
+        "type": "xsd:string"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "NVIDIA A100",
+        "cuda": "11.3",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Zero-shot FID-30K",
+        "value": "exact value varies by model size/cfg",
+        "split": "test",
+        "dataset": "MS-COCO 2014"
+      },
+      {
+        "metric": "CLIP score",
+        "value": "exact value varies by model size/cfg",
+        "split": "test",
+        "dataset": "Visual Genome"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Pre-training shared model",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "Imaginaire",
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "Internal NVIDIA Dataset"
+        ],
+        "dataset_produced": [
+          "Base Shared Denoiser"
+        ]
+      },
+      {
+        "name": "Expert Specialization",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "Internal NVIDIA Dataset"
+        ],
+        "dataset_produced": [
+          "eDiff-I Ensemble"
+        ]
+      },
+      {
+        "name": "Zero-shot Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "torch-fidelity",
+          "clip"
+        ],
+        "dataset_used": [
+          "MS-COCO 2014",
+          "Visual Genome"
+        ],
+        "dataset_produced": [
+          "FID-CLIP trade-off curves"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Pre-training shared model",
+      "predicate": "usedSoftware",
+      "object": "Imaginaire"
+    },
+    {
+      "subject": "Expert Specialization",
+      "predicate": "follows",
+      "object": "Pre-training shared model"
+    },
+    {
+      "subject": "Expert Specialization",
+      "predicate": "usedMethod",
+      "object": "Binary-tree-based branching strategy"
+    },
+    {
+      "subject": "Zero-shot Evaluation",
+      "predicate": "usedDataset",
+      "object": "MS-COCO 2014"
+    },
+    {
+      "subject": "Zero-shot Evaluation",
+      "predicate": "generatesResult",
+      "object": "Zero-shot FID-30K"
+    },
+    {
+      "subject": "Expert Specialization",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Expert Specialization",
+      "predicate": "executedIn",
+      "object": "Linux"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

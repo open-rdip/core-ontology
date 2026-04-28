@@ -1,0 +1,153 @@
+# RDIP Triples — study020
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study020_Project a rdip:ResearchProject ;
+    rdip:title "CSAW-M: An Ordinal Classification Dataset for Benchmarking Mammographic Masking of Cancer" ;
+    rdip:fundingReference "Region Stockholm (HMT 20200813), Swedish Research Council (2019-04764), and Swedish Breast Cancer Association" ;
+    .
+
+ex:study020_Org1 a vivo:Organization ;
+    rdfs:label "KTH Royal Institute of Technology" .
+ex:study020_Org2 a vivo:Organization ;
+    rdfs:label "Karolinska Institutet" .
+ex:study020_Org3 a vivo:Organization ;
+    rdfs:label "SciLifeLab" .
+ex:study020_Org4 a vivo:Organization ;
+    rdfs:label "Karolinska University Hospital" .
+ex:study020_Org5 a vivo:Organization ;
+    rdfs:label "Saint Göran Hospital" .
+ex:study020_Project rdip:hasLeadOrganization ex:study020_Org1 .
+
+ex:study020_Person1 a vivo:Person ;
+    rdfs:label "Moein Sorkhei" .
+ex:study020_Project rdip:hasParticipant ex:study020_Person1 .
+ex:study020_Person2 a vivo:Person ;
+    rdfs:label "Edward Azavedo" .
+ex:study020_Project rdip:hasParticipant ex:study020_Person2 .
+ex:study020_Person3 a vivo:Person ;
+    rdfs:label "Athanasios Zouzos" .
+ex:study020_Project rdip:hasParticipant ex:study020_Person3 .
+ex:study020_Person4 a vivo:Person ;
+    rdfs:label "Yue Liu" .
+ex:study020_Project rdip:hasParticipant ex:study020_Person4 .
+ex:study020_Person5 a vivo:Person ;
+    rdfs:label "Karin Dembrower" .
+ex:study020_Project rdip:hasParticipant ex:study020_Person5 .
+ex:study020_Person6 a vivo:Person ;
+    rdfs:label "Fredrik Strand" .
+ex:study020_Project rdip:hasParticipant ex:study020_Person6 .
+ex:study020_Person7 a vivo:Person ;
+    rdfs:label "Hossein Azizpour" .
+ex:study020_Project rdip:hasParticipant ex:study020_Person7 .
+ex:study020_Person8 a vivo:Person ;
+    rdfs:label "Kevin Smith" .
+ex:study020_Project rdip:hasParticipant ex:study020_Person8 .
+
+ex:study020_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "CSAW-M_Annotation_Tool" ;
+    .
+ex:study020_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "PyTorch" ;
+    .
+
+ex:study020_Dataset1 a dcat:Dataset ;
+    rdip:title "CSAW-M" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study020_Dataset2 a dcat:Dataset ;
+    rdip:title "CSAW" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "restricted" ;
+    .
+
+ex:study020_Method1 a rdip:Method ;
+    rdip:title "Ordinal Classification" ;
+    rdip:description "A classification task where the classes have a natural order, used here to assess levels of mammographic masking." ;
+    .
+ex:study020_Method2 a rdip:Method ;
+    rdip:title "Deep Learning Regression" ;
+    rdip:description "Training convolutional neural networks to estimate the masking level of mammograms as a continuous value." ;
+    .
+ex:study020_Method3 a rdip:Method ;
+    rdip:title "Majority Voting" ;
+    rdip:description "Combining multiple specialist annotations to form a consensus ground truth." ;
+    .
+
+ex:study020_Param1 a rdip:Parameter ;
+    rdip:parameterName "learning_rate" ;
+    rdip:parameterValue "1e-4" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study020_Param2 a rdip:Parameter ;
+    rdip:parameterName "batch_size" ;
+    rdip:parameterValue "16" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study020_Param3 a rdip:Parameter ;
+    rdip:parameterName "num_epochs" ;
+    rdip:parameterValue "30" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+
+ex:study020_Env1 a rdip:ComputingEnvironment ;
+    rdip:osVersion "Ubuntu 18.04" ;
+    rdip:gpuModel "NVIDIA GeForce RTX 2080 Ti" ;
+    rdip:cudaVersion "11.0" ;
+    .
+
+ex:study020_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "AUC" ;
+    rdip:metricValue "0.64" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "CSAW-M" ;
+    rdip:metricDataType "xsd:float" .
+ex:study020_Result2 a rdip:EvaluationResult ;
+    rdip:metricName "accuracy" ;
+    rdip:metricValue "0.45" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "CSAW-M" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study020_Act1 a rdip:DataCollectionActivity ;
+    rdip:title "Data Collection and Annotation" ;
+    rdip:isPartOfProject ex:study020_Project ;
+    .
+ex:study020_Project rdip:hasActivity ex:study020_Act1 .
+ex:study020_Act2 a rdip:DataProcessingActivity ;
+    rdip:title "Preprocessing" ;
+    rdip:isPartOfProject ex:study020_Project ;
+    .
+ex:study020_Project rdip:hasActivity ex:study020_Act2 .
+ex:study020_Act3 a rdip:SoftwareDevelopmentActivity ;
+    rdip:title "Model Training" ;
+    rdip:isPartOfProject ex:study020_Project ;
+    .
+ex:study020_Project rdip:hasActivity ex:study020_Act3 .
+ex:study020_Act4 a rdip:DataAnalysisActivity ;
+    rdip:title "Evaluation" ;
+    rdip:isPartOfProject ex:study020_Project ;
+    .
+ex:study020_Project rdip:hasActivity ex:study020_Act4 .
+
+# ═══ RELATIONS ═══
+ex:study020_Dataset1 rdip:derivedFrom ex:study020_Dataset2 .
+ex:study020_Act1 rdip:usedSoftware ex:study020_Sw1 .
+ex:study020_Act3 rdip:hasParameter ex:study020_Param1 .
+ex:study020_Act3 rdip:executedIn ex:study020_Env1 .
+ex:study020_Act4 rdip:generatesResult ex:study020_Result1 .
+ex:study020_Act2 rdip:follows ex:study020_Act1 .
+ex:study020_Act3 rdip:follows ex:study020_Act2 .
+ex:study020_Act4 rdip:follows ex:study020_Act3 .
+
+# ═══ END (8 resolved, 0 unresolved) ═══

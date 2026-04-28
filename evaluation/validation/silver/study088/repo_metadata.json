@@ -1,0 +1,29 @@
+{
+  "study_id": "study088",
+  "repo_url": "https://github.com/DarshanDeshpande/jax-models",
+  "software_dependencies": [
+    {
+      "name": "jax",
+      "version": "0.2.21",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "flax",
+      "version": "0.3.6",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "Apache-2.0",
+  "errors": []
+}

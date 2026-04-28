@@ -1,0 +1,65 @@
+{
+  "study_id": "study071",
+  "repo_url": "https://github.com/yuvalkirstain/pickscore",
+  "software_dependencies": [
+    {
+      "name": "accelerate",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "datasets",
+      "version": "2.10.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "deepspeed",
+      "version": "0.8.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "fire",
+      "version": "0.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "hydra-core",
+      "version": "1.3.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "rich",
+      "version": "13.3.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "submitit",
+      "version": "1.4.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "transformers",
+      "version": "4.27.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wandb",
+      "version": "0.12.21",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

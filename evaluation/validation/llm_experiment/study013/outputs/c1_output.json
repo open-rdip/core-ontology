@@ -1,0 +1,257 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Python",
+        "version": "not specified"
+      },
+      {
+        "name": "Scikit-Learn",
+        "version": "not specified"
+      },
+      {
+        "name": "YeastSpotter",
+        "version": "not specified"
+      },
+      {
+        "name": "Zenodo",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COOS-7 (Cells Out Of Sample 7-Class)",
+        "format": "16-bit tiff",
+        "access": "Public (CC-BY-NC 4.0)"
+      },
+      {
+        "name": "Training",
+        "format": "64x64 pixel crops",
+        "access": "Public"
+      },
+      {
+        "name": "Test1",
+        "format": "64x64 pixel crops",
+        "access": "Public"
+      },
+      {
+        "name": "Test2",
+        "format": "64x64 pixel crops",
+        "access": "Public"
+      },
+      {
+        "name": "Test3",
+        "format": "64x64 pixel crops",
+        "access": "Public"
+      },
+      {
+        "name": "Test4",
+        "format": "64x64 pixel crops",
+        "access": "Public"
+      },
+      {
+        "name": "CIFAR",
+        "format": "Image",
+        "access": "General"
+      },
+      {
+        "name": "ImageNet",
+        "format": "Image",
+        "access": "General"
+      }
+    ],
+    "Method": [
+      {
+        "name": "DeepLoc (11-layer CNN)"
+      },
+      {
+        "name": "Haralick texture features (Texture)"
+      },
+      {
+        "name": "VGG16 (ImageNet pretrained CNN)"
+      },
+      {
+        "name": "Paired Cell Inpainting (PCI)"
+      },
+      {
+        "name": "k-nearest neighbor classifier"
+      },
+      {
+        "name": "L1 Logistic Regression"
+      },
+      {
+        "name": "Random Forest"
+      },
+      {
+        "name": "Mask-RCNN segmentation"
+      },
+      {
+        "name": "Random search hyperparameter optimization"
+      },
+      {
+        "name": "Self-supervised learning"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Alex X. Lu",
+        "role": "Lead Author"
+      },
+      {
+        "name": "Wiebke Schormann",
+        "role": "Co-Author"
+      },
+      {
+        "name": "David W. Andrews",
+        "role": "Co-Author"
+      },
+      {
+        "name": "Amy X. Lu",
+        "role": "Co-Author"
+      },
+      {
+        "name": "Marzyeh Ghassemi",
+        "role": "Co-Author"
+      },
+      {
+        "name": "Alan M. Moses",
+        "role": "Co-Author"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Toronto"
+      },
+      {
+        "name": "Sunnybrook Research Institute"
+      },
+      {
+        "name": "Vector Institute"
+      },
+      {
+        "name": "CIFAR"
+      },
+      {
+        "name": "PerkinElmer"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Batch size (DeepLoc)",
+        "value": "128"
+      },
+      {
+        "name": "Training iterations (DeepLoc)",
+        "value": "10000"
+      },
+      {
+        "name": "Image dimensions",
+        "value": "64x64"
+      },
+      {
+        "name": "k (KNN)",
+        "value": "11"
+      },
+      {
+        "name": "Number of classes",
+        "value": "7"
+      },
+      {
+        "name": "Total images in COOS-7",
+        "value": "132209"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "Nvidia (donated)",
+        "cuda": "not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Class-Balanced Error (%)",
+        "value": "1.2",
+        "split": "DeepLoc End-to-End on Test1"
+      },
+      {
+        "metric": "Class-Balanced Error (%)",
+        "value": "7.4",
+        "split": "DeepLoc End-to-End on Test3"
+      },
+      {
+        "metric": "Class-Balanced Error (%)",
+        "value": "5.4",
+        "split": "DeepLoc End-to-End on Test4"
+      },
+      {
+        "metric": "Sensitivity",
+        "value": "0.684",
+        "split": "Early Endosome class on Test4 (DeepLoc)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Curation",
+        "type": "Preprocessing"
+      },
+      {
+        "name": "Cell Segmentation",
+        "type": "Preprocessing"
+      },
+      {
+        "name": "Feature Extraction",
+        "type": "Methodology"
+      },
+      {
+        "name": "Unsupervised Training (PCI)",
+        "type": "Model Training"
+      },
+      {
+        "name": "Supervised Training (DeepLoc)",
+        "type": "Model Training"
+      },
+      {
+        "name": "Hyperparameter Optimization",
+        "type": "Model Tuning"
+      },
+      {
+        "name": "Out-of-sample Benchmark Evaluation",
+        "type": "Evaluation"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Alex X. Lu",
+      "predicate": "affiliated_with",
+      "object": "University of Toronto"
+    },
+    {
+      "subject": "COOS-7",
+      "predicate": "hosted_at",
+      "object": "Zenodo"
+    },
+    {
+      "subject": "DeepLoc",
+      "predicate": "evaluated_on",
+      "object": "COOS-7"
+    },
+    {
+      "subject": "YeastSpotter",
+      "predicate": "used_for",
+      "object": "Cell Segmentation"
+    },
+    {
+      "subject": "Training Activity",
+      "predicate": "precedes",
+      "object": "Out-of-sample Benchmark Evaluation"
+    },
+    {
+      "subject": "Data Curation",
+      "predicate": "precedes",
+      "object": "Cell Segmentation"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {"name": "MMDetection", "version": "v1906.07155"},
+      {"name": "LabelMe", "version": "Not Specified"},
+      {"name": "GLIP", "version": "Not Specified"},
+      {"name": "YOLO-World", "version": "Not Specified"},
+      {"name": "Grounding DINO", "version": "Not Specified"},
+      {"name": "SAM", "version": "Not Specified"}
+    ],
+    "Dataset": [
+      {"name": "COD10K-D", "format": "Bounding Box and Class Label", "access": "Open Source"},
+      {"name": "NC4K-D", "format": "Bounding Box and Class Label", "access": "Open Source"},
+      {"name": "CAMO-D", "format": "Bounding Box and Class Label", "access": "Open Source"},
+      {"name": "COD10K-v2", "format": "Segmentation Mask", "access": "Public"},
+      {"name": "NC4K", "format": "Segmentation Mask", "access": "Public"},
+      {"name": "CAMO", "format": "Segmentation Mask", "access": "Public"}
+    ],
+    "Method": [
+      {"name": "Camouflage-Aware Feature Refinement (CAFR)"},
+      {"name": "Adaptive Gradient Propagation (AGP)"},
+      {"name": "Sparse Feature Refinement (SFR)"},
+      {"name": "AdamW Optimizer"},
+      {"name": "Swin Transformer"},
+      {"name": "Focal Loss"},
+      {"name": "GIoU Loss"}
+    ],
+    "Person": [
+      {"name": "Zhimeng Xin", "role": "Researcher"},
+      {"name": "Tianxu Wu", "role": "Researcher"},
+      {"name": "Shiming Chen", "role": "Researcher"},
+      {"name": "Shuo Ye", "role": "Researcher"},
+      {"name": "Zijing Xie", "role": "Researcher"},
+      {"name": "Yixiong Zou", "role": "Researcher"},
+      {"name": "Xinge You", "role": "Researcher"},
+      {"name": "Yufei Guo", "role": "Researcher"}
+    ],
+    "Organization": [
+      {"name": "Huazhong University of Science and Technology"},
+      {"name": "Intelligent Science and Technology Academy of CASIC"}
+    ],
+    "Parameter": [
+      {"name": "Initial learning rate", "value": "0.0003"},
+      {"name": "Momentum", "value": "0.05"},
+      {"name": "SFR crop width", "value": "200"},
+      {"name": "SFR crop height", "value": "200"}
+    ],
+    "RandomSeed": [
+      {"name": "Training groups", "value": "10"}
+    ],
+    "ComputingEnvironment": [
+      {"os": "Not Specified", "gpu": "Required for Online SFR", "cuda": "Required for Online SFR"}
+    ],
+    "EvaluationResult": [
+      {"metric": "mAP", "value": "99.1", "split": "COD10K-D (Faster R-CNN Swin-L)"},
+      {"metric": "FLOPs", "value": "353.98G", "split": "GDino + CAFR (Swin-T)"}
+    ],
+    "Activity": [
+      {"name": "Annotating RCOD datasets", "type": "DataProductionActivity"},
+      {"name": "Training with CAFR", "type": "DataAnalysisActivity"},
+      {"name": "Extracting bounding boxes from masks", "type": "DataProcessingActivity"},
+      {"name": "Implementing CAFR in MMDetection", "type": "SoftwareDevelopmentActivity"}
+    ]
+  },
+  "relations": [
+    {"subject": "Training with CAFR", "predicate": "usedSoftware", "object": "MMDetection"},
+    {"subject": "Training with CAFR", "predicate": "usedDataset", "object": "COD10K-D"},
+    {"subject": "Training with CAFR", "predicate": "usedMethod", "object": "Adaptive Gradient Propagation (AGP)"},
+    {"subject": "Annotating RCOD datasets", "predicate": "usedSoftware", "object": "LabelMe"},
+    {"subject": "Annotating RCOD datasets", "predicate": "generatesDataset", "object": "COD10K-D"},
+    {"subject": "COD10K-D", "predicate": "derivedFrom", "object": "COD10K-v2"},
+    {"subject": "NC4K-D", "predicate": "derivedFrom", "object": "NC4K"},
+    {"subject": "CAMO-D", "predicate": "derivedFrom", "object": "CAMO"},
+    {"subject": "Training with CAFR", "predicate": "hasParameter", "object": "Initial learning rate"},
+    {"subject": "Training with CAFR", "predicate": "generatesResult", "object": "mAP"}
+  ]
+}

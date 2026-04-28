@@ -1,0 +1,231 @@
+{
+  "study_id": "study052",
+  "project": {
+    "title": "Robust Decision Trees Against Adversarial Examples",
+    "lead_organization": "Massachusetts Institute of Technology",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "tensorflow",
+        "version": "1.12.0"
+      },
+      {
+        "name": "keras",
+        "version": null
+      },
+      {
+        "name": "autovar",
+        "version": "0.0.1a3"
+      },
+      {
+        "name": "cleverhans",
+        "version": "3.0.1"
+      },
+      {
+        "name": "cvxopt",
+        "version": "1.2.3"
+      },
+      {
+        "name": "cvxpy",
+        "version": "1.0.21"
+      },
+      {
+        "name": "Cython",
+        "version": "0.29.5"
+      },
+      {
+        "name": "joblib",
+        "version": "0.13.1"
+      },
+      {
+        "name": "jupyter",
+        "version": "1.0.0"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.0.2"
+      },
+      {
+        "name": "mkdir-p",
+        "version": "0.1.1"
+      },
+      {
+        "name": "mnist",
+        "version": "0.2.2"
+      },
+      {
+        "name": "numpy",
+        "version": "1.16.1"
+      },
+      {
+        "name": "pandas",
+        "version": "0.24.1"
+      },
+      {
+        "name": "scipy",
+        "version": "1.2.1"
+      },
+      {
+        "name": "XGBoost",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "MNIST",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Fashion-MNIST",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Robust Decision Tree Building",
+        "description": "A novel algorithm to learn robust trees by optimizing performance under the worst-case perturbation of input features."
+      },
+      {
+        "name": "Adversarial Training",
+        "description": "A technique used to improve model robustness by training on adversarial examples."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Hongge Chen",
+        "affiliation": "Massachusetts Institute of Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Huan Zhang",
+        "affiliation": "University of California, Los Angeles",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Duane Boning",
+        "affiliation": "Massachusetts Institute of Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Cho-Jui Hsieh",
+        "affiliation": "University of California, Los Angeles",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "University of California, Los Angeles"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "epsilon",
+        "value": "0.3",
+        "type": "xsd:float"
+      },
+      {
+        "name": "num_trees",
+        "value": "null",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "0",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "accuracy",
+        "value": "null",
+        "split": "test",
+        "dataset": "MNIST"
+      },
+      {
+        "metric": "robustness",
+        "value": "null",
+        "split": "test",
+        "dataset": "Fashion-MNIST"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Algorithm Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "tensorflow",
+          "cleverhans"
+        ],
+        "dataset_used": [
+          "MNIST",
+          "Fashion-MNIST"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Robustness Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "XGBoost"
+        ],
+        "dataset_used": [
+          "MNIST",
+          "Fashion-MNIST"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Algorithm Development",
+      "predicate": "usedMethod",
+      "object": "Robust Decision Tree Building"
+    },
+    {
+      "subject": "Robustness Evaluation",
+      "predicate": "generatesResult",
+      "object": "accuracy"
+    },
+    {
+      "subject": "Robustness Evaluation",
+      "predicate": "generatesResult",
+      "object": "robustness"
+    },
+    {
+      "subject": "Algorithm Development",
+      "predicate": "usedDataset",
+      "object": "MNIST"
+    },
+    {
+      "subject": "Robustness Evaluation",
+      "predicate": "follows",
+      "object": "Algorithm Development"
+    },
+    {
+      "subject": "tensorflow",
+      "predicate": "softwareDependency",
+      "object": "keras"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

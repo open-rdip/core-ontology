@@ -1,0 +1,219 @@
+{
+  "study_id": "study024",
+  "project": {
+    "title": "Non-convex Quadratic Programming Using Coherent Optical Networks",
+    "lead_organization": "1QB Information Technologies (1QBit)",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "setuptools",
+        "version": "66.0.0"
+      },
+      {
+        "name": "future",
+        "version": "0.18.3"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.6.3"
+      },
+      {
+        "name": "numpy",
+        "version": "1.24.1"
+      },
+      {
+        "name": "pandas",
+        "version": "1.5.2"
+      },
+      {
+        "name": "pytest",
+        "version": "7.2.0"
+      },
+      {
+        "name": "scipy",
+        "version": "1.10.0"
+      },
+      {
+        "name": "torch",
+        "version": "1.13.1"
+      },
+      {
+        "name": "json-stream",
+        "version": "1.5.2"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.64.1"
+      },
+      {
+        "name": "xmlrunner",
+        "version": "1.7.7"
+      },
+      {
+        "name": "python",
+        "version": "3.10"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "BoxQP",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Coherent Continuous Variable Machine (CCVM)",
+        "description": "A framework using interacting quantum optical oscillators to solve continuous non-convex optimization problems by simulating a diffusion process."
+      },
+      {
+        "name": "delay-line CCVM",
+        "description": "A variant of the CCVM experiment where the network is implemented using optical delay lines."
+      },
+      {
+        "name": "measurement-feedback CCVM",
+        "description": "A variant of the CCVM experiment involving weak measurements and feedback loops."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Farhad Khosravi",
+        "affiliation": "1QB Information Technologies (1QBit)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ugur Yildiz",
+        "affiliation": "1QB Information Technologies (1QBit)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Artur Scherer",
+        "affiliation": "1QB Information Technologies (1QBit)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Pooya Ronagh",
+        "affiliation": "1QB Information Technologies (1QBit)",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "1QB Information Technologies (1QBit)"
+      },
+      {
+        "name": "University of Waterloo"
+      },
+      {
+        "name": "Perimeter Institute for Theoretical Physics"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "time_step",
+        "value": "0.01",
+        "type": "xsd:float"
+      },
+      {
+        "name": "noise_scale",
+        "value": "1.0",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "1",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu",
+        "gpu": "null",
+        "cuda": "null",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "objective_value",
+        "value": "-1029.5",
+        "split": "test",
+        "dataset": "BoxQP"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Software Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "torch",
+          "numpy"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Numerical Benchmarking",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "BoxQP"
+        ],
+        "dataset_produced": [
+          "Benchmarking results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Numerical Benchmarking",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Numerical Benchmarking",
+      "predicate": "usedDataset",
+      "object": "BoxQP"
+    },
+    {
+      "subject": "Numerical Benchmarking",
+      "predicate": "usedMethod",
+      "object": "Coherent Continuous Variable Machine (CCVM)"
+    },
+    {
+      "subject": "Numerical Benchmarking",
+      "predicate": "generatesResult",
+      "object": "objective_value"
+    },
+    {
+      "subject": "torch",
+      "predicate": "softwareDependency",
+      "object": "numpy"
+    },
+    {
+      "subject": "Numerical Benchmarking",
+      "predicate": "follows",
+      "object": "Software Development"
+    },
+    {
+      "subject": "Numerical Benchmarking",
+      "predicate": "executedIn",
+      "object": "Ubuntu"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

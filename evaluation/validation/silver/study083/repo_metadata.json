@@ -1,0 +1,127 @@
+{
+  "study_id": "study083",
+  "repo_url": "https://github.com/joseangelmartinb/gklr",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "python",
+        "version": "3.7"
+      },
+      {
+        "name": "numpy",
+        "version": "1.15.0"
+      },
+      {
+        "name": "scipy",
+        "version": ""
+      },
+      {
+        "name": "pandas",
+        "version": ""
+      },
+      {
+        "name": "tqdm",
+        "version": ""
+      },
+      {
+        "name": "ipython",
+        "version": ""
+      },
+      {
+        "name": "matplotlib",
+        "version": ""
+      },
+      {
+        "name": "scikit-learn",
+        "version": ""
+      },
+      {
+        "name": "pympler",
+        "version": ""
+      },
+      {
+        "name": "pip",
+        "version": ""
+      },
+      {
+        "name": "pyscaffold",
+        "version": ""
+      },
+      {
+        "name": "sphinx_rtd_theme  # to build docs locally",
+        "version": ""
+      },
+      {
+        "name": "-e .  # install git checkout of gklr in editable mode",
+        "version": ""
+      },
+      {
+        "name": "jupyterlab",
+        "version": ""
+      },
+      {
+        "name": "pylint",
+        "version": ""
+      },
+      {
+        "name": "pytest",
+        "version": ""
+      },
+      {
+        "name": "pytest-cov",
+        "version": ""
+      },
+      {
+        "name": "pytest-xdist",
+        "version": ""
+      },
+      {
+        "name": "pytest-virtualenv",
+        "version": ""
+      },
+      {
+        "name": "pytest-fixture-config",
+        "version": ""
+      },
+      {
+        "name": "pytest-shutil",
+        "version": ""
+      },
+      {
+        "name": "twine",
+        "version": ""
+      },
+      {
+        "name": "pre_commit",
+        "version": ""
+      },
+      {
+        "name": "tox",
+        "version": ""
+      },
+      {
+        "name": "nbdime",
+        "version": ""
+      },
+      {
+        "name": "nbstripout",
+        "version": ""
+      },
+      {
+        "name": "sphinx",
+        "version": ""
+      },
+      {
+        "name": "recommonmark",
+        "version": ""
+      }
+    ],
+    "source": "conda",
+    "env_name": "gklr"
+  },
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

@@ -1,0 +1,1377 @@
+{
+  "study_id": "study013",
+  "repo_url": "https://github.com/zenodo/zenodo",
+  "software_dependencies": [
+    {
+      "name": "alembic",
+      "version": "1.0.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "amqp",
+      "version": "2.4.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "angular-gettext-babel",
+      "version": "0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "aniso8601",
+      "version": "6.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "arrow",
+      "version": "0.13.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "asn1crypto",
+      "version": "1.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "attrs",
+      "version": "19.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "autosemver",
+      "version": "0.5.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Babel",
+      "version": "2.6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "backports-abc",
+      "version": "0.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "backports.functools-lru-cache",
+      "version": "1.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "backports.shutil-get-terminal-size",
+      "version": "1.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "billiard",
+      "version": "3.5.0.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "binaryornot",
+      "version": "0.4.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "bleach",
+      "version": "3.1.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "blinker",
+      "version": "1.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cairocffi",
+      "version": "0.9.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "CairoSVG",
+      "version": "1.0.22",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cchardet",
+      "version": "2.1.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "celery",
+      "version": "4.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "certifi",
+      "version": "2019.3.9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cffi",
+      "version": "1.12.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "chardet",
+      "version": "3.0.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "citeproc-py",
+      "version": "0.5.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "citeproc-py-styles",
+      "version": "0.1.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "click",
+      "version": "7.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "configparser",
+      "version": "3.7.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "contextlib2",
+      "version": "0.5.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cookiecutter",
+      "version": "1.6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "counter-robots",
+      "version": "2018.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cryptography",
+      "version": "2.6.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "datacite",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dcxml",
+      "version": "0.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "decorator",
+      "version": "4.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dictdiffer",
+      "version": "0.8.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dojson",
+      "version": "1.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dulwich",
+      "version": "0.19.11",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "elasticsearch",
+      "version": "7.0.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "elasticsearch-dsl",
+      "version": "7.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "entrypoints",
+      "version": "0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "enum34",
+      "version": "1.1.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask",
+      "version": "1.0.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Admin",
+      "version": "1.5.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Alembic",
+      "version": "2.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Assets",
+      "version": "0.12",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-BabelEx",
+      "version": "0.9.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Breadcrumbs",
+      "version": "0.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Caching",
+      "version": "1.6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-CeleryExt",
+      "version": "0.3.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Collect",
+      "version": "1.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Cors",
+      "version": "3.0.9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-DebugToolbar",
+      "version": "0.10.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-IIIF",
+      "version": "0.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-KVSession",
+      "version": "0.6.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Limiter",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Login",
+      "version": "0.4.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Mail",
+      "version": "0.9.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Menu",
+      "version": "0.7.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-OAuthlib",
+      "version": "0.9.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Principal",
+      "version": "0.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-RESTful",
+      "version": "0.3.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-Security",
+      "version": "3.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "flask-shell-ipython",
+      "version": "0.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-SQLAlchemy",
+      "version": "2.4.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "flask-talisman",
+      "version": "0.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-WTF",
+      "version": "0.14.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "fs",
+      "version": "0.5.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ftfy",
+      "version": "4.4.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "funcsigs",
+      "version": "1.0.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "future",
+      "version": "0.17.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "github3.py",
+      "version": "1.0.0a4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "html5lib",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "httpretty",
+      "version": "0.9.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "humanize",
+      "version": "0.5.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "idna",
+      "version": "2.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "IDUtils",
+      "version": "1.1.14",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "infinity",
+      "version": "1.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "intervals",
+      "version": "0.8.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-access",
+      "version": "1.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-accounts",
+      "version": "1.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-admin",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-app",
+      "version": "1.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-assets",
+      "version": "1.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-banners",
+      "version": "1.0.0a0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-base",
+      "version": "1.2.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-cache",
+      "version": "1.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-celery",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-communities",
+      "version": "1.0.0a29",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-config",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-csl-rest",
+      "version": "1.0.0a1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-db",
+      "version": "1.0.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-deposit",
+      "version": "1.0.0a11",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-files-rest",
+      "version": "1.0.0a23.post3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-formatter",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-github",
+      "version": "1.0.0a28",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-i18n",
+      "version": "1.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-iiif",
+      "version": "1.0.0a5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-indexer",
+      "version": "1.1.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-jsonschemas",
+      "version": "1.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-logging",
+      "version": "1.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-mail",
+      "version": "1.0.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-marc21",
+      "version": "1.0.0a9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-oaiserver",
+      "version": "1.1.1.post1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-oauth2server",
+      "version": "1.0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-oauthclient",
+      "version": "1.1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-openaire",
+      "version": "1.0.0a16",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-opendefinition",
+      "version": "1.0.0a12",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-pidrelations",
+      "version": "1.0.0a4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-pidstore",
+      "version": "1.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-previewer",
+      "version": "1.0.0a11",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-queues",
+      "version": "1.0.0a2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-records",
+      "version": "1.3.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-records-files",
+      "version": "1.0.0a11.post1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-records-rest",
+      "version": "1.6.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-records-ui",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-rest",
+      "version": "1.1.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-search",
+      "version": "1.2.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-search-ui",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-sipstore",
+      "version": "1.0.0a7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-stats",
+      "version": "1.0.0a14.post3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-theme",
+      "version": "1.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-userprofiles",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "invenio-webhooks",
+      "version": "1.0.0a4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ipaddr",
+      "version": "2.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ipaddress",
+      "version": "1.0.22",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ipython",
+      "version": "5.8.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ipython-genutils",
+      "version": "0.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "isbnlib",
+      "version": "3.10.10",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "itsdangerous",
+      "version": "1.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Jinja2",
+      "version": "2.10.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jinja2-time",
+      "version": "0.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "joblib",
+      "version": "0.14.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jsmin",
+      "version": "2.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jsonpatch",
+      "version": "1.23",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jsonpointer",
+      "version": "2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jsonref",
+      "version": "0.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jsonresolver",
+      "version": "0.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jsonschema",
+      "version": "2.6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jupyter-client",
+      "version": "5.2.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jupyter-core",
+      "version": "4.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "kombu",
+      "version": "4.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "limits",
+      "version": "1.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "lxml",
+      "version": "4.6.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Mako",
+      "version": "1.0.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "1.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "marshmallow",
+      "version": "2.20.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "maxminddb",
+      "version": "1.5.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "maxminddb-geolite2",
+      "version": "2018.703",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "mistune",
+      "version": "0.8.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "mock",
+      "version": "2.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "msgpack-python",
+      "version": "0.5.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nbconvert",
+      "version": "5.4.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nbformat",
+      "version": "4.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ndg-httpsclient",
+      "version": "0.4.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "node-semver",
+      "version": "0.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.16.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "oauthlib",
+      "version": "2.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandocfilters",
+      "version": "1.4.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "passlib",
+      "version": "1.7.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pathlib2",
+      "version": "2.3.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pbr",
+      "version": "5.1.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pexpect",
+      "version": "4.6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pickleshare",
+      "version": "0.7.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Pillow",
+      "version": "6.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pluggy",
+      "version": "0.12",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "poyo",
+      "version": "0.4.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "prompt-toolkit",
+      "version": "1.0.15",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "psycopg2-binary",
+      "version": "2.7.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ptyprocess",
+      "version": "0.6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyasn1",
+      "version": "0.4.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pycountry",
+      "version": "18.12.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pycparser",
+      "version": "2.19",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Pygments",
+      "version": "2.3.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "PyJWT",
+      "version": "1.7.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pykerberos",
+      "version": "1.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyOpenSSL",
+      "version": "17.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.8.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-editor",
+      "version": "1.0.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-geoip",
+      "version": "1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-slugify",
+      "version": "3.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pytz",
+      "version": "2018.9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "PyYAML",
+      "version": "5.4.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyzmq",
+      "version": "18.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "raven",
+      "version": "6.10.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "redis",
+      "version": "3.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "requests",
+      "version": "2.21.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "requests-oauthlib",
+      "version": "1.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "requests-kerberos",
+      "version": "0.12.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scandir",
+      "version": "1.10.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "0.20.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.2.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Sickle",
+      "version": "0.6.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "simplegeneric",
+      "version": "0.8.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "simplejson",
+      "version": "3.16.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "simplekv",
+      "version": "0.12.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "singledispatch",
+      "version": "3.4.0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "six",
+      "version": "1.12.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "speaklater",
+      "version": "1.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "SQLAlchemy",
+      "version": "1.3.24",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "SQLAlchemy-Continuum",
+      "version": "1.3.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "SQLAlchemy-Utils",
+      "version": "0.33.11",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "statsd",
+      "version": "3.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "testpath",
+      "version": "0.4.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "text-unidecode",
+      "version": "1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tornado",
+      "version": "5.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "traitlets",
+      "version": "4.3.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ua-parser",
+      "version": "0.8.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Unidecode",
+      "version": "1.0.22",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "uritemplate.py",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "uritools",
+      "version": "2.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "urllib3",
+      "version": "1.24.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "uWSGI",
+      "version": "2.0.20",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "uwsgitop",
+      "version": "0.11",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "validators",
+      "version": "0.12.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "vine",
+      "version": "1.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Wand",
+      "version": "0.5.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.1.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "webargs",
+      "version": "5.5.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "webassets",
+      "version": "0.12.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "webencodings",
+      "version": "0.5.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Werkzeug",
+      "version": "0.15.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "whichcraft",
+      "version": "0.5.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wsgi-statsd",
+      "version": "0.3.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "WTForms",
+      "version": "2.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "WTForms-Alchemy",
+      "version": "0.16.9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "WTForms-Components",
+      "version": "0.10.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "python:2.7",
+    "python_version": "2.7"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "GPL",
+  "errors": []
+}

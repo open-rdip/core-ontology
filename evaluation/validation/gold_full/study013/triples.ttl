@@ -1,0 +1,203 @@
+# RDIP Triples — study013
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study013_Project a rdip:ResearchProject ;
+    rdip:title "The Cells Out of Sample (COOS) dataset and benchmarks for measuring out-of-sample generalization of image classifiers" ;
+    rdip:fundingReference "CIFAR AI Chair, and the Baidu Scholarship Program 2019" ;
+    .
+
+ex:study013_Org1 a vivo:Organization ;
+    rdfs:label "University of Toronto" .
+ex:study013_Org2 a vivo:Organization ;
+    rdfs:label "Sunnybrook Research Institute" .
+ex:study013_Org3 a vivo:Organization ;
+    rdfs:label "Vector Institute" .
+ex:study013_Org4 a vivo:Organization ;
+    rdfs:label "CAGEF" .
+ex:study013_Project rdip:hasLeadOrganization ex:study013_Org1 .
+
+ex:study013_Person1 a vivo:Person ;
+    rdfs:label "Alex X. Lu" .
+ex:study013_Project rdip:hasParticipant ex:study013_Person1 .
+ex:study013_Person2 a vivo:Person ;
+    rdfs:label "Wiebke Schormann" .
+ex:study013_Project rdip:hasParticipant ex:study013_Person2 .
+ex:study013_Person3 a vivo:Person ;
+    rdfs:label "David W. Andrews" .
+ex:study013_Project rdip:hasParticipant ex:study013_Person3 .
+ex:study013_Person4 a vivo:Person ;
+    rdfs:label "Amy X. Lu" .
+ex:study013_Project rdip:hasParticipant ex:study013_Person4 .
+ex:study013_Person5 a vivo:Person ;
+    rdfs:label "Marzyeh Ghassemi" .
+ex:study013_Project rdip:hasParticipant ex:study013_Person5 .
+ex:study013_Person6 a vivo:Person ;
+    rdfs:label "Alan M. Moses" .
+ex:study013_Project rdip:hasParticipant ex:study013_Person6 .
+
+ex:study013_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "alembic" ;
+    rdip:version "1.0.8" ;
+    .
+ex:study013_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "amqp" ;
+    rdip:version "2.4.2" ;
+    .
+ex:study013_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "celery" ;
+    rdip:version "4.1.1" ;
+    .
+ex:study013_Sw4 a rdip:SoftwareApplication ;
+    rdip:title "elasticsearch" ;
+    rdip:version "7.0.5" ;
+    .
+ex:study013_Sw5 a rdip:SoftwareApplication ;
+    rdip:title "YeastSpotter" ;
+    .
+ex:study013_Sw6 a rdip:SoftwareApplication ;
+    rdip:title "python" ;
+    rdip:version "2.7" ;
+    .
+
+ex:study013_Dataset1 a dcat:Dataset ;
+    rdip:title "COOS-7" ;
+    rdip:dataFormat "tiff" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study013_Dataset2 a dcat:Dataset ;
+    rdip:title "Training" ;
+    rdip:dataFormat "tiff" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study013_Dataset2 rdip:derivedFrom ex:study013_Dataset1 .
+ex:study013_Dataset3 a dcat:Dataset ;
+    rdip:title "Test1" ;
+    rdip:dataFormat "tiff" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study013_Dataset3 rdip:derivedFrom ex:study013_Dataset1 .
+ex:study013_Dataset4 a dcat:Dataset ;
+    rdip:title "Test2" ;
+    rdip:dataFormat "tiff" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study013_Dataset4 rdip:derivedFrom ex:study013_Dataset1 .
+ex:study013_Dataset5 a dcat:Dataset ;
+    rdip:title "Test3" ;
+    rdip:dataFormat "tiff" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study013_Dataset5 rdip:derivedFrom ex:study013_Dataset1 .
+ex:study013_Dataset6 a dcat:Dataset ;
+    rdip:title "Test4" ;
+    rdip:dataFormat "tiff" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study013_Dataset6 rdip:derivedFrom ex:study013_Dataset1 .
+ex:study013_Dataset7 a dcat:Dataset ;
+    rdip:title "CIFAR" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study013_Dataset8 a dcat:Dataset ;
+    rdip:title "ImageNet" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study013_Dataset9 a dcat:Dataset ;
+    rdip:title "Raw microscopy images" ;
+    rdip:dataFormat "tiff" ;
+    rdip:accessLevel "open" ;
+    .
+
+ex:study013_Method1 a rdip:Method ;
+    rdip:title "Supervised deep CNN" ;
+    rdip:description "End-to-end classification using a supervised deep convolutional neural network." ;
+    .
+ex:study013_Method2 a rdip:Method ;
+    rdip:title "Self-supervised CNN" ;
+    rdip:description "A method using representations learned from a self-supervised convolutional neural network." ;
+    .
+ex:study013_Method3 a rdip:Method ;
+    rdip:title "Transferred neural network features" ;
+    rdip:description "Classification using features transferred from pre-trained neural networks." ;
+    .
+ex:study013_Method4 a rdip:Method ;
+    rdip:title "YeastSpotter segmentation" ;
+    rdip:description "A trained mask-RCNN used to segment nucleus channels into individual cell crops." ;
+    .
+
+ex:study013_Param1 a rdip:Parameter ;
+    rdip:parameterName "image_size" ;
+    rdip:parameterValue "64x64" ;
+    rdip:parameterDataType "xsd:string" ;
+    .
+ex:study013_Param2 a rdip:Parameter ;
+    rdip:parameterName "bit_depth" ;
+    rdip:parameterValue "16-bit" ;
+    rdip:parameterDataType "xsd:string" ;
+    .
+ex:study013_Param3 a rdip:Parameter ;
+    rdip:parameterName "num_classes" ;
+    rdip:parameterValue "7" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study013_Param4 a rdip:Parameter ;
+    rdip:parameterName "total_images" ;
+    rdip:parameterValue "132,209" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+
+ex:study013_Env1 a rdip:ComputingEnvironment ;
+    rdip:osVersion "Linux" ;
+    .
+
+ex:study013_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "accuracy" ;
+    rdip:metricValue "0.990" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Test1" ;
+    rdip:metricDataType "xsd:float" .
+ex:study013_Result2 a rdip:EvaluationResult ;
+    rdip:metricName "accuracy" ;
+    rdip:metricValue "0.979" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Test3" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study013_Act1 a rdip:DataCollectionActivity ;
+    rdip:title "Data Collection" ;
+    rdip:isPartOfProject ex:study013_Project ;
+    .
+ex:study013_Project rdip:hasActivity ex:study013_Act1 .
+ex:study013_Act2 a rdip:DataProcessingActivity ;
+    rdip:title "Image Processing" ;
+    rdip:isPartOfProject ex:study013_Project ;
+    .
+ex:study013_Project rdip:hasActivity ex:study013_Act2 .
+ex:study013_Act3 a rdip:DataAnalysisActivity ;
+    rdip:title "Benchmarking" ;
+    rdip:isPartOfProject ex:study013_Project ;
+    .
+ex:study013_Project rdip:hasActivity ex:study013_Act3 .
+
+# ═══ RELATIONS ═══
+ex:study013_Dataset1 rdip:derivedFrom ex:study013_Dataset9 .
+ex:study013_Dataset3 rdip:derivedFrom ex:study013_Dataset1 .
+ex:study013_Dataset6 rdip:derivedFrom ex:study013_Dataset1 .
+ex:study013_Act2 rdip:usedSoftware ex:study013_Sw5 .
+ex:study013_Act3 rdip:usedMethod ex:study013_Method1 .
+ex:study013_Act3 rdip:generatesResult ex:study013_Result2 .
+ex:study013_Act3 rdip:follows ex:study013_Act2 .
+
+# ═══ END (7 resolved, 0 unresolved) ═══

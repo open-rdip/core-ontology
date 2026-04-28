@@ -1,0 +1,130 @@
+{
+  "study_id": "study091",
+  "project": {
+    "title": "Technical Debt Management Automation: State of the Art and Future Perspectives",
+    "lead_organization": "University of Groningen",
+    "funding": "São Paulo Research Foundation (FAPESP) grants 2021/04301-4, 2022/15312-3, 2015/24144-7; National Council for Scientific and Technological Development (CNPq) grants 312634/2018-8, 315217/2021-4; Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES) finance code 001 "
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "micromamba",
+        "version": "latest"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Primary Study Collection",
+        "format": "PDF",
+        "access": "open",
+        "role": "used",
+        "derived_from": "Scopus, IEEE Xplore, ACM Digital Library"
+      },
+      {
+        "name": "Extracted Data and Classification",
+        "format": "CSV",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "Primary Study Collection"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Systematic Mapping Study (SMS)",
+        "description": "A research methodology used to provide an overview of a research area through classification and counting of contributions."
+      }
+    ],
+    "Person": [
+      {
+        "name": "João Paulo Biazotto",
+        "affiliation": "University of Groningen",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Daniel Feitosa",
+        "affiliation": "University of Groningen",
+        "role": null
+      },
+      {
+        "name": "Paris Avgeriou",
+        "affiliation": "University of Groningen",
+        "role": null
+      },
+      {
+        "name": "Elisa Yumi Nakagawa",
+        "affiliation": "University of São Paulo",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Groningen"
+      },
+      {
+        "name": "University of São Paulo"
+      },
+      {
+        "name": "Bernoulli Institute for Mathematics, Computer Science and Artificial Intelligence"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Primary Study Selection",
+        "type": "DataCollectionActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Primary Study Collection"
+        ]
+      },
+      {
+        "name": "Data Extraction and Synthesis",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [
+          "Primary Study Collection"
+        ],
+        "dataset_produced": [
+          "Extracted Data and Classification"
+        ]
+      },
+      {
+        "name": "Analysis of TDM Automation Trends",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [],
+        "dataset_used": [
+          "Extracted Data and Classification"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Systematic Mapping Study (SMS)",
+      "predicate": "usedDataset",
+      "object": "Primary Study Collection"
+    },
+    {
+      "subject": "Data Extraction and Synthesis",
+      "predicate": "generatesDataset",
+      "object": "Extracted Data and Classification"
+    },
+    {
+      "subject": "Extracted Data and Classification",
+      "predicate": "derivedFrom",
+      "object": "Primary Study Collection"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

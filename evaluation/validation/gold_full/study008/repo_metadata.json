@@ -1,0 +1,21 @@
+{
+  "study_id": "study008",
+  "repo_url": "https://github.com/konstantinjdobler/tight-budget-llm-adaptation",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "nvidia/cuda:12.1.1-cudnn8-devel-ubuntu22.04",
+    "cuda_version": "12.1.1",
+    "os": "Ubuntu 22.04"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "42",
+      "file": "dlib/data/dataset.py",
+      "context": "seed=42"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

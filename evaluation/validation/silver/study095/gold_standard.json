@@ -1,0 +1,376 @@
+{
+  "study_id": "study095",
+  "project": {
+    "title": "Efficient Passage Retrieval with Hashing for Open-domain Question Answering",
+    "lead_organization": "Studio Ousia",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "absl-py",
+        "version": "0.11.0"
+      },
+      {
+        "name": "attrs",
+        "version": "20.3.0"
+      },
+      {
+        "name": "cachetools",
+        "version": "4.2.0"
+      },
+      {
+        "name": "certifi",
+        "version": "2020.12.5"
+      },
+      {
+        "name": "chardet",
+        "version": "4.0.0"
+      },
+      {
+        "name": "click",
+        "version": "7.1.2"
+      },
+      {
+        "name": "comet-ml",
+        "version": "3.2.9"
+      },
+      {
+        "name": "configobj",
+        "version": "5.0.6"
+      },
+      {
+        "name": "dulwich",
+        "version": "0.20.14"
+      },
+      {
+        "name": "everett",
+        "version": "1.0.3"
+      },
+      {
+        "name": "faiss-cpu",
+        "version": "1.6.5"
+      },
+      {
+        "name": "filelock",
+        "version": "3.0.12"
+      },
+      {
+        "name": "future",
+        "version": "0.18.2"
+      },
+      {
+        "name": "google-auth",
+        "version": "1.24.0"
+      },
+      {
+        "name": "google-auth-oauthlib",
+        "version": "0.4.2"
+      },
+      {
+        "name": "grpcio",
+        "version": "1.34.0"
+      },
+      {
+        "name": "idna",
+        "version": "2.10"
+      },
+      {
+        "name": "importlib-metadata",
+        "version": "3.3.0"
+      },
+      {
+        "name": "joblib",
+        "version": "1.0.0"
+      },
+      {
+        "name": "jsonschema",
+        "version": "3.2.0"
+      },
+      {
+        "name": "lmdb",
+        "version": "1.0.0"
+      },
+      {
+        "name": "markdown",
+        "version": "3.3.3"
+      },
+      {
+        "name": "netifaces",
+        "version": "0.10.9"
+      },
+      {
+        "name": "numpy",
+        "version": "1.19.4"
+      },
+      {
+        "name": "nvidia-ml-py3",
+        "version": "7.352.0"
+      },
+      {
+        "name": "oauthlib",
+        "version": "3.1.0"
+      },
+      {
+        "name": "packaging",
+        "version": "20.8"
+      },
+      {
+        "name": "protobuf",
+        "version": "3.14.0"
+      },
+      {
+        "name": "pyasn1",
+        "version": "0.4.8"
+      },
+      {
+        "name": "pyasn1-modules",
+        "version": "0.2.8"
+      },
+      {
+        "name": "pyparsing",
+        "version": "2.4.7"
+      },
+      {
+        "name": "pyrsistent",
+        "version": "0.17.3"
+      },
+      {
+        "name": "pytorch-lightning",
+        "version": "0.9.0"
+      },
+      {
+        "name": "pyyaml",
+        "version": "5.3.1"
+      },
+      {
+        "name": "regex",
+        "version": "2020.11.13"
+      },
+      {
+        "name": "requests",
+        "version": "2.25.1"
+      },
+      {
+        "name": "requests-oauthlib",
+        "version": "1.3.0"
+      },
+      {
+        "name": "rsa",
+        "version": "4.6"
+      },
+      {
+        "name": "sacremoses",
+        "version": "0.0.43"
+      },
+      {
+        "name": "sentencepiece",
+        "version": "0.1.94"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Natural Questions",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "TriviaQA",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Wikipedia",
+        "format": "text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Binary Passage Retriever (BPR)",
+        "description": "A memory-efficient neural retrieval model that integrates learning-to-hash into Dense Passage Retriever to represent the passage index using binary codes."
+      },
+      {
+        "name": "Dense Passage Retriever (DPR)",
+        "description": "A state-of-the-art retrieval model that encodes passages into continuous vectors."
+      },
+      {
+        "name": "Learning-to-hash",
+        "description": "A technique used to map high-dimensional data into compact binary codes while preserving similarity."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Ikuya Yamada",
+        "affiliation": "Studio Ousia",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Akari Asai",
+        "affiliation": "University of Washington",
+        "role": null
+      },
+      {
+        "name": "Hannaneh Hajishirzi",
+        "affiliation": "University of Washington",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Studio Ousia"
+      },
+      {
+        "name": "RIKEN"
+      },
+      {
+        "name": "University of Washington"
+      },
+      {
+        "name": "Allen Institute for AI"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "gamma",
+        "value": "0.1",
+        "type": "xsd:float"
+      },
+      {
+        "name": "alpha",
+        "value": "2.0",
+        "type": "xsd:float"
+      },
+      {
+        "name": "learning_rate",
+        "value": "2e-5",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "128",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "max_grad_norm",
+        "value": "1.0",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "top-20 accuracy",
+        "value": "78.0",
+        "split": "test",
+        "dataset": "Natural Questions"
+      },
+      {
+        "metric": "top-100 accuracy",
+        "value": "86.1",
+        "split": "test",
+        "dataset": "Natural Questions"
+      },
+      {
+        "metric": "top-20 accuracy",
+        "value": "79.3",
+        "split": "test",
+        "dataset": "TriviaQA"
+      },
+      {
+        "metric": "top-100 accuracy",
+        "value": "84.9",
+        "split": "test",
+        "dataset": "TriviaQA"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "BPR Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "pytorch-lightning"
+        ],
+        "dataset_used": [
+          "Natural Questions",
+          "TriviaQA"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Passage Indexing",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [
+          "faiss-cpu"
+        ],
+        "dataset_used": [
+          "Wikipedia"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Open-domain QA Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "numpy"
+        ],
+        "dataset_used": [
+          "Natural Questions",
+          "TriviaQA"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Binary Passage Retriever (BPR)",
+      "predicate": "usedMethod",
+      "object": "Learning-to-hash"
+    },
+    {
+      "subject": "Binary Passage Retriever (BPR)",
+      "predicate": "derivedFrom",
+      "object": "Dense Passage Retriever (DPR)"
+    },
+    {
+      "subject": "BPR Training",
+      "predicate": "hasParameter",
+      "object": "gamma"
+    },
+    {
+      "subject": "BPR Training",
+      "predicate": "hasParameter",
+      "object": "alpha"
+    },
+    {
+      "subject": "BPR Training",
+      "predicate": "usedSoftware",
+      "object": "pytorch-lightning"
+    },
+    {
+      "subject": "Passage Indexing",
+      "predicate": "usedSoftware",
+      "object": "faiss-cpu"
+    },
+    {
+      "subject": "Open-domain QA Evaluation",
+      "predicate": "generatesResult",
+      "object": "top-20 accuracy"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

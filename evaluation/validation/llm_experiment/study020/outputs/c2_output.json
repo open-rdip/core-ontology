@@ -1,0 +1,101 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "CSAW-M Annotation Tool",
+        "version": "1.0",
+        "url": "https://github.com/MoeinSorkhei/CSAW-M_Annotation_Tool/"
+      },
+      {
+        "name": "Libra",
+        "version": "not specified",
+        "description": "Automated breast radiodensity assessment software"
+      },
+      {
+        "name": "Docker",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "CSAW-M",
+        "format": "PNG (16-bit raw, 8-bit preprocessed), CSV",
+        "access": "Restricted (Figshare/SciLifeLab Data Repository)",
+        "identifier": "10.6084/m9.figshare.16835203"
+      },
+      {
+        "name": "CSAW",
+        "format": "DICOM",
+        "access": "Private population-based cohort"
+      },
+      {
+        "name": "CSAW-S",
+        "format": "Digital mammograms",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Ordinal Classification"
+      },
+      {
+        "name": "Pairwise Comparison"
+      },
+      {
+        "name": "Ternary Search"
+      },
+      {
+        "name": "ResNet34 Baseline"
+      }
+    ],
+    "Person": [
+      { "name": "Moein Sorkhei", "role": "Researcher" },
+      { "name": "Edward Azavedo", "role": "Researcher" },
+      { "name": "Athanasios Zouzos", "role": "Researcher" },
+      { "name": "Yue Liu", "role": "Researcher" },
+      { "name": "Karin Dembrower", "role": "Researcher" },
+      { "name": "Fredrik Strand", "role": "Researcher" },
+      { "name": "Hossein Azizpour", "role": "Researcher" },
+      { "name": "Dimitra Ntoula", "role": "Researcher" },
+      { "name": "Kevin Smith", "role": "Researcher" }
+    ],
+    "Organization": [
+      { "name": "KTH Royal Institute of Technology" },
+      { "name": "SciLifeLab" },
+      { "name": "Karolinska Institutet" },
+      { "name": "Karolinska University Hospital" },
+      { "name": "Saint Göran Hospital" }
+    ],
+    "Parameter": [
+      { "name": "Number of individuals", "value": "10,020" },
+      { "name": "Masking levels", "value": "8" },
+      { "name": "Image resolution", "value": "632x512" }
+    ],
+    "RandomSeed": [
+      { "name": "Seed list for sorting", "value": "6 sorted mammograms" }
+    ],
+    "ComputingEnvironment": [
+      { "os": "not specified", "gpu": "not specified", "cuda": "not specified" }
+    ],
+    "EvaluationResult": [
+      { "metric": "AUC", "value": "0.66", "split": "Public Test (Interval Cancer)" },
+      { "metric": "Odds Ratio", "value": "3.2", "split": "Public Test (Interval Cancer)" }
+    ],
+    "Activity": [
+      { "name": "Dataset Creation", "type": "prov:Activity" },
+      { "name": "Annotation Procedure", "type": "prov:Activity" },
+      { "name": "Model Training", "type": "prov:Activity" },
+      { "name": "Evaluation", "type": "prov:Activity" }
+    ]
+  },
+  "relations": [
+    { "subject": "CSAW-M", "predicate": "wasDerivedFrom", "object": "CSAW" },
+    { "subject": "CSAW-M", "predicate": "wasGeneratedBy", "object": "Dataset Creation" },
+    { "subject": "Annotation Procedure", "predicate": "used", "object": "CSAW-M Annotation Tool" },
+    { "subject": "Annotation Procedure", "predicate": "wasAssociatedWith", "object": "Moein Sorkhei" },
+    { "subject": "Model Training", "predicate": "used", "object": "CSAW-M" },
+    { "subject": "Dataset Creation", "predicate": "used", "object": "Libra" },
+    { "subject": "Evaluation", "predicate": "wasInformedBy", "object": "Model Training" },
+    { "subject": "CSAW-M", "predicate": "wasAssociatedWith", "object": "KTH Royal Institute of Technology" }
+  ]
+}

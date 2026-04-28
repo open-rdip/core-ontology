@@ -1,0 +1,187 @@
+{
+  "study_id": "study082",
+  "project": {
+    "title": "Recurrent Independent Mechanisms",
+    "lead_organization": "Mila, Université de Montréal",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "pytorch",
+        "version": "gpu_0"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "0"
+      },
+      {
+        "name": "cudnn",
+        "version": "cuda10.0_0"
+      },
+      {
+        "name": "h5py",
+        "version": "py37h7918eee_0"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Moving MNIST",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": "MNIST"
+      },
+      {
+        "name": "Bouncing Balls",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CIFAR-10",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Recurrent Independent Mechanisms (RIMs)",
+        "description": "A recurrent architecture in which multiple groups of recurrent cells operate with nearly independent transition dynamics and communicate sparingly through attention."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Anirudh Goyal",
+        "affiliation": "Mila, Université de Montréal",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Alex Lamb",
+        "affiliation": "Mila, Université de Montréal",
+        "role": null
+      },
+      {
+        "name": "Jordan Hoffmann",
+        "affiliation": "Mila, Université de Montréal",
+        "role": null
+      },
+      {
+        "name": "Shagun Sodhani",
+        "affiliation": "Mila, Université de Montréal",
+        "role": null
+      },
+      {
+        "name": "Sergey Levine",
+        "affiliation": "UC Berkeley",
+        "role": null
+      },
+      {
+        "name": "Yoshua Bengio",
+        "affiliation": "Mila, Université de Montréal",
+        "role": null
+      },
+      {
+        "name": "Bernhard Schölkopf",
+        "affiliation": "MPI for Intelligent Systems",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Mila, Université de Montréal"
+      },
+      {
+        "name": "UC Berkeley"
+      },
+      {
+        "name": "MPI for Intelligent Systems"
+      },
+      {
+        "name": "Google Research"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": "NVIDIA",
+        "cuda": "10.0",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Model Training and Evaluation",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "Moving MNIST",
+          "Bouncing Balls",
+          "CIFAR-10"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Recurrent Independent Mechanisms (RIMs)",
+      "predicate": "usedSoftware",
+      "object": "pytorch"
+    },
+    {
+      "subject": "Model Training and Evaluation",
+      "predicate": "usedMethod",
+      "object": "Recurrent Independent Mechanisms (RIMs)"
+    },
+    {
+      "subject": "Model Training and Evaluation",
+      "predicate": "usedDataset",
+      "object": "Moving MNIST"
+    },
+    {
+      "subject": "Model Training and Evaluation",
+      "predicate": "usedDataset",
+      "object": "Bouncing Balls"
+    },
+    {
+      "subject": "Model Training and Evaluation",
+      "predicate": "usedDataset",
+      "object": "CIFAR-10"
+    },
+    {
+      "subject": "event_based/train_cifar.py",
+      "predicate": "hasParameter",
+      "object": "seed"
+    },
+    {
+      "subject": "event_based/splitcross.py",
+      "predicate": "hasParameter",
+      "object": "seed"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

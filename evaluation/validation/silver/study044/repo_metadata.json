@@ -1,0 +1,36 @@
+{
+  "study_id": "study044",
+  "repo_url": "https://github.com/eric-ai-lab/soft-thinking",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "nvidia/cuda:12.4.1-cudnn9-devel-ubuntu22.04",
+    "cuda_version": "12.4.1",
+    "os": "Ubuntu 22.04"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "0",
+      "file": "run_sglang_nothinking.py",
+      "context": "seed=0"
+    },
+    {
+      "value": "1",
+      "file": "sglang_soft_thinking_pkg/benchmark/dspy/bench_dspy_intro.py",
+      "context": "seed=1"
+    },
+    {
+      "value": "2023",
+      "file": "sglang_soft_thinking_pkg/benchmark/dspy/bench_dspy_intro.py",
+      "context": "seed=2023"
+    },
+    {
+      "value": "42",
+      "file": "sglang_soft_thinking_pkg/benchmark/kernels/minmax-text-01-lightning_attention/benchmark_lightning_attention_decode.py",
+      "context": "torch.manual_seed(42"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

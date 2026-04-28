@@ -1,0 +1,148 @@
+{
+  "study_id": "study041",
+  "project": {
+    "title": "Garbage Collection for Rust: The Finalizer Frontier",
+    "lead_organization": "King's College London",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "ALLOY",
+        "version": null
+      },
+      {
+        "name": "Rust",
+        "version": "1.78.0"
+      },
+      {
+        "name": "debian",
+        "version": "bookworm"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "som-rs",
+        "format": "BC",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Finalizer Safety Analysis",
+        "description": "Rejects unsound destructors from automatically being reused as finalizers."
+      },
+      {
+        "name": "Finalizer Elision",
+        "description": "Optimises away unnecessary finalizers."
+      },
+      {
+        "name": "Premature Finalizer Prevention",
+        "description": "Ensures that finalizers are only run when it is provably safe to do so."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Jacob Hughes",
+        "affiliation": "King's College London",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Laurence Tratt",
+        "affiliation": "King's College London",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "King's College London"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Debian Bookworm",
+        "gpu": null,
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "execution_time",
+        "value": "138.59 ±5.18",
+        "split": "test",
+        "dataset": "som-rs-bc bounce"
+      },
+      {
+        "metric": "execution_time",
+        "value": "134.24 ±0.22",
+        "split": "test",
+        "dataset": "som-rs-bc bounce"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Garbage Collection Implementation",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "Rust"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Benchmarking",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "ALLOY"
+        ],
+        "dataset_used": [
+          "som-rs"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "ALLOY",
+      "predicate": "usedMethod",
+      "object": "Finalizer Safety Analysis"
+    },
+    {
+      "subject": "ALLOY",
+      "predicate": "usedMethod",
+      "object": "Finalizer Elision"
+    },
+    {
+      "subject": "ALLOY",
+      "predicate": "usedMethod",
+      "object": "Premature Finalizer Prevention"
+    },
+    {
+      "subject": "Benchmarking",
+      "predicate": "usedDataset",
+      "object": "som-rs"
+    },
+    {
+      "subject": "Benchmarking",
+      "predicate": "generatesResult",
+      "object": "execution_time"
+    },
+    {
+      "subject": "ALLOY",
+      "predicate": "executedIn",
+      "object": "Debian Bookworm"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

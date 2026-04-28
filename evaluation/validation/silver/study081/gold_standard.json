@@ -1,0 +1,214 @@
+{
+  "study_id": "study081",
+  "project": {
+    "title": "Requirements and Motivations of Low-Resource Speech Synthesis for Language Revitalization",
+    "lead_organization": "National Research Council Canada",
+    "funding": "Indigenous Languages Technology project at the National Research Council Canada "
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "epitran",
+        "version": "1.9"
+      },
+      {
+        "name": "g2p",
+        "version": "0.5.20220318"
+      },
+      {
+        "name": "g2p-en",
+        "version": "2.1.0"
+      },
+      {
+        "name": "inflect",
+        "version": "4.1.0"
+      },
+      {
+        "name": "librosa",
+        "version": "0.7.2"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.2.2"
+      },
+      {
+        "name": "nltk",
+        "version": "3.5"
+      },
+      {
+        "name": "numba",
+        "version": "0.48"
+      },
+      {
+        "name": "numpy",
+        "version": "1.19.0"
+      },
+      {
+        "name": "panphon",
+        "version": "0.19"
+      },
+      {
+        "name": "pillow",
+        "version": "9.1.0"
+      },
+      {
+        "name": "pypinyin",
+        "version": "0.39.0"
+      },
+      {
+        "name": "pyworld",
+        "version": "0.2.10"
+      },
+      {
+        "name": "PyYAML",
+        "version": "5.4.1"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "0.23.2"
+      },
+      {
+        "name": "scipy",
+        "version": "1.5.0"
+      },
+      {
+        "name": "soundfile",
+        "version": "0.10.3.post1"
+      },
+      {
+        "name": "tensorboard",
+        "version": "2.2.2"
+      },
+      {
+        "name": "tgt",
+        "version": "1.4.4"
+      },
+      {
+        "name": "torch",
+        "version": "1.7.0"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.46.1"
+      },
+      {
+        "name": "unidecode",
+        "version": "1.1.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "LJSpeech",
+        "format": "audio/wav",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Kanien'kéha data",
+        "format": "audio/wav",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Gitksan data",
+        "format": "audio/wav",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "SENĆOŦEN data",
+        "format": "audio/wav",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "FastSpeech2",
+        "description": "A non-autoregressive text-to-speech model used for low-resource speech synthesis."
+      },
+      {
+        "name": "Tacotron2",
+        "description": "An autoregressive text-to-speech model used as a baseline."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Aidan Pine",
+        "affiliation": "National Research Council Canada",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Dan Wells",
+        "affiliation": "University of Edinburgh",
+        "role": null
+      },
+      {
+        "name": "Patrick Littell",
+        "affiliation": "National Research Council Canada",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "National Research Council Canada"
+      },
+      {
+        "name": "University of Edinburgh"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "System Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "torch",
+          "librosa",
+          "epitran"
+        ],
+        "dataset_used": [
+          "LJSpeech",
+          "Kanien'kéha data",
+          "Gitksan data",
+          "SENĆOŦEN data"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Aidan Pine",
+      "predicate": "hasActivityRole",
+      "object": "System Development"
+    },
+    {
+      "subject": "System Development",
+      "predicate": "usedMethod",
+      "object": "FastSpeech2"
+    },
+    {
+      "subject": "System Development",
+      "predicate": "usedDataset",
+      "object": "LJSpeech"
+    },
+    {
+      "subject": "FastSpeech2",
+      "predicate": "softwareDependency",
+      "object": "torch"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

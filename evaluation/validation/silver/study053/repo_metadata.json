@@ -1,0 +1,89 @@
+{
+  "study_id": "study053",
+  "repo_url": "https://github.com/maxzanella/clip-lora",
+  "software_dependencies": [
+    {
+      "name": "flake8",
+      "version": "3.7.9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "yapf",
+      "version": "0.29.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "isort",
+      "version": "4.3.21",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "yacs",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "gdown",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "future",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ftfy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "regex",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wilds",
+      "version": "1.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tabulate",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "Other",
+  "errors": []
+}

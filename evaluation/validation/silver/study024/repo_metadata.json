@@ -1,0 +1,88 @@
+{
+  "study_id": "study024",
+  "repo_url": "https://github.com/1qb-information-technologies/ccvm",
+  "software_dependencies": [
+    {
+      "name": "setuptools",
+      "version": "66.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "future",
+      "version": "0.18.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.6.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.24.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "1.5.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pytest",
+      "version": "7.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.10.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "1.13.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "json-stream",
+      "version": "1.5.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.64.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "xmlrunner",
+      "version": "1.7.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "1qbit/ubuntu20-python:3.10",
+    "python_version": "3.10",
+    "os": "Ubuntu"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "1",
+      "file": "ccvm_simulators/ccvmplotlib/problem_metadata/boxqp_metadata.py",
+      "context": "seed=1"
+    }
+  ],
+  "license": "Other",
+  "errors": []
+}

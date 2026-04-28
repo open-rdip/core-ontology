@@ -1,0 +1,141 @@
+{
+  "study_id": "study079",
+  "repo_url": "https://github.com/ukplab/arxiv2024-lfqa-hallucination",
+  "software_dependencies": [
+    {
+      "name": "dkpro-cassis",
+      "version": "0.7.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "inceptalytics",
+      "version": "0.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wordcloud",
+      "version": "1.8.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "transformers",
+      "version": "4.34.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "2.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "accelerate",
+      "version": "0.23.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "langchain",
+      "version": "0.0.312",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pycountry",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "flash-attn",
+      "version": "2.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "einops",
+      "version": "0.7.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sentencepiece",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "deepspeed",
+      "version": "0.10.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "accelerate",
+      "version": "0.21.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "peft",
+      "version": "0.4.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "bitsandbytes",
+      "version": "0.41.1",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "protobuf",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wandb",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "vllm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "42",
+      "file": "src/modelling/self_refine.py",
+      "context": "seed=42"
+    },
+    {
+      "value": "22",
+      "file": "src/visualizations/bar_plots.py",
+      "context": "random.seed(22"
+    },
+    {
+      "value": "28",
+      "file": "src/evaluation/selfcheck.py",
+      "context": "torch.manual_seed(28"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

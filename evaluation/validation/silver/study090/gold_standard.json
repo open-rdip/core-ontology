@@ -1,0 +1,289 @@
+{
+  "study_id": "study090",
+  "project": {
+    "title": "BEVDepth: Acquisition of Reliable Depth for Multi-view 3D Object Detection",
+    "lead_organization": "Institute of Computing Technology, CAS",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "pytorch-lightning",
+        "version": "1.6.0"
+      },
+      {
+        "name": "setuptools",
+        "version": "59.5.0"
+      },
+      {
+        "name": "torch",
+        "version": "1.9.0"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.10.0"
+      },
+      {
+        "name": "numba",
+        "version": null
+      },
+      {
+        "name": "numpy",
+        "version": null
+      },
+      {
+        "name": "nuscenes-devkit",
+        "version": null
+      },
+      {
+        "name": "opencv-python-headless",
+        "version": null
+      },
+      {
+        "name": "pandas",
+        "version": null
+      },
+      {
+        "name": "scikit-image",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": null
+      },
+      {
+        "name": "tensorboardX",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "nuScenes",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "BEVDepth",
+        "description": "A 3D object detector for camera-based Bird's-Eye-View detection that leverages explicit depth supervision and a camera-awareness depth estimation module."
+      },
+      {
+        "name": "Camera-awareness Depth Prediction",
+        "description": "A module that uses camera intrinsic and extrinsic parameters as input to facilitate depth predicting capability."
+      },
+      {
+        "name": "Depth Refinement Module",
+        "description": "A module designed to counter side effects of imprecise feature unprojection using residual blocks."
+      },
+      {
+        "name": "Efficient Voxel Pooling",
+        "description": "A customized GPU-based operator for fast conversion of multi-view features into BEV space."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yinhao Li",
+        "affiliation": "Institute of Computing Technology, CAS",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zheng Ge",
+        "affiliation": "MEGVII Technology",
+        "role": null
+      },
+      {
+        "name": "Guanyi Yu",
+        "affiliation": "MEGVII Technology",
+        "role": null
+      },
+      {
+        "name": "Jinrong Yang",
+        "affiliation": "Huazhong University of Science and Technology",
+        "role": null
+      },
+      {
+        "name": "Zengran Wang",
+        "affiliation": "MEGVII Technology",
+        "role": null
+      },
+      {
+        "name": "Yukang Shi",
+        "affiliation": "Xi'an Jiaotong University",
+        "role": null
+      },
+      {
+        "name": "Jianjian Sun",
+        "affiliation": "MEGVII Technology",
+        "role": null
+      },
+      {
+        "name": "Zeming Li",
+        "affiliation": "MEGVII Technology",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Institute of Computing Technology, CAS"
+      },
+      {
+        "name": "MEGVII Technology"
+      },
+      {
+        "name": "University of Chinese Academy of Sciences"
+      },
+      {
+        "name": "Huazhong University of Science and Technology"
+      },
+      {
+        "name": "Xi'an Jiaotong University"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "2e-4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "64",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "24",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.01",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": "NVIDIA GeForce RTX 3090",
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "NDS",
+        "value": "60.9%",
+        "split": "test",
+        "dataset": "nuScenes"
+      },
+      {
+        "metric": "mAP",
+        "value": "52.8%",
+        "split": "test",
+        "dataset": "nuScenes"
+      },
+      {
+        "metric": "mATE",
+        "value": "0.308",
+        "split": "test",
+        "dataset": "nuScenes"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Depth Supervision Preprocessing",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "nuscenes-devkit",
+          "numpy"
+        ],
+        "dataset_used": [
+          "nuScenes"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "torch",
+          "pytorch-lightning"
+        ],
+        "dataset_used": [
+          "nuScenes"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "nuscenes-devkit"
+        ],
+        "dataset_used": [
+          "nuScenes"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "BEVDepth",
+      "predicate": "usedMethod",
+      "object": "Camera-awareness Depth Prediction"
+    },
+    {
+      "subject": "BEVDepth",
+      "predicate": "usedMethod",
+      "object": "Depth Refinement Module"
+    },
+    {
+      "subject": "BEVDepth",
+      "predicate": "usedMethod",
+      "object": "Efficient Voxel Pooling"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedDataset",
+      "object": "nuScenes"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedSoftware",
+      "object": "pytorch-lightning"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "generatesResult",
+      "object": "NDS"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "generatesResult",
+      "object": "mAP"
+    },
+    {
+      "subject": "torch",
+      "predicate": "softwareDependency",
+      "object": "numpy"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,139 @@
+{
+  "study_id": "study073",
+  "repo_url": "https://github.com/NVlabs/FoundationStereo",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04",
+    "cuda_version": "12.4.1",
+    "os": "Ubuntu 22.04"
+  },
+  "conda": {
+    "deps": [
+      {
+        "name": "python",
+        "version": "3.11"
+      },
+      {
+        "name": "pip",
+        "version": ""
+      },
+      {
+        "name": "torch",
+        "version": "2.4.1"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.19.1"
+      },
+      {
+        "name": "torchaudio",
+        "version": "2.4.1"
+      },
+      {
+        "name": "scikit-image",
+        "version": ""
+      },
+      {
+        "name": "omegaconf",
+        "version": ""
+      },
+      {
+        "name": "opencv-contrib-python",
+        "version": ""
+      },
+      {
+        "name": "imgaug",
+        "version": ""
+      },
+      {
+        "name": "ninja",
+        "version": ""
+      },
+      {
+        "name": "timm",
+        "version": ""
+      },
+      {
+        "name": "albumentations",
+        "version": ""
+      },
+      {
+        "name": "jupyterlab",
+        "version": ""
+      },
+      {
+        "name": "scipy",
+        "version": ""
+      },
+      {
+        "name": "joblib",
+        "version": ""
+      },
+      {
+        "name": "scikit-learn",
+        "version": ""
+      },
+      {
+        "name": "ruamel.yaml",
+        "version": ""
+      },
+      {
+        "name": "trimesh",
+        "version": ""
+      },
+      {
+        "name": "pyyaml",
+        "version": ""
+      },
+      {
+        "name": "imageio",
+        "version": ""
+      },
+      {
+        "name": "open3d",
+        "version": ""
+      },
+      {
+        "name": "transformations",
+        "version": ""
+      },
+      {
+        "name": "einops",
+        "version": ""
+      },
+      {
+        "name": "gdown",
+        "version": ""
+      },
+      {
+        "name": "nodejs",
+        "version": ""
+      },
+      {
+        "name": "xformers",
+        "version": "0.0.28.post1"
+      },
+      {
+        "name": "huggingface-hub",
+        "version": ""
+      }
+    ],
+    "source": "conda",
+    "env_name": "foundation_stereo"
+  },
+  "seeds": [
+    {
+      "value": "0",
+      "file": "scripts/run_demo_batch.py",
+      "context": "set_seed(0"
+    },
+    {
+      "value": "31",
+      "file": "dinov2/dinov2/utils/utils.py",
+      "context": "seed=31"
+    }
+  ],
+  "license": "Other",
+  "errors": []
+}

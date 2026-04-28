@@ -1,0 +1,45 @@
+{
+  "study_id": "study018",
+  "repo_url": "https://github.com/markson14/WheatDet",
+  "software_dependencies": [
+    {
+      "name": "ninja",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "yacs",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cython",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "nvidia/cuda:${CUDA}-cudnn${CUDNN}-devel-ubuntu16.04",
+    "os": "Ubuntu 16.04"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

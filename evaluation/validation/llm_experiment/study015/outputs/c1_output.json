@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {"name": "Gmsh", "version": "51"},
+      {"name": "PETSc/TAO", "version": "ANL-21/39 - Revision 3.19"},
+      {"name": "hypre", "version": "not specified"}
+    ],
+    "Dataset": [
+      {"name": "Benchmarks for single-phase flow in fractured porous media", "format": "not specified", "access": "public"}
+    ],
+    "Method": [
+      {"name": "Block Preconditioner"},
+      {"name": "Schur complements approximation"},
+      {"name": "Fixed-stress approximation"},
+      {"name": "Constrained Pressure Residual (CPR)"},
+      {"name": "System-AMG"},
+      {"name": "Linear transformation for saddle-point singularity"},
+      {"name": "Mixed-dimensional discrete fracture-matrix modeling"},
+      {"name": "Implicit Euler scheme"},
+      {"name": "Semi-smooth Newton method"},
+      {"name": "Multi-point flux approximation (MPFA)"},
+      {"name": "Multi-point stress approximation (MPSA)"},
+      {"name": "First-order upwinding scheme"},
+      {"name": "GMRES"},
+      {"name": "Incomplete LU factorization (ILU)"}
+    ],
+    "Person": [
+      {"name": "Yury Zabegaev", "role": "Author"},
+      {"name": "Inga Berre", "role": "Author"},
+      {"name": "Eirik Keilegavlen", "role": "Author"}
+    ],
+    "Organization": [
+      {"name": "Center for Modeling of Coupled Subsurface Dynamics, Department of Mathematics, University of Bergen"}
+    ],
+    "Parameter": [
+      {"name": "Biot coefficient", "value": "α"},
+      {"name": "Lame coefficients", "value": "G, λ_Lame"},
+      {"name": "Fluid compressibility", "value": "γ"},
+      {"name": "Porosity", "value": "φ"},
+      {"name": "Fluid density", "value": "ρ"},
+      {"name": "Time step", "value": "Δt"},
+      {"name": "Solid thermal expansion", "value": "β^s"}
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {"os": "not specified", "gpu": "not specified", "cuda": "not specified"}
+    ],
+    "EvaluationResult": [
+      {"metric": "GMRES iterations", "value": "scales well", "split": "grid refinement experiments"},
+      {"metric": "Robustness", "value": "performs robustly", "split": "various fracture states, friction coefficients and Peclét number"}
+    ],
+    "Activity": [
+      {"name": "Mathematical modeling", "type": "Theory development"},
+      {"name": "Discretization using cell-centered finite volume schemes", "type": "Numerical method design"},
+      {"name": "Construction of preconditioning algorithm", "type": "Algorithm development"},
+      {"name": "Preprocessing for saddle-point singularities", "type": "Algorithm step"},
+      {"name": "Decoupling of physics subproblems (Contact, Momentum, Energy, Mass)", "type": "Algorithm step"},
+      {"name": "Numerical evaluation through fluid injection experiments", "type": "Experimentation"}
+    ]
+  },
+  "relations": [
+    {"subject": "Yury Zabegaev", "predicate": "is affiliated with", "object": "University of Bergen"},
+    {"subject": "Block Preconditioner", "predicate": "uses", "object": "Schur complements approximation"},
+    {"subject": "Block Preconditioner", "predicate": "uses", "object": "Fixed-stress approximation"},
+    {"subject": "Block Preconditioner", "predicate": "evaluated by", "object": "Numerical evaluation through fluid injection experiments"},
+    {"subject": "Gmsh", "predicate": "used for", "object": "Discretization using cell-centered finite volume schemes"},
+    {"subject": "GMRES", "predicate": "is preconditioned by", "object": "Block Preconditioner"},
+    {"subject": "Mathematical modeling", "predicate": "precedes", "object": "Discretization using cell-centered finite volume schemes"},
+    {"subject": "Discretization using cell-centered finite volume schemes", "predicate": "precedes", "object": "Construction of preconditioning algorithm"},
+    {"subject": "Construction of preconditioning algorithm", "predicate": "precedes", "object": "Numerical evaluation through fluid injection experiments"}
+  ]
+}

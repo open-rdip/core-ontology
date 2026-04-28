@@ -1,0 +1,95 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {"name": "HISTOCARTOGRAPHY", "version": "v1"},
+      {"name": "DGL", "version": "state-of-the-art"},
+      {"name": "PyTorch", "version": "latest"},
+      {"name": "torchvision", "version": "latest"},
+      {"name": "HoVerNet", "version": "Graham et al. 2019"},
+      {"name": "QUPATH", "version": "Bankhead et al."},
+      {"name": "HISTOMICSTK", "version": "Beezley et al."},
+      {"name": "STAINTOOLS", "version": "Byfield et al."},
+      {"name": "SYNTAX", "version": "Byfield et al."},
+      {"name": "HISTOLAB", "version": "Arbitrio et al."},
+      {"name": "OPENSLIDE", "version": "Gilbert et al."}
+    ],
+    "Dataset": [
+      {"name": "BRACS", "format": "Tumor RoI", "access": "public"},
+      {"name": "BACH", "format": "Tumor RoI", "access": "public"},
+      {"name": "SICAPv2", "format": "WSI", "access": "public"},
+      {"name": "UZH", "format": "TMA", "access": "public"},
+      {"name": "PanNuke", "format": "nuclei", "access": "public"},
+      {"name": "MoNuSac", "format": "nuclei", "access": "public"},
+      {"name": "ImageNet", "format": "images", "access": "public"}
+    ],
+    "Method": [
+      {"name": "Vahadane Normalization"},
+      {"name": "Macenko Normalization"},
+      {"name": "Otsu thresholding"},
+      {"name": "Simple Linear Iterative Clustering (SLIC)"},
+      {"name": "k-Nearest Neighbors (k-NN)"},
+      {"name": "Region Adjacency Graph (RAG)"},
+      {"name": "Graph Isomorphism Network (GIN)"},
+      {"name": "Principal Neighborhood Aggregation (PNA)"},
+      {"name": "GNNEXPLAINER"},
+      {"name": "GRAPHGRAD-CAM"},
+      {"name": "GRAPHGRAD-CAM++"},
+      {"name": "GRAPHLRP"},
+      {"name": "ResNet34"}
+    ],
+    "Person": [
+      {"name": "Guillaume Jaume", "role": "Lead Author"},
+      {"name": "Pushpak Pati", "role": "Lead Author"},
+      {"name": "Valentin Anklin", "role": "Author"},
+      {"name": "Antonio Foncubierta", "role": "Author"},
+      {"name": "Maria Gabrani", "role": "Author"}
+    ],
+    "Organization": [
+      {"name": "IBM Research, Zurich"},
+      {"name": "EPFL, Lausanne"},
+      {"name": "ETH, Zurich"}
+    ],
+    "Parameter": [
+      {"name": "k (k-NN)", "value": "5"},
+      {"name": "threshold distance", "value": "50 pixels"},
+      {"name": "nuclei patch size", "value": "72x72"},
+      {"name": "superpixels per image", "value": "400"},
+      {"name": "hidden units (GNN)", "value": "64"},
+      {"name": "hidden units (MLP)", "value": "128"}
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {"os": "Not specified", "gpu": "NVIDIA P100", "cuda": "Not specified"},
+      {"os": "Not specified", "gpu": "single-core POWER8 processor", "cuda": "Not specified"}
+    ],
+    "EvaluationResult": [
+      {"metric": "Weighted F1", "value": "61.5 \u00b1 0.9", "split": "BRACS HACT-Net"},
+      {"metric": "Weighted F1", "value": "90.7 \u00b1 0.5", "split": "BACH HACT-Net"},
+      {"metric": "Weighted F1", "value": "62.0 \u00b1 3.6", "split": "SICAPv2 Classification"},
+      {"metric": "Average Dice", "value": "44.3 \u00b1 2.0", "split": "SICAPv2 Segmentation"},
+      {"metric": "Average Dice", "value": "66.0 \u00b1 3.1", "split": "UZH Segmentation"}
+    ],
+    "Activity": [
+      {"name": "Nuclei Detection", "type": "DataProcessingActivity"},
+      {"name": "Stain Normalization", "type": "DataProcessingActivity"},
+      {"name": "Tissue Component Detection", "type": "DataProcessingActivity"},
+      {"name": "HoVerNet Training", "type": "DataAnalysisActivity"},
+      {"name": "Performance Benchmarking", "type": "DataAnalysisActivity"},
+      {"name": "HISTOCARTOGRAPHY Development", "type": "SoftwareDevelopmentActivity"}
+    ]
+  },
+  "relations": [
+    {"subject": "HISTOCARTOGRAPHY Development", "predicate": "hasActivityRole", "object": "Guillaume Jaume"},
+    {"subject": "Performance Benchmarking", "predicate": "usedDataset", "object": "BRACS"},
+    {"subject": "Performance Benchmarking", "predicate": "usedDataset", "object": "BACH"},
+    {"subject": "Performance Benchmarking", "predicate": "usedSoftware", "object": "HISTOCARTOGRAPHY"},
+    {"subject": "Performance Benchmarking", "predicate": "executedIn", "object": "NVIDIA P100"},
+    {"subject": "Performance Benchmarking", "predicate": "generatesResult", "object": "61.5 \u00b1 0.9"},
+    {"subject": "Nuclei Detection", "predicate": "usedMethod", "object": "HoVerNet"},
+    {"subject": "Stain Normalization", "predicate": "usedMethod", "object": "Vahadane Normalization"},
+    {"subject": "HISTOCARTOGRAPHY", "predicate": "softwareDependency", "object": "DGL"},
+    {"subject": "HISTOCARTOGRAPHY", "predicate": "softwareDependency", "object": "PyTorch"},
+    {"subject": "HoVerNet Training", "predicate": "usedDataset", "object": "PanNuke"},
+    {"subject": "Performance Benchmarking", "predicate": "hasParameter", "object": "k (k-NN)"}
+  ]
+}

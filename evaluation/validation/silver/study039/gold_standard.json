@@ -1,0 +1,251 @@
+{
+  "study_id": "study039",
+  "project": {
+    "title": "Motion meets Attention: Video Motion Prompts",
+    "lead_organization": "Australian National University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "torch",
+        "version": "1.8.1"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.9.1"
+      },
+      {
+        "name": "torchaudio",
+        "version": "0.8.1"
+      },
+      {
+        "name": "av",
+        "version": null
+      },
+      {
+        "name": "einops",
+        "version": null
+      },
+      {
+        "name": "h5py",
+        "version": null
+      },
+      {
+        "name": "numpy",
+        "version": null
+      },
+      {
+        "name": "matplotlib",
+        "version": null
+      },
+      {
+        "name": "opencv-python",
+        "version": null
+      },
+      {
+        "name": "psutil",
+        "version": null
+      },
+      {
+        "name": "scikit-learn",
+        "version": null
+      },
+      {
+        "name": "simplejson",
+        "version": null
+      },
+      {
+        "name": "tensorboard",
+        "version": null
+      },
+      {
+        "name": "timm",
+        "version": null
+      },
+      {
+        "name": "wandb",
+        "version": null
+      },
+      {
+        "name": "git",
+        "version": null
+      },
+      {
+        "name": "python",
+        "version": "3.7"
+      },
+      {
+        "name": "pip",
+        "version": "22.3.1"
+      },
+      {
+        "name": "fvcore",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "MPII Cooking 2",
+        "format": "videos",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "HMDB-51",
+        "format": "videos",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "FineGym",
+        "format": "videos",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "UCF-Crime",
+        "format": "videos",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Modified Sigmoid Function",
+        "description": "An attention mechanism with learnable slope and shift parameters used to modulate motion signals from frame differencing maps."
+      },
+      {
+        "name": "Pair-wise Temporal Attention Variation Regularization",
+        "description": "A regularization technique applied to ensure temporal continuity and smoothness of attention maps by removing unwanted noise."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Qixiang Chen",
+        "affiliation": "Australian National University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Lei Wang",
+        "affiliation": "Australian National University & Data61/CSIRO",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Piotr Koniusz",
+        "affiliation": "Data61/CSIRO & Australian National University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Tom Gedeon",
+        "affiliation": "Curtin University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Australian National University"
+      },
+      {
+        "name": "Data61/CSIRO"
+      },
+      {
+        "name": "Curtin University"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "slope",
+        "value": "learnable",
+        "type": "xsd:float"
+      },
+      {
+        "name": "shift",
+        "value": "learnable",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "1",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": null,
+        "cuda": "10.2",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Motion Signal Modulation",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "MPII Cooking 2"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Generalization Testing",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "UCF-Crime"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Modified Sigmoid Function",
+      "predicate": "hasParameter",
+      "object": "slope"
+    },
+    {
+      "subject": "Modified Sigmoid Function",
+      "predicate": "hasParameter",
+      "object": "shift"
+    },
+    {
+      "subject": "Motion Signal Modulation",
+      "predicate": "usedMethod",
+      "object": "Modified Sigmoid Function"
+    },
+    {
+      "subject": "Motion Signal Modulation",
+      "predicate": "usedDataset",
+      "object": "MPII Cooking 2"
+    },
+    {
+      "subject": "Generalization Testing",
+      "predicate": "follows",
+      "object": "Motion Signal Modulation"
+    },
+    {
+      "subject": "Generalization Testing",
+      "predicate": "usedDataset",
+      "object": "UCF-Crime"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

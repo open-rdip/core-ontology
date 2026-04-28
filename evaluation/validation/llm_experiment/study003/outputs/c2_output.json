@@ -1,0 +1,176 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "MMDetection",
+        "version": "not specified"
+      },
+      {
+        "name": "LabelMe",
+        "version": "not specified"
+      },
+      {
+        "name": "PyTorch",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COD10K-D",
+        "format": "Bounding Box and Class Label",
+        "access": "https://github.com/zhimengXin/RCOD"
+      },
+      {
+        "name": "NC4K-D",
+        "format": "Bounding Box and Class Label",
+        "access": "https://github.com/zhimengXin/RCOD"
+      },
+      {
+        "name": "CAMO-D",
+        "format": "Bounding Box and Class Label",
+        "access": "https://github.com/zhimengXin/RCOD"
+      },
+      {
+        "name": "COD10K-v2",
+        "format": "Mask Label",
+        "access": "External Reference [11]"
+      },
+      {
+        "name": "NC4K",
+        "format": "Mask Label",
+        "access": "External Reference [12]"
+      },
+      {
+        "name": "CAMO",
+        "format": "Mask Label",
+        "access": "External Reference [13]"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Camouflage-Aware Feature Refinement (CAFR)"
+      },
+      {
+        "name": "Adaptive Gradient Propagation (AGP)"
+      },
+      {
+        "name": "Sparse Feature Refinement (SFR)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhimeng Xin",
+        "role": "Lead Author"
+      },
+      {
+        "name": "Tianxu Wu",
+        "role": "Author"
+      },
+      {
+        "name": "Shiming Chen",
+        "role": "Author"
+      },
+      {
+        "name": "Yufei Guo",
+        "role": "Corresponding Author"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Huazhong University of Science and Technology"
+      },
+      {
+        "name": "Intelligent Science and Technology Academy of CASIC"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Learning Rate",
+        "value": "0.0003"
+      },
+      {
+        "name": "Momentum",
+        "value": "0.05"
+      },
+      {
+        "name": "Optimizer",
+        "value": "AdamW"
+      },
+      {
+        "name": "SFR Crop Size",
+        "value": "200x200"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "Training Runs",
+        "value": "10 groups of random seeds"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "Required (not specified model)",
+        "cuda": "Used (for memory management)"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mAP",
+        "value": "99.1",
+        "split": "Faster R-CNN Swin-L (Table III)"
+      },
+      {
+        "metric": "FLOPs",
+        "value": "353.98 G",
+        "split": "GDino + CAFR Swin-T"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "RCOD Dataset Annotation",
+        "type": "Data Preparation"
+      },
+      {
+        "name": "CAFR Strategy Training",
+        "type": "Model Training"
+      },
+      {
+        "name": "Comparative Performance Evaluation",
+        "type": "Validation"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "RCOD Dataset Annotation",
+      "predicate": "wasAssociatedWith",
+      "object": "Zhimeng Xin"
+    },
+    {
+      "subject": "COD10K-D",
+      "predicate": "wasGeneratedBy",
+      "object": "RCOD Dataset Annotation"
+    },
+    {
+      "subject": "COD10K-D",
+      "predicate": "wasDerivedFrom",
+      "object": "COD10K-v2"
+    },
+    {
+      "subject": "CAFR Strategy Training",
+      "predicate": "used",
+      "object": "MMDetection"
+    },
+    {
+      "subject": "CAFR Strategy Training",
+      "predicate": "used",
+      "object": "COD10K-D"
+    },
+    {
+      "subject": "Comparative Performance Evaluation",
+      "predicate": "wasInformedBy",
+      "object": "CAFR Strategy Training"
+    }
+  ]
+}

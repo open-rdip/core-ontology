@@ -1,0 +1,149 @@
+{
+  "study_id": "study074",
+  "project": {
+    "title": "DroidBot-GPT: GPT-powered UI Automation for Android",
+    "lead_organization": "Institute for AI Industry Research (AIR), Tsinghua University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "DroidBot-GPT",
+        "version": null
+      },
+      {
+        "name": "setuptools",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "self-created dataset of 33 tasks",
+        "format": "JSON",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "GPT-powered UI Automation",
+        "description": "Utilizes GPT-like large language models to automate interactions with Android mobile applications by translating GUI state to natural language prompts."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Hao Wen",
+        "affiliation": "Institute for AI Industry Research (AIR), Tsinghua University",
+        "role": null
+      },
+      {
+        "name": "Hongming Wang",
+        "affiliation": "Institute for AI Industry Research (AIR), Tsinghua University",
+        "role": null
+      },
+      {
+        "name": "Jiaxuan Liu",
+        "affiliation": "Beijing University of Posts and Telecommunications",
+        "role": null
+      },
+      {
+        "name": "Yuanchun Li",
+        "affiliation": "Institute for AI Industry Research (AIR), Tsinghua University",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Institute for AI Industry Research (AIR), Tsinghua University"
+      },
+      {
+        "name": "Beijing University of Posts and Telecommunications"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "success rate",
+        "value": "39.39%",
+        "split": "test",
+        "dataset": "self-created dataset of 33 tasks"
+      },
+      {
+        "metric": "average partial completion progress",
+        "value": "66.76%",
+        "split": "test",
+        "dataset": "self-created dataset of 33 tasks"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Dataset Creation",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "self-created dataset of 33 tasks"
+        ]
+      },
+      {
+        "name": "Tool Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "setuptools"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "DroidBot-GPT"
+        ]
+      },
+      {
+        "name": "Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "DroidBot-GPT"
+        ],
+        "dataset_used": [
+          "self-created dataset of 33 tasks"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "DroidBot-GPT",
+      "predicate": "usedMethod",
+      "object": "GPT-powered UI Automation"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "usedSoftware",
+      "object": "DroidBot-GPT"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "usedDataset",
+      "object": "self-created dataset of 33 tasks"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "generatesResult",
+      "object": "success rate"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "generatesResult",
+      "object": "average partial completion progress"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,116 @@
+{
+  "study_id": "study054",
+  "project": {
+    "title": "Adaptation for Validation of a Consolidated Control Barrier Function based Control Synthesis",
+    "lead_organization": "University of Michigan",
+    "funding": "National Science Foundation (NSF)"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "ROS2",
+        "version": "not specified"
+      },
+      {
+        "name": "Python",
+        "version": "3.10"
+      },
+      {
+        "name": "Poetry",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [],
+    "Method": [
+      {
+        "name": "Consolidated Control Barrier Function",
+        "description": "An approach for synthesizing any number of candidate CBFs into one consolidated CBF candidate for safe control design."
+      },
+      {
+        "name": "Parameter Adaptation Law",
+        "description": "A law proposed for the weights of consolidated CBF constituents to ensure controllable dynamics are non-vanishing."
+      },
+      {
+        "name": "Quadratic Program (QP) based Control",
+        "description": "A control law used to certify the consolidated CBF candidate as valid for nonlinear, control-affine systems."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Mitchell Black",
+        "affiliation": "University of Michigan",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Michigan"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "1",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu",
+        "gpu": null,
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Simulation Study",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "Python"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Experimental Validation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "ROS2"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Simulation Study",
+      "predicate": "usedMethod",
+      "object": "Consolidated Control Barrier Function"
+    },
+    {
+      "subject": "Experimental Validation",
+      "predicate": "usedMethod",
+      "object": "Consolidated Control Barrier Function"
+    },
+    {
+      "subject": "Experimental Validation",
+      "predicate": "executedIn",
+      "object": "Ubuntu"
+    },
+    {
+      "subject": "Experimental Validation",
+      "predicate": "follows",
+      "object": "Simulation Study"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

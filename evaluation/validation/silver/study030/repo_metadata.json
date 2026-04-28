@@ -1,0 +1,14 @@
+{
+  "study_id": "study030",
+  "repo_url": "https://github.com/openpifpaf/openpifpafwebdemo",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:1.7.1-cuda11.0-cudnn8-runtime",
+    "cuda_version": "11.0"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "Other",
+  "errors": []
+}

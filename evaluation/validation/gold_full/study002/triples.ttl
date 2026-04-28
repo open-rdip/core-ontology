@@ -1,0 +1,226 @@
+# RDIP Triples — study002
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study002_Project a rdip:ResearchProject ;
+    rdip:title "Kronecker Decomposition for Knowledge Graph Embeddings" ;
+    .
+
+ex:study002_Org1 a vivo:Organization ;
+    rdfs:label "Paderborn University" .
+ex:study002_Project rdip:hasLeadOrganization ex:study002_Org1 .
+
+ex:study002_Person1 a vivo:Person ;
+    rdfs:label "Caglar Demir" .
+ex:study002_Project rdip:hasParticipant ex:study002_Person1 .
+ex:study002_Person2 a vivo:Person ;
+    rdfs:label "Julian Lienen" .
+ex:study002_Project rdip:hasParticipant ex:study002_Person2 .
+ex:study002_Person3 a vivo:Person ;
+    rdfs:label "Axel-Cyrille Ngonga Ngomo" .
+ex:study002_Project rdip:hasParticipant ex:study002_Person3 .
+
+ex:study002_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "numpy" ;
+    rdip:version "1.26.4" ;
+    .
+ex:study002_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "torch" ;
+    rdip:version "2.5.1" ;
+    .
+ex:study002_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "lightning" ;
+    rdip:version "2.5.0.post0" ;
+    .
+ex:study002_Sw4 a rdip:SoftwareApplication ;
+    rdip:title "pandas" ;
+    rdip:version "2.1.0" ;
+    .
+ex:study002_Sw5 a rdip:SoftwareApplication ;
+    rdip:title "polars" ;
+    rdip:version "0.16.14" ;
+    .
+ex:study002_Sw6 a rdip:SoftwareApplication ;
+    rdip:title "pyarrow" ;
+    rdip:version "11.0.0" ;
+    .
+ex:study002_Sw7 a rdip:SoftwareApplication ;
+    rdip:title "rdflib" ;
+    rdip:version "7.0.0" ;
+    .
+ex:study002_Sw8 a rdip:SoftwareApplication ;
+    rdip:title "tiktoken" ;
+    rdip:version "0.5.1" ;
+    .
+ex:study002_Sw9 a rdip:SoftwareApplication ;
+    rdip:title "pykeen" ;
+    rdip:version "1.10.2" ;
+    .
+ex:study002_Sw10 a rdip:SoftwareApplication ;
+    rdip:title "psutil" ;
+    rdip:version "5.9.4" ;
+    .
+ex:study002_Sw11 a rdip:SoftwareApplication ;
+    rdip:title "matplotlib" ;
+    rdip:version "3.8.2" ;
+    .
+ex:study002_Sw12 a rdip:SoftwareApplication ;
+    rdip:title "zstandard" ;
+    rdip:version "0.21.0" ;
+    .
+ex:study002_Sw13 a rdip:SoftwareApplication ;
+    rdip:title "pytest" ;
+    rdip:version "7.2.2" ;
+    .
+ex:study002_Sw14 a rdip:SoftwareApplication ;
+    rdip:title "ruff" ;
+    rdip:version "0.0.284" ;
+    .
+ex:study002_Sw15 a rdip:SoftwareApplication ;
+    rdip:title "scikit-learn" ;
+    rdip:version "1.2.2" ;
+    .
+ex:study002_Sw16 a rdip:SoftwareApplication ;
+    rdip:title "sphinx" ;
+    rdip:version "7.2.6" ;
+    .
+ex:study002_Sw17 a rdip:SoftwareApplication ;
+    rdip:title "sphinx-autoapi" ;
+    rdip:version "3.0.0" ;
+    .
+ex:study002_Sw18 a rdip:SoftwareApplication ;
+    rdip:title "myst-parser" ;
+    rdip:version "2.0.0" ;
+    .
+ex:study002_Sw19 a rdip:SoftwareApplication ;
+    rdip:title "sphinx_rtd_theme" ;
+    rdip:version "2.0.0" ;
+    .
+ex:study002_Sw20 a rdip:SoftwareApplication ;
+    rdip:title "sphinx-theme" ;
+    rdip:version "1.0" ;
+    .
+ex:study002_Sw21 a rdip:SoftwareApplication ;
+    rdip:title "sphinxcontrib-plantuml" ;
+    rdip:version "0.27" ;
+    .
+ex:study002_Sw22 a rdip:SoftwareApplication ;
+    rdip:title "plantuml-local-client" ;
+    rdip:version "1.2022.6" ;
+    .
+ex:study002_Sw23 a rdip:SoftwareApplication ;
+    rdip:title "python" ;
+    rdip:version "3.10" ;
+    .
+ex:study002_Sw24 a rdip:SoftwareApplication ;
+    rdip:title "dice-embeddings" ;
+    rdip:version "latest" ;
+    .
+
+ex:study002_Dataset1 a dcat:Dataset ;
+    rdip:title "Freebase" ;
+    rdip:dataFormat "RDF" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study002_Dataset2 a dcat:Dataset ;
+    rdip:title "Wikitext-2" ;
+    rdip:dataFormat "text" ;
+    rdip:accessLevel "open" ;
+    .
+
+ex:study002_Method1 a rdip:Method ;
+    rdip:title "Kronecker Decomposition (KD)" ;
+    rdip:description "A technique to reduce the number of parameters in a knowledge graph embedding model by splitting large embedding matrices into smaller ones during training." ;
+    .
+ex:study002_Method2 a rdip:Method ;
+    rdip:title "Link Prediction" ;
+    rdip:description "The task of predicting whether a triple is likely to be true in a knowledge graph." ;
+    .
+ex:study002_Method3 a rdip:Method ;
+    rdip:title "Label Smoothing (LS)" ;
+    rdip:description "An implicit calibration method that transforms probability distributions to less extreme ones to improve robustness." ;
+    .
+ex:study002_Method4 a rdip:Method ;
+    rdip:title "Label Relaxation (LR)" ;
+    rdip:description "A generalization of label smoothing that models the target as a credal set of candidate probability distributions." ;
+    .
+ex:study002_Method5 a rdip:Method ;
+    rdip:title "1vsAll" ;
+    rdip:description "A training strategy where for each positive triple, all possible tail perturbed triples are considered as negative examples." ;
+    .
+ex:study002_Method6 a rdip:Method ;
+    rdip:title "KvsAll" ;
+    rdip:description "A training strategy that constructs multi-label binary vectors for each head-relation pair." ;
+    .
+
+ex:study002_Param1 a rdip:Parameter ;
+    rdip:parameterName "embedding_size" ;
+    rdip:parameterValue "200" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study002_Param2 a rdip:Parameter ;
+    rdip:parameterName "seed" ;
+    rdip:parameterValue "1" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study002_Param3 a rdip:Parameter ;
+    rdip:parameterName "smoothing_parameter_alpha" ;
+    rdip:parameterValue "0.1" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study002_Seed1 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "1" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study002_Seed2 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "42" ;
+    rdip:parameterDataType "xsd:integer" .
+
+ex:study002_Env1 a rdip:ComputingEnvironment ;
+    rdip:osVersion "Linux" ;
+    rdip:hardwareSpec "33 GB" ;
+    .
+
+ex:study002_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "MRR" ;
+    rdip:metricValue "0.1" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "benchmark" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study002_Act1 a rdip:SoftwareDevelopmentActivity ;
+    rdip:title "Software Development" ;
+    rdip:isPartOfProject ex:study002_Project ;
+    .
+ex:study002_Project rdip:hasActivity ex:study002_Act1 .
+ex:study002_Act2 a rdip:DataProcessingActivity ;
+    rdip:title "Model Training" ;
+    rdip:isPartOfProject ex:study002_Project ;
+    .
+ex:study002_Project rdip:hasActivity ex:study002_Act2 .
+ex:study002_Act3 a rdip:DataAnalysisActivity ;
+    rdip:title "Link Prediction Evaluation" ;
+    rdip:isPartOfProject ex:study002_Project ;
+    .
+ex:study002_Project rdip:hasActivity ex:study002_Act3 .
+
+# ═══ RELATIONS ═══
+ex:study002_Act2 rdip:usedSoftware ex:study002_Sw2 .
+ex:study002_Act2 rdip:usedMethod ex:study002_Method1 .
+ex:study002_Act2 rdip:hasParameter ex:study002_Param1 .
+ex:study002_Act2 rdip:executedIn ex:study002_Env1 .
+ex:study002_Act3 rdip:generatesResult ex:study002_Result1 .
+ex:study002_Act3 rdip:follows ex:study002_Act2 .
+ex:study002_Sw24 rdip:softwareDependency ex:study002_Sw2 .
+
+# ═══ END (7 resolved, 0 unresolved) ═══

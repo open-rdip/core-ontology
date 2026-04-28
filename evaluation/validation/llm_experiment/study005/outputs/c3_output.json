@@ -1,0 +1,170 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "eDiff-I",
+        "version": "v5"
+      },
+      {
+        "name": "Stable Diffusion",
+        "version": ""
+      },
+      {
+        "name": "DALL-E 2",
+        "version": ""
+      },
+      {
+        "name": "Imagen",
+        "version": ""
+      },
+      {
+        "name": "GLIDE",
+        "version": ""
+      },
+      {
+        "name": "Parti",
+        "version": ""
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "MS-COCO",
+        "format": "image-text pairs",
+        "access": "public"
+      },
+      {
+        "name": "Visual Genome",
+        "format": "image-text pairs",
+        "access": "public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Ensemble of Expert Denoisers"
+      },
+      {
+        "name": "Paint-with-words"
+      },
+      {
+        "name": "Classifier-free guidance"
+      },
+      {
+        "name": "Denoising score matching"
+      },
+      {
+        "name": "Cross-attention modulation"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yogesh Balaji",
+        "role": "Researcher"
+      },
+      {
+        "name": "Seungjun Nah",
+        "role": "Researcher"
+      },
+      {
+        "name": "Xun Huang",
+        "role": "Researcher"
+      },
+      {
+        "name": "Arash Vahdat",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "NVIDIA Corporation"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Training iterations",
+        "value": "600K"
+      },
+      {
+        "name": "Resolution",
+        "value": "1024x1024"
+      },
+      {
+        "name": "Expert models split",
+        "value": "50K iterations"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Not specified",
+        "gpu": "NVIDIA A100",
+        "cuda": "Not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "FID",
+        "value": "7.04",
+        "split": "MS-COCO 256x256"
+      },
+      {
+        "metric": "FID",
+        "value": "7.26",
+        "split": "eDiff-I-Config-B"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Training ensemble of experts",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Pre-training shared diffusion model",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Evaluation on MS-COCO",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Implementing paint-with-words extension",
+        "type": "SoftwareDevelopmentActivity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Training ensemble of experts",
+      "predicate": "usedMethod",
+      "object": "Ensemble of Expert Denoisers"
+    },
+    {
+      "subject": "Evaluation on MS-COCO",
+      "predicate": "usedDataset",
+      "object": "MS-COCO"
+    },
+    {
+      "subject": "Evaluation on MS-COCO",
+      "predicate": "generatesResult",
+      "object": "FID 7.04"
+    },
+    {
+      "subject": "eDiff-I",
+      "predicate": "softwareDependency",
+      "object": "CLIP text encoder"
+    },
+    {
+      "subject": "eDiff-I",
+      "predicate": "softwareDependency",
+      "object": "T5 text encoder"
+    },
+    {
+      "subject": "Training ensemble of experts",
+      "predicate": "executedIn",
+      "object": "NVIDIA A100 GPU"
+    },
+    {
+      "subject": "Training ensemble of experts",
+      "predicate": "hasParameter",
+      "object": "600K iterations"
+    }
+  ]
+}

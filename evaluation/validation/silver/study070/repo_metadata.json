@@ -1,0 +1,45 @@
+{
+  "study_id": "study070",
+  "repo_url": "https://github.com/yushi-hu/ic-dst",
+  "software_dependencies": [
+    {
+      "name": "sqlparse",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sentence-transformers",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "openai",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "42",
+      "file": "codegen_completion.py",
+      "context": "set_seed(42"
+    },
+    {
+      "value": "88",
+      "file": "data/sample.py",
+      "context": "seed=88"
+    },
+    {
+      "value": "2",
+      "file": "data/create_data.py",
+      "context": "np.random.seed(2"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

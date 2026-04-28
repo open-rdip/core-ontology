@@ -1,0 +1,41 @@
+{
+  "study_id": "study040",
+  "repo_url": "https://github.com/timeseriesAI/tsai",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "fastai",
+        "version": "2.7.9"
+      },
+      {
+        "name": "pyts",
+        "version": "0.12.0"
+      },
+      {
+        "name": "imbalanced-learn",
+        "version": "0.8.0"
+      },
+      {
+        "name": "psutil",
+        "version": "5.4.8"
+      },
+      {
+        "name": "pytorch",
+        "version": "1.7.0"
+      }
+    ],
+    "source": "conda",
+    "env_name": "tsai"
+  },
+  "seeds": [
+    {
+      "value": "0",
+      "file": "tsai/data/core.py",
+      "context": "seed=0"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

@@ -1,0 +1,344 @@
+{
+  "study_id": "study006",
+  "project": {
+    "title": "Scalable Decision-Making in Stochastic Environments through Learned Temporal Abstraction",
+    "lead_organization": "Vanderbilt University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "torch",
+        "version": "1.12.0+cu116"
+      },
+      {
+        "name": "numpy",
+        "version": "1.23.2"
+      },
+      {
+        "name": "gym",
+        "version": "0.18.0"
+      },
+      {
+        "name": "mujoco-py",
+        "version": "2.1.2.14"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.3.4"
+      },
+      {
+        "name": "typed-argument-parser",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "gitpython",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "einops",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "wandb",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "dm_control",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "python",
+        "version": "3.9"
+      },
+      {
+        "name": "pip",
+        "version": "18.0"
+      },
+      {
+        "name": "conda",
+        "version": "4.5.9"
+      },
+      {
+        "name": "patchelf",
+        "version": "0.9"
+      },
+      {
+        "name": "scikit-image",
+        "version": "0.17.2"
+      },
+      {
+        "name": "scikit-video",
+        "version": "1.1.11"
+      },
+      {
+        "name": "d4rl",
+        "version": "c3dd04da02acbf4de6cbaa1141deb4f958f03ca9"
+      },
+      {
+        "name": "mjrl",
+        "version": "3871d93763d3b49c4741e6daeaebbc605fe140dc"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "D4RL MuJoCo",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Adroit hand manipulation tasks",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Stochastic MuJoCo",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Latent Macro Action Planner (L-MAP)",
+        "description": "A method that learns a set of temporally extended macro-actions through a state-conditional VQ-VAE and uses Monte Carlo tree search for planning."
+      },
+      {
+        "name": "Vector Quantized Variational Autoencoder (VQ-VAE)",
+        "description": "A model used to learn a lower-dimensional discrete representation of temporally extended primitive actions (macro-actions)."
+      },
+      {
+        "name": "Monte Carlo Tree Search (MCTS)",
+        "description": "A search algorithm used to navigate the latent space, integrated with progressive widening to address environment and behavior policy stochasticity."
+      },
+      {
+        "name": "Progressive Widening",
+        "description": "A strategy used with MCTS to balance rapid planning using learned abstractions with exhaustive exploration when resources permit."
+      },
+      {
+        "name": "Polling Control Mode",
+        "description": "A mode where MCTS returns only the first primitive action of the recommended macro-action, allowing for recovery from locally suboptimal decisions."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Baiting Luo",
+        "affiliation": "Vanderbilt University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ava Pettet",
+        "affiliation": "Nissan Advanced Technology Center",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Aron Laszka",
+        "affiliation": "Pennsylvania State University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Abhishek Dubey",
+        "affiliation": "Vanderbilt University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ayan Mukhopadhyay",
+        "affiliation": "Vanderbilt University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Vanderbilt University"
+      },
+      {
+        "name": "Pennsylvania State University"
+      },
+      {
+        "name": "Nissan Advanced Technology Center"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "alpha",
+        "value": "0.1",
+        "type": "xsd:float"
+      },
+      {
+        "name": "epsilon",
+        "value": "1",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "MCTS iterations",
+        "value": "100",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "M",
+        "value": "16",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "N",
+        "value": "4",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "B",
+        "value": "4",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "lambda",
+        "value": "0.5",
+        "type": "xsd:float"
+      },
+      {
+        "name": "gamma",
+        "value": "0.99",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "10",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "null",
+        "cuda": "11.6",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Average Score",
+        "value": "105.74 ± 2.24",
+        "split": "test",
+        "dataset": "Medium-Expert Hopper (Deterministic)"
+      },
+      {
+        "metric": "Average Score",
+        "value": "73.90 ± 1.91",
+        "split": "test",
+        "dataset": "Medium Hopper (Deterministic)"
+      },
+      {
+        "metric": "Average Score",
+        "value": "91.18 ± 0.56",
+        "split": "test",
+        "dataset": "Medium-Replay Hopper (Deterministic)"
+      },
+      {
+        "metric": "Average Score",
+        "value": "106.11 ± 2.16",
+        "split": "test",
+        "dataset": "Medium-Expert-Mod Hopper (Moderate Stochasticity)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Temporal Abstraction Learning",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "torch",
+          "einops"
+        ],
+        "dataset_used": [
+          "D4RL MuJoCo"
+        ],
+        "dataset_produced": [
+          "Latent Macro Action representations"
+        ]
+      },
+      {
+        "name": "Latent Transition Modeling",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "Latent Macro Action representations"
+        ],
+        "dataset_produced": [
+          "Prior Transformer model"
+        ]
+      },
+      {
+        "name": "Planning and Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "mujoco-py",
+          "gym",
+          "wandb"
+        ],
+        "dataset_used": [
+          "Stochastic MuJoCo",
+          "Adroit hand manipulation tasks"
+        ],
+        "dataset_produced": [
+          "Evaluation results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Temporal Abstraction Learning",
+      "predicate": "usedMethod",
+      "object": "Vector Quantized Variational Autoencoder (VQ-VAE)"
+    },
+    {
+      "subject": "Latent Transition Modeling",
+      "predicate": "follows",
+      "object": "Temporal Abstraction Learning"
+    },
+    {
+      "subject": "Planning and Evaluation",
+      "predicate": "usedMethod",
+      "object": "Monte Carlo Tree Search (MCTS)"
+    },
+    {
+      "subject": "Planning and Evaluation",
+      "predicate": "usedMethod",
+      "object": "Progressive Widening"
+    },
+    {
+      "subject": "Planning and Evaluation",
+      "predicate": "follows",
+      "object": "Latent Transition Modeling"
+    },
+    {
+      "subject": "Planning and Evaluation",
+      "predicate": "generatesResult",
+      "object": "Average Score"
+    },
+    {
+      "subject": "Planning and Evaluation",
+      "predicate": "hasParameter",
+      "object": "MCTS iterations"
+    },
+    {
+      "subject": "Temporal Abstraction Learning",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

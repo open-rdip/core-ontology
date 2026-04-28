@@ -1,0 +1,210 @@
+{
+  "study_id": "study032",
+  "project": {
+    "title": "MotionLM: Multi-Agent Motion Forecasting as Language Modeling",
+    "lead_organization": "Waymo",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Ubuntu",
+        "version": "20.04"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Waymo Open Motion Dataset",
+        "format": "TFRecord",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "MotionLM",
+        "description": "A multi-agent motion forecasting model that represents continuous trajectories as sequences of discrete motion tokens and casts prediction as a language modeling task."
+      },
+      {
+        "name": "Autoregressive Decoding",
+        "description": "A process where the model produces joint distributions over interactive agent futures in a single sequential process."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Ari Seff",
+        "affiliation": "Waymo",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Brian Cera",
+        "affiliation": "Waymo",
+        "role": null
+      },
+      {
+        "name": "Dian Chen",
+        "affiliation": "Waymo",
+        "role": null
+      },
+      {
+        "name": "Khaled S. Refaat",
+        "affiliation": "Waymo",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Waymo"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "1e-4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "128",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "training_steps",
+        "value": "500000",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "optimizer",
+        "value": "AdamW",
+        "type": "xsd:string"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "2022",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 20.04",
+        "gpu": null,
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mAP",
+        "value": "0.4071",
+        "split": "test",
+        "dataset": "Waymo Open Motion Dataset"
+      },
+      {
+        "metric": "minADE",
+        "value": "0.5898",
+        "split": "test",
+        "dataset": "Waymo Open Motion Dataset"
+      },
+      {
+        "metric": "minFDE",
+        "value": "1.1444",
+        "split": "test",
+        "dataset": "Waymo Open Motion Dataset"
+      },
+      {
+        "metric": "Miss Rate",
+        "value": "0.2818",
+        "split": "test",
+        "dataset": "Waymo Open Motion Dataset"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Discrete Motion Tokenization",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "Waymo Open Motion Dataset"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "Ubuntu"
+        ],
+        "dataset_used": [
+          "Waymo Open Motion Dataset"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Motion Forecasting Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [],
+        "dataset_used": [
+          "Waymo Open Motion Dataset"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "MotionLM",
+      "predicate": "usedDataset",
+      "object": "Waymo Open Motion Dataset"
+    },
+    {
+      "subject": "MotionLM",
+      "predicate": "usedMethod",
+      "object": "Autoregressive Decoding"
+    },
+    {
+      "subject": "MotionLM",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "MotionLM",
+      "predicate": "hasParameter",
+      "object": "batch_size"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "executedIn",
+      "object": "Ubuntu 20.04"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "MotionLM"
+    },
+    {
+      "subject": "Motion Forecasting Evaluation",
+      "predicate": "generatesResult",
+      "object": "mAP"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "follows",
+      "object": "Discrete Motion Tokenization"
+    },
+    {
+      "subject": "Motion Forecasting Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

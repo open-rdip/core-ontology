@@ -1,0 +1,310 @@
+{
+  "study_id": "study033",
+  "project": {
+    "title": "ADN: Artifact Disentanglement Network for Unsupervised Metal Artifact Reduction",
+    "lead_organization": "University of Rochester",
+    "funding": "NSF award #1722847 and the Morris K. Udall Center of Excellence in Parkinson’s Disease Research by NIH."
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "matplotlib",
+        "version": "3.1.1"
+      },
+      {
+        "name": "PyYAML",
+        "version": "5.1.0"
+      },
+      {
+        "name": "requests",
+        "version": "2.22.0"
+      },
+      {
+        "name": "scikit-image",
+        "version": "0.14.1"
+      },
+      {
+        "name": "scipy",
+        "version": "1.1.0"
+      },
+      {
+        "name": "SimpleITK",
+        "version": "1.2.0"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.32.1"
+      },
+      {
+        "name": "torch",
+        "version": "1.0.0"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.2.1"
+      },
+      {
+        "name": "googledrivedownloader",
+        "version": "0.4"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "SYN",
+        "format": "images",
+        "access": null,
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CL1",
+        "format": "images",
+        "access": null,
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CL2",
+        "format": "images",
+        "access": null,
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "ADN",
+        "description": "Artifact Disentanglement Network that disentangles metal artifacts from CT images in the latent space."
+      },
+      {
+        "name": "Artifact Disentanglement",
+        "description": "Process of separating content and artifact components in the latent space."
+      },
+      {
+        "name": "Artifact Synthesis",
+        "description": "Generating realistic metal artifacts in artifact-free images via artifact transfer."
+      },
+      {
+        "name": "Unsupervised Metal Artifact Reduction",
+        "description": "Reducing metal artifacts without using paired training data."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Haofu Liao",
+        "affiliation": "University of Rochester",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Wei-An Lin",
+        "affiliation": "University of Maryland",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "S. Kevin Zhou",
+        "affiliation": "Institute of Computing Technology, Chinese Academy of Sciences",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jiebo Luo",
+        "affiliation": "University of Rochester",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Rochester"
+      },
+      {
+        "name": "University of Maryland"
+      },
+      {
+        "name": "Institute of Computing Technology, Chinese Academy of Sciences"
+      },
+      {
+        "name": "Peng Cheng Laboratory"
+      },
+      {
+        "name": "NSF"
+      },
+      {
+        "name": "NIH"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "0.0001",
+        "type": "xsd:float"
+      },
+      {
+        "name": "lambda_I_adv",
+        "value": "1.0",
+        "type": "xsd:float"
+      },
+      {
+        "name": "lambda_Ia_adv",
+        "value": "1.0",
+        "type": "xsd:float"
+      },
+      {
+        "name": "lambda_rec",
+        "value": "20.0",
+        "type": "xsd:float"
+      },
+      {
+        "name": "lambda_self",
+        "value": "20.0",
+        "type": "xsd:float"
+      },
+      {
+        "name": "lambda_art",
+        "value": "20.0",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": "nvidia",
+        "cuda": "9.0",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "PSNR",
+        "value": "33.6",
+        "split": "test",
+        "dataset": "SYN"
+      },
+      {
+        "metric": "SSIM",
+        "value": "92.4",
+        "split": "test",
+        "dataset": "SYN"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Synthesis",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "SYN"
+        ]
+      },
+      {
+        "name": "ADN Implementation",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "torch",
+          "torchvision"
+        ],
+        "dataset_used": [
+          "SYN",
+          "CL1",
+          "CL2"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "SYN"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "ADN",
+      "predicate": "usedMethod",
+      "object": "Artifact Disentanglement"
+    },
+    {
+      "subject": "ADN",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "ADN",
+      "predicate": "hasParameter",
+      "object": "lambda_rec"
+    },
+    {
+      "subject": "ADN Implementation",
+      "predicate": "usedMethod",
+      "object": "ADN"
+    },
+    {
+      "subject": "ADN Implementation",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "ADN Implementation",
+      "predicate": "usedDataset",
+      "object": "SYN"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "usedDataset",
+      "object": "SYN"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "PSNR"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "SSIM"
+    },
+    {
+      "subject": "Haofu Liao",
+      "predicate": "hasActivityRole",
+      "object": "ADN Implementation"
+    },
+    {
+      "subject": "Jiebo Luo",
+      "predicate": "hasActivityRole",
+      "object": "ADN Implementation"
+    },
+    {
+      "subject": "ADN Implementation",
+      "predicate": "executedIn",
+      "object": "nvidia"
+    },
+    {
+      "subject": "torchvision",
+      "predicate": "softwareDependency",
+      "object": "torch"
+    },
+    {
+      "subject": "ADN Implementation",
+      "predicate": "follows",
+      "object": "Data Synthesis"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "follows",
+      "object": "ADN Implementation"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

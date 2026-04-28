@@ -1,0 +1,47 @@
+{
+  "study_id": "study062",
+  "repo_url": "https://github.com/rmojgani/LPINNs",
+  "software_dependencies": [
+    {
+      "name": "Python",
+      "version": "3.7.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.8.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.22.3",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "1.11",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "PyHessian",
+      "version": "0.1",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "3",
+      "file": "code/LPINN.py",
+      "context": "SEED = 3"
+    }
+  ],
+  "license": "",
+  "errors": []
+}

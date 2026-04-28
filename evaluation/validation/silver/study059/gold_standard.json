@@ -1,0 +1,459 @@
+{
+  "study_id": "study059",
+  "project": {
+    "title": "Federated Continual Learning for Text Classification via Selective Inter-client Transfer",
+    "lead_organization": "DRIMCO GmbH",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "absl-py",
+        "version": "0.14.1"
+      },
+      {
+        "name": "alembic",
+        "version": "1.4.1"
+      },
+      {
+        "name": "astunparse",
+        "version": "1.6.3"
+      },
+      {
+        "name": "cachetools",
+        "version": "4.2.4"
+      },
+      {
+        "name": "certifi",
+        "version": "2021.5.30"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "2.0.6"
+      },
+      {
+        "name": "click",
+        "version": "7.1.2"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "2.0.0"
+      },
+      {
+        "name": "cycler",
+        "version": "0.10.0"
+      },
+      {
+        "name": "databricks-cli",
+        "version": "0.15.0"
+      },
+      {
+        "name": "docker",
+        "version": "5.0.3"
+      },
+      {
+        "name": "entrypoints",
+        "version": "0.3"
+      },
+      {
+        "name": "Flask",
+        "version": "1.1.4"
+      },
+      {
+        "name": "Flask-SocketIO",
+        "version": "4.0.0"
+      },
+      {
+        "name": "flatbuffers",
+        "version": "1.12"
+      },
+      {
+        "name": "gast",
+        "version": "0.3.3"
+      },
+      {
+        "name": "gensim",
+        "version": "4.1.2"
+      },
+      {
+        "name": "gitdb",
+        "version": "4.0.7"
+      },
+      {
+        "name": "GitPython",
+        "version": "3.1.24"
+      },
+      {
+        "name": "google-auth",
+        "version": "1.35.0"
+      },
+      {
+        "name": "google-auth-oauthlib",
+        "version": "0.4.6"
+      },
+      {
+        "name": "google-pasta",
+        "version": "0.2.0"
+      },
+      {
+        "name": "greenlet",
+        "version": "1.1.2"
+      },
+      {
+        "name": "grpcio",
+        "version": "1.32.0"
+      },
+      {
+        "name": "gunicorn",
+        "version": "20.1.0"
+      },
+      {
+        "name": "h5py",
+        "version": "2.10.0"
+      },
+      {
+        "name": "idna",
+        "version": "3.2"
+      },
+      {
+        "name": "itsdangerous",
+        "version": "1.1.0"
+      },
+      {
+        "name": "Jinja2",
+        "version": "2.11.3"
+      },
+      {
+        "name": "joblib",
+        "version": "1.1.0"
+      },
+      {
+        "name": "Keras-Preprocessing",
+        "version": "1.1.2"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.3.2"
+      },
+      {
+        "name": "Mako",
+        "version": "1.1.5"
+      },
+      {
+        "name": "Markdown",
+        "version": "3.3.4"
+      },
+      {
+        "name": "MarkupSafe",
+        "version": "2.0.1"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.3.4"
+      },
+      {
+        "name": "mlflow",
+        "version": "1.14.1"
+      },
+      {
+        "name": "numpy",
+        "version": "1.19.5"
+      },
+      {
+        "name": "oauthlib",
+        "version": "3.1.1"
+      },
+      {
+        "name": "opt-einsum",
+        "version": "3.3.0"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "AGNews",
+        "format": "word tokens",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Amazon",
+        "format": "word tokens",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "DBPedia",
+        "format": "word tokens",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Yelp",
+        "format": "word tokens",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "SUBJ",
+        "format": "word tokens",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "FedSeIT",
+        "description": "A novel Federated Selective Inter-client Transfer framework that selectively combines model parameters of foreign clients while assessing domain overlap."
+      },
+      {
+        "name": "Selective Inter-client Transfer (SIT)",
+        "description": "A clustering-based algorithm using KNN to extract cluster centers for identifying relevant knowledge transfer between clients."
+      },
+      {
+        "name": "Federated Learning (FL)",
+        "description": "A machine learning paradigm where models are trained across multiple decentralized edge devices or servers holding local data samples without exchanging them."
+      },
+      {
+        "name": "Continual Learning (CL)",
+        "description": "The ability of a model to learn from a stream of data and tasks sequentially without forgetting previously learned information."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yatin Chaudhary",
+        "affiliation": "DRIMCO GmbH; University of Munich (LMU)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Pranav Rai",
+        "affiliation": "DRIMCO GmbH; University of Munich (LMU)",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Matthias Schubert",
+        "affiliation": "University of Munich (LMU)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Hinrich Schütze",
+        "affiliation": "University of Munich (LMU)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Pankaj Gupta",
+        "affiliation": "DRIMCO GmbH",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "DRIMCO GmbH"
+      },
+      {
+        "name": "University of Munich (LMU)"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "lambda2",
+        "value": "{0.1, 1.0}",
+        "type": "xsd:string"
+      },
+      {
+        "name": "K",
+        "value": "{3, 5}",
+        "type": "xsd:string"
+      },
+      {
+        "name": "LConv",
+        "value": "3",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "NF",
+        "value": "128",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "Stride",
+        "value": "1",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "Dropout",
+        "value": "0.3",
+        "type": "xsd:float"
+      },
+      {
+        "name": "learning_rate",
+        "value": "1e-4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "Batch Size",
+        "value": "64",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "lambda1",
+        "value": "1e-3",
+        "type": "xsd:float"
+      },
+      {
+        "name": "C",
+        "value": "3",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "T",
+        "value": "5",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "R",
+        "value": "10",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "epochs_per_round",
+        "value": "50",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "early_stopping_patience",
+        "value": "3",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "Q",
+        "value": "200",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "D",
+        "value": "300",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed_task_generation",
+        "value": "42",
+        "source": "paper"
+      },
+      {
+        "name": "random_seed_task_allocation_and_init",
+        "value": "{1, 2}",
+        "source": "paper"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "average text classification improvement",
+        "value": "12.4%",
+        "split": "test",
+        "dataset": "five diverse domain datasets"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Task Generation",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "AGNews",
+          "Amazon",
+          "DBPedia",
+          "Yelp",
+          "SUBJ"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Selective Knowledge Transfer",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "gensim",
+          "numpy"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Federated Continual Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 3,
+        "software_used": [
+          "mlflow",
+          "numpy"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "FedSeIT",
+      "predicate": "usedMethod",
+      "object": "Selective Inter-client Transfer (SIT)"
+    },
+    {
+      "subject": "FedSeIT",
+      "predicate": "usedMethod",
+      "object": "Federated Learning (FL)"
+    },
+    {
+      "subject": "FedSeIT",
+      "predicate": "usedMethod",
+      "object": "Continual Learning (CL)"
+    },
+    {
+      "subject": "Task Generation",
+      "predicate": "hasParameter",
+      "object": "random_seed_task_generation"
+    },
+    {
+      "subject": "Federated Continual Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Federated Continual Training",
+      "predicate": "hasParameter",
+      "object": "Batch Size"
+    },
+    {
+      "subject": "Federated Continual Training",
+      "predicate": "follows",
+      "object": "Task Generation"
+    },
+    {
+      "subject": "Selective Knowledge Transfer",
+      "predicate": "usedMethod",
+      "object": "SIT"
+    },
+    {
+      "subject": "Selective Knowledge Transfer",
+      "predicate": "hasParameter",
+      "object": "Q"
+    },
+    {
+      "subject": "FedSeIT",
+      "predicate": "generatesResult",
+      "object": "average text classification improvement"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

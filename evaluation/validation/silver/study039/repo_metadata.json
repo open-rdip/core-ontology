@@ -1,0 +1,190 @@
+{
+  "study_id": "study039",
+  "repo_url": "https://github.com/q1xiangchen/vmps",
+  "software_dependencies": [
+    {
+      "name": "torch",
+      "version": "1.8.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.9.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchaudio",
+      "version": "0.8.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "av",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "einops",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "h5py",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opencv-python",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "psutil",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "simplejson",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "timm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wandb",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "git",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "python",
+        "version": "3.7"
+      },
+      {
+        "name": "pytorch",
+        "version": "1.8.1"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.9.1"
+      },
+      {
+        "name": "torchaudio",
+        "version": "0.8.1"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "10.2"
+      },
+      {
+        "name": "pip",
+        "version": "22.3.1"
+      },
+      {
+        "name": "av",
+        "version": ""
+      },
+      {
+        "name": "einops",
+        "version": ""
+      },
+      {
+        "name": "h5py",
+        "version": ""
+      },
+      {
+        "name": "matplotlib",
+        "version": ""
+      },
+      {
+        "name": "opencv-python",
+        "version": ""
+      },
+      {
+        "name": "psutil",
+        "version": ""
+      },
+      {
+        "name": "scikit-learn",
+        "version": ""
+      },
+      {
+        "name": "simplejson",
+        "version": ""
+      },
+      {
+        "name": "tensorboard",
+        "version": ""
+      },
+      {
+        "name": "timm",
+        "version": ""
+      },
+      {
+        "name": "wandb",
+        "version": ""
+      },
+      {
+        "name": "git+https://github.com/facebookresearch/fvcore # for fvcore",
+        "version": ""
+      }
+    ],
+    "source": "conda",
+    "env_name": "vmps"
+  },
+  "seeds": [
+    {
+      "value": "1",
+      "file": "timesformer/config/defaults.py",
+      "context": "SEED = 1"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

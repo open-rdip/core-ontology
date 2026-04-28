@@ -1,0 +1,196 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "DICE Embeddings",
+        "version": "Open-source implementation"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "UMLS",
+        "format": "Knowledge Graph",
+        "access": "Public"
+      },
+      {
+        "name": "KINSHIP",
+        "format": "Knowledge Graph",
+        "access": "Public"
+      },
+      {
+        "name": "Freebase",
+        "format": "Knowledge Graph",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Kronecker Decomposition (KD)"
+      },
+      {
+        "name": "Link Prediction"
+      },
+      {
+        "name": "Label Smoothing (LS)"
+      },
+      {
+        "name": "Label Relaxation (LR)"
+      },
+      {
+        "name": "1vsAll Training Strategy"
+      },
+      {
+        "name": "KvsAll Training Strategy"
+      },
+      {
+        "name": "DistMult"
+      },
+      {
+        "name": "RESCAL"
+      },
+      {
+        "name": "ComplEx"
+      },
+      {
+        "name": "RotatE"
+      },
+      {
+        "name": "QuatE"
+      },
+      {
+        "name": "ConvE"
+      },
+      {
+        "name": "ConvKB"
+      },
+      {
+        "name": "HypER"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Caglar Demir",
+        "role": "Researcher"
+      },
+      {
+        "name": "Julian Lienen",
+        "role": "Researcher"
+      },
+      {
+        "name": "Axel-Cyrille Ngonga Ngomo",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Data Science Group, Paderborn University"
+      },
+      {
+        "name": "Heinz Nixdorf Institute, Paderborn University"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Embedding size",
+        "value": "200 (example)"
+      },
+      {
+        "name": "Smoothing parameter (alpha)",
+        "value": "variable"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "pseudo-random generator seed",
+        "value": "1"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Mean Reciprocal Rank (MRR)",
+        "value": "up to 10% improvement",
+        "split": "test"
+      },
+      {
+        "metric": "Parameter reduction",
+        "value": "59%",
+        "split": "relation embeddings"
+      },
+      {
+        "metric": "Parameter reduction average",
+        "value": "16.4 times fewer",
+        "split": "relation and entity embeddings"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Training KGE models with Kronecker Decomposition",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Evaluating link prediction performance",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Developing DICE Embeddings framework",
+        "type": "SoftwareDevelopmentActivity"
+      },
+      {
+        "name": "Fine-grained parameter sweep",
+        "type": "DataAnalysisActivity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Training KGE models with Kronecker Decomposition",
+      "predicate": "usedMethod",
+      "object": "Kronecker Decomposition (KD)"
+    },
+    {
+      "subject": "Training KGE models with Kronecker Decomposition",
+      "predicate": "usedDataset",
+      "object": "UMLS"
+    },
+    {
+      "subject": "Training KGE models with Kronecker Decomposition",
+      "predicate": "usedDataset",
+      "object": "KINSHIP"
+    },
+    {
+      "subject": "Training KGE models with Kronecker Decomposition",
+      "predicate": "hasParameter",
+      "object": "Embedding size"
+    },
+    {
+      "subject": "Evaluating link prediction performance",
+      "predicate": "generatesResult",
+      "object": "Mean Reciprocal Rank (MRR)"
+    },
+    {
+      "subject": "Evaluating link prediction performance",
+      "predicate": "usedMethod",
+      "object": "Link Prediction"
+    },
+    {
+      "subject": "Developing DICE Embeddings framework",
+      "predicate": "usedSoftware",
+      "object": "DICE Embeddings"
+    },
+    {
+      "subject": "Training KGE models with Kronecker Decomposition",
+      "predicate": "hasActivityRole",
+      "object": "Caglar Demir"
+    },
+    {
+      "subject": "Training KGE models with Kronecker Decomposition",
+      "predicate": "hasActivityRole",
+      "object": "Julian Lienen"
+    },
+    {
+      "subject": "Training KGE models with Kronecker Decomposition",
+      "predicate": "hasActivityRole",
+      "object": "Axel-Cyrille Ngonga Ngomo"
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "study_id": "study077",
+  "project": {
+    "title": "AFLOW: AUTOMATING AGENTIC WORKFLOW GENERATION",
+    "lead_organization": "Deep Wisdom",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "scipy",
+        "version": "1.9.0"
+      },
+      {
+        "name": "antlr4-python3-runtime",
+        "version": "4.11"
+      },
+      {
+        "name": "networkx",
+        "version": "3.3"
+      },
+      {
+        "name": "nltk",
+        "version": "3.9.1"
+      },
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "openai",
+        "version": "1.55.3"
+      },
+      {
+        "name": "litellm",
+        "version": "1.75.2"
+      },
+      {
+        "name": "litellm-enterprise",
+        "version": "0.1.19"
+      },
+      {
+        "name": "litellm-proxy-extras",
+        "version": "0.2.16"
+      },
+      {
+        "name": "dashscope",
+        "version": "1.23.4"
+      },
+      {
+        "name": "pydantic",
+        "version": "2.9.0"
+      },
+      {
+        "name": "loguru",
+        "version": "0.7.3"
+      },
+      {
+        "name": "pandas",
+        "version": "2.2.3"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.10.0"
+      },
+      {
+        "name": "datasets",
+        "version": "3.4.0"
+      },
+      {
+        "name": "faiss-cpu",
+        "version": "1.8.0.post1"
+      },
+      {
+        "name": "textgrad",
+        "version": "0.1.8"
+      },
+      {
+        "name": "fastapi",
+        "version": "0.111.0"
+      },
+      {
+        "name": "motor",
+        "version": "3.7.0"
+      },
+      {
+        "name": "uvicorn",
+        "version": "0.29.0"
+      },
+      {
+        "name": "sqlalchemy",
+        "version": "2.0.38"
+      },
+      {
+        "name": "python-jose",
+        "version": "3.3.0"
+      },
+      {
+        "name": "passlib",
+        "version": "1.7.4"
+      },
+      {
+        "name": "python-multipart",
+        "version": "0.0.6"
+      },
+      {
+        "name": "bcrypt",
+        "version": "4.0.1"
+      },
+      {
+        "name": "celery",
+        "version": "5.3.4"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "GSM8K",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MATH",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "HotpotQA",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "HumanEval",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MBPP",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "AFLOW",
+        "description": "An automated framework that formulates workflow optimization as a search problem over code-represented workflows using Monte Carlo Tree Search."
+      },
+      {
+        "name": "Monte Carlo Tree Search",
+        "description": "Used for efficient exploration of the workflow search space by balancing exploitation and exploration."
+      },
+      {
+        "name": "Tree-Structured Experience",
+        "description": "A mechanism for reusing successful workflow modifications and avoiding repeated failures through systematic path tracking."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Jiayi Zhang",
+        "affiliation": "Deep Wisdom",
+        "role": null
+      },
+      {
+        "name": "Chenglin Wu",
+        "affiliation": "Deep Wisdom",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Deep Wisdom"
+      },
+      {
+        "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+      },
+      {
+        "name": "Renmin University of China"
+      },
+      {
+        "name": "Nanjing University"
+      },
+      {
+        "name": "Fudan University"
+      },
+      {
+        "name": "King Abdullah University of Science and Technology"
+      },
+      {
+        "name": "Université de Montréal & Mila"
+      },
+      {
+        "name": "The Hong Kong University of Science and Technology"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "43",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "10",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "8",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Workflow Optimization Search",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "networkx",
+          "openai",
+          "litellm"
+        ],
+        "dataset_used": [
+          "GSM8K",
+          "MATH",
+          "HotpotQA"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "pytest"
+        ],
+        "dataset_used": [
+          "HumanEval",
+          "MBPP"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "AFLOW",
+      "predicate": "usedMethod",
+      "object": "Monte Carlo Tree Search"
+    },
+    {
+      "subject": "AFLOW",
+      "predicate": "usedMethod",
+      "object": "Tree-Structured Experience"
+    },
+    {
+      "subject": "Workflow Optimization Search",
+      "predicate": "usedMethod",
+      "object": "AFLOW"
+    },
+    {
+      "subject": "Workflow Optimization Search",
+      "predicate": "usedDataset",
+      "object": "GSM8K"
+    },
+    {
+      "subject": "Workflow Optimization Search",
+      "predicate": "usedSoftware",
+      "object": "networkx"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "usedDataset",
+      "object": "HumanEval"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

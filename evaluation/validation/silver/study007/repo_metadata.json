@@ -1,0 +1,93 @@
+{
+  "study_id": "study007",
+  "repo_url": "https://github.com/ShangtongZhang/DeepRL",
+  "software_dependencies": [
+    {
+      "name": "torch",
+      "version": "1.5.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "gym",
+      "version": "0.10.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorflow",
+      "version": "1.15.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "atari-py",
+      "version": "0.1.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opencv-python",
+      "version": "4.0.0.21",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-image",
+      "version": "0.14.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.31.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "0.24.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pathlib",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "seaborn",
+      "version": "0.9.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "roboschool",
+      "version": "1.0.49",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchmeta",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "nvidia/cuda:10.0-base",
+    "cuda_version": "10.0"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

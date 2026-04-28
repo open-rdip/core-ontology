@@ -1,0 +1,98 @@
+You are an expert research metadata annotator using the RDIP ontology.
+Extract structured metadata from this research paper and its repository.
+
+══════════════════════════════════════
+PAPER METADATA
+══════════════════════════════════════
+Study ID: study014
+Title: H3DNet: 3D Object Detection Using Hybrid Geometric Primitives
+arXiv: 2006.05682
+Repository: https://github.com/open-mmlab/mmdetection3d
+
+══════════════════════════════════════
+REPOSITORY METADATA (auto-extracted)
+══════════════════════════════════════
+
+Docker base image: pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel
+
+Random seeds found in main code:
+  - seed=1 (in projects/PETR/configs/petr_vovnet_gridmask_p4_800x320.py)
+  - seed=1588147245 (in configs/minkunet/minkunet18_w16_torchsparse_8xb2-amp-15e_semantickitti.py)
+  - seed=1024 (in configs/imvotenet/imvotenet_stage2_8xb16_sunrgbd-3d.py)
+  - seed=8 (in configs/imvotenet/imvotenet_stage2_8xb16_sunrgbd-3d.py)
+  - seed=4 (in configs/groupfree3d/groupfree3d_head-L6-O256_4xb8_scannet-seg.py)
+
+Random seeds found in test files (may not be experiment seeds):
+  - seed=0 (in tests/test_structures/test_bbox/test_box3d.py)
+  - seed=42 (in tests/test_models/test_backbones/test_mink_resnet.py)
+  - seed=3 (in tests/test_models/test_layers/test_vote_module.py)
+
+Repository license: Apache-2.0
+
+══════════════════════════════════════
+PAPER TEXT
+══════════════════════════════════════
+[The paper PDF is attached separately in this conversation]
+
+══════════════════════════════════════
+EXTRACTION TASK
+══════════════════════════════════════
+
+Extract ALL of the following from the attached paper and the repository metadata above.
+Be CONSERVATIVE — only extract what is explicitly stated.
+Mark uncertain items with [UNCERTAIN].
+
+Return ONLY valid JSON in this EXACT format (no markdown fences, no explanation before or after):
+
+{
+  "study_id": "study014",
+  "project": {
+    "title": "...",
+    "lead_organization": "first author's affiliation",
+    "funding": "from acknowledgments section, or null"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {"name": "...", "version": "exact version from repo or paper"}
+    ],
+    "Dataset": [
+      {"name": "...", "format": "CSV|JSON|images|etc", "access": "open|restricted", "role": "used|produced", "derived_from": "parent dataset name or null"}
+    ],
+    "Method": [
+      {"name": "...", "description": "one sentence"}
+    ],
+    "Person": [
+      {"name": "...", "affiliation": "...", "role": "Principal Investigator|Software Engineer|Data Collector|..."}
+    ],
+    "Organization": [
+      {"name": "..."}
+    ],
+    "Parameter": [
+      {"name": "learning_rate|batch_size|num_epochs|etc", "value": "...", "type": "xsd:float|xsd:integer|xsd:string"}
+    ],
+    "RandomSeed": [
+      {"name": "random_seed", "value": "...", "source": "paper|repo"}
+    ],
+    "ComputingEnvironment": [
+      {"os": "...", "gpu": "...", "cuda": "...", "ram": "..."}
+    ],
+    "EvaluationResult": [
+      {"metric": "accuracy|F1|mAP|AUC|etc", "value": "...", "split": "test|val|train", "dataset": "dataset name"}
+    ],
+    "Activity": [
+      {"name": "descriptive name", "type": "DataCollectionActivity|DataProcessingActivity|DataProductionActivity|DataAnalysisActivity|SoftwareDevelopmentActivity", "order": 1, "software_used": ["..."], "dataset_used": ["..."], "dataset_produced": ["..."]}
+    ]
+  },
+  "relations": [
+    {"subject": "entity name", "predicate": "usedSoftware|usedDataset|generatesDataset|usedMethod|hasParameter|executedIn|generatesResult|derivedFrom|follows|softwareDependency|hasActivityRole", "object": "entity name"}
+  ]
+}
+
+IMPORTANT RULES:
+1. Software versions: prefer exact versions from repo (requirements.txt) over paper text.
+2. Include random seeds found in repo metadata above.
+3. Activities must have an ORDER field (1, 2, 3...) showing execution sequence.
+4. For each activity, list which software, datasets, and methods it uses/produces.
+5. Relations must use the EXACT predicate names listed above.
+6. Evaluation metrics: include the EXACT numeric value and which split (test/val/train).
+7. If something is not mentioned, omit it — do NOT fabricate.

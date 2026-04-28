@@ -1,0 +1,166 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "DICE Embeddings",
+        "version": "open-source",
+        "url": "https://github.com/dice-group/dice-embeddings"
+      },
+      {
+        "name": "ADAM optimizer"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "UMLS",
+        "format": "Knowledge Graph",
+        "access": "public"
+      },
+      {
+        "name": "KINSHIP",
+        "format": "Knowledge Graph",
+        "access": "public"
+      },
+      {
+        "name": "Freebase",
+        "format": "Knowledge Graph"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Kronecker Decomposition (KD)"
+      },
+      {
+        "name": "1vsAll training strategy"
+      },
+      {
+        "name": "KvsAll training strategy"
+      },
+      {
+        "name": "Label Smoothing (LS)"
+      },
+      {
+        "name": "Label Relaxation (LR)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Caglar Demir",
+        "role": "Researcher"
+      },
+      {
+        "name": "Julian Lienen",
+        "role": "Researcher"
+      },
+      {
+        "name": "Axel-Cyrille Ngonga Ngomo",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Data Science Group, Paderborn University"
+      },
+      {
+        "name": "Heinz Nixdorf Institute, Paderborn University"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning rate",
+        "value": "0.01"
+      },
+      {
+        "name": "batch size",
+        "value": "1024"
+      },
+      {
+        "name": "epochs",
+        "value": "1000"
+      },
+      {
+        "name": "embedding size",
+        "value": "variable (parameter sweep)"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "pseudo-random generator seed",
+        "value": "1"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "gpu": "hardware-agnostic framework"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "MRR",
+        "value": "up to 10% absolute improvement",
+        "split": "test"
+      },
+      {
+        "metric": "Parameter Reduction",
+        "value": "59% on relation embeddings",
+        "split": "model complexity"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Training",
+        "type": "prov:Activity"
+      },
+      {
+        "name": "Link Prediction Evaluation",
+        "type": "prov:Activity"
+      },
+      {
+        "name": "Kronecker Decomposition",
+        "type": "prov:Activity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Training",
+      "predicate": "used",
+      "object": "ADAM optimizer"
+    },
+    {
+      "subject": "Training",
+      "predicate": "used",
+      "object": "UMLS"
+    },
+    {
+      "subject": "Training",
+      "predicate": "used",
+      "object": "KINSHIP"
+    },
+    {
+      "subject": "Training",
+      "predicate": "wasAssociatedWith",
+      "object": "Caglar Demir"
+    },
+    {
+      "subject": "Link Prediction Evaluation",
+      "predicate": "wasInformedBy",
+      "object": "Training"
+    },
+    {
+      "subject": "DICE Embeddings",
+      "predicate": "wasGeneratedBy",
+      "object": "Kronecker Decomposition"
+    },
+    {
+      "subject": "Kronecker Decomposition",
+      "predicate": "wasAssociatedWith",
+      "object": "Julian Lienen"
+    },
+    {
+      "subject": "Kronecker Decomposition",
+      "predicate": "wasAssociatedWith",
+      "object": "Axel-Cyrille Ngonga Ngomo"
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "study_id": "study017",
+  "project": {
+    "title": "HistoCartography: A Toolkit for Graph Analytics in Digital Pathology",
+    "lead_organization": "IBM Research, Zurich",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "HistoCartography",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "torch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "dgl",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "scikit-image",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "opencv-python",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "BRACS",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "TCGA-BRCA",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "RoI",
+        "format": "images",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "WSI",
+        "format": "images",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Vahadane Normalization",
+        "description": "A stain normalization technique used during preprocessing to standardize the appearance of histopathology images."
+      },
+      {
+        "name": "Macenko Normalization",
+        "description": "A method for stain normalization based on singular value decomposition of the optical density transformation."
+      },
+      {
+        "name": "Cell Graph (CG) Construction",
+        "description": "Representing tissue by detecting nuclei as nodes and defining edges based on spatial proximity or connectivity."
+      },
+      {
+        "name": "Tissue Graph (TG) Construction",
+        "description": "Representing tissue by detecting super-pixels or regions as nodes to capture higher-level architectural patterns."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Guillaume Jaume",
+        "affiliation": "IBM Research, Zurich",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Pushpak Pati",
+        "affiliation": "IBM Research, Zurich",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Valentin Anklin",
+        "affiliation": "ETH, Zurich",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Antonio Foncubierta",
+        "affiliation": "IBM Research, Zurich",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Maria Gabrani",
+        "affiliation": "IBM Research, Zurich",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "IBM Research, Zurich"
+      },
+      {
+        "name": "EPFL, Lausanne"
+      },
+      {
+        "name": "ETH, Zurich"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "k",
+        "value": "5",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "image_size",
+        "value": "1000^2",
+        "type": "xsd:string"
+      },
+      {
+        "name": "image_size",
+        "value": "2500^2",
+        "type": "xsd:string"
+      },
+      {
+        "name": "image_size",
+        "value": "5000^2",
+        "type": "xsd:string"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": "NVIDIA P100",
+        "cuda": null,
+        "ram": null
+      },
+      {
+        "os": null,
+        "gpu": null,
+        "cuda": null,
+        "ram": "single-core POWER8 processor"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Processing Time",
+        "value": "1.77",
+        "split": "test",
+        "dataset": "Tumor"
+      },
+      {
+        "metric": "Processing Time",
+        "value": "0.80",
+        "split": "test",
+        "dataset": "Tumor"
+      },
+      {
+        "metric": "Processing Time",
+        "value": "186.10",
+        "split": "test",
+        "dataset": "WSI"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Preprocessing",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "scikit-image",
+          "opencv-python"
+        ],
+        "dataset_used": [
+          "BRACS",
+          "TCGA-BRCA"
+        ],
+        "dataset_produced": [
+          "Normalized Images"
+        ]
+      },
+      {
+        "name": "Graph Construction",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [
+          "HistoCartography",
+          "dgl"
+        ],
+        "dataset_used": [
+          "Normalized Images"
+        ],
+        "dataset_produced": [
+          "Cell Graphs",
+          "Tissue Graphs"
+        ]
+      },
+      {
+        "name": "Performance Benchmarking",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "HistoCartography"
+        ],
+        "dataset_used": [
+          "Cell Graphs",
+          "Tissue Graphs"
+        ],
+        "dataset_produced": [
+          "Computational Time Metrics"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "HistoCartography",
+      "predicate": "softwareDependency",
+      "object": "torch"
+    },
+    {
+      "subject": "HistoCartography",
+      "predicate": "softwareDependency",
+      "object": "dgl"
+    },
+    {
+      "subject": "Preprocessing",
+      "predicate": "usedMethod",
+      "object": "Vahadane Normalization"
+    },
+    {
+      "subject": "Graph Construction",
+      "predicate": "usedMethod",
+      "object": "Cell Graph (CG) Construction"
+    },
+    {
+      "subject": "Performance Benchmarking",
+      "predicate": "generatesResult",
+      "object": "Processing Time"
+    },
+    {
+      "subject": "Graph Construction",
+      "predicate": "follows",
+      "object": "Preprocessing"
+    },
+    {
+      "subject": "Performance Benchmarking",
+      "predicate": "follows",
+      "object": "Graph Construction"
+    },
+    {
+      "subject": "Performance Benchmarking",
+      "predicate": "executedIn",
+      "object": "NVIDIA P100"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

@@ -1,0 +1,215 @@
+# RDIP Triples — study001
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study001_Project a rdip:ResearchProject ;
+    rdip:title "ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation" ;
+    .
+
+ex:study001_Org1 a vivo:Organization ;
+    rdfs:label "Microsoft" .
+ex:study001_Project rdip:hasLeadOrganization ex:study001_Org1 .
+
+ex:study001_Person1 a vivo:Person ;
+    rdfs:label "Zhewei Yao" .
+ex:study001_Project rdip:hasParticipant ex:study001_Person1 .
+ex:study001_Person2 a vivo:Person ;
+    rdfs:label "Xiaoxia Wu" .
+ex:study001_Project rdip:hasParticipant ex:study001_Person2 .
+ex:study001_Person3 a vivo:Person ;
+    rdfs:label "Cheng Li" .
+ex:study001_Project rdip:hasParticipant ex:study001_Person3 .
+ex:study001_Person4 a vivo:Person ;
+    rdfs:label "Stephen Youn" .
+ex:study001_Project rdip:hasParticipant ex:study001_Person4 .
+ex:study001_Person5 a vivo:Person ;
+    rdfs:label "Yuxiong He" .
+ex:study001_Project rdip:hasParticipant ex:study001_Person5 .
+
+ex:study001_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "DeepSpeed" ;
+    .
+ex:study001_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "pytorch" ;
+    .
+ex:study001_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "torchvision" ;
+    .
+ex:study001_Sw4 a rdip:SoftwareApplication ;
+    rdip:title "torchaudio" ;
+    .
+ex:study001_Sw5 a rdip:SoftwareApplication ;
+    rdip:title "cuda" ;
+    rdip:version "12.2.2" ;
+    .
+ex:study001_Sw6 a rdip:SoftwareApplication ;
+    rdip:title "pytorch-cuda" ;
+    rdip:version "11.8" ;
+    .
+ex:study001_Sw7 a rdip:SoftwareApplication ;
+    rdip:title "gcc" ;
+    rdip:version "11.4" ;
+    .
+ex:study001_Sw8 a rdip:SoftwareApplication ;
+    rdip:title "ninja" ;
+    .
+ex:study001_Sw9 a rdip:SoftwareApplication ;
+    rdip:title "python" ;
+    rdip:version "3.10" ;
+    .
+
+ex:study001_Dataset1 a dcat:Dataset ;
+    rdip:title "Wikitext-2" ;
+    rdip:dataFormat "text" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study001_Dataset2 a dcat:Dataset ;
+    rdip:title "PTB" ;
+    rdip:dataFormat "text" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study001_Dataset3 a dcat:Dataset ;
+    rdip:title "C4" ;
+    rdip:dataFormat "text" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study001_Dataset4 a dcat:Dataset ;
+    rdip:title "Calibration Set" ;
+    rdip:dataFormat "text" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study001_Dataset4 rdip:derivedFrom ex:study001_Dataset3 .
+
+ex:study001_Method1 a rdip:Method ;
+    rdip:title "Round-to-nearest (RTN)" ;
+    rdip:description "A naive baseline quantization method that rounds floating point numbers to the nearest integer representation." ;
+    .
+ex:study001_Method2 a rdip:Method ;
+    rdip:title "GPTQ" ;
+    rdip:description "A post-training quantization method that updates weights by solving a non-linear least square problem layer-by-layer." ;
+    .
+ex:study001_Method3 a rdip:Method ;
+    rdip:title "ZeroQuant (ZQ-Global)" ;
+    rdip:description "A method that treats each layer as a subnetwork and uses distillation to optimize the quantized version." ;
+    .
+ex:study001_Method4 a rdip:Method ;
+    rdip:title "Low-Rank Compensation (LoRC)" ;
+    rdip:description "A technique that uses low-rank matrix factorization to compensate for quantization errors in weights." ;
+    .
+
+ex:study001_Param1 a rdip:Parameter ;
+    rdip:parameterName "learning_rate" ;
+    rdip:parameterValue "1e-3 to 5e-8" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study001_Param2 a rdip:Parameter ;
+    rdip:parameterName "batch_size" ;
+    rdip:parameterValue "1" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study001_Param3 a rdip:Parameter ;
+    rdip:parameterName "calibration_samples" ;
+    rdip:parameterValue "128" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study001_Param4 a rdip:Parameter ;
+    rdip:parameterName "token_length" ;
+    rdip:parameterValue "2048" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study001_Param5 a rdip:Parameter ;
+    rdip:parameterName "LoRC_dimension_m" ;
+    rdip:parameterValue "8" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study001_Seed1 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "1234" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study001_Seed2 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "42" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study001_Seed3 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "123" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study001_Seed4 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "456" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study001_Seed5 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "0" ;
+    rdip:parameterDataType "xsd:integer" .
+
+ex:study001_Env1 a rdip:ComputingEnvironment ;
+    rdip:osVersion "Ubuntu 20.04" ;
+    rdip:gpuModel "modern GPUs" ;
+    rdip:cudaVersion "12.2.2" ;
+    .
+
+ex:study001_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "PPL" ;
+    rdip:metricValue "10.90" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "BLOOM-176B" ;
+    rdip:metricDataType "xsd:float" .
+ex:study001_Result2 a rdip:EvaluationResult ;
+    rdip:metricName "PPL" ;
+    rdip:metricValue "10.33" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "OPT-66B" ;
+    rdip:metricDataType "xsd:float" .
+ex:study001_Result3 a rdip:EvaluationResult ;
+    rdip:metricName "PPL" ;
+    rdip:metricValue "11.02" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "BLOOM-176B (W4A16 GPTQ)" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study001_Act1 a rdip:DataProcessingActivity ;
+    rdip:title "Data Sampling" ;
+    rdip:isPartOfProject ex:study001_Project ;
+    .
+ex:study001_Project rdip:hasActivity ex:study001_Act1 .
+ex:study001_Act2 a rdip:SoftwareDevelopmentActivity ;
+    rdip:title "Post-Training Quantization" ;
+    rdip:isPartOfProject ex:study001_Project ;
+    .
+ex:study001_Project rdip:hasActivity ex:study001_Act2 .
+ex:study001_Act3 a rdip:SoftwareDevelopmentActivity ;
+    rdip:title "Low-Rank Compensation" ;
+    rdip:isPartOfProject ex:study001_Project ;
+    .
+ex:study001_Project rdip:hasActivity ex:study001_Act3 .
+ex:study001_Act4 a rdip:DataAnalysisActivity ;
+    rdip:title "Perplexity Evaluation" ;
+    rdip:isPartOfProject ex:study001_Project ;
+    .
+ex:study001_Project rdip:hasActivity ex:study001_Act4 .
+
+# ═══ RELATIONS ═══
+ex:study001_Act2 rdip:usedSoftware ex:study001_Sw1 .
+ex:study001_Act2 rdip:usedDataset ex:study001_Dataset3 .
+ex:study001_Act2 rdip:usedMethod ex:study001_Method2 .
+ex:study001_Act3 rdip:usedMethod ex:study001_Method4 .
+ex:study001_Act2 rdip:hasParameter ex:study001_Param1 .
+ex:study001_Act2 rdip:hasParameter ex:study001_Param2 .
+ex:study001_Act2 rdip:executedIn ex:study001_Env1 .
+ex:study001_Act4 rdip:generatesResult ex:study001_Result3 .
+ex:study001_Dataset4 rdip:derivedFrom ex:study001_Dataset3 .
+ex:study001_Act2 rdip:follows ex:study001_Act1 .
+ex:study001_Act3 rdip:follows ex:study001_Act2 .
+ex:study001_Sw1 rdip:softwareDependency ex:study001_Sw2 .
+
+# ═══ END (12 resolved, 0 unresolved) ═══

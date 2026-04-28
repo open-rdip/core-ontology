@@ -1,0 +1,252 @@
+{
+  "study_id": "study066",
+  "project": {
+    "title": "ResNeSt: Split-Attention Networks",
+    "lead_organization": "Facebook",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "python",
+        "version": "3.7"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "ImageNet",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MS-COCO",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "LVIS",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Split-Attention",
+        "description": "A modularized architecture applying channel-wise attention on different network branches to capture cross-feature interactions."
+      },
+      {
+        "name": "ResNeSt",
+        "description": "A CNN architecture that combines channel-wise attention strategy with a multi-path network layout."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Hang Zhang",
+        "affiliation": "Facebook",
+        "role": null
+      },
+      {
+        "name": "Chongruo Wu",
+        "affiliation": "UC Davis",
+        "role": null
+      },
+      {
+        "name": "Zhongyue Zhang",
+        "affiliation": "Snap",
+        "role": null
+      },
+      {
+        "name": "Yi Zhu",
+        "affiliation": "Amazon",
+        "role": null
+      },
+      {
+        "name": "Haibin Lin",
+        "affiliation": "ByteDance",
+        "role": null
+      },
+      {
+        "name": "Zhi Zhang",
+        "affiliation": "Amazon",
+        "role": null
+      },
+      {
+        "name": "Yue Sun",
+        "affiliation": "SenseTime",
+        "role": null
+      },
+      {
+        "name": "Tong He",
+        "affiliation": "Amazon",
+        "role": null
+      },
+      {
+        "name": "Jonas Mueller",
+        "affiliation": "Amazon",
+        "role": null
+      },
+      {
+        "name": "R. Manmatha",
+        "affiliation": "Facebook",
+        "role": null
+      },
+      {
+        "name": "Mu Li",
+        "affiliation": "Amazon",
+        "role": null
+      },
+      {
+        "name": "Alexander Smola",
+        "affiliation": "Amazon",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Facebook"
+      },
+      {
+        "name": "UC Davis"
+      },
+      {
+        "name": "Snap"
+      },
+      {
+        "name": "Amazon"
+      },
+      {
+        "name": "ByteDance"
+      },
+      {
+        "name": "SenseTime"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "GPU",
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "accuracy",
+        "value": "81.1",
+        "split": "val",
+        "dataset": "ImageNet"
+      },
+      {
+        "metric": "accuracy",
+        "value": "82.8",
+        "split": "val",
+        "dataset": "ImageNet"
+      },
+      {
+        "metric": "accuracy",
+        "value": "83.9",
+        "split": "val",
+        "dataset": "ImageNet"
+      },
+      {
+        "metric": "accuracy",
+        "value": "84.5",
+        "split": "val",
+        "dataset": "ImageNet"
+      },
+      {
+        "metric": "box mAP",
+        "value": "48.30",
+        "split": "val",
+        "dataset": "MS-COCO"
+      },
+      {
+        "metric": "mask mAP",
+        "value": "41.56",
+        "split": "val",
+        "dataset": "MS-COCO"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Software Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "python"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Training and Evaluation on ImageNet",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [
+          "ImageNet"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Transfer Learning on MS-COCO",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [],
+        "dataset_used": [
+          "MS-COCO"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "ResNeSt",
+      "predicate": "usedMethod",
+      "object": "Split-Attention"
+    },
+    {
+      "subject": "Model Training and Evaluation on ImageNet",
+      "predicate": "usedDataset",
+      "object": "ImageNet"
+    },
+    {
+      "subject": "Transfer Learning on MS-COCO",
+      "predicate": "usedDataset",
+      "object": "MS-COCO"
+    },
+    {
+      "subject": "Model Training and Evaluation on ImageNet",
+      "predicate": "generatesResult",
+      "object": "accuracy"
+    },
+    {
+      "subject": "Transfer Learning on MS-COCO",
+      "predicate": "generatesResult",
+      "object": "box mAP"
+    },
+    {
+      "subject": "Transfer Learning on MS-COCO",
+      "predicate": "generatesResult",
+      "object": "mask mAP"
+    },
+    {
+      "subject": "Software Development",
+      "predicate": "usedSoftware",
+      "object": "python"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

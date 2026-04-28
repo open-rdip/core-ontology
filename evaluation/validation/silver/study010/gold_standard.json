@@ -1,0 +1,267 @@
+{
+  "study_id": "study010",
+  "project": {
+    "title": "SVTR: Scene Text Recognition with a Single Visual Model",
+    "lead_organization": "Beijing Jiaotong University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "PaddleOCR",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "mmpose",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "pytorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "cuda",
+        "version": "12.1.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "English scene text recognition tasks",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Chinese scene text recognition tasks",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "SVTR",
+        "description": "A single visual model for scene text recognition that dispenses with sequential modeling and uses a patch-wise image tokenization framework."
+      },
+      {
+        "name": "Global Mixing",
+        "description": "A mechanism that evaluates the dependence among all character components to establish long-term dependence."
+      },
+      {
+        "name": "Local Mixing",
+        "description": "A mechanism that evaluates correlation among components within a predefined window to encode character morphology."
+      },
+      {
+        "name": "Progressive Overlapping Patch Embedding",
+        "description": "A method to transform an image text into patches (character components) using consecutive 3x3 convolutions."
+      },
+      {
+        "name": "Multi-Resolution Heatmap Aggregation",
+        "description": "A strategy used during inference to generate scale-aware high-resolution heatmaps."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yongkun Du",
+        "affiliation": "Beijing Jiaotong University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zhineng Chen",
+        "affiliation": "Fudan University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Caiyan Jia",
+        "affiliation": "Beijing Jiaotong University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Xiaoting Yin",
+        "affiliation": "Baidu Inc.",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Tianlun Zheng",
+        "affiliation": "Fudan University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Chenxia Li",
+        "affiliation": "Baidu Inc.",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Yuning Du",
+        "affiliation": "Baidu Inc.",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Yu-Gang Jiang",
+        "affiliation": "Fudan University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Beijing Jiaotong University"
+      },
+      {
+        "name": "Fudan University"
+      },
+      {
+        "name": "Baidu Inc."
+      },
+      {
+        "name": "Shanghai Collaborative Innovation Center of Intelligent Visual Computing"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "window_size",
+        "value": "7x11",
+        "type": "xsd:string"
+      },
+      {
+        "name": "parameters_count",
+        "value": "6.03M",
+        "type": "xsd:string"
+      },
+      {
+        "name": "inference_speed",
+        "value": "4.5ms per image",
+        "type": "xsd:string"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "1",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "7",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 22.04",
+        "gpu": "NVIDIA 1080Ti",
+        "cuda": "12.1.1",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "AP",
+        "value": "70.5%",
+        "split": "test-dev",
+        "dataset": "COCO2017"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Patch Embedding",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "PaddleOCR"
+        ],
+        "dataset_used": [
+          "English scene text recognition tasks"
+        ],
+        "dataset_produced": [
+          "Character Components"
+        ]
+      },
+      {
+        "name": "Mixing and Merging",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [
+          "PaddleOCR"
+        ],
+        "dataset_used": [
+          "Character Components"
+        ],
+        "dataset_produced": [
+          "Multi-grained character features"
+        ]
+      },
+      {
+        "name": "Linear Prediction",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "PaddleOCR"
+        ],
+        "dataset_used": [
+          "Multi-grained character features"
+        ],
+        "dataset_produced": [
+          "Digital character sequence"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "SVTR",
+      "predicate": "usedMethod",
+      "object": "Global Mixing"
+    },
+    {
+      "subject": "SVTR",
+      "predicate": "usedMethod",
+      "object": "Local Mixing"
+    },
+    {
+      "subject": "SVTR",
+      "predicate": "usedMethod",
+      "object": "Progressive Overlapping Patch Embedding"
+    },
+    {
+      "subject": "SVTR",
+      "predicate": "hasParameter",
+      "object": "window_size"
+    },
+    {
+      "subject": "Patch Embedding",
+      "predicate": "usedSoftware",
+      "object": "PaddleOCR"
+    },
+    {
+      "subject": "Mixing and Merging",
+      "predicate": "follows",
+      "object": "Patch Embedding"
+    },
+    {
+      "subject": "Linear Prediction",
+      "predicate": "follows",
+      "object": "Mixing and Merging"
+    },
+    {
+      "subject": "SVTR",
+      "predicate": "executedIn",
+      "object": "NVIDIA 1080Ti"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

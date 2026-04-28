@@ -1,0 +1,244 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Mistral-7B",
+        "version": "v0.1"
+      },
+      {
+        "name": "LeoLM",
+        "version": "not specified"
+      },
+      {
+        "name": "sentencepiece",
+        "version": "not specified"
+      },
+      {
+        "name": "PyTorch FSDP",
+        "version": "not specified"
+      },
+      {
+        "name": "FlashAttention",
+        "version": "2"
+      },
+      {
+        "name": "lm-eval-harness",
+        "version": "fork by Plüster"
+      },
+      {
+        "name": "lighteval",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "OSCAR23.01 German split",
+        "format": "text",
+        "access": "public"
+      },
+      {
+        "name": "CulturaX",
+        "format": "text",
+        "access": "public"
+      },
+      {
+        "name": "MMLU",
+        "format": "translated German/Arabic",
+        "access": "public"
+      },
+      {
+        "name": "TruthfulQA",
+        "format": "translated German",
+        "access": "public"
+      },
+      {
+        "name": "ARC",
+        "format": "translated German/Arabic",
+        "access": "public"
+      },
+      {
+        "name": "HellaSwag",
+        "format": "translated German/Arabic",
+        "access": "public"
+      },
+      {
+        "name": "PAWS-X",
+        "format": "translated German",
+        "access": "public"
+      },
+      {
+        "name": "LAMBADA-OpenAI",
+        "format": "translated German",
+        "access": "public"
+      },
+      {
+        "name": "OALL",
+        "format": "benchmark suite",
+        "access": "public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Tokenizer Swapping"
+      },
+      {
+        "name": "Pure bfloat16 Training"
+      },
+      {
+        "name": "Mixed-precision bfloat16 Training"
+      },
+      {
+        "name": "Continued Pretraining"
+      },
+      {
+        "name": "FOCUS embedding initialization"
+      },
+      {
+        "name": "Activation Checkpointing"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Konstantin Dobler",
+        "role": "Lead Researcher/Corresponding Author"
+      },
+      {
+        "name": "Gerard de Melo",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Hasso Plattner Institute"
+      },
+      {
+        "name": "University of Potsdam"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Learning rate",
+        "value": "4e-5"
+      },
+      {
+        "name": "Batch size",
+        "value": "256"
+      },
+      {
+        "name": "Context length",
+        "value": "4,096"
+      },
+      {
+        "name": "Total training tokens",
+        "value": "8 billion"
+      },
+      {
+        "name": "Optimizer",
+        "value": "AdamW"
+      },
+      {
+        "name": "Weight decay",
+        "value": "0.05"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "Nvidia A100 (80GB/40GB), H100 (80GB), A6000 (48GB)",
+        "cuda": "RMSNorm CUDA kernels"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Avg. Downstream Task Score (German)",
+        "value": "47.2",
+        "split": "German tokenizer + pure bfloat16"
+      },
+      {
+        "metric": "Avg. Downstream Task Score (Arabic)",
+        "value": "54.6",
+        "split": "Arabic pure++"
+      },
+      {
+        "metric": "Word-normalized NLL",
+        "value": "1.59",
+        "split": "100% training, pure bfloat16"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Filtering OSCAR23.01 with quality warnings",
+        "type": "DataProcessingActivity"
+      },
+      {
+        "name": "Training sentencepiece BPE tokenizer",
+        "type": "DataProductionActivity"
+      },
+      {
+        "name": "Continued pretraining of Mistral-7B",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Downstream task evaluation using lm-eval-harness",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Training benchmarking on H100 GPUs",
+        "type": "DataAnalysisActivity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Continued pretraining of Mistral-7B",
+      "predicate": "usedSoftware",
+      "object": "Mistral-7B"
+    },
+    {
+      "subject": "Continued pretraining of Mistral-7B",
+      "predicate": "usedDataset",
+      "object": "OSCAR23.01 German split"
+    },
+    {
+      "subject": "Continued pretraining of Mistral-7B",
+      "predicate": "usedMethod",
+      "object": "Pure bfloat16 Training"
+    },
+    {
+      "subject": "Continued pretraining of Mistral-7B",
+      "predicate": "hasParameter",
+      "object": "Learning rate"
+    },
+    {
+      "subject": "Continued pretraining of Mistral-7B",
+      "predicate": "executedIn",
+      "object": "Nvidia A100 (80GB/40GB), H100 (80GB), A6000 (48GB)"
+    },
+    {
+      "subject": "Continued pretraining of Mistral-7B",
+      "predicate": "generatesResult",
+      "object": "Word-normalized NLL"
+    },
+    {
+      "subject": "Downstream task evaluation using lm-eval-harness",
+      "predicate": "usedDataset",
+      "object": "MMLU"
+    },
+    {
+      "subject": "Downstream task evaluation using lm-eval-harness",
+      "predicate": "generatesResult",
+      "object": "Avg. Downstream Task Score (German)"
+    },
+    {
+      "subject": "Training sentencepiece BPE tokenizer",
+      "predicate": "usedSoftware",
+      "object": "sentencepiece"
+    },
+    {
+      "subject": "Filtering OSCAR23.01 with quality warnings",
+      "predicate": "follows",
+      "object": "OSCAR23.01 German split"
+    }
+  ]
+}

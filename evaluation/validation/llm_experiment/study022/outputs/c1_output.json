@@ -1,0 +1,224 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "nvFuser",
+        "version": "not specified"
+      },
+      {
+        "name": "Transformer",
+        "version": "standard transformer encoder"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Pinterest Homefeed production data",
+        "format": "real-time user actions and batch user embeddings",
+        "access": "internal"
+      }
+    ],
+    "Method": [
+      {
+        "name": "TransAct"
+      },
+      {
+        "name": "Pinnability"
+      },
+      {
+        "name": "PinnerFormer"
+      },
+      {
+        "name": "Wide and Deep learning (WDL)"
+      },
+      {
+        "name": "Deep Cross Network (DCN) V2"
+      },
+      {
+        "name": "PinSage"
+      },
+      {
+        "name": "Early fusion (concat and append)"
+      },
+      {
+        "name": "Random Time Window Masking"
+      },
+      {
+        "name": "Transformer Output Compression"
+      },
+      {
+        "name": "CUDA kernel fusion"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Xue Xia",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Pong Eksombatchai",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Nikil Pancha",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Dhruvil Deven Badani",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Po-Wei Wang",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Neng Gu",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Saurabh Vishwas Joshi",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Nazanin Farahpour",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Zhiyuan Zhang",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Andrew Zhai",
+        "role": "Researcher/Engineer"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Pinterest"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "sequence length",
+        "value": "100 actions"
+      },
+      {
+        "name": "PinSage dimension",
+        "value": "32-dimensional"
+      },
+      {
+        "name": "transformer encoder layers",
+        "value": "2"
+      },
+      {
+        "name": "transformer heads",
+        "value": "1"
+      },
+      {
+        "name": "random time window T",
+        "value": "uniformly from 0 to 24 hours"
+      },
+      {
+        "name": "retrain frequency",
+        "value": "twice per week"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "served on GPUs",
+        "cuda": "uses CUDA kernels"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Repin Volume (Related Pins)",
+        "value": "+2.8%",
+        "split": "online A/B experiment"
+      },
+      {
+        "metric": "Repin Volume (Search)",
+        "value": "+2.3%",
+        "split": "online A/B experiment"
+      },
+      {
+        "metric": "Email CTR (Notification)",
+        "value": "+1.4%",
+        "split": "online A/B experiment"
+      },
+      {
+        "metric": "Push Open Rate (Notification)",
+        "value": "+1.9%",
+        "split": "online A/B experiment"
+      },
+      {
+        "metric": "Impression Diversity",
+        "value": "-1%",
+        "split": "with random time window mask"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Sequence encoding",
+        "type": "Feature Engineering"
+      },
+      {
+        "name": "Early fusion",
+        "type": "Modeling"
+      },
+      {
+        "name": "Offline evaluation",
+        "type": "Experimentation"
+      },
+      {
+        "name": "Ablation study",
+        "type": "Experimentation"
+      },
+      {
+        "name": "Online A/B experiment",
+        "type": "Experimentation"
+      },
+      {
+        "name": "Production deployment",
+        "type": "Engineering"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "TransAct",
+      "predicate": "is part of",
+      "object": "Pinnability"
+    },
+    {
+      "subject": "PinnerFormer",
+      "predicate": "generates",
+      "object": "batch user embeddings"
+    },
+    {
+      "subject": "TransAct",
+      "predicate": "uses",
+      "object": "PinSage embeddings"
+    },
+    {
+      "subject": "TransAct",
+      "predicate": "deployed in",
+      "object": "Homefeed"
+    },
+    {
+      "subject": "TransAct",
+      "predicate": "deployed in",
+      "object": "Search"
+    },
+    {
+      "subject": "TransAct",
+      "predicate": "deployed in",
+      "object": "Related Pins"
+    },
+    {
+      "subject": "Xue Xia",
+      "predicate": "is affiliated with",
+      "object": "Pinterest"
+    }
+  ]
+}

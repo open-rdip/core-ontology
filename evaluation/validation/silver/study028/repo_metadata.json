@@ -1,0 +1,1698 @@
+{
+  "study_id": "study028",
+  "repo_url": "https://github.com/jun-sato/anatpaste",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "_anaconda_depends",
+        "version": "py39_0"
+      },
+      {
+        "name": "_libgcc_mutex",
+        "version": "main"
+      },
+      {
+        "name": "_openmp_mutex",
+        "version": "1_gnu"
+      },
+      {
+        "name": "absl-py",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "aiohttp",
+        "version": "py39h7f8727e_0"
+      },
+      {
+        "name": "aiosignal",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "alabaster",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "anaconda",
+        "version": "py39_1"
+      },
+      {
+        "name": "anaconda-client",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "anaconda-project",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "anyio",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "appdirs",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "argh",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "argon2-cffi",
+        "version": "py39h27cfd23_1"
+      },
+      {
+        "name": "arrow",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "asn1crypto",
+        "version": "py_0"
+      },
+      {
+        "name": "astroid",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "astropy",
+        "version": "py39h09021b7_0"
+      },
+      {
+        "name": "async-timeout",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "async_generator",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "atomicwrites",
+        "version": "py_0"
+      },
+      {
+        "name": "attrs",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "autopep8",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "babel",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "backcall",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "backports",
+        "version": "pyhd3eb1b0_2"
+      },
+      {
+        "name": "backports.shutil_get_terminal_size",
+        "version": "pyhd3eb1b0_3"
+      },
+      {
+        "name": "beautifulsoup4",
+        "version": "pyh06a4308_0"
+      },
+      {
+        "name": "binaryornot",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "bitarray",
+        "version": "py39h7f8727e_1"
+      },
+      {
+        "name": "bkcharts",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "black",
+        "version": "py_0"
+      },
+      {
+        "name": "blas",
+        "version": "mkl"
+      },
+      {
+        "name": "bleach",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "blinker",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "blosc",
+        "version": "h8c45485_0"
+      },
+      {
+        "name": "bokeh",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "boto",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "bottleneck",
+        "version": "py39hdd57654_1"
+      },
+      {
+        "name": "brotli",
+        "version": "he6710b0_2"
+      },
+      {
+        "name": "brotlipy",
+        "version": "py39h27cfd23_1003"
+      },
+      {
+        "name": "brunsli",
+        "version": "h2531618_0"
+      },
+      {
+        "name": "bzip2",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "c-ares",
+        "version": "h27cfd23_0"
+      },
+      {
+        "name": "ca-certificates",
+        "version": "h06a4308_2"
+      },
+      {
+        "name": "cached-property",
+        "version": "py_0"
+      },
+      {
+        "name": "cachetools",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "cairo",
+        "version": "hf32fb01_1"
+      },
+      {
+        "name": "certifi",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "cffi",
+        "version": "py39h400218f_0"
+      },
+      {
+        "name": "cfitsio",
+        "version": "hf0d0db6_6"
+      },
+      {
+        "name": "chardet",
+        "version": "py39h06a4308_1003"
+      },
+      {
+        "name": "charls",
+        "version": "h2531618_0"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "click",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "clyent",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "colorama",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "conda",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "conda-content-trust",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "conda-pack",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "conda-package-handling",
+        "version": "py39h27cfd23_1"
+      },
+      {
+        "name": "conda-token",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "contextlib2",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "cookiecutter",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "cryptography",
+        "version": "py39hd23ed53_0"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "h2bc3f7f_2"
+      },
+      {
+        "name": "curl",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "cycler",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "cython",
+        "version": "py39hdbfa776_0"
+      },
+      {
+        "name": "cytoolz",
+        "version": "py39h27cfd23_0"
+      },
+      {
+        "name": "daal4py",
+        "version": "py39h78b71dc_0"
+      },
+      {
+        "name": "dal",
+        "version": "h06a4308_729"
+      },
+      {
+        "name": "dask",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "dask-core",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "dataclasses",
+        "version": "pyh6d0b6a4_7"
+      },
+      {
+        "name": "dbus",
+        "version": "hb2f20db_0"
+      },
+      {
+        "name": "debugpy",
+        "version": "py39h295c915_0"
+      },
+      {
+        "name": "decorator",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "defusedxml",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "diff-match-patch",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "distributed",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "docutils",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "entrypoints",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "et_xmlfile",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "expat",
+        "version": "h2531618_2"
+      },
+      {
+        "name": "fastcache",
+        "version": "py39he8ac12f_0"
+      },
+      {
+        "name": "ffmpeg",
+        "version": "hf484d3e_0"
+      },
+      {
+        "name": "filelock",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "flake8",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "flask",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "fontconfig",
+        "version": "h6c09931_0"
+      },
+      {
+        "name": "fonttools",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "freetype",
+        "version": "h70c0345_0"
+      },
+      {
+        "name": "fribidi",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "frozenlist",
+        "version": "py39h7f8727e_0"
+      },
+      {
+        "name": "fsspec",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "get_terminal_size",
+        "version": "haa9412d_0"
+      },
+      {
+        "name": "gevent",
+        "version": "py39h7f8727e_1"
+      },
+      {
+        "name": "giflib",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "glib",
+        "version": "h5202010_0"
+      },
+      {
+        "name": "glob2",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "gmp",
+        "version": "h2531618_2"
+      },
+      {
+        "name": "gmpy2",
+        "version": "py39h8083e48_3"
+      },
+      {
+        "name": "gnutls",
+        "version": "he1e5248_0"
+      },
+      {
+        "name": "google-auth",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "google-auth-oauthlib",
+        "version": "py_2"
+      },
+      {
+        "name": "graphite2",
+        "version": "h23475e2_0"
+      },
+      {
+        "name": "greenlet",
+        "version": "py39h295c915_0"
+      },
+      {
+        "name": "grpcio",
+        "version": "py39hce63b2e_0"
+      },
+      {
+        "name": "gst-plugins-base",
+        "version": "h8213a91_2"
+      },
+      {
+        "name": "gstreamer",
+        "version": "h28cd5cc_2"
+      },
+      {
+        "name": "h5py",
+        "version": "py39ha0f2276_0"
+      },
+      {
+        "name": "harfbuzz",
+        "version": "h6f93f22_0"
+      },
+      {
+        "name": "hdf5",
+        "version": "hb1b8bf9_0"
+      },
+      {
+        "name": "heapdict",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "html5lib",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "icu",
+        "version": "he6710b0_3"
+      },
+      {
+        "name": "idna",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "imagecodecs",
+        "version": "py39h4cda21f_0"
+      },
+      {
+        "name": "imageio",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "imagesize",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "importlib-metadata",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "importlib_metadata",
+        "version": "hd3eb1b0_0"
+      },
+      {
+        "name": "inflection",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "iniconfig",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "intel-openmp",
+        "version": "h06a4308_3561"
+      },
+      {
+        "name": "intervaltree",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "ipykernel",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "ipython",
+        "version": "py39hb070fc8_0"
+      },
+      {
+        "name": "ipython_genutils",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "ipywidgets",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "isort",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "itsdangerous",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "jbig",
+        "version": "hdba287a_0"
+      },
+      {
+        "name": "jdcal",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "jedi",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "jeepney",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "jinja2",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "jinja2-time",
+        "version": "pyhd3eb1b0_2"
+      },
+      {
+        "name": "joblib",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "jpeg",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "json5",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "jsonschema",
+        "version": "pyhd3eb1b0_2"
+      },
+      {
+        "name": "jupyter",
+        "version": "py39h06a4308_7"
+      },
+      {
+        "name": "jupyter_client",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "jupyter_console",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "jupyter_core",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "jupyter_server",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "jupyterlab",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "jupyterlab_pygments",
+        "version": "py_0"
+      },
+      {
+        "name": "jupyterlab_server",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "jupyterlab_widgets",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "jxrlib",
+        "version": "h7b6447c_2"
+      },
+      {
+        "name": "keyring",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "py39h2531618_0"
+      },
+      {
+        "name": "krb5",
+        "version": "hac12032_0"
+      },
+      {
+        "name": "lame",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "lazy-object-proxy",
+        "version": "py39h27cfd23_0"
+      },
+      {
+        "name": "lcms2",
+        "version": "h3be6417_0"
+      },
+      {
+        "name": "ld_impl_linux-64",
+        "version": "h7274673_9"
+      },
+      {
+        "name": "lerc",
+        "version": "h295c915_0"
+      },
+      {
+        "name": "libaec",
+        "version": "he6710b0_1"
+      },
+      {
+        "name": "libarchive",
+        "version": "h62408e4_0"
+      },
+      {
+        "name": "libcurl",
+        "version": "h0b77cf5_0"
+      },
+      {
+        "name": "libdeflate",
+        "version": "h7f8727e_5"
+      },
+      {
+        "name": "libedit",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "libev",
+        "version": "h7f8727e_1"
+      },
+      {
+        "name": "libffi",
+        "version": "he6710b0_2"
+      },
+      {
+        "name": "libgcc-ng",
+        "version": "h5101ec6_17"
+      },
+      {
+        "name": "libgfortran-ng",
+        "version": "ha8ba4b0_17"
+      },
+      {
+        "name": "libgfortran4",
+        "version": "ha8ba4b0_17"
+      },
+      {
+        "name": "libgomp",
+        "version": "h5101ec6_17"
+      },
+      {
+        "name": "libiconv",
+        "version": "h63c8f33_5"
+      },
+      {
+        "name": "libidn2",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "liblief",
+        "version": "h2531618_1"
+      },
+      {
+        "name": "libllvm11",
+        "version": "h3826bc1_0"
+      },
+      {
+        "name": "libnghttp2",
+        "version": "hce63b2e_0"
+      },
+      {
+        "name": "libpng",
+        "version": "hbc83047_0"
+      },
+      {
+        "name": "libprotobuf",
+        "version": "h4ff587b_0"
+      },
+      {
+        "name": "libsodium",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "libspatialindex",
+        "version": "h2531618_0"
+      },
+      {
+        "name": "libssh2",
+        "version": "h1ba5d50_1"
+      },
+      {
+        "name": "libstdcxx-ng",
+        "version": "hd4cf53a_17"
+      },
+      {
+        "name": "libtasn1",
+        "version": "h27cfd23_0"
+      },
+      {
+        "name": "libtiff",
+        "version": "h85742a9_0"
+      },
+      {
+        "name": "libtool",
+        "version": "h7b6447c_1005"
+      },
+      {
+        "name": "libunistring",
+        "version": "h27cfd23_0"
+      },
+      {
+        "name": "libuuid",
+        "version": "h7f8727e_2"
+      },
+      {
+        "name": "libuv",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "libwebp",
+        "version": "h89dd481_0"
+      },
+      {
+        "name": "libwebp-base",
+        "version": "h27cfd23_0"
+      },
+      {
+        "name": "libxcb",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "libxml2",
+        "version": "h03d6c58_0"
+      },
+      {
+        "name": "libxslt",
+        "version": "hc22bd24_0"
+      },
+      {
+        "name": "libzopfli",
+        "version": "he6710b0_0"
+      },
+      {
+        "name": "llvmlite",
+        "version": "py39h295c915_1"
+      },
+      {
+        "name": "locket",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "lxml",
+        "version": "py39h1f438cf_1"
+      },
+      {
+        "name": "lz4-c",
+        "version": "h295c915_1"
+      },
+      {
+        "name": "lzo",
+        "version": "h7b6447c_2"
+      },
+      {
+        "name": "markdown",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "markupsafe",
+        "version": "py39h27cfd23_0"
+      },
+      {
+        "name": "matplotlib",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "matplotlib-base",
+        "version": "py39h3ed280b_0"
+      },
+      {
+        "name": "matplotlib-inline",
+        "version": "pyhd3eb1b0_2"
+      },
+      {
+        "name": "mccabe",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "mistune",
+        "version": "py39h27cfd23_1000"
+      },
+      {
+        "name": "mkl",
+        "version": "h06a4308_640"
+      },
+      {
+        "name": "mkl-service",
+        "version": "py39h7f8727e_0"
+      },
+      {
+        "name": "mkl_fft",
+        "version": "py39hd3c417c_0"
+      },
+      {
+        "name": "mkl_random",
+        "version": "py39h51133e4_0"
+      },
+      {
+        "name": "mock",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "more-itertools",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "mpc",
+        "version": "h10f8cd9_1"
+      },
+      {
+        "name": "mpfr",
+        "version": "hb69a4c5_1"
+      },
+      {
+        "name": "mpi",
+        "version": "mpich"
+      },
+      {
+        "name": "mpich",
+        "version": "hc856adb_0"
+      },
+      {
+        "name": "mpmath",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "msgpack-python",
+        "version": "py39hff7bd54_1"
+      },
+      {
+        "name": "multidict",
+        "version": "py39h7f8727e_2"
+      },
+      {
+        "name": "multipledispatch",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "munkres",
+        "version": "py_0"
+      },
+      {
+        "name": "mypy_extensions",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "nbclassic",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "nbclient",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "nbconvert",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "nbformat",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "ncurses",
+        "version": "h7f8727e_2"
+      },
+      {
+        "name": "nest-asyncio",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "nettle",
+        "version": "hbbd107a_1"
+      },
+      {
+        "name": "networkx",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "nltk",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "nose",
+        "version": "pyhd3eb1b0_1006"
+      },
+      {
+        "name": "notebook",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "numba",
+        "version": "py39h51133e4_0"
+      },
+      {
+        "name": "numexpr",
+        "version": "py39h6abb31d_0"
+      },
+      {
+        "name": "numpy",
+        "version": "py39hf144106_0"
+      },
+      {
+        "name": "numpy-base",
+        "version": "py39h74d4b33_0"
+      },
+      {
+        "name": "numpydoc",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "oauthlib",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "olefile",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "openh264",
+        "version": "h4ff587b_0"
+      },
+      {
+        "name": "openjpeg",
+        "version": "h3ad879b_0"
+      },
+      {
+        "name": "openpyxl",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "openssl",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "packaging",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pandas",
+        "version": "py39h8c16a72_0"
+      },
+      {
+        "name": "pandocfilters",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "pango",
+        "version": "hd140c19_0"
+      },
+      {
+        "name": "parso",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "partd",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "patchelf",
+        "version": "h295c915_0"
+      },
+      {
+        "name": "path",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "path.py",
+        "version": "hd3eb1b0_0"
+      },
+      {
+        "name": "pathlib2",
+        "version": "py39h06a4308_2"
+      },
+      {
+        "name": "pathspec",
+        "version": "py_0"
+      },
+      {
+        "name": "patsy",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "pcre",
+        "version": "h295c915_0"
+      },
+      {
+        "name": "pep8",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "pexpect",
+        "version": "pyhd3eb1b0_3"
+      },
+      {
+        "name": "pickleshare",
+        "version": "pyhd3eb1b0_1003"
+      },
+      {
+        "name": "pillow",
+        "version": "py39h5aabda8_0"
+      },
+      {
+        "name": "pip",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "pixman",
+        "version": "h7f8727e_1"
+      },
+      {
+        "name": "pkginfo",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "pluggy",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "ply",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "poyo",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "prometheus_client",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "prompt-toolkit",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "prompt_toolkit",
+        "version": "hd3eb1b0_0"
+      },
+      {
+        "name": "protobuf",
+        "version": "py39h295c915_0"
+      },
+      {
+        "name": "psutil",
+        "version": "py39h27cfd23_1"
+      },
+      {
+        "name": "ptyprocess",
+        "version": "pyhd3eb1b0_2"
+      },
+      {
+        "name": "py",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "py-lief",
+        "version": "py39h2531618_1"
+      },
+      {
+        "name": "pyasn1",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pyasn1-modules",
+        "version": "py_0"
+      },
+      {
+        "name": "pycodestyle",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pycosat",
+        "version": "py39h27cfd23_0"
+      },
+      {
+        "name": "pycparser",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pycurl",
+        "version": "py39h8f2d780_1"
+      },
+      {
+        "name": "pydocstyle",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pyerfa",
+        "version": "py39h27cfd23_0"
+      },
+      {
+        "name": "pyflakes",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pygments",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pyjwt",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "pylint",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "pyls-spyder",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pyodbc",
+        "version": "py39h295c915_0"
+      },
+      {
+        "name": "pyopenssl",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "pyparsing",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pyqt",
+        "version": "py39h2531618_6"
+      },
+      {
+        "name": "pyrsistent",
+        "version": "py39heee7806_0"
+      },
+      {
+        "name": "pysocks",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "pytables",
+        "version": "py39h77479fe_1"
+      },
+      {
+        "name": "pytest",
+        "version": "py39h06a4308_2"
+      },
+      {
+        "name": "python",
+        "version": "h12debd9_1"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "python-libarchive-c",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "python-lsp-black",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "python-lsp-jsonrpc",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "python-lsp-server",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "python-slugify",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pytorch",
+        "version": "py3.9_cuda11.3_cudnn8.2.0_0"
+      },
+      {
+        "name": "pytorch-mutex",
+        "version": "cuda"
+      },
+      {
+        "name": "pytz",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pywavelets",
+        "version": "py39h6323ea4_4"
+      },
+      {
+        "name": "pyxdg",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pyyaml",
+        "version": "py39h7f8727e_1"
+      },
+      {
+        "name": "pyzmq",
+        "version": "py39h295c915_2"
+      },
+      {
+        "name": "qdarkstyle",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "qstylizer",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "qt",
+        "version": "h5867ecd_1"
+      },
+      {
+        "name": "qtawesome",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "qtconsole",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "qtpy",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "readline",
+        "version": "h27cfd23_0"
+      },
+      {
+        "name": "regex",
+        "version": "py39h7f8727e_0"
+      },
+      {
+        "name": "requests",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "requests-oauthlib",
+        "version": "py_0"
+      },
+      {
+        "name": "ripgrep",
+        "version": "0"
+      },
+      {
+        "name": "rope",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "rsa",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "rtree",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "ruamel_yaml",
+        "version": "py39h27cfd23_0"
+      },
+      {
+        "name": "scikit-image",
+        "version": "py39h51133e4_0"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "py39h51133e4_0"
+      },
+      {
+        "name": "scikit-learn-intelex",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "scipy",
+        "version": "py39hc147768_0"
+      },
+      {
+        "name": "seaborn",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "secretstorage",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "send2trash",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "setuptools",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "simplegeneric",
+        "version": "py39h06a4308_2"
+      },
+      {
+        "name": "singledispatch",
+        "version": "pyhd3eb1b0_1001"
+      },
+      {
+        "name": "sip",
+        "version": "py39h2531618_0"
+      },
+      {
+        "name": "six",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "snappy",
+        "version": "he6710b0_0"
+      },
+      {
+        "name": "sniffio",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "snowballstemmer",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "sortedcollections",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "sortedcontainers",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "soupsieve",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "sphinx",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "sphinxcontrib",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "sphinxcontrib-applehelp",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "sphinxcontrib-devhelp",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "sphinxcontrib-htmlhelp",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "sphinxcontrib-jsmath",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "sphinxcontrib-qthelp",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "sphinxcontrib-serializinghtml",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "sphinxcontrib-websupport",
+        "version": "py_0"
+      },
+      {
+        "name": "spyder",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "spyder-kernels",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "sqlalchemy",
+        "version": "py39h7f8727e_0"
+      },
+      {
+        "name": "sqlite",
+        "version": "hc218d9a_0"
+      },
+      {
+        "name": "statsmodels",
+        "version": "py39h27cfd23_0"
+      },
+      {
+        "name": "sympy",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "tbb",
+        "version": "hd09550d_0"
+      },
+      {
+        "name": "tbb4py",
+        "version": "py39hd09550d_0"
+      },
+      {
+        "name": "tblib",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "tensorboard",
+        "version": "py_1"
+      },
+      {
+        "name": "tensorboard-data-server",
+        "version": "py39hca6d32c_0"
+      },
+      {
+        "name": "tensorboard-plugin-wit",
+        "version": "py_0"
+      },
+      {
+        "name": "terminado",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "testpath",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "text-unidecode",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "textdistance",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "pyh0d69192_0"
+      },
+      {
+        "name": "three-merge",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "tifffile",
+        "version": "pyhd3eb1b0_2"
+      },
+      {
+        "name": "tinycss",
+        "version": "pyhd3eb1b0_1002"
+      },
+      {
+        "name": "tk",
+        "version": "h1ccaba5_0"
+      },
+      {
+        "name": "toml",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "toolz",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "torchaudio",
+        "version": "py39_cu113"
+      },
+      {
+        "name": "torchvision",
+        "version": "py39_cu113"
+      },
+      {
+        "name": "tornado",
+        "version": "py39h27cfd23_0"
+      },
+      {
+        "name": "tqdm",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "traitlets",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "typed-ast",
+        "version": "py39h7f8727e_1"
+      },
+      {
+        "name": "typing-extensions",
+        "version": "hd3eb1b0_0"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "pyh06a4308_0"
+      },
+      {
+        "name": "tzdata",
+        "version": "hda174b7_0"
+      },
+      {
+        "name": "ujson",
+        "version": "py39h295c915_0"
+      },
+      {
+        "name": "unicodecsv",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "unidecode",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "unixodbc",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "urllib3",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "watchdog",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "wcwidth",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "webencodings",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "werkzeug",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "wheel",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "whichcraft",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "widgetsnbextension",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "wrapt",
+        "version": "py39he8ac12f_1"
+      },
+      {
+        "name": "wurlitzer",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "xlrd",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "xlsxwriter",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "xlwt",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "xz",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "yaml",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "yapf",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "yarl",
+        "version": "py39h27cfd23_0"
+      },
+      {
+        "name": "zeromq",
+        "version": "h2531618_0"
+      },
+      {
+        "name": "zfp",
+        "version": "h2531618_6"
+      },
+      {
+        "name": "zict",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "zipp",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "zlib",
+        "version": "h7f8727e_4"
+      },
+      {
+        "name": "zope",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "zope.event",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "zope.interface",
+        "version": "py39h7f8727e_0"
+      },
+      {
+        "name": "zstd",
+        "version": "haebb681_0"
+      },
+      {
+        "name": "grad-cam",
+        "version": "1.3.7"
+      },
+      {
+        "name": "ttach",
+        "version": "0.0.3"
+      }
+    ],
+    "source": "conda",
+    "env_name": "cutpaste"
+  },
+  "seeds": [
+    {
+      "value": "42",
+      "file": "run_training.py",
+      "context": "seed=42"
+    },
+    {
+      "value": "0",
+      "file": "run_training.py",
+      "context": "seed = 0"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

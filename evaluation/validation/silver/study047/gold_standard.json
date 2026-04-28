@@ -1,0 +1,235 @@
+{
+  "study_id": "study047",
+  "project": {
+    "title": "Dual-path RNN: efficient long sequence modeling for time-domain single-channel speech separation",
+    "lead_organization": "Columbia University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "python",
+        "version": "3.8"
+      },
+      {
+        "name": "Cython",
+        "version": null
+      },
+      {
+        "name": "Asteroid",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "WSJ0-2mix",
+        "format": "audio",
+        "access": "open",
+        "role": "used",
+        "derived_from": "WSJ0"
+      },
+      {
+        "name": "WSJ0-3mix",
+        "format": "audio",
+        "access": "open",
+        "role": "used",
+        "derived_from": "WSJ0"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Dual-path RNN",
+        "description": "A method for organizing RNN layers to model extremely long sequences by splitting the input into smaller chunks and iteratively applying intra- and inter-chunk operations."
+      },
+      {
+        "name": "Utterance-level Permutation Invariant Training",
+        "description": "A training criterion for the speaker-independent speech separation problem."
+      },
+      {
+        "name": "Segmental SDR",
+        "description": "A training objective used to maximize the signal-to-distortion ratio in the time domain."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yi Luo",
+        "affiliation": "Columbia University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zhuo Chen",
+        "affiliation": "Microsoft",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Takuya Yoshioka",
+        "affiliation": "Microsoft",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Columbia University"
+      },
+      {
+        "name": "Microsoft"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "1e-3",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "null",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "optimizer",
+        "value": "Adam",
+        "type": "xsd:string"
+      },
+      {
+        "name": "weight_decay",
+        "value": "1e-5",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "17",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": null,
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "SI-SNRi",
+        "value": "18.8",
+        "split": "test",
+        "dataset": "WSJ0-2mix"
+      },
+      {
+        "metric": "SDRi",
+        "value": "19.0",
+        "split": "test",
+        "dataset": "WSJ0-2mix"
+      },
+      {
+        "metric": "SI-SNRi",
+        "value": "14.7",
+        "split": "test",
+        "dataset": "WSJ0-3mix"
+      },
+      {
+        "metric": "SDRi",
+        "value": "15.3",
+        "split": "test",
+        "dataset": "WSJ0-3mix"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Preprocessing",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "Asteroid"
+        ],
+        "dataset_used": [
+          "WSJ0-2mix",
+          "WSJ0-3mix"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Training",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "python",
+          "Asteroid"
+        ],
+        "dataset_used": [
+          "WSJ0-2mix",
+          "WSJ0-3mix"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Speech Separation Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "python"
+        ],
+        "dataset_used": [
+          "WSJ0-2mix",
+          "WSJ0-3mix"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Dual-path RNN",
+      "predicate": "usedSoftware",
+      "object": "Asteroid"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "Utterance-level Permutation Invariant Training"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "optimizer"
+    },
+    {
+      "subject": "Speech Separation Evaluation",
+      "predicate": "generatesResult",
+      "object": "SI-SNRi"
+    },
+    {
+      "subject": "Speech Separation Evaluation",
+      "predicate": "generatesResult",
+      "object": "SDRi"
+    },
+    {
+      "subject": "WSJ0-2mix",
+      "predicate": "derivedFrom",
+      "object": "WSJ0"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "follows",
+      "object": "Data Preprocessing"
+    },
+    {
+      "subject": "Speech Separation Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

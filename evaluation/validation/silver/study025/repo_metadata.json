@@ -1,0 +1,75 @@
+{
+  "study_id": "study025",
+  "repo_url": "https://github.com/yihao6/vfa",
+  "software_dependencies": [
+    {
+      "name": "torch",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "2.0",
+      "constraint": "<",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nibabel",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "openpyxl",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "thop",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:2.0.0-cuda11.7-cudnn8-runtime",
+    "cuda_version": "11.7"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "GPL",
+  "errors": []
+}

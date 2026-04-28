@@ -1,0 +1,199 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "HigherHRNet",
+        "version": "v3"
+      },
+      {
+        "name": "HRNet",
+        "version": "W32/W48"
+      },
+      {
+        "name": "Adam optimizer",
+        "version": "Not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COCO keypoint detection dataset",
+        "format": "Images with 17 keypoint labels",
+        "access": "Public (http://cocodataset.org/)"
+      },
+      {
+        "name": "CrowdPose",
+        "format": "Images (Crowded scenes)",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Bottom-up human pose estimation"
+      },
+      {
+        "name": "Multi-resolution supervision (MRS)"
+      },
+      {
+        "name": "Multi-resolution heatmap aggregation"
+      },
+      {
+        "name": "Associative embedding"
+      },
+      {
+        "name": "Transposed convolution (Deconvolution)"
+      },
+      {
+        "name": "Bilinear interpolation"
+      },
+      {
+        "name": "Data augmentation (random rotation, scale, translation, flip)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Bowen Cheng",
+        "role": "Author"
+      },
+      {
+        "name": "Bin Xiao",
+        "role": "Author"
+      },
+      {
+        "name": "Jingdong Wang",
+        "role": "Author"
+      },
+      {
+        "name": "Honghui Shi",
+        "role": "Author"
+      },
+      {
+        "name": "Thomas S. Huang",
+        "role": "Author"
+      },
+      {
+        "name": "Lei Zhang",
+        "role": "Author"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "UIUC"
+      },
+      {
+        "name": "Microsoft"
+      },
+      {
+        "name": "University of Oregon"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Base learning rate",
+        "value": "1e-3"
+      },
+      {
+        "name": "Training epochs",
+        "value": "300"
+      },
+      {
+        "name": "Input image size",
+        "value": "512x512 / 640x640"
+      },
+      {
+        "name": "Gaussian kernel standard deviation",
+        "value": "2"
+      },
+      {
+        "name": "Heatmap loss weight",
+        "value": "1"
+      },
+      {
+        "name": "Grouping loss weight",
+        "value": "1e-3"
+      },
+      {
+        "name": "Batch size",
+        "value": "Not specified in snippet"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Not specified",
+        "gpu": "Not specified",
+        "cuda": "Not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "AP (Average Precision)",
+        "value": "70.5%",
+        "split": "COCO test-dev"
+      },
+      {
+        "metric": "AP (Average Precision)",
+        "value": "67.6%",
+        "split": "CrowdPose test"
+      },
+      {
+        "metric": "APM (Medium persons)",
+        "value": "+2.5% improvement",
+        "split": "COCO test-dev"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Preprocessing",
+        "type": "Data Augmentation"
+      },
+      {
+        "name": "Model Training",
+        "type": "Supervised Learning"
+      },
+      {
+        "name": "Heatmap Prediction",
+        "type": "Inference"
+      },
+      {
+        "name": "Keypoint Grouping",
+        "type": "Post-processing"
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "Validation"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "HigherHRNet",
+      "predicate": "uses_backbone",
+      "object": "HRNet"
+    },
+    {
+      "subject": "HigherHRNet",
+      "predicate": "evaluated_on",
+      "object": "COCO keypoint detection dataset"
+    },
+    {
+      "subject": "HigherHRNet",
+      "predicate": "evaluated_on",
+      "object": "CrowdPose"
+    },
+    {
+      "subject": "Multi-resolution supervision",
+      "predicate": "used_during",
+      "object": "Model Training"
+    },
+    {
+      "subject": "Heatmap aggregation",
+      "predicate": "used_during",
+      "object": "Heatmap Prediction"
+    },
+    {
+      "subject": "Associative embedding",
+      "predicate": "used_for",
+      "object": "Keypoint Grouping"
+    }
+  ]
+}

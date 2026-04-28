@@ -1,0 +1,252 @@
+{
+  "study_id": "study020",
+  "project": {
+    "title": "CSAW-M: An Ordinal Classification Dataset for Benchmarking Mammographic Masking of Cancer",
+    "lead_organization": "KTH Royal Institute of Technology",
+    "funding": "Region Stockholm (HMT 20200813), Swedish Research Council (2019-04764), and Swedish Breast Cancer Association"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "CSAW-M_Annotation_Tool",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "PyTorch",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "CSAW-M",
+        "format": "images",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "CSAW"
+      },
+      {
+        "name": "CSAW",
+        "format": "images",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Ordinal Classification",
+        "description": "A classification task where the classes have a natural order, used here to assess levels of mammographic masking."
+      },
+      {
+        "name": "Deep Learning Regression",
+        "description": "Training convolutional neural networks to estimate the masking level of mammograms as a continuous value."
+      },
+      {
+        "name": "Majority Voting",
+        "description": "Combining multiple specialist annotations to form a consensus ground truth."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Moein Sorkhei",
+        "affiliation": "KTH Royal Institute of Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Edward Azavedo",
+        "affiliation": "Karolinska Institutet",
+        "role": "Data Collector"
+      },
+      {
+        "name": "Athanasios Zouzos",
+        "affiliation": "Karolinska Institutet",
+        "role": "Data Collector"
+      },
+      {
+        "name": "Yue Liu",
+        "affiliation": "KTH Royal Institute of Technology",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Karin Dembrower",
+        "affiliation": "Karolinska Institutet",
+        "role": "Data Collector"
+      },
+      {
+        "name": "Fredrik Strand",
+        "affiliation": "Karolinska Institutet",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Hossein Azizpour",
+        "affiliation": "KTH Royal Institute of Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Kevin Smith",
+        "affiliation": "KTH Royal Institute of Technology",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "KTH Royal Institute of Technology"
+      },
+      {
+        "name": "Karolinska Institutet"
+      },
+      {
+        "name": "SciLifeLab"
+      },
+      {
+        "name": "Karolinska University Hospital"
+      },
+      {
+        "name": "Saint Göran Hospital"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "1e-4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "16",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "30",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 18.04",
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "cuda": "11.0",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "AUC",
+        "value": "0.64",
+        "split": "test",
+        "dataset": "CSAW-M"
+      },
+      {
+        "metric": "accuracy",
+        "value": "0.45",
+        "split": "test",
+        "dataset": "CSAW-M"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Collection and Annotation",
+        "type": "DataCollectionActivity",
+        "order": 1,
+        "software_used": [
+          "CSAW-M_Annotation_Tool"
+        ],
+        "dataset_used": [
+          "CSAW"
+        ],
+        "dataset_produced": [
+          "CSAW-M"
+        ]
+      },
+      {
+        "name": "Preprocessing",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [
+          "CSAW-M"
+        ],
+        "dataset_produced": [
+          "Preprocessed Images"
+        ]
+      },
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 3,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "Preprocessed Images"
+        ],
+        "dataset_produced": [
+          "Masking Estimation Model"
+        ]
+      },
+      {
+        "name": "Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 4,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "CSAW-M",
+          "Masking Estimation Model"
+        ],
+        "dataset_produced": [
+          "AUC results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "CSAW-M",
+      "predicate": "derivedFrom",
+      "object": "CSAW"
+    },
+    {
+      "subject": "Data Collection and Annotation",
+      "predicate": "usedSoftware",
+      "object": "CSAW-M_Annotation_Tool"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "executedIn",
+      "object": "Ubuntu 18.04"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "generatesResult",
+      "object": "AUC"
+    },
+    {
+      "subject": "Preprocessing",
+      "predicate": "follows",
+      "object": "Data Collection and Annotation"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "follows",
+      "object": "Preprocessing"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

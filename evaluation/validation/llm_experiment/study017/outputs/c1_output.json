@@ -1,0 +1,252 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "HistoCartography",
+        "version": "v1"
+      },
+      {
+        "name": "PyTorch",
+        "version": "not specified"
+      },
+      {
+        "name": "Deep Graph Library (DGL)",
+        "version": "not specified"
+      },
+      {
+        "name": "torchvision",
+        "version": "not specified"
+      },
+      {
+        "name": "NumPy",
+        "version": "not specified"
+      },
+      {
+        "name": "QuPath",
+        "version": "not specified"
+      },
+      {
+        "name": "HistomicsTK",
+        "version": "not specified"
+      },
+      {
+        "name": "histolab",
+        "version": "not specified"
+      },
+      {
+        "name": "StainTools",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "BRACS",
+        "format": "Tumor RoI (40x)",
+        "access": "Public (referenced)"
+      },
+      {
+        "name": "BACH",
+        "format": "Tumor RoI (20x)",
+        "access": "Public (referenced)"
+      },
+      {
+        "name": "SICAPv2",
+        "format": "WSI (10x)",
+        "access": "Public (referenced)"
+      },
+      {
+        "name": "UZH",
+        "format": "TMA (40x)",
+        "access": "Public (referenced)"
+      },
+      {
+        "name": "PanNuke",
+        "format": "Nuclei segmentation",
+        "access": "Public (referenced)"
+      },
+      {
+        "name": "MoNuSac",
+        "format": "Nuclei segmentation",
+        "access": "Public (referenced)"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Graph Neural Networks (GNN)"
+      },
+      {
+        "name": "Graph Isomorphism Network (GIN)"
+      },
+      {
+        "name": "Principal Neighborhood Aggregation (PNA)"
+      },
+      {
+        "name": "HACT-Net"
+      },
+      {
+        "name": "SegGini"
+      },
+      {
+        "name": "HoVerNet"
+      },
+      {
+        "name": "SLIC (Simple Linear Iterative Clustering)"
+      },
+      {
+        "name": "Macenko Stain Normalization"
+      },
+      {
+        "name": "Vahadane Stain Normalization"
+      },
+      {
+        "name": "GNNExplainer"
+      },
+      {
+        "name": "GraphGrad-CAM"
+      },
+      {
+        "name": "GraphGrad-CAM++"
+      },
+      {
+        "name": "GraphLRP"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Guillaume Jaume",
+        "role": "Lead Author"
+      },
+      {
+        "name": "Pushpak Pati",
+        "role": "Lead Author"
+      },
+      {
+        "name": "Valentin Anklin",
+        "role": "Author"
+      },
+      {
+        "name": "Antonio Foncubierta",
+        "role": "Author"
+      },
+      {
+        "name": "Maria Gabrani",
+        "role": "Author"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "IBM Research, Zurich"
+      },
+      {
+        "name": "EPFL, Lausanne"
+      },
+      {
+        "name": "ETH, Zurich"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "k (neighbors)",
+        "value": "5"
+      },
+      {
+        "name": "distance threshold",
+        "value": "50 pixels"
+      },
+      {
+        "name": "nuclei patch size",
+        "value": "72x72 (resized to 224x224)"
+      },
+      {
+        "name": "superpixels per image",
+        "value": "400"
+      },
+      {
+        "name": "hidden units (PNA/GIN)",
+        "value": "64"
+      },
+      {
+        "name": "MLP hidden units",
+        "value": "128"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "NVIDIA P100",
+        "cuda": "not specified"
+      },
+      {
+        "os": "not specified",
+        "gpu": "None (CPU-only)",
+        "cuda": "n/a"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Weighted F1",
+        "value": "90.7 ± 0.5",
+        "split": "BACH Dataset"
+      },
+      {
+        "metric": "Average Dice",
+        "value": "66.0 ± 3.1",
+        "split": "UZH Dataset"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Stain Normalization",
+        "type": "Preprocessing"
+      },
+      {
+        "name": "Tissue Detection",
+        "type": "Preprocessing"
+      },
+      {
+        "name": "Nuclei Detection",
+        "type": "Preprocessing"
+      },
+      {
+        "name": "Entity-Graph Building",
+        "type": "Preprocessing"
+      },
+      {
+        "name": "Model Training",
+        "type": "Machine Learning"
+      },
+      {
+        "name": "Post-hoc Explanation",
+        "type": "Explainability"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "HistoCartography",
+      "predicate": "implements",
+      "object": "HoVerNet"
+    },
+    {
+      "subject": "HistoCartography",
+      "predicate": "uses",
+      "object": "Deep Graph Library (DGL)"
+    },
+    {
+      "subject": "HistoCartography",
+      "predicate": "benchmarked_on",
+      "object": "BRACS"
+    },
+    {
+      "subject": "Guillaume Jaume",
+      "predicate": "affiliated_with",
+      "object": "IBM Research, Zurich"
+    },
+    {
+      "subject": "PNA layers",
+      "predicate": "has_parameter",
+      "object": "64 hidden units"
+    }
+  ]
+}

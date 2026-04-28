@@ -1,0 +1,139 @@
+{
+  "study_id": "study001",
+  "repo_url": "https://github.com/microsoft/DeepSpeed",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "nvidia/cuda:12.2.2-devel-ubuntu20.04",
+    "cuda_version": "12.2.2",
+    "os": "Ubuntu 20.04"
+  },
+  "conda": {
+    "deps": [
+      {
+        "name": "pytorch",
+        "version": ""
+      },
+      {
+        "name": "torchvision",
+        "version": ""
+      },
+      {
+        "name": "torchaudio",
+        "version": ""
+      },
+      {
+        "name": "cuda",
+        "version": ""
+      },
+      {
+        "name": "pytorch-cuda",
+        "version": "11.8"
+      },
+      {
+        "name": "compilers",
+        "version": ""
+      },
+      {
+        "name": "sysroot_linux-64",
+        "version": "2.17"
+      },
+      {
+        "name": "gcc",
+        "version": "11.4"
+      },
+      {
+        "name": "ninja",
+        "version": ""
+      },
+      {
+        "name": "py-cpuinfo",
+        "version": ""
+      },
+      {
+        "name": "libaio",
+        "version": ""
+      },
+      {
+        "name": "ca-certificates",
+        "version": ""
+      },
+      {
+        "name": "certifi",
+        "version": ""
+      },
+      {
+        "name": "openssl",
+        "version": ""
+      },
+      {
+        "name": "python",
+        "version": "3.10"
+      },
+      {
+        "name": "pydantic",
+        "version": ""
+      }
+    ],
+    "source": "conda"
+  },
+  "seeds": [
+    {
+      "value": "1234",
+      "file": "deepspeed/runtime/pipe/module.py",
+      "context": "seed=1234"
+    },
+    {
+      "value": "42",
+      "file": "op_builder/npu/inference.py",
+      "context": "seed = 42"
+    },
+    {
+      "value": "123",
+      "file": "tests/unit/alexnet_model.py",
+      "context": "seed=123"
+    },
+    {
+      "value": "456",
+      "file": "tests/unit/v1/zero/test_zero_user_backward.py",
+      "context": "torch.manual_seed(456"
+    },
+    {
+      "value": "0",
+      "file": "tests/unit/runtime/sparse_tensor/test_averaging_sparse_gradients.py",
+      "context": "torch.manual_seed(0"
+    },
+    {
+      "value": "1670",
+      "file": "tests/unit/runtime/zero/test_zero_grad_clip.py",
+      "context": "torch.manual_seed(1670"
+    },
+    {
+      "value": "4321",
+      "file": "tests/unit/model_parallelism/test_autotp_custom_patterns.py",
+      "context": "torch.manual_seed(4321"
+    },
+    {
+      "value": "321",
+      "file": "tests/unit/model_parallelism/test_autotp_custom_patterns.py",
+      "context": "torch.manual_seed(321"
+    },
+    {
+      "value": "1",
+      "file": "tests/unit/ops/sparse_attention/test_sparse_attention.py",
+      "context": "torch.manual_seed(1"
+    },
+    {
+      "value": "20",
+      "file": "tests/unit/ops/transformer/inference/test_attention.py",
+      "context": "torch.manual_seed(20"
+    },
+    {
+      "value": "11",
+      "file": "tests/unit/moe/test_moe.py",
+      "context": "seed=11"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

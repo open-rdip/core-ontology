@@ -1,0 +1,281 @@
+{
+  "study_id": "study094",
+  "project": {
+    "title": "Grounding DINO 1.5: Advance the Edge of Open-Set Object Detection",
+    "lead_organization": "International Digital Economy Academy (IDEA)",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "torch",
+        "version": null
+      },
+      {
+        "name": "torchvision",
+        "version": null
+      },
+      {
+        "name": "torchmetrics",
+        "version": null
+      },
+      {
+        "name": "numpy",
+        "version": null
+      },
+      {
+        "name": "timm",
+        "version": null
+      },
+      {
+        "name": "einops",
+        "version": null
+      },
+      {
+        "name": "opencv-python",
+        "version": null
+      },
+      {
+        "name": "tqdm",
+        "version": null
+      },
+      {
+        "name": "torchprofile",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": null
+      },
+      {
+        "name": "torch-fidelity",
+        "version": null
+      },
+      {
+        "name": "torchdiffeq",
+        "version": null
+      },
+      {
+        "name": "diffusers",
+        "version": null
+      },
+      {
+        "name": "omegaconf",
+        "version": null
+      },
+      {
+        "name": "ipdb",
+        "version": null
+      },
+      {
+        "name": "wandb",
+        "version": null
+      },
+      {
+        "name": "matplotlib",
+        "version": null
+      },
+      {
+        "name": "huggingface-hub",
+        "version": null
+      },
+      {
+        "name": "transformers",
+        "version": null
+      },
+      {
+        "name": "onnx",
+        "version": null
+      },
+      {
+        "name": "onnxsim",
+        "version": null
+      },
+      {
+        "name": "onnxruntime",
+        "version": null
+      },
+      {
+        "name": "pycocotools",
+        "version": null
+      },
+      {
+        "name": "lvis",
+        "version": null
+      },
+      {
+        "name": "scikit-image",
+        "version": null
+      },
+      {
+        "name": "gradio",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COCO",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "LVIS",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Objects365",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Grounding DINO 1.5 Pro",
+        "description": "A high-performance open-set object detection model designed for strong generalization using a large-scale dataset of over 20 million images."
+      },
+      {
+        "name": "Grounding DINO 1.5 Edge",
+        "description": "An efficient open-set object detection model optimized for edge deployment with faster inference speed."
+      },
+      {
+        "name": "Vision-Language Grounding",
+        "description": "A technique to associate linguistic descriptions with visual regions for object localization."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Tianhe Ren",
+        "affiliation": "International Digital Economy Academy (IDEA)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Qing Jiang",
+        "affiliation": "International Digital Economy Academy (IDEA)",
+        "role": null
+      },
+      {
+        "name": "Shilong Liu",
+        "affiliation": "International Digital Economy Academy (IDEA)",
+        "role": null
+      },
+      {
+        "name": "Zhaoyang Zeng",
+        "affiliation": "International Digital Economy Academy (IDEA)",
+        "role": null
+      },
+      {
+        "name": "Lei Zhang",
+        "affiliation": "International Digital Economy Academy (IDEA)",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "International Digital Economy Academy (IDEA)"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "2020",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "937162211",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "2147483647",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "AP",
+        "value": "54.3",
+        "split": "test",
+        "dataset": "COCO"
+      },
+      {
+        "metric": "AP",
+        "value": "52.5",
+        "split": "test",
+        "dataset": "LVIS"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "Objects365"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Open-Set Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "pycocotools"
+        ],
+        "dataset_used": [
+          "COCO",
+          "LVIS"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Grounding DINO 1.5 Pro",
+      "predicate": "usedDataset",
+      "object": "Objects365"
+    },
+    {
+      "subject": "Grounding DINO 1.5 Edge",
+      "predicate": "usedDataset",
+      "object": "Objects365"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Open-Set Evaluation",
+      "predicate": "generatesResult",
+      "object": "AP"
+    },
+    {
+      "subject": "Open-Set Evaluation",
+      "predicate": "usedSoftware",
+      "object": "pycocotools"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,210 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "PyTorch FSDP",
+        "version": "not specified"
+      },
+      {
+        "name": "FlashAttention",
+        "version": "not specified"
+      },
+      {
+        "name": "lm-eval-harness",
+        "version": "fork by Plüster (2023)"
+      },
+      {
+        "name": "sentencepiece",
+        "version": "not specified"
+      },
+      {
+        "name": "lighteval",
+        "version": "not specified"
+      },
+      {
+        "name": "Mistral-7B",
+        "version": "v0.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "OSCAR23.01 (German split)",
+        "format": "text",
+        "access": "public"
+      },
+      {
+        "name": "CulturaX (German and Arabic)",
+        "format": "text",
+        "access": "public"
+      },
+      {
+        "name": "MMLU",
+        "format": "benchmark",
+        "access": "public"
+      },
+      {
+        "name": "OALL",
+        "format": "benchmark suite",
+        "access": "public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Continued Pretraining"
+      },
+      {
+        "name": "Pure bfloat16 Training"
+      },
+      {
+        "name": "Tokenizer Swapping"
+      },
+      {
+        "name": "Mixed-precision Training"
+      },
+      {
+        "name": "FOCUS Embedding Initialization"
+      },
+      {
+        "name": "Activation Checkpointing"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Konstantin Dobler",
+        "role": "Lead Author"
+      },
+      {
+        "name": "Gerard de Melo",
+        "role": "Author"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Hasso Plattner Institute / University of Potsdam"
+      },
+      {
+        "name": "ELLIS Unit Potsdam"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Learning rate",
+        "value": "4e-5"
+      },
+      {
+        "name": "Batch size",
+        "value": "256"
+      },
+      {
+        "name": "Context length",
+        "value": "4,096"
+      },
+      {
+        "name": "Total training tokens",
+        "value": "8 billion"
+      },
+      {
+        "name": "Vocabulary size",
+        "value": "32,768"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "not specified",
+        "value": "not specified"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "Nvidia A100 (40GB/80GB), H100 (80GB), A6000 (48GB)",
+        "cuda": "not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Word-normalized NLL",
+        "value": "1.59",
+        "split": "German test set (pure bfloat16)"
+      },
+      {
+        "metric": "Average Accuracy",
+        "value": "47.2",
+        "split": "German benchmarks (pure bfloat16, German tokenizer)"
+      },
+      {
+        "metric": "GPU Speedup",
+        "value": "39.2%",
+        "split": "2x A100 (pure vs mixed)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Baseline Setup",
+        "type": "Preparation"
+      },
+      {
+        "name": "Tokenizer Training",
+        "type": "Preprocessing"
+      },
+      {
+        "name": "Continued Pretraining Experiments",
+        "type": "Training"
+      },
+      {
+        "name": "Efficiency Benchmarking",
+        "type": "Evaluation"
+      },
+      {
+        "name": "Downstream Task Evaluation",
+        "type": "Evaluation"
+      },
+      {
+        "name": "Hindsight Study (Arabic/German improvements)",
+        "type": "Analysis"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Konstantin Dobler",
+      "predicate": "affiliatedWith",
+      "object": "Hasso Plattner Institute"
+    },
+    {
+      "subject": "Mistral-7B",
+      "predicate": "adaptedTo",
+      "object": "German"
+    },
+    {
+      "subject": "Mistral-7B",
+      "predicate": "adaptedTo",
+      "object": "Arabic"
+    },
+    {
+      "subject": "Pure bfloat16 Training",
+      "predicate": "comparedTo",
+      "object": "Mixed-precision Training"
+    },
+    {
+      "subject": "Tokenizer Swapping",
+      "predicate": "uses",
+      "object": "sentencepiece"
+    },
+    {
+      "subject": "Continued Pretraining Experiments",
+      "predicate": "usesDataset",
+      "object": "OSCAR23.01"
+    },
+    {
+      "subject": "Hindsight Study",
+      "predicate": "usesDataset",
+      "object": "CulturaX"
+    },
+    {
+      "subject": "Downstream Task Evaluation",
+      "predicate": "usesSoftware",
+      "object": "lm-eval-harness"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "study_id": "study025",
+  "project": {
+    "title": "Vector Field Attention for Deformable Image Registration",
+    "lead_organization": "Johns Hopkins University",
+    "funding": "National Institute on Aging, National Institute of Health"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "torch",
+        "version": "2.0.0"
+      },
+      {
+        "name": "numpy",
+        "version": "2.0"
+      },
+      {
+        "name": "CUDA",
+        "version": "11.7"
+      },
+      {
+        "name": "torchvision",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "tqdm",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "tensorboard",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "nibabel",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "scipy",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "pandas",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "openpyxl",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "thop",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Learn2Reg 2021 Task 3",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": "Learn2Reg 2021"
+      },
+      {
+        "name": "Learn2Reg 2022",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "T1-weighted MR images",
+        "format": "images",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Vector Field Attention (VFA)",
+        "description": "A framework that enhances deformable image registration by extracting multi-resolution feature maps and retrieving pixel-level correspondences based on feature similarity through an attention module."
+      },
+      {
+        "name": "Im2grid",
+        "description": "A previous method for image registration used as a baseline for comparison."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yihao Liu",
+        "affiliation": "Johns Hopkins University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Junyu Chen",
+        "affiliation": "Johns Hopkins School of Medicine",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Lianrui Zuo",
+        "affiliation": "National Institute on Aging",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Aaron Carass",
+        "affiliation": "Johns Hopkins University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jerry L. Prince",
+        "affiliation": "Johns Hopkins University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Johns Hopkins University"
+      },
+      {
+        "name": "Johns Hopkins School of Medicine"
+      },
+      {
+        "name": "National Institute on Aging"
+      },
+      {
+        "name": "National Institute of Health"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "num_parameters",
+        "value": "1.0M",
+        "type": "xsd:string"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu",
+        "gpu": "null",
+        "cuda": "11.7",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Dice similarity coefficient (DSC)",
+        "value": "mean of 132 labels",
+        "split": "test",
+        "dataset": "T1-weighted MR images"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Model Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Vector Field Attention module"
+        ]
+      },
+      {
+        "name": "Unsupervised Registration Task",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "torch",
+          "nibabel"
+        ],
+        "dataset_used": [
+          "T1-weighted MR images",
+          "T2-weighted MR images"
+        ],
+        "dataset_produced": [
+          "Warped label image"
+        ]
+      },
+      {
+        "name": "Challenge Participation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "Learn2Reg 2021 Challenge",
+          "Learn2Reg 2022 Challenge"
+        ],
+        "dataset_produced": [
+          "TRE results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Yihao Liu",
+      "predicate": "hasActivityRole",
+      "object": "Model Development"
+    },
+    {
+      "subject": "Model Development",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Unsupervised Registration Task",
+      "predicate": "usedDataset",
+      "object": "T1-weighted MR images"
+    },
+    {
+      "subject": "Unsupervised Registration Task",
+      "predicate": "usedMethod",
+      "object": "Vector Field Attention (VFA)"
+    },
+    {
+      "subject": "Challenge Participation",
+      "predicate": "generatesResult",
+      "object": "Dice similarity coefficient (DSC)"
+    },
+    {
+      "subject": "Unsupervised Registration Task",
+      "predicate": "follows",
+      "object": "Model Development"
+    },
+    {
+      "subject": "Challenge Participation",
+      "predicate": "follows",
+      "object": "Unsupervised Registration Task"
+    },
+    {
+      "subject": "torch",
+      "predicate": "softwareDependency",
+      "object": "numpy"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

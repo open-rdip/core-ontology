@@ -1,0 +1,20 @@
+{
+  "study_id": "study021",
+  "repo_url": "https://github.com/jeonjaehyeong/dpl",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "nvidia/cuda:${CUDA}-cudnn${CUDNN}-devel-ubuntu16.04",
+    "os": "Ubuntu 16.04"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "666",
+      "file": "tools/relation_train_net.py",
+      "context": "SEED = 666"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

@@ -1,0 +1,24 @@
+{
+  "study_id": "study003",
+  "repo_url": "https://github.com/zhimengxin/rcod",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "0",
+      "file": "tools/dataset_converters/mot2reid.py",
+      "context": "random.seed(0"
+    },
+    {
+      "value": "42",
+      "file": "mmdet/visualization/palette.py",
+      "context": "np.random.seed(42"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

@@ -1,0 +1,234 @@
+{
+  "study_id": "study038",
+  "project": {
+    "title": "Conditional out-of-sample generation for unpaired data using trVAE",
+    "lead_organization": "Helmholtz Center Munich",
+    "funding": "BMBF (01IS18036A and 01IS18053A), Chan-Zuckerberg Initiative, and the European Union’s Horizon 2020 research and innovation programme"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "anndata",
+        "version": null
+      },
+      {
+        "name": "scanpy",
+        "version": null
+      },
+      {
+        "name": "adjustText",
+        "version": null
+      },
+      {
+        "name": "tensorflow",
+        "version": "2.5.3"
+      },
+      {
+        "name": "numpy",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": null
+      },
+      {
+        "name": "pandas",
+        "version": null
+      },
+      {
+        "name": "keras",
+        "version": "2.2.4"
+      },
+      {
+        "name": "matplotlib",
+        "version": null
+      },
+      {
+        "name": "seaborn",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "MNIST",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Kang et al. (pbmc)",
+        "format": "numeric",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Haber et al. (intestinal epithelium)",
+        "format": "numeric",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "trVAE",
+        "description": "A conditional variational autoencoder that regularizes the decoder with Maximum Mean Discrepancy (MMD) to improve out-of-sample generation for unpaired data."
+      },
+      {
+        "name": "Maximum Mean Discrepancy",
+        "description": "A kernel-based statistical test used as a regularization term in the decoder to match distributions across conditions."
+      },
+      {
+        "name": "Adam",
+        "description": "The optimization algorithm used for training the network."
+      }
+    ],
+    "Person": [
+      {
+        "name": "M. Lotfollahi",
+        "affiliation": "Helmholtz Center Munich",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Mohsen Naghipourfar",
+        "affiliation": "Helmholtz Center Munich",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Fabian J. Theis",
+        "affiliation": "Helmholtz Center Munich",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "F. Alexander Wolf",
+        "affiliation": "Helmholtz Center Munich",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Helmholtz Center Munich"
+      },
+      {
+        "name": "Technical University of Munich"
+      },
+      {
+        "name": "Sharif University of Technology"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "0.001",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "128",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "1000",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "leaky_relu_slope",
+        "value": "0.2",
+        "type": "xsd:float"
+      },
+      {
+        "name": "dropout_rate",
+        "value": "0.2",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "R-squared",
+        "value": "0.94",
+        "split": "test",
+        "dataset": "Kang et al. (pbmc)"
+      },
+      {
+        "metric": "R-squared",
+        "value": "0.89",
+        "split": "test",
+        "dataset": "Haber et al. (intestinal epithelium)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Model Training",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "tensorflow",
+          "keras"
+        ],
+        "dataset_used": [
+          "MNIST",
+          "Kang et al. (pbmc)"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Out-of-sample Prediction",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "trVAE"
+        ],
+        "dataset_used": [
+          "Haber et al. (intestinal epithelium)"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "trVAE",
+      "predicate": "usedMethod",
+      "object": "Maximum Mean Discrepancy"
+    },
+    {
+      "subject": "trVAE",
+      "predicate": "usedSoftware",
+      "object": "tensorflow"
+    },
+    {
+      "subject": "trVAE",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedDataset",
+      "object": "MNIST"
+    },
+    {
+      "subject": "Out-of-sample Prediction",
+      "predicate": "generatesResult",
+      "object": "R-squared"
+    },
+    {
+      "subject": "tensorflow",
+      "predicate": "softwareDependency",
+      "object": "numpy"
+    },
+    {
+      "subject": "keras",
+      "predicate": "softwareDependency",
+      "object": "tensorflow"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

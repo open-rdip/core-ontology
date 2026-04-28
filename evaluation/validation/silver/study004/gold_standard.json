@@ -1,0 +1,314 @@
+{
+  "study_id": "study004",
+  "project": {
+    "title": "A Study of the Mathematics of Deep Learning",
+    "lead_organization": "Johns Hopkins University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "TensorFlow",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "PyTorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "beautifulsoup4",
+        "version": "4.10.0"
+      },
+      {
+        "name": "cachetools",
+        "version": "5.0.0"
+      },
+      {
+        "name": "certifi",
+        "version": "2021.10.8"
+      },
+      {
+        "name": "filelock",
+        "version": "3.6.0"
+      },
+      {
+        "name": "humanize",
+        "version": "4.0.0"
+      },
+      {
+        "name": "idna",
+        "version": "3.3"
+      },
+      {
+        "name": "ircstyle",
+        "version": "0.1.5"
+      },
+      {
+        "name": "lxml",
+        "version": "4.8.0"
+      },
+      {
+        "name": "miniirc",
+        "version": "1.6.3"
+      },
+      {
+        "name": "packaging",
+        "version": "21.3"
+      },
+      {
+        "name": "pikepdf",
+        "version": "5.0.1"
+      },
+      {
+        "name": "pillow",
+        "version": "9.0.1"
+      },
+      {
+        "name": "platformdirs",
+        "version": "2.5.1"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.0.7"
+      },
+      {
+        "name": "ruamel-yaml",
+        "version": "0.17.21"
+      },
+      {
+        "name": "ruamel-yaml-clib",
+        "version": "0.2.6"
+      },
+      {
+        "name": "soupsieve",
+        "version": "2.3.1"
+      },
+      {
+        "name": "uritools",
+        "version": "4.0.0"
+      },
+      {
+        "name": "urlextract",
+        "version": "1.5.0"
+      },
+      {
+        "name": "urltitle",
+        "version": "0.3.8"
+      },
+      {
+        "name": "python",
+        "version": "3.9"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "MNIST",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CIFAR-10",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "ImageNet",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Empirical Risk Minimization (ERM)",
+        "description": "A principle in statistical learning theory which defines a family of learning algorithms and is used to give theoretical bounds on their performance."
+      },
+      {
+        "name": "RMSProp",
+        "description": "An adaptive learning rate method proposed by Geoff Hinton in Lecture 6e of his Coursera Class."
+      },
+      {
+        "name": "ADAM",
+        "description": "An algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments."
+      },
+      {
+        "name": "PAC-Bayesian Bounds",
+        "description": "A framework for providing generalization guarantees for stochastic classifiers based on a prior and posterior distribution over the hypothesis space."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Anirbit Mukherjee",
+        "affiliation": "Johns Hopkins University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Amitabh Basu",
+        "affiliation": "Johns Hopkins University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Shubhalaxmi Mukherjee",
+        "affiliation": "IISER, Pune",
+        "role": "Data Collector"
+      },
+      {
+        "name": "Zachary Lubberts",
+        "affiliation": "J.H.U",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Monosij Mondal",
+        "affiliation": "UPenn",
+        "role": "Software Engineer"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Johns Hopkins University"
+      },
+      {
+        "name": "University of Toronto"
+      },
+      {
+        "name": "Microsoft"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "depth",
+        "value": "2 to 8",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "width",
+        "value": "100 to 1000",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "mini-batch size",
+        "value": "100",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "input dimension",
+        "value": "20",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "null",
+        "cuda": "null",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Accuracy",
+        "value": "human-like",
+        "split": "test",
+        "dataset": "ImageNet"
+      },
+      {
+        "metric": "S_alpha",
+        "value": "77.0",
+        "split": "test",
+        "dataset": "SINet"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Theoretical Analysis",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Circuit Complexity Theorems"
+        ]
+      },
+      {
+        "name": "Algorithm Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "TensorFlow",
+          "PyTorch"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Stochastic Algorithms"
+        ]
+      },
+      {
+        "name": "Experimental Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "TensorFlow"
+        ],
+        "dataset_used": [
+          "MNIST",
+          "CIFAR-10"
+        ],
+        "dataset_produced": [
+          "Risk Bounds"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "usedSoftware",
+      "object": "TensorFlow"
+    },
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "usedDataset",
+      "object": "MNIST"
+    },
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "usedMethod",
+      "object": "RMSProp"
+    },
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "usedMethod",
+      "object": "ADAM"
+    },
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "generatesResult",
+      "object": "Accuracy"
+    },
+    {
+      "subject": "Theoretical Analysis",
+      "predicate": "usedMethod",
+      "object": "PAC-Bayesian Bounds"
+    },
+    {
+      "subject": "Algorithm Development",
+      "predicate": "follows",
+      "object": "Theoretical Analysis"
+    },
+    {
+      "subject": "Experimental Evaluation",
+      "predicate": "follows",
+      "object": "Algorithm Development"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

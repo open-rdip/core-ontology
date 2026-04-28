@@ -1,0 +1,292 @@
+{
+  "study_id": "study089",
+  "project": {
+    "title": "MOL: Joint Estimation of Micro-Expression, Optical Flow, and Landmark via Transformer-Graph-Style Convolution",
+    "lead_organization": "China University of Mining and Technology",
+    "funding": "National Natural Science Foundation of China under Grants 62276264, 62202470; National Science Fund for Excellent Young Scholars under Grant 62122026; National Science Fund for Distinguished Young Scholars under Grant 62025203"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "dlib",
+        "version": "19.24.1"
+      },
+      {
+        "name": "numpy",
+        "version": "1.23.5"
+      },
+      {
+        "name": "opencv_contrib_python_headless",
+        "version": "4.7.0.72"
+      },
+      {
+        "name": "opencv_python",
+        "version": "4.7.0.72"
+      },
+      {
+        "name": "opencv_python_headless",
+        "version": "4.7.0.72"
+      },
+      {
+        "name": "Pillow",
+        "version": "9.5.0"
+      },
+      {
+        "name": "scikit_learn",
+        "version": "1.2.2"
+      },
+      {
+        "name": "spatial_correlation_sampler",
+        "version": null
+      },
+      {
+        "name": "torch",
+        "version": "1.13.0"
+      },
+      {
+        "name": "torchsummary",
+        "version": "1.5.1"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.14.0"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "SAMM",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CAS(ME)^2",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MMEW",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "300W",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "FlyingChairs",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "MOL",
+        "description": "An end-to-end deep learning framework that jointly estimates micro-expressions, optical flow, and facial landmarks using transformer-graph-style convolution."
+      },
+      {
+        "name": "F5C block",
+        "description": "A block composed of fully-connected convolution and channel correspondence convolution to extract local-global features from raw frames."
+      },
+      {
+        "name": "Channel correspondence convolution",
+        "description": "A graph-style convolution introduced to model correlations among feature patterns."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhiwen Shao",
+        "affiliation": "China University of Mining and Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Yifan Cheng",
+        "affiliation": "China University of Mining and Technology",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Lizhuang Ma",
+        "affiliation": "Shanghai Jiao Tong University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "China University of Mining and Technology"
+      },
+      {
+        "name": "East China Normal University"
+      },
+      {
+        "name": "Shanghai Jiao Tong University"
+      },
+      {
+        "name": "The University of Western Australia"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "0.0001",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "4",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "100",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.0005",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "2023",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": "NVIDIA RTX 3090",
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "UF1",
+        "value": "0.8521",
+        "split": "test",
+        "dataset": "MMEW"
+      },
+      {
+        "metric": "UAR",
+        "value": "0.8409",
+        "split": "test",
+        "dataset": "MMEW"
+      },
+      {
+        "metric": "UF1",
+        "value": "0.4578",
+        "split": "test",
+        "dataset": "SAMM"
+      },
+      {
+        "metric": "UAR",
+        "value": "0.4725",
+        "split": "test",
+        "dataset": "SAMM"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Pre-training for Optical Flow",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "FlyingChairs"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Landmark Detection Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "torch",
+          "dlib"
+        ],
+        "dataset_used": [
+          "300W"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Joint MER Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 3,
+        "software_used": [
+          "torch",
+          "opencv_python"
+        ],
+        "dataset_used": [
+          "SAMM",
+          "CAS(ME)^2",
+          "MMEW"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Performance Analysis",
+        "type": "DataAnalysisActivity",
+        "order": 4,
+        "software_used": [
+          "scikit_learn"
+        ],
+        "dataset_used": [
+          "MMEW",
+          "SAMM"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "MOL",
+      "predicate": "usedMethod",
+      "object": "F5C block"
+    },
+    {
+      "subject": "Joint MER Training",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Joint MER Training",
+      "predicate": "usedDataset",
+      "object": "MMEW"
+    },
+    {
+      "subject": "Joint MER Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Performance Analysis",
+      "predicate": "generatesResult",
+      "object": "UF1"
+    },
+    {
+      "subject": "torch",
+      "predicate": "softwareDependency",
+      "object": "numpy"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

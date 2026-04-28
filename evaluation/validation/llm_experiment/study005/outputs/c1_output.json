@@ -1,0 +1,163 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "eDiff-I",
+        "version": "v5"
+      },
+      {
+        "name": "Stable Diffusion",
+        "version": "Not specified"
+      },
+      {
+        "name": "DALL-E 2",
+        "version": "Not specified"
+      },
+      {
+        "name": "Imagen",
+        "version": "Not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "MS-COCO",
+        "format": "Image-Text Pairs",
+        "access": "Public"
+      },
+      {
+        "name": "Visual Genome",
+        "format": "Image-Text Pairs",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Ensemble of Expert Denoisers"
+      },
+      {
+        "name": "Paint-with-words"
+      },
+      {
+        "name": "Cross-attention modulation"
+      },
+      {
+        "name": "Finetuning scheme for specialized models"
+      },
+      {
+        "name": "Classifier-free guidance"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yogesh Balaji",
+        "role": "Researcher"
+      },
+      {
+        "name": "Seungjun Nah",
+        "role": "Researcher"
+      },
+      {
+        "name": "Xun Huang",
+        "role": "Researcher"
+      },
+      {
+        "name": "Ming-Yu Liu",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "NVIDIA Corporation"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Training iterations (Base model)",
+        "value": "2M"
+      },
+      {
+        "name": "Finetuning iterations (Expert models)",
+        "value": "50K - 300K"
+      },
+      {
+        "name": "Output resolution",
+        "value": "1024 x 1024"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "Random dropout independently on individual embeddings",
+        "value": "Not specified"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Not specified",
+        "gpu": "NVIDIA A100",
+        "cuda": "Not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "FID-30K",
+        "value": "7.04",
+        "split": "MS-COCO (eDiff-I-Config-D)"
+      },
+      {
+        "metric": "FID-30K",
+        "value": "7.26",
+        "split": "MS-COCO (eDiff-I-Config-B)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Pre-training shared diffusion model",
+        "type": "Training"
+      },
+      {
+        "name": "Progressive splitting into specialized models",
+        "type": "Model Optimization"
+      },
+      {
+        "name": "Finetuning expert denoisers",
+        "type": "Training"
+      },
+      {
+        "name": "Quantitative evaluation on benchmarks",
+        "type": "Evaluation"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Yogesh Balaji",
+      "predicate": "employed_by",
+      "object": "NVIDIA Corporation"
+    },
+    {
+      "subject": "eDiff-I",
+      "predicate": "uses_method",
+      "object": "Ensemble of Expert Denoisers"
+    },
+    {
+      "subject": "eDiff-I",
+      "predicate": "evaluated_on",
+      "object": "MS-COCO"
+    },
+    {
+      "subject": "eDiff-I",
+      "predicate": "uses_software",
+      "object": "T5 text encoder"
+    },
+    {
+      "subject": "eDiff-I",
+      "predicate": "uses_software",
+      "object": "CLIP text encoder"
+    },
+    {
+      "subject": "Pre-training shared diffusion model",
+      "predicate": "precedes",
+      "object": "Finetuning expert denoisers"
+    }
+  ]
+}

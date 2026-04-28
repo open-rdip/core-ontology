@@ -1,0 +1,204 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "dice-embeddings",
+        "version": "not specified"
+      },
+      {
+        "name": "ADAM optimizer",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "UMLS",
+        "format": "Knowledge Graph",
+        "access": "Public"
+      },
+      {
+        "name": "KINSHIP",
+        "format": "Knowledge Graph",
+        "access": "Public"
+      },
+      {
+        "name": "Freebase",
+        "format": "Knowledge Graph",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Kronecker Decomposition (KD)"
+      },
+      {
+        "name": "Link Prediction"
+      },
+      {
+        "name": "1vsAll Training Strategy"
+      },
+      {
+        "name": "KvsAll Training Strategy"
+      },
+      {
+        "name": "Label Smoothing (LS)"
+      },
+      {
+        "name": "Label Relaxation (LR)"
+      },
+      {
+        "name": "DistMult"
+      },
+      {
+        "name": "RESCAL"
+      },
+      {
+        "name": "Complex"
+      },
+      {
+        "name": "Rotate"
+      },
+      {
+        "name": "QuatE"
+      },
+      {
+        "name": "ConvE"
+      },
+      {
+        "name": "ConvKB"
+      },
+      {
+        "name": "HypER"
+      },
+      {
+        "name": "Batch Normalization"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Caglar Demir",
+        "role": "Author"
+      },
+      {
+        "name": "Julian Lienen",
+        "role": "Author"
+      },
+      {
+        "name": "Axel-Cyrille Ngonga Ngomo",
+        "role": "Author"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Paderborn University"
+      },
+      {
+        "name": "Data Science Group"
+      },
+      {
+        "name": "Heinz Nixdorf Institute"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Embedding vector size (d)",
+        "value": "{4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 289, 324}"
+      },
+      {
+        "name": "Learning rate",
+        "value": "0.01"
+      },
+      {
+        "name": "Batch size",
+        "value": "1024"
+      },
+      {
+        "name": "Epochs",
+        "value": "1000"
+      },
+      {
+        "name": "Smoothing/Relaxation parameter (α)",
+        "value": "{0.1, 0.2}"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "Pseudo-random generator seed",
+        "value": "1"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "not specified",
+        "cuda": "not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Mean Reciprocal Rank (MRR)",
+        "value": "Improved up to absolute 10%",
+        "split": "Test"
+      },
+      {
+        "metric": "Parameter Reduction",
+        "value": "59% (relation) / 16.4x (total)",
+        "split": "not specified"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Literature Review",
+        "type": "Background Analysis"
+      },
+      {
+        "name": "Methodology Proposal",
+        "type": "Theoretical Framework"
+      },
+      {
+        "name": "Experimental Design",
+        "type": "Setup"
+      },
+      {
+        "name": "Hyperparameter Optimization",
+        "type": "Training"
+      },
+      {
+        "name": "Link Prediction Evaluation",
+        "type": "Performance Assessment"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Caglar Demir",
+      "predicate": "affiliatedWith",
+      "object": "Paderborn University"
+    },
+    {
+      "subject": "Kronecker Decomposition",
+      "predicate": "appliedTo",
+      "object": "Knowledge Graph Embeddings"
+    },
+    {
+      "subject": "1vsAll Training Strategy",
+      "predicate": "usedFor",
+      "object": "Model Training"
+    },
+    {
+      "subject": "ADAM optimizer",
+      "predicate": "optimizes",
+      "object": "Cross Entropy Loss"
+    },
+    {
+      "subject": "Label Smoothing",
+      "predicate": "improves",
+      "object": "Model Calibration"
+    },
+    {
+      "subject": "Kronecker Decomposition",
+      "predicate": "reduces",
+      "object": "Number of Parameters"
+    }
+  ]
+}

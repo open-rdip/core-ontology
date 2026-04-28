@@ -1,0 +1,233 @@
+{
+  "study_id": "study053",
+  "project": {
+    "title": "Low-Rank Few-Shot Adaptation of Vision-Language Models",
+    "lead_organization": "UCLouvain",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "flake8",
+        "version": "3.7.9"
+      },
+      {
+        "name": "yapf",
+        "version": "0.29.0"
+      },
+      {
+        "name": "isort",
+        "version": "4.3.21"
+      },
+      {
+        "name": "yacs",
+        "version": null
+      },
+      {
+        "name": "gdown",
+        "version": null
+      },
+      {
+        "name": "future",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": null
+      },
+      {
+        "name": "scikit-learn",
+        "version": null
+      },
+      {
+        "name": "tqdm",
+        "version": null
+      },
+      {
+        "name": "ftfy",
+        "version": null
+      },
+      {
+        "name": "regex",
+        "version": null
+      },
+      {
+        "name": "wilds",
+        "version": "1.2.2"
+      },
+      {
+        "name": "tabulate",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "ImageNet",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Caltech101",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "OxfordPets",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "StanfordCars",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Flowers102",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Food101",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "FGVCAircraft",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "SUN397",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "DTD",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "EuroSAT",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "UCF101",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "CLIP-LORA",
+        "description": "A method introducing Low-Rank Adaptation (LoRA) for few-shot learning in Vision-Language Models like CLIP."
+      },
+      {
+        "name": "Few-Shot Adaptation",
+        "description": "The process of adapting a pre-trained model to a target task using only a small number of labeled samples."
+      },
+      {
+        "name": "Parameter-Efficient Fine-Tuning (PEFT)",
+        "description": "A set of techniques aimed at fine-tuning large models by updating only a small subset of parameters."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Maxime Zanella",
+        "affiliation": "UCLouvain and UMons",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ismail Ben Ayed",
+        "affiliation": "ÉTS Montréal",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "UCLouvain"
+      },
+      {
+        "name": "UMons"
+      },
+      {
+        "name": "ÉTS Montréal"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "accuracy",
+        "value": "78.0",
+        "split": "test",
+        "dataset": "MaPLe (CVPR ’23) comparison"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Few-Shot Adaptation Experiment",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "scikit-learn",
+          "scipy"
+        ],
+        "dataset_used": [
+          "ImageNet",
+          "Caltech101"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "CLIP-LORA",
+      "predicate": "usedMethod",
+      "object": "Low-Rank Adaptation (LoRA)"
+    },
+    {
+      "subject": "Few-Shot Adaptation Experiment",
+      "predicate": "usedMethod",
+      "object": "CLIP-LORA"
+    },
+    {
+      "subject": "Few-Shot Adaptation Experiment",
+      "predicate": "usedDataset",
+      "object": "ImageNet"
+    },
+    {
+      "subject": "Few-Shot Adaptation Experiment",
+      "predicate": "generatesResult",
+      "object": "accuracy"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,186 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "DeepSpeed",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Wikitext-2",
+        "format": "text",
+        "access": "public"
+      },
+      {
+        "name": "PTB",
+        "format": "text",
+        "access": "public"
+      },
+      {
+        "name": "C4",
+        "format": "text",
+        "access": "public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Post-training quantization (PTQ)"
+      },
+      {
+        "name": "Round-to-nearest (RTN)"
+      },
+      {
+        "name": "GPTQ"
+      },
+      {
+        "name": "ZeroQuant"
+      },
+      {
+        "name": "ZeroQuant-Global (ZQ-Global)"
+      },
+      {
+        "name": "ZeroQuant-Local (ZQ-Local)"
+      },
+      {
+        "name": "Low-Rank Compensation (LoRC)"
+      },
+      {
+        "name": "Fine-grained quantization (FGQ)"
+      },
+      {
+        "name": "Singular Value Decomposition (SVD)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhewei Yao",
+        "role": "Researcher"
+      },
+      {
+        "name": "Xiaoxia Wu",
+        "role": "Researcher"
+      },
+      {
+        "name": "Cheng Li",
+        "role": "Researcher"
+      },
+      {
+        "name": "Stephen Youn",
+        "role": "Researcher"
+      },
+      {
+        "name": "Yuxiong He",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Microsoft"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning rate",
+        "value": "1e-4"
+      },
+      {
+        "name": "dropout rate",
+        "value": "0.05"
+      },
+      {
+        "name": "block size",
+        "value": "64-256"
+      },
+      {
+        "name": "LoRC dimension",
+        "value": "8"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "fixed random seed",
+        "value": "123, 234, 456"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "Modern GPUs (streaming multiprocessors)",
+        "cuda": "not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Perplexity (PPL)",
+        "value": "10.31",
+        "split": "OPT-13b WikiText"
+      },
+      {
+        "metric": "Perplexity (PPL)",
+        "value": "8.11",
+        "split": "BLOOM-176b W16-A16 WikiText"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Sensitivity analysis of LLMs",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "PTQ evaluation and comparison",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Development of LoRC method",
+        "type": "SoftwareDevelopmentActivity"
+      },
+      {
+        "name": "Quantize-aware training experiments",
+        "type": "DataAnalysisActivity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Sensitivity analysis of LLMs",
+      "predicate": "usedDataset",
+      "object": "Wikitext-2"
+    },
+    {
+      "subject": "Sensitivity analysis of LLMs",
+      "predicate": "usedMethod",
+      "object": "Post-training quantization (PTQ)"
+    },
+    {
+      "subject": "PTQ evaluation and comparison",
+      "predicate": "usedSoftware",
+      "object": "DeepSpeed"
+    },
+    {
+      "subject": "PTQ evaluation and comparison",
+      "predicate": "usedMethod",
+      "object": "GPTQ"
+    },
+    {
+      "subject": "Development of LoRC method",
+      "predicate": "usedMethod",
+      "object": "Singular Value Decomposition (SVD)"
+    },
+    {
+      "subject": "Quantize-aware training experiments",
+      "predicate": "hasParameter",
+      "object": "learning rate"
+    },
+    {
+      "subject": "Quantize-aware training experiments",
+      "predicate": "hasParameter",
+      "object": "dropout rate"
+    },
+    {
+      "subject": "PTQ evaluation and comparison",
+      "predicate": "generatesResult",
+      "object": "Perplexity (PPL)"
+    }
+  ]
+}

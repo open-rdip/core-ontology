@@ -1,0 +1,71 @@
+{
+  "study_id": "study076",
+  "repo_url": "https://github.com/mcontisc/PIHAM",
+  "software_dependencies": [
+    {
+      "name": "numpy",
+      "version": "1.22.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "functorch",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-tensor-py3",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.10.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "PyYAML",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "POT",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "10",
+      "file": "src/synthetic.py",
+      "context": "SEED = 10"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

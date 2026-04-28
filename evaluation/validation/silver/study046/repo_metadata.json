@@ -1,0 +1,104 @@
+{
+  "study_id": "study046",
+  "repo_url": "https://github.com/lmomoy/lf-yolo",
+  "software_dependencies": [
+    {
+      "name": "matplotlib",
+      "version": "3.2.2",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.18.5",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opencv-python",
+      "version": "4.1.2",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Pillow",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "PyYAML",
+      "version": "5.3.1",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.4.1",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "1.7.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.8.1",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.41.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard",
+      "version": "2.4.1",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "seaborn",
+      "version": "0.11.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "thop",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pycocotools",
+      "version": "2.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "nvcr.io/nvidia/pytorch:21.03-py3"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "0",
+      "file": "utils/torch_utils.py",
+      "context": "seed=0"
+    }
+  ],
+  "license": "GPL",
+  "errors": []
+}

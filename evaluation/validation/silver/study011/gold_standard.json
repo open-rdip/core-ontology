@@ -1,0 +1,281 @@
+{
+  "study_id": "study011",
+  "project": {
+    "title": "RepVGG: Making VGG-style ConvNets Great Again",
+    "lead_organization": "Tsinghua University",
+    "funding": "The National Key Research and Development Program of China (No. 2017YFA0700800), the National Natural Science Foundation of China (No.61925107, No.U1936202), Beijing Academy of Artificial Intelligence (BAAI), and the Baidu Scholarship Program 2019 "
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "pytorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "cuda",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "cuDNN",
+        "version": "7.5.0 "
+      },
+      {
+        "name": "Intel MKL",
+        "version": "exact version not specified "
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "ImageNet",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CIFAR-10",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CIFAR-100",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MNIST",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Structural Re-parameterization",
+        "description": "A technique to decouple a training-time multi-branch topology from an inference-time plain architecture by transforming parameters."
+      },
+      {
+        "name": "RepVGG",
+        "description": "A simple ConvNet architecture with a VGG-like inference-time body composed of stacked 3x3 convolutions and ReLU."
+      },
+      {
+        "name": "Winograd Convolution",
+        "description": "A classic algorithm used to accelerate 3x3 convolutions by reducing the number of multiplications."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Xiaohan Ding",
+        "affiliation": "Tsinghua University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Xiangyu Zhang",
+        "affiliation": "MEGVII Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jungong Han",
+        "affiliation": "Aberystwyth University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ningning Ma",
+        "affiliation": "Hong Kong University of Science and Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Guiguang Ding",
+        "affiliation": "Tsinghua University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jian Sun",
+        "affiliation": "MEGVII Technology",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Tsinghua University "
+      },
+      {
+        "name": "MEGVII Technology "
+      },
+      {
+        "name": "Hong Kong University of Science and Technology "
+      },
+      {
+        "name": "Aberystwyth University "
+      },
+      {
+        "name": "Beijing National Research Center for Information Science and Technology (BNRist) "
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "batch_size",
+        "value": "128",
+        "type": "xsd:integer "
+      },
+      {
+        "name": "num_epochs",
+        "value": "120",
+        "type": "xsd:integer "
+      },
+      {
+        "name": "num_epochs",
+        "value": "200",
+        "type": "xsd:integer "
+      },
+      {
+        "name": "input_resolution",
+        "value": "224",
+        "type": "xsd:integer "
+      },
+      {
+        "name": "input_resolution",
+        "value": "300",
+        "type": "xsd:integer "
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "2",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "3",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "7",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "NVIDIA 1080Ti",
+        "cuda": "null",
+        "ram": "null "
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "top-1 accuracy",
+        "value": "over 80%",
+        "split": "test",
+        "dataset": "ImageNet "
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "ImageNet"
+        ],
+        "dataset_produced": [
+          "RepVGG training-time model "
+        ]
+      },
+      {
+        "name": "Structural Re-parameterization",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "RepVGG training-time model"
+        ],
+        "dataset_produced": [
+          "RepVGG inference-time model "
+        ]
+      },
+      {
+        "name": "Speed and Accuracy Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "cuDNN"
+        ],
+        "dataset_used": [
+          "ImageNet"
+        ],
+        "dataset_produced": [
+          "Evaluation results "
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "RepVGG",
+      "predicate": "usedMethod",
+      "object": "Structural Re-parameterization "
+    },
+    {
+      "subject": "RepVGG",
+      "predicate": "usedMethod",
+      "object": "Winograd Convolution "
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedDataset",
+      "object": "ImageNet "
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "num_epochs "
+    },
+    {
+      "subject": "Speed and Accuracy Evaluation",
+      "predicate": "executedIn",
+      "object": "NVIDIA 1080Ti "
+    },
+    {
+      "subject": "Speed and Accuracy Evaluation",
+      "predicate": "generatesResult",
+      "object": "top-1 accuracy "
+    },
+    {
+      "subject": "Structural Re-parameterization",
+      "predicate": "follows",
+      "object": "Model Training "
+    },
+    {
+      "subject": "Speed and Accuracy Evaluation",
+      "predicate": "follows",
+      "object": "Structural Re-parameterization "
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

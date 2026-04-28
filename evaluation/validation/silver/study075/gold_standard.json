@@ -1,0 +1,111 @@
+{
+  "study_id": "study075",
+  "project": {
+    "title": "Computational Reverse-Engineering Analysis for Scattering Experiments for Form Factor and Structure Factor Determination ('P(q) and S(q) CREASE')",
+    "lead_organization": "University of Delaware",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "numpy",
+        "version": null
+      },
+      {
+        "name": "matplotlib",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": null
+      },
+      {
+        "name": "numexpr",
+        "version": null
+      },
+      {
+        "name": "py3dmol",
+        "version": null
+      },
+      {
+        "name": "jupyter",
+        "version": null
+      },
+      {
+        "name": "tensorflow",
+        "version": null
+      }
+    ],
+    "Dataset": [],
+    "Method": [
+      {
+        "name": "CREASE",
+        "description": "Computational Reverse-Engineering Analysis for Scattering Experiments, a machine learning accelerated method to analyze small angle scattering profiles."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Christian M. Heil",
+        "affiliation": "University of Delaware",
+        "role": null
+      },
+      {
+        "name": "Yingzhen Ma",
+        "affiliation": "Louisiana State University",
+        "role": null
+      },
+      {
+        "name": "Bhuvnesh Bharti",
+        "affiliation": "Louisiana State University",
+        "role": null
+      },
+      {
+        "name": "Arthi Jayaraman",
+        "affiliation": "University of Delaware",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Delaware"
+      },
+      {
+        "name": "Louisiana State University"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Software Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "tensorflow",
+          "numpy",
+          "scipy"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Arthi Jayaraman",
+      "predicate": "hasActivityRole",
+      "object": "Software Development"
+    },
+    {
+      "subject": "Software Development",
+      "predicate": "usedMethod",
+      "object": "CREASE"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

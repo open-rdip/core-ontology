@@ -1,0 +1,263 @@
+{
+  "study_id": "study088",
+  "project": {
+    "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+    "lead_organization": "Microsoft Research Asia",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "jax",
+        "version": "0.2.21"
+      },
+      {
+        "name": "flax",
+        "version": "0.3.6"
+      },
+      {
+        "name": "tqdm",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "ImageNet-1K",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "COCO",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "ADE20K",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Swin Transformer",
+        "description": "A hierarchical vision Transformer whose representation is computed with shifted windows to achieve linear computational complexity."
+      },
+      {
+        "name": "Shifted Windowing Scheme",
+        "description": "A method that limits self-attention computation to non-overlapping local windows while allowing for cross-window connection."
+      },
+      {
+        "name": "Hierarchical Feature Map",
+        "description": "The construction of hierarchical representations by merging image patches in deeper layers."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Ze Liu",
+        "affiliation": "Microsoft Research Asia",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Yutong Lin",
+        "affiliation": "Microsoft Research Asia",
+        "role": null
+      },
+      {
+        "name": "Yue Cao",
+        "affiliation": "Microsoft Research Asia",
+        "role": null
+      },
+      {
+        "name": "Han Hu",
+        "affiliation": "Microsoft Research Asia",
+        "role": null
+      },
+      {
+        "name": "Yixuan Wei",
+        "affiliation": "Microsoft Research Asia",
+        "role": null
+      },
+      {
+        "name": "Zheng Zhang",
+        "affiliation": "Microsoft Research Asia",
+        "role": null
+      },
+      {
+        "name": "Stephen Lin",
+        "affiliation": "Microsoft Research Asia",
+        "role": null
+      },
+      {
+        "name": "Baining Guo",
+        "affiliation": "Microsoft Research Asia",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Microsoft Research Asia"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "patch_size",
+        "value": "4x4",
+        "type": "xsd:string"
+      },
+      {
+        "name": "window_size",
+        "value": "7",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "batch_size",
+        "value": "1024",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "initial_learning_rate",
+        "value": "0.001",
+        "type": "xsd:float"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.05",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": "V100",
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "top-1 accuracy",
+        "value": "87.3",
+        "split": "test",
+        "dataset": "ImageNet-1K"
+      },
+      {
+        "metric": "box AP",
+        "value": "58.7",
+        "split": "test",
+        "dataset": "COCO"
+      },
+      {
+        "metric": "mask AP",
+        "value": "51.1",
+        "split": "test",
+        "dataset": "COCO"
+      },
+      {
+        "metric": "mIoU",
+        "value": "53.5",
+        "split": "val",
+        "dataset": "ADE20K"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Image Classification Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "jax",
+          "flax"
+        ],
+        "dataset_used": [
+          "ImageNet-1K"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Object Detection Fine-tuning",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [
+          "COCO"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Semantic Segmentation Fine-tuning",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 3,
+        "software_used": [],
+        "dataset_used": [
+          "ADE20K"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 4,
+        "software_used": [],
+        "dataset_used": [
+          "ImageNet-1K",
+          "COCO",
+          "ADE20K"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Swin Transformer",
+      "predicate": "usedMethod",
+      "object": "Shifted Windowing Scheme"
+    },
+    {
+      "subject": "Image Classification Training",
+      "predicate": "usedMethod",
+      "object": "Swin Transformer"
+    },
+    {
+      "subject": "Image Classification Training",
+      "predicate": "usedDataset",
+      "object": "ImageNet-1K"
+    },
+    {
+      "subject": "Object Detection Fine-tuning",
+      "predicate": "follows",
+      "object": "Image Classification Training"
+    },
+    {
+      "subject": "Semantic Segmentation Fine-tuning",
+      "predicate": "follows",
+      "object": "Image Classification Training"
+    },
+    {
+      "subject": "Model Evaluation",
+      "predicate": "generatesResult",
+      "object": "top-1 accuracy"
+    },
+    {
+      "subject": "Model Evaluation",
+      "predicate": "generatesResult",
+      "object": "box AP"
+    },
+    {
+      "subject": "flax",
+      "predicate": "softwareDependency",
+      "object": "jax"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

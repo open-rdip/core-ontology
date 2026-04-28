@@ -1,0 +1,26 @@
+{
+  "study_id": "study092",
+  "repo_url": "https://github.com/luigy-mach/trade",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu20.04",
+    "cuda_version": "11.0.3",
+    "os": "Ubuntu 20.04"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "2",
+      "file": "tracklet/object_detector/yolov3_tf/utils/plot_utils.py",
+      "context": "seed=2"
+    },
+    {
+      "value": "0",
+      "file": "tracklet/object_detector/pYOLO/core/utils.py",
+      "context": "random.seed(0"
+    }
+  ],
+  "license": "",
+  "errors": []
+}

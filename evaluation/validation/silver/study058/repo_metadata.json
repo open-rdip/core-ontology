@@ -1,0 +1,41 @@
+{
+  "study_id": "study058",
+  "repo_url": "https://github.com/microsoft/toxigen",
+  "software_dependencies": [
+    {
+      "name": "nltk",
+      "version": "3.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "requests",
+      "version": "2.27.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.22.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "1.10.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "transformers",
+      "version": "4.12.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

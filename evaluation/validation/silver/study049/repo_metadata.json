@@ -1,0 +1,13 @@
+{
+  "study_id": "study049",
+  "repo_url": "https://github.com/sail-sg/inceptionnext",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "${FROM_IMAGE_NAME}"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "Apache-2.0",
+  "errors": []
+}

@@ -1,0 +1,183 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Pinnability",
+        "version": "Production"
+      },
+      {
+        "name": "TransAct",
+        "version": "v1"
+      },
+      {
+        "name": "PinnerFormer",
+        "version": "batch-generated"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Pinterest Homefeed Dataset",
+        "format": "Log data (user actions)",
+        "access": "Private/Proprietary"
+      },
+      {
+        "name": "2-week offline training dataset",
+        "format": "Time-series logs",
+        "access": "Private/Proprietary"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Transformer Encoder"
+      },
+      {
+        "name": "Wide & Deep Learning (WDL)"
+      },
+      {
+        "name": "Deep & Cross Network V2 (DCN V2)"
+      },
+      {
+        "name": "PinSage Embedding"
+      },
+      {
+        "name": "Early Fusion (Concat)"
+      },
+      {
+        "name": "Random Time Window Masking"
+      },
+      {
+        "name": "Multi-task Pointwise Ranking"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Xue Xia",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Pong Eksombatchai",
+        "role": "Researcher/Engineer"
+      },
+      {
+        "name": "Nikil Pancha",
+        "role": "Researcher/Engineer"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Pinterest"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Sequence Length",
+        "value": "100"
+      },
+      {
+        "name": "Transformer Layers",
+        "value": "2"
+      },
+      {
+        "name": "Hidden Dimension",
+        "value": "32"
+      },
+      {
+        "name": "PinSage Embedding Dimension",
+        "value": "32"
+      },
+      {
+        "name": "Retrain Frequency",
+        "value": "Twice a week"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Not specified",
+        "gpu": "GPU serving (upgraded from CPU)",
+        "cuda": "Not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Homefeed Repin Volume",
+        "value": "+11.0%",
+        "split": "Online Treatment Group"
+      },
+      {
+        "metric": "Homefeed Hide Volume",
+        "value": "-10.0%",
+        "split": "Online Treatment Group"
+      },
+      {
+        "metric": "HIT@3/repin",
+        "value": "+9.41%",
+        "split": "Offline Ablation"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Realtime user action capturing",
+        "type": "DataCollectionActivity"
+      },
+      {
+        "name": "User action sequence sorting and padding",
+        "type": "DataProcessingActivity"
+      },
+      {
+        "name": "TransAct model training and evaluation",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Implementation of GPU-based serving in Pinnability",
+        "type": "SoftwareDevelopmentActivity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "TransAct model training and evaluation",
+      "predicate": "usedSoftware",
+      "object": "TransAct"
+    },
+    {
+      "subject": "TransAct model training and evaluation",
+      "predicate": "usedDataset",
+      "object": "2-week offline training dataset"
+    },
+    {
+      "subject": "TransAct model training and evaluation",
+      "predicate": "usedMethod",
+      "object": "Transformer Encoder"
+    },
+    {
+      "subject": "TransAct model training and evaluation",
+      "predicate": "hasParameter",
+      "object": "Sequence Length"
+    },
+    {
+      "subject": "TransAct model training and evaluation",
+      "predicate": "generatesResult",
+      "object": "Homefeed Repin Volume"
+    },
+    {
+      "subject": "Pinnability",
+      "predicate": "usedSoftware",
+      "object": "TransAct"
+    },
+    {
+      "subject": "Pinnability",
+      "predicate": "usedSoftware",
+      "object": "PinnerFormer"
+    },
+    {
+      "subject": "Implementation of GPU-based serving in Pinnability",
+      "predicate": "executedIn",
+      "object": "GPU serving (upgraded from CPU)"
+    },
+    {
+      "subject": "Xue Xia",
+      "predicate": "hasActivityRole",
+      "object": "TransAct model training and evaluation"
+    }
+  ]
+}

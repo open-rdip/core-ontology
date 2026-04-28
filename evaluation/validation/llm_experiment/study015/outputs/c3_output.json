@@ -1,0 +1,147 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Gmsh",
+        "version": "not specified"
+      },
+      {
+        "name": "PETSc/TAO",
+        "version": "3.19"
+      }
+    ],
+    "Dataset": [],
+    "Method": [
+      {
+        "name": "Nested approximations of Schur complements"
+      },
+      {
+        "name": "Fixed-stress approximation"
+      },
+      {
+        "name": "Constrained Pressure Residual (CPR)"
+      },
+      {
+        "name": "System-AMG"
+      },
+      {
+        "name": "Discrete fracture-matrix (DFM) modeling"
+      },
+      {
+        "name": "Augmented Lagrangian approach"
+      },
+      {
+        "name": "Multi-point flux approximation (MPFA)"
+      },
+      {
+        "name": "Multi-point stress approximation (MPSA)"
+      },
+      {
+        "name": "Implicit Euler scheme"
+      },
+      {
+        "name": "Semi-smooth Newton method"
+      },
+      {
+        "name": "Generalized Minimal Residual (GMRES)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yury Zabegaev",
+        "role": "Researcher"
+      },
+      {
+        "name": "Inga Berre",
+        "role": "Researcher"
+      },
+      {
+        "name": "Eirik Keilegavlen",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Bergen"
+      },
+      {
+        "name": "Center for Modeling of Coupled Subsurface Dynamics"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Friction coefficient",
+        "value": "variable"
+      },
+      {
+        "name": "Peclét number",
+        "value": "variable"
+      },
+      {
+        "name": "Biot coefficient (alpha)",
+        "value": "not specified"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "GMRES iterations",
+        "value": "robust/scaling well",
+        "split": "numerical experiments"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Implementation of a block preconditioner for thermo-poromechanics",
+        "type": "SoftwareDevelopmentActivity"
+      },
+      {
+        "name": "Numerical experiments of fluid injection into fractured porous media",
+        "type": "DataAnalysisActivity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Numerical experiments of fluid injection into fractured porous media",
+      "predicate": "usedMethod",
+      "object": "Nested approximations of Schur complements"
+    },
+    {
+      "subject": "Numerical experiments of fluid injection into fractured porous media",
+      "predicate": "usedMethod",
+      "object": "Fixed-stress approximation"
+    },
+    {
+      "subject": "Numerical experiments of fluid injection into fractured porous media",
+      "predicate": "usedMethod",
+      "object": "Constrained Pressure Residual (CPR)"
+    },
+    {
+      "subject": "Numerical experiments of fluid injection into fractured porous media",
+      "predicate": "usedMethod",
+      "object": "System-AMG"
+    },
+    {
+      "subject": "Implementation of a block preconditioner for thermo-poromechanics",
+      "predicate": "usedSoftware",
+      "object": "Gmsh"
+    },
+    {
+      "subject": "Numerical experiments of fluid injection into fractured porous media",
+      "predicate": "generatesResult",
+      "object": "GMRES iterations"
+    },
+    {
+      "subject": "Numerical experiments of fluid injection into fractured porous media",
+      "predicate": "hasParameter",
+      "object": "Friction coefficient"
+    },
+    {
+      "subject": "Numerical experiments of fluid injection into fractured porous media",
+      "predicate": "hasParameter",
+      "object": "Peclét number"
+    }
+  ]
+}

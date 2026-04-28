@@ -1,0 +1,272 @@
+{
+  "study_id": "study042",
+  "project": {
+    "title": "D$^4$-VTON: Dynamic Semantics Disentangling for Differential Diffusion based Virtual Try-On",
+    "lead_organization": "Ocean University of China",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "_libgcc_mutex",
+        "version": "0.1"
+      },
+      {
+        "name": "_openmp_mutex",
+        "version": "5.1"
+      },
+      {
+        "name": "blas",
+        "version": "1.0"
+      },
+      {
+        "name": "brotli-python",
+        "version": "1.0.9"
+      },
+      {
+        "name": "bzip2",
+        "version": "1.0.8"
+      },
+      {
+        "name": "ca-certificates",
+        "version": "2023.08.22"
+      },
+      {
+        "name": "certifi",
+        "version": "2023.11.17"
+      },
+      {
+        "name": "cffi",
+        "version": "1.15.1"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "2.0.4"
+      },
+      {
+        "name": "cryptography",
+        "version": "41.0.3"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "11.3.1"
+      },
+      {
+        "name": "ffmpeg",
+        "version": "4.3"
+      },
+      {
+        "name": "freetype",
+        "version": "2.12.1"
+      },
+      {
+        "name": "giflib",
+        "version": "5.2.1"
+      },
+      {
+        "name": "gmp",
+        "version": "6.2.1"
+      },
+      {
+        "name": "gnutls",
+        "version": "3.6.15"
+      },
+      {
+        "name": "idna",
+        "version": "3.4"
+      },
+      {
+        "name": "intel-openmp",
+        "version": "2021.4.0"
+      },
+      {
+        "name": "jpeg",
+        "version": "9e"
+      },
+      {
+        "name": "lame",
+        "version": "3.100"
+      },
+      {
+        "name": "lcms2",
+        "version": "2.12"
+      },
+      {
+        "name": "ld_impl_linux-64",
+        "version": "2.38"
+      },
+      {
+        "name": "lerc",
+        "version": "3.0"
+      },
+      {
+        "name": "libdeflate",
+        "version": "1.17"
+      },
+      {
+        "name": "libffi",
+        "version": "3.3"
+      },
+      {
+        "name": "libgcc-ng",
+        "version": "11.2.0"
+      },
+      {
+        "name": "libgfortran-ng",
+        "version": "11.2.0"
+      },
+      {
+        "name": "libgfortran5",
+        "version": "11.2.0"
+      },
+      {
+        "name": "libgomp",
+        "version": "11.2.0"
+      },
+      {
+        "name": "libiconv",
+        "version": "1.16"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "VITON-HD",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "DressCode",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Dynamic Semantics Disentangling Modules",
+        "description": "Aggregates abstract semantic information for precise garment warping."
+      },
+      {
+        "name": "Differential Information Tracking Path",
+        "description": "Framework integrating a tracking path to reduce learning ambiguities in simultaneous inpainting and denoising tasks."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhaotong Yang",
+        "affiliation": "Ocean University of China",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zicheng Jiang",
+        "affiliation": "Ocean University of China",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Xinzhe Li",
+        "affiliation": "Ocean University of China",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Huiyu Zhou",
+        "affiliation": "University of Leicester",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Junyu Dong",
+        "affiliation": "Ocean University of China",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Huaidong Zhang",
+        "affiliation": "South China University of Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Yong Du",
+        "affiliation": "Ocean University of China",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Ocean University of China"
+      },
+      {
+        "name": "University of Leicester"
+      },
+      {
+        "name": "South China University of Technology"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": null,
+        "cuda": "11.3.1",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Garment Warping",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "VITON-HD"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Virtual Try-On Generation",
+        "type": "DataProductionActivity",
+        "order": 2,
+        "software_used": [
+          "cudatoolkit"
+        ],
+        "dataset_used": [
+          "DressCode"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Zhaotong Yang",
+      "predicate": "hasActivityRole",
+      "object": "Garment Warping"
+    },
+    {
+      "subject": "Dynamic Semantics Disentangling Modules",
+      "predicate": "usedDataset",
+      "object": "VITON-HD"
+    },
+    {
+      "subject": "Differential Information Tracking Path",
+      "predicate": "usedMethod",
+      "object": "Dynamic Semantics Disentangling Modules"
+    },
+    {
+      "subject": "Virtual Try-On Generation",
+      "predicate": "executedIn",
+      "object": "Linux"
+    },
+    {
+      "subject": "Virtual Try-On Generation",
+      "predicate": "usedSoftware",
+      "object": "cudatoolkit"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

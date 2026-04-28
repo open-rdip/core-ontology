@@ -1,0 +1,155 @@
+{
+  "study_id": "study067",
+  "repo_url": "https://github.com/stelios30/cf-effect-decomposition",
+  "software_dependencies": [
+    {
+      "name": "matplotlib",
+      "version": "3.7.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.24.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cvxpy",
+      "version": "1.3.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "joblib",
+      "version": "1.3.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.65.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm-joblib",
+      "version": "0.0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ipykernel",
+      "version": "6.21.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ipython",
+      "version": "8.14.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "2.0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "seaborn",
+      "version": "0.12.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "typer",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pymdptoolbox",
+      "version": "4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ollama",
+      "version": "0.1.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "gymnasium",
+      "version": "0.29.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pygame",
+      "version": "2.5.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "moviepy",
+      "version": "1.0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "2.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tianshou",
+      "version": "0.5.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "guildai",
+      "version": "0.9.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "loguru",
+      "version": "0.7.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pytest",
+      "version": "8.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "transformers",
+      "version": "4.40.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

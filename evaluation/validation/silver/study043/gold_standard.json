@@ -1,0 +1,212 @@
+{
+  "study_id": "study043",
+  "project": {
+    "title": "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis",
+    "lead_organization": "IRCAM - Sorbonne Université",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "torch",
+        "version": null
+      },
+      {
+        "name": "librosa",
+        "version": null
+      },
+      {
+        "name": "git",
+        "version": null
+      },
+      {
+        "name": "pydub",
+        "version": null
+      },
+      {
+        "name": "numpy",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": null
+      },
+      {
+        "name": "tqdm",
+        "version": null
+      },
+      {
+        "name": "soundfile",
+        "version": null
+      },
+      {
+        "name": "transformers",
+        "version": "4.29.2"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "VCTK",
+        "format": "audio",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Strings",
+        "format": "audio",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "RAVE",
+        "description": "A Realtime Audio Variational autoEncoder allowing both fast and high-quality audio waveform synthesis through a two-stage training procedure and multi-band decomposition."
+      },
+      {
+        "name": "Representation learning",
+        "description": "The first stage of the RAVE training procedure focused on learning a compact latent representation of the audio."
+      },
+      {
+        "name": "Adversarial fine-tuning",
+        "description": "The second stage of the RAVE training procedure used to improve synthesis quality using an adversarial objective."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Antoine Caillon",
+        "affiliation": "IRCAM - Sorbonne Université",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Philippe Esling",
+        "affiliation": "IRCAM - Sorbonne Université",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "IRCAM - Sorbonne Université"
+      },
+      {
+        "name": "CNRS UMR 9912"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "664",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": null,
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "KL divergence",
+        "value": "0.11 ± 0.09",
+        "split": "test",
+        "dataset": "RAVE Strings (in-domain)"
+      },
+      {
+        "metric": "KL divergence",
+        "value": "0.16 ± 0.11",
+        "split": "test",
+        "dataset": "RAVE VCTK (out-of-domain Strings)"
+      },
+      {
+        "metric": "KL divergence",
+        "value": "0.24 ± 0.37",
+        "split": "test",
+        "dataset": "RAVE Strings (out-of-domain VCTK)"
+      },
+      {
+        "metric": "KL divergence",
+        "value": "0.09 ± 0.02",
+        "split": "test",
+        "dataset": "RAVE VCTK (in-domain)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Representation learning",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "VCTK",
+          "Strings"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Adversarial fine-tuning",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "VCTK",
+          "Strings"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Timbre transfer",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "RAVE"
+        ],
+        "dataset_used": [
+          "VCTK",
+          "Strings"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "RAVE",
+      "predicate": "usedMethod",
+      "object": "Representation learning"
+    },
+    {
+      "subject": "RAVE",
+      "predicate": "usedMethod",
+      "object": "Adversarial fine-tuning"
+    },
+    {
+      "subject": "Adversarial fine-tuning",
+      "predicate": "follows",
+      "object": "Representation learning"
+    },
+    {
+      "subject": "RAVE Strings",
+      "predicate": "generatesResult",
+      "object": "KL divergence"
+    },
+    {
+      "subject": "Timbre transfer",
+      "predicate": "usedSoftware",
+      "object": "RAVE"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

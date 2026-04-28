@@ -1,0 +1,39 @@
+{
+  "study_id": "study011",
+  "repo_url": "https://github.com/open-mmlab/mmclassification",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "0",
+      "file": "projects/fgia_accv2022_1st/config/mae_vit-large-p16_8xb512-amp-coslr-1600e_in1k.py",
+      "context": "seed=0"
+    },
+    {
+      "value": "3",
+      "file": "projects/internimage_classification/ops_dcnv3/test.py",
+      "context": "torch.manual_seed(3"
+    },
+    {
+      "value": "2",
+      "file": "projects/dino/config/dino_vit-base-p16_8xb64-amp-coslr-100e_in1k.py",
+      "context": "seed=2"
+    },
+    {
+      "value": "7",
+      "file": "tests/test_datasets/test_samplers/test_repeat_aug.py",
+      "context": "seed=7"
+    },
+    {
+      "value": "42",
+      "file": "tests/test_datasets/test_samplers/test_repeat_aug.py",
+      "context": "seed=42"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

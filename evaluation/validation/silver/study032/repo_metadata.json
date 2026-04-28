@@ -1,0 +1,20 @@
+{
+  "study_id": "study032",
+  "repo_url": "https://github.com/horizonrobotics/gump",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "ubuntu:20.04 as vulkan-khronos",
+    "os": "Ubuntu 20.04"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "2022",
+      "file": "nuplan_extent/planning/training/data_augmentation/test/test_kinematic_data_augmentation.py",
+      "context": "np.random.seed(2022"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

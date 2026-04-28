@@ -1,0 +1,158 @@
+{
+  "study_id": "study002",
+  "repo_url": "https://github.com/dice-group/dice-embeddings",
+  "software_dependencies": [
+    {
+      "name": "numpy",
+      "version": "1.26.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "2.5.1",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "lightning",
+      "version": "2.5.0.post0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "2.1.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "polars",
+      "version": "0.16.14",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyarrow",
+      "version": "11.0.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "rdflib",
+      "version": "7.0.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.5.1",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pykeen",
+      "version": "1.10.2",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "psutil",
+      "version": "5.9.4",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.8.2",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "zstandard",
+      "version": "0.21.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pytest",
+      "version": "7.2.2",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ruff",
+      "version": "0.0.284",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.2.2",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sphinx",
+      "version": "7.2.6",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sphinx-autoapi",
+      "version": "3.0.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "myst-parser",
+      "version": "2.0.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sphinx_rtd_theme",
+      "version": "2.0.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sphinx-theme",
+      "version": "1.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sphinxcontrib-plantuml",
+      "version": "0.27",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "plantuml-local-client",
+      "version": "1.2022.6",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "python:3.10",
+    "python_version": "3.10"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "42",
+      "file": "tests/test_experiment_dir_reuse.py",
+      "context": "seed = 42"
+    },
+    {
+      "value": "1",
+      "file": "examples/multi_hop_query_answering/benchmarking.py",
+      "context": "seed=1"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

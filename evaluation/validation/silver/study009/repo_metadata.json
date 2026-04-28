@@ -1,0 +1,34 @@
+{
+  "study_id": "study009",
+  "repo_url": "https://github.com/open-mmlab/mmpose",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "0",
+      "file": "tools/dataset_converters/parse_macaquepose_dataset.py",
+      "context": "np.random.seed(0"
+    },
+    {
+      "value": "21",
+      "file": "mmpose/configs/body_2d_keypoint/rtmpose/coco/rtmpose_m_8xb256-420e_coco-256x192.py",
+      "context": "seed=21"
+    },
+    {
+      "value": "2024",
+      "file": "projects/rtmpose3d/configs/rtmw3d-x_8xb32_cocktail14-384x288.py",
+      "context": "seed=2024"
+    },
+    {
+      "value": "1",
+      "file": "projects/pose_anything/datasets/datasets/mp100/test_dataset.py",
+      "context": "random.seed(1"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

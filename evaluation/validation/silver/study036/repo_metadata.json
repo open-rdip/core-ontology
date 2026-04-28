@@ -1,0 +1,161 @@
+{
+  "study_id": "study036",
+  "repo_url": "https://github.com/RUCAIBox/LLMBox",
+  "software_dependencies": [
+    {
+      "name": "transformers",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "safetensors",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tokenizers",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "datasets",
+      "version": "2.16.1",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "coloredlogs",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.58.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jinja2",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "packaging",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wheel",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "vllm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "flash-attn",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "anthropic",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dashscope",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "qianfan",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "openai",
+      "version": "1.0.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.5.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nltk",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sacrebleu",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "rouge_score",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "langcodes",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "language_data",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "google-api-python-client",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "immutabledict",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "langdetect",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "42",
+      "file": "training/train.py",
+      "context": "set_seed(42"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

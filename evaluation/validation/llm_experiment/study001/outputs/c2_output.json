@@ -1,0 +1,172 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "DeepSpeed",
+        "version": "Code will be released as part of"
+      },
+      {
+        "name": "Hugging Face Transformers",
+        "version": "Pre-trained GPT2 and BLOOM models"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "WikiText-2",
+        "format": "Text",
+        "access": "Public"
+      },
+      {
+        "name": "PTB (Penn Treebank)",
+        "format": "Text",
+        "access": "Public"
+      },
+      {
+        "name": "C4 (Colossal Clean Crawled Corpus)",
+        "format": "Text",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Post-training Quantization (PTQ)"
+      },
+      {
+        "name": "Round-to-Nearest (RTN)"
+      },
+      {
+        "name": "GPTQ"
+      },
+      {
+        "name": "ZeroQuant (ZQ-Global, ZQ-Local)"
+      },
+      {
+        "name": "Low-Rank Compensation (LoRC)"
+      },
+      {
+        "name": "Fine-grained Quantization (FGQ)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhewei Yao",
+        "role": "Researcher"
+      },
+      {
+        "name": "Xiaoxia Wu",
+        "role": "Researcher"
+      },
+      {
+        "name": "Cheng Li",
+        "role": "Researcher"
+      },
+      {
+        "name": "Stephen Youn",
+        "role": "Researcher"
+      },
+      {
+        "name": "Yuxiong He",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Microsoft"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Weight Bit Precision",
+        "value": "INT4, INT8"
+      },
+      {
+        "name": "Activation Bit Precision",
+        "value": "INT8"
+      },
+      {
+        "name": "Block Size (FGQ)",
+        "value": "32, 64, 128, 256, 512, 1024"
+      },
+      {
+        "name": "LoRC Dimension",
+        "value": "8"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "Experiment Fixed Seed",
+        "value": "123, 234, 456"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Not Specified",
+        "gpu": "Modern GPUs (Streaming Multiprocessors)",
+        "cuda": "Not Specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Perplexity (PPL)",
+        "value": "11.20",
+        "split": "BLOOM-176B W4asym-A16 RTN"
+      },
+      {
+        "metric": "Perplexity (PPL)",
+        "value": "11.02",
+        "split": "BLOOM-176B W4A16 GPTQ"
+      },
+      {
+        "metric": "Perplexity (PPL)",
+        "value": "10.70",
+        "split": "OPT-30b W16-A16 (FP16 Baseline)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Sensitivity Analysis",
+        "type": "prov:Activity"
+      },
+      {
+        "name": "PTQ Method Evaluation",
+        "type": "prov:Activity"
+      },
+      {
+        "name": "Low-Rank Compensation Development",
+        "type": "prov:Activity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Sensitivity Analysis",
+      "predicate": "wasAssociatedWith",
+      "object": "Zhewei Yao"
+    },
+    {
+      "subject": "PTQ Method Evaluation",
+      "predicate": "used",
+      "object": "WikiText-2"
+    },
+    {
+      "subject": "PTQ Method Evaluation",
+      "predicate": "used",
+      "object": "GPTQ"
+    },
+    {
+      "subject": "Low-Rank Compensation Development",
+      "predicate": "wasInformedBy",
+      "object": "Sensitivity Analysis"
+    },
+    {
+      "subject": "Quantized Models",
+      "predicate": "wasGeneratedBy",
+      "object": "PTQ Method Evaluation"
+    },
+    {
+      "subject": "LoRC",
+      "predicate": "wasDerivedFrom",
+      "object": "Singular Value Decomposition (SVD)"
+    }
+  ]
+}

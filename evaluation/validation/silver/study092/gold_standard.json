@@ -1,0 +1,214 @@
+{
+  "study_id": "study092",
+  "project": {
+    "title": "TrADe Re-ID – Live Person Re-Identification using Tracking and Anomaly Detection",
+    "lead_organization": "Universidade Federal Fluminense",
+    "funding": "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES) Finance Code 001; CNPq"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "CUDA",
+        "version": "11.0.3"
+      },
+      {
+        "name": "cuDNN",
+        "version": "8"
+      },
+      {
+        "name": "Ubuntu",
+        "version": "20.04"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "PRW",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "LSPS",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "TrADe",
+        "description": "A live person Re-ID approach that uses tracking and anomaly detection to generate smaller galleries of higher-quality images."
+      },
+      {
+        "name": "Simple Online and Realtime Tracking (SORT)",
+        "description": "A framework for multi-object tracking used to identify sequences of images belonging to the same individual."
+      },
+      {
+        "name": "Anomaly Detection",
+        "description": "A filtering process that removes low-quality or outlier images from tracklets to improve Re-ID accuracy."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Luigy Machaca",
+        "affiliation": "Universidade Federal Fluminense",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "F. Oliver Sumari H.",
+        "affiliation": "Universidade Federal Fluminense",
+        "role": null
+      },
+      {
+        "name": "Jose Huaman",
+        "affiliation": "Universidade Federal Fluminense",
+        "role": null
+      },
+      {
+        "name": "Esteban Clua",
+        "affiliation": "Universidade Federal Fluminense",
+        "role": null
+      },
+      {
+        "name": "Joris Guerin",
+        "affiliation": "Université Toulouse",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Universidade Federal Fluminense"
+      },
+      {
+        "name": "Université Toulouse"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "IoU_threshold",
+        "value": "0.3",
+        "type": "xsd:float"
+      },
+      {
+        "name": "max_age",
+        "value": "1",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "min_hits",
+        "value": "3",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "batch_size",
+        "value": "32",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "2",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "0",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 20.04",
+        "gpu": null,
+        "cuda": "11.0.3",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mAP",
+        "value": "18.3",
+        "split": "test",
+        "dataset": "PRW"
+      },
+      {
+        "metric": "mAP",
+        "value": "13.6",
+        "split": "test",
+        "dataset": "LSPS"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Pedestrian Tracking",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "PRW"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Tracklet Anomaly Filtering",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Person Re-Identification",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "TrADe",
+      "predicate": "usedMethod",
+      "object": "Simple Online and Realtime Tracking (SORT)"
+    },
+    {
+      "subject": "TrADe",
+      "predicate": "usedMethod",
+      "object": "Anomaly Detection"
+    },
+    {
+      "subject": "Pedestrian Tracking",
+      "predicate": "usedDataset",
+      "object": "PRW"
+    },
+    {
+      "subject": "Tracklet Anomaly Filtering",
+      "predicate": "follows",
+      "object": "Pedestrian Tracking"
+    },
+    {
+      "subject": "Person Re-Identification",
+      "predicate": "follows",
+      "object": "Tracklet Anomaly Filtering"
+    },
+    {
+      "subject": "Person Re-Identification",
+      "predicate": "generatesResult",
+      "object": "mAP"
+    },
+    {
+      "subject": "TrADe",
+      "predicate": "executedIn",
+      "object": "Ubuntu 20.04"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

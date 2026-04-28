@@ -1,0 +1,180 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Latent Macro Action Planner (L-MAP)",
+        "version": "ICLR 2025 version"
+      },
+      {
+        "name": "Chameleon testbed",
+        "version": "NSF-supported"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Stochastic MuJoCo",
+        "format": "Offline RL trajectory data",
+        "access": "Public (Rigter et al., 2023)"
+      },
+      {
+        "name": "D4RL MuJoCo",
+        "format": "Offline RL trajectory data",
+        "access": "Public"
+      },
+      {
+        "name": "Adroit hand manipulation tasks",
+        "format": "High-dimensional action space data",
+        "access": "Public"
+      },
+      {
+        "name": "AntMaze",
+        "format": "Navigation goal-conditioned data",
+        "access": "Public"
+      },
+      {
+        "name": "HIV Treatment",
+        "format": "6-dimensional state space simulation data",
+        "access": "Public (Ernst et al., 2006)"
+      },
+      {
+        "name": "Currency Exchange",
+        "format": "Ornstein-Uhlenbeck process data",
+        "access": "Public (Almgren & Chriss, 2001)"
+      }
+    ],
+    "Method": [
+      {
+        "name": "State-conditional Vector Quantized Variational Autoencoder (VQ-VAE)"
+      },
+      {
+        "name": "Monte Carlo Tree Search (MCTS) with progressive widening"
+      },
+      {
+        "name": "Causal Transformer (Prior Model)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Baiting Luo",
+        "role": "Researcher"
+      },
+      {
+        "name": "Ava Pettet",
+        "role": "Researcher"
+      },
+      {
+        "name": "Aron Laszka",
+        "role": "Researcher"
+      },
+      {
+        "name": "Abhishek Dubey",
+        "role": "Researcher"
+      },
+      {
+        "name": "Ayan Mukhopadhyay",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Vanderbilt University"
+      },
+      {
+        "name": "Pennsylvania State University"
+      },
+      {
+        "name": "Nissan Advanced Technology Center"
+      },
+      {
+        "name": "National Science Foundation (NSF)"
+      },
+      {
+        "name": "Defense Advanced Research Projects Agency (DARPA)"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "alpha (exploration rate)",
+        "value": "0.1"
+      },
+      {
+        "name": "epsilon",
+        "value": "1"
+      },
+      {
+        "name": "MCTS iterations",
+        "value": "100"
+      },
+      {
+        "name": "M (latent code samples)",
+        "value": "16"
+      },
+      {
+        "name": "N (subsequent samples)",
+        "value": "4"
+      },
+      {
+        "name": "B (macro actions samples)",
+        "value": "4"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Average Success Rate",
+        "value": "83.33%",
+        "split": "AntMaze environments"
+      },
+      {
+        "metric": "Mean Score",
+        "value": "68.70",
+        "split": "Standard evaluation"
+      },
+      {
+        "metric": "Currency Exchange Score",
+        "value": "106.78",
+        "split": "Currency environment"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Representation Learning",
+        "type": "VQ-VAE training"
+      },
+      {
+        "name": "Latent Transition Modeling",
+        "type": "Prior Transformer training"
+      },
+      {
+        "name": "Decision-making evaluation",
+        "type": "MCTS Planning"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Representation Learning",
+      "predicate": "used",
+      "object": "Stochastic MuJoCo"
+    },
+    {
+      "subject": "Decision-making evaluation",
+      "predicate": "used",
+      "object": "Latent Macro Action Planner (L-MAP)"
+    },
+    {
+      "subject": "Representation Learning",
+      "predicate": "wasAssociatedWith",
+      "object": "Baiting Luo"
+    },
+    {
+      "subject": "Latent Transition Modeling",
+      "predicate": "wasInformedBy",
+      "object": "Representation Learning"
+    },
+    {
+      "subject": "L-MAP results",
+      "predicate": "wasGeneratedBy",
+      "object": "Decision-making evaluation"
+    }
+  ]
+}

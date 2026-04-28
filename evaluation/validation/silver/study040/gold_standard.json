@@ -1,0 +1,257 @@
+{
+  "study_id": "study040",
+  "project": {
+    "title": "A Time Series is Worth 64 Words: Long-term Forecasting with Transformers",
+    "lead_organization": "Princeton University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "fastai",
+        "version": "2.7.9"
+      },
+      {
+        "name": "pyts",
+        "version": "0.12.0"
+      },
+      {
+        "name": "imbalanced-learn",
+        "version": "0.8.0"
+      },
+      {
+        "name": "psutil",
+        "version": "5.4.8"
+      },
+      {
+        "name": "pytorch",
+        "version": "1.7.0"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Electricity",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Weather",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Traffic",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "ETT",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Patching",
+        "description": "Segmentation of time series into subseries-level patches which are served as input tokens to Transformer."
+      },
+      {
+        "name": "Channel-independence",
+        "description": "Design where each channel contains a single univariate time series that shares the same embedding and Transformer weights."
+      },
+      {
+        "name": "PatchTST",
+        "description": "A Transformer-based model utilizing patching and channel-independence for multivariate time series forecasting."
+      },
+      {
+        "name": "Masked Self-supervised Learning",
+        "description": "A pre-training task where a portion of the input patches are masked and the model is trained to reconstruct them."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yuqi Nie",
+        "affiliation": "Princeton University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Nam H. Nguyen",
+        "affiliation": "IBM Research",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Phanwadee Sinthong",
+        "affiliation": "IBM Research",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jayant Kalagnanam",
+        "affiliation": "IBM Research",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Princeton University"
+      },
+      {
+        "name": "IBM Research"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "patch_length",
+        "value": "16",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "stride",
+        "value": "8",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "look-back_window",
+        "value": "336",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "2019",
+        "source": "paper"
+      },
+      {
+        "name": "random_seed",
+        "value": "2020",
+        "source": "paper"
+      },
+      {
+        "name": "random_seed",
+        "value": "2021",
+        "source": "paper"
+      },
+      {
+        "name": "random_seed",
+        "value": "2022",
+        "source": "paper"
+      },
+      {
+        "name": "random_seed",
+        "value": "2023",
+        "source": "paper"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Self-supervised Pre-training",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "Electricity",
+          "Weather",
+          "Traffic"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Supervised Fine-tuning",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "Electricity",
+          "Weather",
+          "Traffic"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Long-term Forecasting Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "Electricity",
+          "Weather",
+          "Traffic",
+          "ETT"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "PatchTST",
+      "predicate": "usedMethod",
+      "object": "Patching"
+    },
+    {
+      "subject": "PatchTST",
+      "predicate": "usedMethod",
+      "object": "Channel-independence"
+    },
+    {
+      "subject": "PatchTST",
+      "predicate": "usedSoftware",
+      "object": "pytorch"
+    },
+    {
+      "subject": "Self-supervised Pre-training",
+      "predicate": "usedMethod",
+      "object": "Masked Self-supervised Learning"
+    },
+    {
+      "subject": "Supervised Fine-tuning",
+      "predicate": "follows",
+      "object": "Self-supervised Pre-training"
+    },
+    {
+      "subject": "Long-term Forecasting Evaluation",
+      "predicate": "usedDataset",
+      "object": "Electricity"
+    },
+    {
+      "subject": "Long-term Forecasting Evaluation",
+      "predicate": "usedDataset",
+      "object": "Weather"
+    },
+    {
+      "subject": "Long-term Forecasting Evaluation",
+      "predicate": "usedDataset",
+      "object": "Traffic"
+    },
+    {
+      "subject": "Long-term Forecasting Evaluation",
+      "predicate": "usedDataset",
+      "object": "ETT"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,280 @@
+{
+  "study_id": "study069",
+  "project": {
+    "title": "Hard Sample Aware Network for Contrastive Deep Graph Clustering",
+    "lead_organization": "National University of Defense Technology",
+    "funding": "National Natural Science Foundation of China (Project no. 62325604, 62276271), and the Science and Technology Innovation Program of Hunan Province (Project no. 2021RC4007)"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "torch",
+        "version": "1.7.1"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.59.0"
+      },
+      {
+        "name": "numpy",
+        "version": "1.19.2"
+      },
+      {
+        "name": "munkres",
+        "version": "1.1.4"
+      },
+      {
+        "name": "scikit_learn",
+        "version": "1.2.0"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "CORA",
+        "format": "graph",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CITESEER",
+        "format": "graph",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "AMAP",
+        "format": "graph",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "BAT",
+        "format": "graph",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "EAT",
+        "format": "graph",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "UAT",
+        "format": "graph",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Hard Sample Aware Network (HSAN)",
+        "description": "A contrastive deep graph clustering method that introduces a comprehensive similarity measure for hard sample mining."
+      },
+      {
+        "name": "Similarity-based Hard Sample Mining",
+        "description": "A technique to weight sample pairs based on attribute-structure similarity to enhance discriminative capability."
+      },
+      {
+        "name": "Contrastive Learning",
+        "description": "A mechanism to learn representations by pulling positive pairs together and pushing negative pairs apart."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yue Liu",
+        "affiliation": "National University of Defense Technology",
+        "role": null
+      },
+      {
+        "name": "Xihong Yang",
+        "affiliation": "National University of Defense Technology",
+        "role": null
+      },
+      {
+        "name": "Sihang Zhou",
+        "affiliation": "National University of Defense Technology",
+        "role": null
+      },
+      {
+        "name": "Xinwang Liu",
+        "affiliation": "National University of Defense Technology",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "National University of Defense Technology"
+      },
+      {
+        "name": "Northwestern Polytechnical University"
+      },
+      {
+        "name": "Beijing Information Science and Technology University"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "focusing factor beta",
+        "value": "2",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "trade-off parameter a",
+        "value": "0.4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "initial trade-off parameter a",
+        "value": "0.99999",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "ACC",
+        "value": "73.23",
+        "split": "test",
+        "dataset": "CORA"
+      },
+      {
+        "metric": "ACC",
+        "value": "71.45",
+        "split": "test",
+        "dataset": "CITESEER"
+      },
+      {
+        "metric": "NMI",
+        "value": "57.30",
+        "split": "test",
+        "dataset": "CORA"
+      },
+      {
+        "metric": "ARI",
+        "value": "51.10",
+        "split": "test",
+        "dataset": "CORA"
+      },
+      {
+        "metric": "F1",
+        "value": "71.99",
+        "split": "test",
+        "dataset": "CORA"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Hard Sample Mining",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "torch",
+          "numpy"
+        ],
+        "dataset_used": [
+          "CORA",
+          "CITESEER"
+        ],
+        "dataset_produced": [
+          "weighted sample pairs"
+        ]
+      },
+      {
+        "name": "Contrastive Network Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "torch"
+        ],
+        "dataset_used": [
+          "weighted sample pairs"
+        ],
+        "dataset_produced": [
+          "trained HSAN model"
+        ]
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "scikit_learn",
+          "munkres"
+        ],
+        "dataset_used": [
+          "CORA",
+          "CITESEER",
+          "AMAP",
+          "BAT",
+          "EAT",
+          "UAT"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "HSAN",
+      "predicate": "usedMethod",
+      "object": "Contrastive Learning"
+    },
+    {
+      "subject": "HSAN",
+      "predicate": "usedMethod",
+      "object": "Similarity-based Hard Sample Mining"
+    },
+    {
+      "subject": "HSAN",
+      "predicate": "hasParameter",
+      "object": "focusing factor beta"
+    },
+    {
+      "subject": "HSAN",
+      "predicate": "hasParameter",
+      "object": "trade-off parameter a"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "usedSoftware",
+      "object": "scikit_learn"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "usedSoftware",
+      "object": "munkres"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "ACC"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "NMI"
+    },
+    {
+      "subject": "Contrastive Network Training",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Hard Sample Mining",
+      "predicate": "usedDataset",
+      "object": "CORA"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

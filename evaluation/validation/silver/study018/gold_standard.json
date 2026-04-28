@@ -1,0 +1,233 @@
+{
+  "study_id": "study018",
+  "project": {
+    "title": "RetinaMask: Learning to predict masks improves state-of-the-art single-shot detection for free",
+    "lead_organization": "UNC at Chapel Hill",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "ninja",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "yacs",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "cython",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "matplotlib",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "tqdm",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COCO",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "RetinaMask",
+        "description": "An augmented single-shot detector that improves RetinaNet by integrating instance mask prediction, an adaptive loss function, and additional hard examples during training."
+      },
+      {
+        "name": "Self-adjusting Loss",
+        "description": "An adaptive loss function for bounding box regression that starts as Smooth L1 loss and transitions based on the current state of training."
+      },
+      {
+        "name": "Best-Matching-Prior",
+        "description": "A training strategy that ensures every ground truth object is matched to at least one anchor, even if the overlap is low."
+      },
+      {
+        "name": "Mask Prediction Module",
+        "description": "A module added during training to predict instance masks, which helps the network learn better feature representations for detection."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Cheng-Yang Fu",
+        "affiliation": "UNC at Chapel Hill",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Mykhailo Shvets",
+        "affiliation": "UNC at Chapel Hill",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Alexander C. Berg",
+        "affiliation": "UNC at Chapel Hill",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "UNC at Chapel Hill"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "0.01",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "16",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_iterations",
+        "value": "280k",
+        "type": "xsd:string"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.0001",
+        "type": "xsd:float"
+      },
+      {
+        "name": "momentum",
+        "value": "0.9",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 16.04",
+        "gpu": "8 GPUs",
+        "cuda": "exact version not specified",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mAP",
+        "value": "41.4",
+        "split": "test-dev",
+        "dataset": "COCO"
+      },
+      {
+        "metric": "mAP",
+        "value": "41.7",
+        "split": "test-dev",
+        "dataset": "COCO"
+      },
+      {
+        "metric": "mAP",
+        "value": "39.1",
+        "split": "test-dev",
+        "dataset": "COCO"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Software Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "ninja",
+          "yacs",
+          "cython"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "RetinaMask Implementation"
+        ]
+      },
+      {
+        "name": "Model Training",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "RetinaMask Implementation"
+        ],
+        "dataset_used": [
+          "COCO"
+        ],
+        "dataset_produced": [
+          "Trained RetinaMask weights"
+        ]
+      },
+      {
+        "name": "Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "RetinaMask Implementation"
+        ],
+        "dataset_used": [
+          "COCO",
+          "Trained RetinaMask weights"
+        ],
+        "dataset_produced": [
+          "COCO mAP results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "RetinaMask",
+      "predicate": "usedMethod",
+      "object": "Self-adjusting Loss"
+    },
+    {
+      "subject": "RetinaMask",
+      "predicate": "usedMethod",
+      "object": "Best-Matching-Prior"
+    },
+    {
+      "subject": "RetinaMask",
+      "predicate": "usedMethod",
+      "object": "Mask Prediction Module"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "batch_size"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedDataset",
+      "object": "COCO"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "executedIn",
+      "object": "Ubuntu 16.04"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "generatesResult",
+      "object": "mAP"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

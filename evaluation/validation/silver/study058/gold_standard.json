@@ -1,0 +1,221 @@
+{
+  "study_id": "study058",
+  "project": {
+    "title": "TOXIGEN: A Large-Scale Machine-Generated Dataset for Adversarial and Implicit Hate Speech Detection",
+    "lead_organization": "University of Washington",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "nltk",
+        "version": "3.7"
+      },
+      {
+        "name": "requests",
+        "version": "2.27.1"
+      },
+      {
+        "name": "numpy",
+        "version": "1.22.0"
+      },
+      {
+        "name": "torch",
+        "version": "1.10.2"
+      },
+      {
+        "name": "transformers",
+        "version": "4.12.3"
+      },
+      {
+        "name": "GPT-3",
+        "version": "not specified"
+      },
+      {
+        "name": "RoBERTa",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "TOXIGEN",
+        "format": "text",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      },
+      {
+        "name": "TOXIGEN-VAL",
+        "format": "text",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "TOXIGEN"
+      },
+      {
+        "name": "HateCheck",
+        "format": "text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "demonstration-based prompting",
+        "description": "A framework to generate subtly toxic and benign text with a massive pretrained language model."
+      },
+      {
+        "name": "ALICE",
+        "description": "Adversarial classifier-in-the-loop decoding method used to generate data that is more confusing to toxicity classifiers."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Maarten Sap",
+        "affiliation": "University of Washington",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Hamid Palangi",
+        "affiliation": "Microsoft Research",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Thomas Hartvigsen",
+        "affiliation": "Massachusetts Institute of Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Saadia Gabriel",
+        "affiliation": "University of Washington",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Dipankar Ray",
+        "affiliation": "Microsoft",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ece Kamar",
+        "affiliation": "Microsoft Research",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Washington"
+      },
+      {
+        "name": "Microsoft Research"
+      },
+      {
+        "name": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Carnegie Mellon University"
+      },
+      {
+        "name": "Allen Institute for AI"
+      },
+      {
+        "name": "Microsoft"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Dataset Generation",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [
+          "GPT-3"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "TOXIGEN"
+        ]
+      },
+      {
+        "name": "Human Validation",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [
+          "TOXIGEN"
+        ],
+        "dataset_produced": [
+          "TOXIGEN-VAL"
+        ]
+      },
+      {
+        "name": "Classifier Benchmarking",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "RoBERTa",
+          "transformers",
+          "torch"
+        ],
+        "dataset_used": [
+          "TOXIGEN",
+          "HateCheck"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Dataset Generation",
+      "predicate": "usedMethod",
+      "object": "demonstration-based prompting"
+    },
+    {
+      "subject": "Dataset Generation",
+      "predicate": "usedMethod",
+      "object": "ALICE"
+    },
+    {
+      "subject": "Dataset Generation",
+      "predicate": "generatesDataset",
+      "object": "TOXIGEN"
+    },
+    {
+      "subject": "Human Validation",
+      "predicate": "follows",
+      "object": "Dataset Generation"
+    },
+    {
+      "subject": "Human Validation",
+      "predicate": "usedDataset",
+      "object": "TOXIGEN"
+    },
+    {
+      "subject": "Human Validation",
+      "predicate": "generatesDataset",
+      "object": "TOXIGEN-VAL"
+    },
+    {
+      "subject": "Classifier Benchmarking",
+      "predicate": "follows",
+      "object": "Human Validation"
+    },
+    {
+      "subject": "Classifier Benchmarking",
+      "predicate": "usedSoftware",
+      "object": "transformers"
+    },
+    {
+      "subject": "TOXIGEN-VAL",
+      "predicate": "derivedFrom",
+      "object": "TOXIGEN"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

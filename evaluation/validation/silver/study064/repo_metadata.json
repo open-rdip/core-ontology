@@ -1,0 +1,79 @@
+{
+  "study_id": "study064",
+  "repo_url": "https://github.com/wayveai/fiery",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "python",
+        "version": "3.7.10"
+      },
+      {
+        "name": "pytorch",
+        "version": "1.7.0"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.8.1"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "10.1"
+      },
+      {
+        "name": "numpy",
+        "version": "1.19.2"
+      },
+      {
+        "name": "scipy",
+        "version": "1.5.2"
+      },
+      {
+        "name": "pillow",
+        "version": "8.0.1"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.50.2"
+      },
+      {
+        "name": "pytorch-lightning",
+        "version": "1.2.5"
+      },
+      {
+        "name": "efficientnet-pytorch",
+        "version": "0.7.0"
+      },
+      {
+        "name": "fvcore",
+        "version": "0.1.2.post20201122"
+      },
+      {
+        "name": "pip",
+        "version": "21.0.1"
+      },
+      {
+        "name": "nuscenes-devkit",
+        "version": "1.1.0"
+      },
+      {
+        "name": "lyft-dataset-sdk",
+        "version": "0.0.8"
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.5.1.48"
+      },
+      {
+        "name": "moviepy",
+        "version": "1.0.3"
+      }
+    ],
+    "source": "conda",
+    "env_name": "fiery"
+  },
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

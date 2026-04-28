@@ -1,0 +1,93 @@
+{
+  "study_id": "study055",
+  "repo_url": "https://github.com/boreshkinai/any-quantile",
+  "software_dependencies": [
+    {
+      "name": "pytorch-lightning",
+      "version": "1.9.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "hydra-core",
+      "version": "1.3.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "omegaconf",
+      "version": "2.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard",
+      "version": "2.11.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "2.3.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.18.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pqdm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "neuralforecast",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "datasetsforecast",
+      "version": "0.0.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jupyter",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "statsforecast",
+      "version": "1.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyarrow",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "onedrivedownloader",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:2.3.1-cuda11.8-cudnn8-runtime as pytorch",
+    "cuda_version": "11.8"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

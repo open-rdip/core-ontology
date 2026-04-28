@@ -1,0 +1,306 @@
+{
+  "study_id": "study045",
+  "project": {
+    "title": "Pre-training via Denoising for Molecular Property Prediction",
+    "lead_organization": "University of Oxford",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "absl-py",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "aiohttp",
+        "version": "py39h7f8727e_1"
+      },
+      {
+        "name": "aiosignal",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "alsa-lib",
+        "version": "h516909a_0"
+      },
+      {
+        "name": "ase",
+        "version": "pyhd8ed1ab_1"
+      },
+      {
+        "name": "asttokens",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "async-timeout",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "attrs",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "backcall",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "black",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "blinker",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "boost",
+        "version": "py39h5472131_5"
+      },
+      {
+        "name": "boost-cpp",
+        "version": "h6cacc03_7"
+      },
+      {
+        "name": "bottleneck",
+        "version": "py39hce1f21e_0"
+      },
+      {
+        "name": "brotli",
+        "version": "he6710b0_2"
+      },
+      {
+        "name": "brotlipy",
+        "version": "py39h27cfd23_1003"
+      },
+      {
+        "name": "bzip2",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "c-ares",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "ca-certificates",
+        "version": "h06a4308_1"
+      },
+      {
+        "name": "cachetools",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "cairo",
+        "version": "ha12eb4b_1010"
+      },
+      {
+        "name": "certifi",
+        "version": "py39h06a4308_2"
+      },
+      {
+        "name": "cffi",
+        "version": "py39hd667e15_1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "QM9",
+        "format": "SDF",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "OC20",
+        "format": "ASE",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "GEOM-Drugs",
+        "format": "SDF",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Denoising Pre-training",
+        "description": "A technique that utilizes large datasets of 3D molecular structures at equilibrium to learn representations by adding noise to atomic coordinates and training a model to reconstruct the original structure."
+      },
+      {
+        "name": "GNS",
+        "description": "Graph Network Simulator used as a baseline and backbone for force and property prediction."
+      },
+      {
+        "name": "SchNet",
+        "description": "A continuous-filter convolutional neural network used for modeling quantum interactions in molecules."
+      },
+      {
+        "name": "DimeNet++",
+        "description": "A directional message passing neural network for efficient and accurate predictions of molecular properties."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Sheheryar Zaidi",
+        "affiliation": "University of Oxford",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Michael Schaarschmidt",
+        "affiliation": "DeepMind",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "James Martens",
+        "affiliation": "DeepMind",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Hyunjik Kim",
+        "affiliation": "DeepMind",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Yee Whye Teh",
+        "affiliation": "University of Oxford",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Alvaro Sanchez-Gonzalez",
+        "affiliation": "DeepMind",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Peter Battaglia",
+        "affiliation": "DeepMind",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Razvan Pascanu",
+        "affiliation": "DeepMind",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jonathan Godwin",
+        "affiliation": "DeepMind",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Oxford"
+      },
+      {
+        "name": "DeepMind"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "1234",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "MAE",
+        "value": "0.0282",
+        "split": "val",
+        "dataset": "OC20 ID (Pre-trained GNS)"
+      },
+      {
+        "metric": "MAE",
+        "value": "0.0332",
+        "split": "val",
+        "dataset": "OC20 ID (GNS from scratch)"
+      },
+      {
+        "metric": "MAE",
+        "value": "0.0314",
+        "split": "val",
+        "dataset": "OC20 OOD Adsorbate (Pre-trained GNS)"
+      },
+      {
+        "metric": "MAE",
+        "value": "0.0382",
+        "split": "val",
+        "dataset": "OC20 OOD Both (Pre-trained GNS)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Pre-training via Denoising",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "ase"
+        ],
+        "dataset_used": [
+          "OC20",
+          "GEOM-Drugs"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Downstream Fine-tuning",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "ase"
+        ],
+        "dataset_used": [
+          "QM9",
+          "OC20"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Force Prediction Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "ase"
+        ],
+        "dataset_used": [
+          "OC20"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Pre-training via Denoising",
+      "predicate": "usedMethod",
+      "object": "Denoising Pre-training"
+    },
+    {
+      "subject": "Downstream Fine-tuning",
+      "predicate": "follows",
+      "object": "Pre-training via Denoising"
+    },
+    {
+      "subject": "GNS",
+      "predicate": "usedSoftware",
+      "object": "ase"
+    },
+    {
+      "subject": "Force Prediction Evaluation",
+      "predicate": "generatesResult",
+      "object": "MAE"
+    },
+    {
+      "subject": "Denoising Pre-training",
+      "predicate": "usedDataset",
+      "object": "OC20"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

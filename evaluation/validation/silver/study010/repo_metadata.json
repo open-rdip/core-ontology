@@ -1,0 +1,34 @@
+{
+  "study_id": "study010",
+  "repo_url": "https://github.com/open-mmlab/mmocr",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "42",
+      "file": "projects/SPTS/config/_base_/default_runtime.py",
+      "context": "seed=42"
+    },
+    {
+      "value": "1",
+      "file": "tests/test_apis/test_inferencers/test_textdet_inferencer.py",
+      "context": "seed = 1"
+    },
+    {
+      "value": "7",
+      "file": "tests/test_datasets/test_samplers/test_batch_aug.py",
+      "context": "seed=7"
+    },
+    {
+      "value": "0",
+      "file": "tests/test_datasets/test_samplers/test_batch_aug.py",
+      "context": "seed=0"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

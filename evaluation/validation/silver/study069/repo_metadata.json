@@ -1,0 +1,41 @@
+{
+  "study_id": "study069",
+  "repo_url": "https://github.com/yueliu1999/hsan",
+  "software_dependencies": [
+    {
+      "name": "torch",
+      "version": "1.7.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.59.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.19.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "munkres",
+      "version": "1.1.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit_learn",
+      "version": "1.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "",
+  "errors": []
+}

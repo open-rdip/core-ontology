@@ -1,0 +1,275 @@
+{
+  "study_id": "study029",
+  "project": {
+    "title": "Gradient Rewiring for Editable Graph Neural Network Training",
+    "lead_organization": "Texas A&M University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "asttokens",
+        "version": "2.2.1"
+      },
+      {
+        "name": "backcall",
+        "version": "0.2.0"
+      },
+      {
+        "name": "certifi",
+        "version": "2023.5.7"
+      },
+      {
+        "name": "daqp",
+        "version": "0.5.1"
+      },
+      {
+        "name": "editable-gnn",
+        "version": "0.0.0"
+      },
+      {
+        "name": "higher",
+        "version": "0.2.1"
+      },
+      {
+        "name": "PyTorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "PyTorch Geometric",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Cora",
+        "format": "graphs",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CiteSeer",
+        "format": "graphs",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "PubMed",
+        "format": "graphs",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "ogbn-arxiv",
+        "format": "graphs",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Gradient Rewiring (GR)",
+        "description": "A closed-form gradient modification method that resolves gradient inconsistency between target and training nodes to enable efficient model editing in GNNs."
+      },
+      {
+        "name": "EGNN",
+        "description": "An Editable Graph Neural Network framework that incorporates gradient rewiring during the base model training phase."
+      },
+      {
+        "name": "MEND",
+        "description": "A meta-learning based model editor used as a baseline for comparison."
+      },
+      {
+        "name": "SEREC",
+        "description": "A semi-parametric model editor used as a baseline for comparison."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhimeng Jiang",
+        "affiliation": "Texas A&M University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zirui Liu",
+        "affiliation": "University of Minnesota",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Xia Hu",
+        "affiliation": "Rice University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Texas A&M University"
+      },
+      {
+        "name": "University of Minnesota"
+      },
+      {
+        "name": "Case Western Reserve University"
+      },
+      {
+        "name": "NYU Shanghai"
+      },
+      {
+        "name": "North Carolina State University"
+      },
+      {
+        "name": "University of Houston"
+      },
+      {
+        "name": "Rice University"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "0.01",
+        "type": "xsd:float"
+      },
+      {
+        "name": "weight_decay",
+        "value": "5e-4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "hidden_channels",
+        "value": "64",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "12345",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "NVIDIA GPU",
+        "cuda": "exact version not specified",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Edit Success",
+        "value": "100.0",
+        "split": "test",
+        "dataset": "Cora"
+      },
+      {
+        "metric": "Drawdown",
+        "value": "0.5",
+        "split": "test",
+        "dataset": "Cora"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Base Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "PyTorch",
+          "PyTorch Geometric"
+        ],
+        "dataset_used": [
+          "Cora"
+        ],
+        "dataset_produced": [
+          "Base GNN Model"
+        ]
+      },
+      {
+        "name": "Model Editing",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [
+          "editable-gnn"
+        ],
+        "dataset_used": [
+          "Base GNN Model"
+        ],
+        "dataset_produced": [
+          "Edited GNN Model"
+        ]
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "Edited GNN Model",
+          "Cora"
+        ],
+        "dataset_produced": [
+          "Edit Success Metrics"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Base Model Training",
+      "predicate": "usedMethod",
+      "object": "EGNN"
+    },
+    {
+      "subject": "Base Model Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Model Editing",
+      "predicate": "usedMethod",
+      "object": "Gradient Rewiring (GR)"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "Edit Success"
+    },
+    {
+      "subject": "Model Editing",
+      "predicate": "follows",
+      "object": "Base Model Training"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "follows",
+      "object": "Model Editing"
+    },
+    {
+      "subject": "asttokens",
+      "predicate": "softwareDependency",
+      "object": "backcall"
+    },
+    {
+      "subject": "Zhimeng Jiang",
+      "predicate": "hasActivityRole",
+      "object": "Base Model Training"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

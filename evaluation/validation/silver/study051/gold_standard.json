@@ -1,0 +1,197 @@
+{
+  "study_id": "study051",
+  "project": {
+    "title": "VISTA-SSM: Varying and Irregular Sampling Time-series Analysis via State Space Models",
+    "lead_organization": "Johns Hopkins University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "numpy",
+        "version": "1.24.3"
+      },
+      {
+        "name": "pandas",
+        "version": "2.0.3"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.9.0"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.2.2"
+      },
+      {
+        "name": "scipy",
+        "version": "1.10.1"
+      },
+      {
+        "name": "aeon",
+        "version": "0.8.1"
+      },
+      {
+        "name": "folium",
+        "version": "0.16.0"
+      },
+      {
+        "name": "networkx",
+        "version": "3.2.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Demographic trends",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Wearable sensor data",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Epidemiological time series",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Ecological momentary assessments",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "VISTA",
+        "description": "A clustering approach for multivariate and irregularly sampled time series based on a parametric state space mixture model."
+      },
+      {
+        "name": "Linear Gaussian state space models (LGSSMs)",
+        "description": "A flexible parametric framework for fitting a wide range of time series dynamics adapted by VISTA."
+      },
+      {
+        "name": "Expectation-maximization scheme",
+        "description": "A scheme developed for fitting model parameters to observed data samples from the log-likelihood function."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Benjamin Brindle",
+        "affiliation": "Johns Hopkins University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Thomas Derrick Hull",
+        "affiliation": "Institute for Psycholinguistics and Digital Health",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Matteo Malgaroli",
+        "affiliation": "New York University School of Medicine",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Nicolas Charon",
+        "affiliation": "University of Houston",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Johns Hopkins University"
+      },
+      {
+        "name": "Institute for Psycholinguistics and Digital Health"
+      },
+      {
+        "name": "New York University School of Medicine"
+      },
+      {
+        "name": "University of Houston"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "1",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "VISTA Algorithm Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "numpy",
+          "scipy"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "scikit-learn",
+          "aeon"
+        ],
+        "dataset_used": [
+          "Wearable sensor data",
+          "Epidemiological time series"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "VISTA",
+      "predicate": "usedMethod",
+      "object": "Linear Gaussian state space models (LGSSMs)"
+    },
+    {
+      "subject": "VISTA",
+      "predicate": "usedMethod",
+      "object": "Expectation-maximization scheme"
+    },
+    {
+      "subject": "VISTA Algorithm Development",
+      "predicate": "usedSoftware",
+      "object": "numpy"
+    },
+    {
+      "subject": "Model Evaluation",
+      "predicate": "usedDataset",
+      "object": "Wearable sensor data"
+    },
+    {
+      "subject": "Model Evaluation",
+      "predicate": "usedSoftware",
+      "object": "aeon"
+    },
+    {
+      "subject": "Model Evaluation",
+      "predicate": "follows",
+      "object": "VISTA Algorithm Development"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

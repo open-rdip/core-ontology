@@ -1,0 +1,113 @@
+{
+  "study_id": "study074",
+  "repo_url": "https://github.com/mobilellm/droidbot-gpt",
+  "software_dependencies": [
+    {
+      "name": "from",
+      "version": "setuptools",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "import",
+      "version": "os",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "setup",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "name",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "packages",
+      "version": "find",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "version",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "description",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "author",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "license",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "author_email",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "url",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "download_url",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "keywords",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "classifiers",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "entry_points",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "package_data",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "install_requires",
+      "version": "",
+      "constraint": "=",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "Other",
+  "errors": []
+}

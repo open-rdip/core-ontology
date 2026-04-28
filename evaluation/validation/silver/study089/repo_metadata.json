@@ -1,0 +1,83 @@
+{
+  "study_id": "study089",
+  "repo_url": "https://github.com/cyf-cuber/mol",
+  "software_dependencies": [
+    {
+      "name": "dlib",
+      "version": "19.24.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.23.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opencv_contrib_python_headless",
+      "version": "4.7.0.72",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opencv_python",
+      "version": "4.7.0.72",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opencv_python_headless",
+      "version": "4.7.0.72",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Pillow",
+      "version": "9.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit_learn",
+      "version": "1.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "spatial_correlation_sampler",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "1.13.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchsummary",
+      "version": "1.5.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.14.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "2023",
+      "file": "main.py",
+      "context": "SEED=2023"
+    }
+  ],
+  "license": "",
+  "errors": []
+}

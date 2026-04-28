@@ -1,0 +1,10 @@
+{
+  "study_id": "study023",
+  "repo_url": "https://github.com/modelscope/modelscope-agent",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "Apache-2.0",
+  "errors": []
+}

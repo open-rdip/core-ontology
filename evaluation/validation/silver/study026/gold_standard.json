@@ -1,0 +1,243 @@
+{
+  "study_id": "study026",
+  "project": {
+    "title": "Loss Function Discovery for Object Detection via Convergence-Simulation Driven Search",
+    "lead_organization": "Tsinghua Shenzhen International Graduate School, Tsinghua University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "PyTorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "MMDetection",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COCO",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "VOC",
+        "format": "XML",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "BDD100K",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "CSE-Autoloss",
+        "description": "An effective convergence-simulation driven evolutionary search algorithm for discovering loss function formulations by regularizing the mathematical rationality of candidates."
+      },
+      {
+        "name": "Convergence property verification",
+        "description": "A module to verify whether a loss function candidate meets mathematical convergence criteria like having a unique global minimum."
+      },
+      {
+        "name": "Model optimization simulation",
+        "description": "A module that simulates the training process on a proxy model to evaluate the performance of loss function candidates."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Peidong Liu",
+        "affiliation": "Tsinghua Shenzhen International Graduate School, Tsinghua University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Gengwei Zhang",
+        "affiliation": "Sun Yat-Sen University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Bochao Wang",
+        "affiliation": "Huawei Noah's Ark Lab",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Hang Xu",
+        "affiliation": "Huawei Noah's Ark Lab",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Xiaodan Liang",
+        "affiliation": "Sun Yat-Sen University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Yong Jiang",
+        "affiliation": "Tsinghua Shenzhen International Graduate School, Tsinghua University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zhenguo Li",
+        "affiliation": "Huawei Noah's Ark Lab",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      },
+      {
+        "name": "Sun Yat-Sen University"
+      },
+      {
+        "name": "Huawei Noah's Ark Lab"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "0.02",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "16",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "12",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.0001",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "8 NVIDIA V100 GPUs",
+        "cuda": "exact version not specified",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mAP",
+        "value": "38.5",
+        "split": "test",
+        "dataset": "COCO"
+      },
+      {
+        "metric": "mAP",
+        "value": "37.2",
+        "split": "test",
+        "dataset": "COCO"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Loss Search",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "COCO"
+        ],
+        "dataset_produced": [
+          "Searched loss functions"
+        ]
+      },
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "MMDetection"
+        ],
+        "dataset_used": [
+          "COCO",
+          "Searched loss functions"
+        ],
+        "dataset_produced": [
+          "Trained object detectors"
+        ]
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "MMDetection"
+        ],
+        "dataset_used": [
+          "COCO",
+          "Trained object detectors"
+        ],
+        "dataset_produced": [
+          "mAP metrics"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "CSE-Autoloss",
+      "predicate": "usedMethod",
+      "object": "Convergence property verification"
+    },
+    {
+      "subject": "CSE-Autoloss",
+      "predicate": "usedMethod",
+      "object": "Model optimization simulation"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "batch_size"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "mAP"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "follows",
+      "object": "Loss Search"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

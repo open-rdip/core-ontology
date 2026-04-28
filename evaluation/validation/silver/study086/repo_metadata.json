@@ -1,0 +1,118 @@
+{
+  "study_id": "study086",
+  "repo_url": "https://github.com/hengvt/proflingo",
+  "software_dependencies": [
+    {
+      "name": "anthropic",
+      "version": "0.25.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "datasets",
+      "version": "2.18.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "fschat",
+      "version": "0.2.36",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.26.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "openai",
+      "version": "1.23.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "2.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "peft",
+      "version": "0.10.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "2.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.66.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "transformers",
+      "version": "4.39.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "trl",
+      "version": "0.8.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "accelerate",
+      "version": "0.28.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "psutil",
+      "version": "5.9.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "bitsandbytes",
+      "version": "0.43.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "protobuf",
+      "version": "5.26.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "0",
+      "file": "proflingo.py",
+      "context": "torch.manual_seed(0"
+    },
+    {
+      "value": "42",
+      "file": "proflingo.py",
+      "context": "seed = 42"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

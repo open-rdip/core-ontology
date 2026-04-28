@@ -1,0 +1,254 @@
+{
+  "study_id": "study036",
+  "project": {
+    "title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+    "lead_organization": "New York University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "datasets",
+        "version": "2.16.1"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.58.0"
+      },
+      {
+        "name": "openai",
+        "version": "1.0.0"
+      },
+      {
+        "name": "tiktoken",
+        "version": "0.5.0"
+      },
+      {
+        "name": "transformers",
+        "version": null
+      },
+      {
+        "name": "safetensors",
+        "version": null
+      },
+      {
+        "name": "tokenizers",
+        "version": null
+      },
+      {
+        "name": "vllm",
+        "version": null
+      },
+      {
+        "name": "flash-attn",
+        "version": null
+      },
+      {
+        "name": "anthropic",
+        "version": null
+      },
+      {
+        "name": "GPT-4",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "GPQA",
+        "format": "JSON",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Google-proof Question Generation",
+        "description": "Domain experts write multiple-choice questions that are difficult to answer using web search."
+      },
+      {
+        "name": "Expert Validation",
+        "description": "Questions are validated by other domain experts to ensure high quality and objective correctness."
+      },
+      {
+        "name": "Chain-of-Thought (CoT) Prompting",
+        "description": "Prompting strategy used for baseline AI models like GPT-4 to improve reasoning performance."
+      }
+    ],
+    "Person": [
+      {
+        "name": "David Rein",
+        "affiliation": "New York University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Betty Li Hou",
+        "affiliation": "New York University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Asa Cooper Stickland",
+        "affiliation": "New York University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jackson Petty",
+        "affiliation": "New York University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Richard Yuanzhe Pang",
+        "affiliation": "New York University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Julian Michael",
+        "affiliation": "New York University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Julien Dirani",
+        "affiliation": "New York University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Samuel R. Bowman",
+        "affiliation": "New York University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "New York University"
+      },
+      {
+        "name": "Cohere"
+      },
+      {
+        "name": "Anthropic, PBC"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "num_questions",
+        "value": "448",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "accuracy",
+        "value": "65%",
+        "split": "test",
+        "dataset": "GPQA"
+      },
+      {
+        "metric": "accuracy",
+        "value": "34%",
+        "split": "test",
+        "dataset": "GPQA"
+      },
+      {
+        "metric": "accuracy",
+        "value": "39%",
+        "split": "test",
+        "dataset": "GPQA"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Question Writing",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "GPQA"
+        ]
+      },
+      {
+        "name": "Expert Validation",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [
+          "GPQA"
+        ],
+        "dataset_produced": [
+          "GPQA"
+        ]
+      },
+      {
+        "name": "Non-Expert Validation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [],
+        "dataset_used": [
+          "GPQA"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "AI Baseline Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 4,
+        "software_used": [
+          "GPT-4"
+        ],
+        "dataset_used": [
+          "GPQA"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "GPQA",
+      "predicate": "usedMethod",
+      "object": "Google-proof Question Generation"
+    },
+    {
+      "subject": "Question Writing",
+      "predicate": "generatesDataset",
+      "object": "GPQA"
+    },
+    {
+      "subject": "Expert Validation",
+      "predicate": "follows",
+      "object": "Question Writing"
+    },
+    {
+      "subject": "Non-Expert Validation",
+      "predicate": "follows",
+      "object": "Expert Validation"
+    },
+    {
+      "subject": "AI Baseline Evaluation",
+      "predicate": "usedSoftware",
+      "object": "GPT-4"
+    },
+    {
+      "subject": "AI Baseline Evaluation",
+      "predicate": "usedDataset",
+      "object": "GPQA"
+    },
+    {
+      "subject": "AI Baseline Evaluation",
+      "predicate": "generatesResult",
+      "object": "accuracy"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

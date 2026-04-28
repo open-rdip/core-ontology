@@ -1,0 +1,260 @@
+{
+  "study_id": "study065",
+  "project": {
+    "title": "Unsupervised Topic Segmentation of Meetings with BERT Embeddings",
+    "lead_organization": "Facebook, Inc.",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "spacy",
+        "version": "2.3.5"
+      },
+      {
+        "name": "attrs",
+        "version": "20.3.0"
+      },
+      {
+        "name": "nltk",
+        "version": "3.6.5"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.0.1"
+      },
+      {
+        "name": "keybert",
+        "version": "0.5.0"
+      },
+      {
+        "name": "sentence-transformers",
+        "version": "2.1.0"
+      },
+      {
+        "name": "transformers",
+        "version": "4.11.0"
+      },
+      {
+        "name": "BERT",
+        "version": "pre-trained"
+      },
+      {
+        "name": "NXT meeting visualisation tool",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "AMI Corpus",
+        "format": "text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "ICSI Corpus",
+        "format": "text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Unsupervised Topic Segmentation",
+        "description": "Dividing multi-person meeting transcripts into topic blocks using pre-trained neural architectures and BERT embeddings."
+      },
+      {
+        "name": "TextTile",
+        "description": "A sliding window approach for topic segmentation based on lexical co-occurrence."
+      },
+      {
+        "name": "Cross-segment clustering",
+        "description": "An unsupervised approach for topic segmentation that clusters sentences across segments."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Alessandro Solbiati",
+        "affiliation": "Facebook, Inc.",
+        "role": null
+      },
+      {
+        "name": "Shivani Poddar",
+        "affiliation": "Facebook, Inc.",
+        "role": null
+      },
+      {
+        "name": "Kevin Heffernan",
+        "affiliation": "Facebook, Inc.",
+        "role": null
+      },
+      {
+        "name": "Shubham Modi",
+        "affiliation": "Facebook, Inc.",
+        "role": null
+      },
+      {
+        "name": "Georgios Damaskinos",
+        "affiliation": "Facebook, Inc.",
+        "role": null
+      },
+      {
+        "name": "Jacques Cali",
+        "affiliation": "Facebook, Inc.",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Facebook, Inc."
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "caption_length_threshold",
+        "value": "20",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "Pk",
+        "value": "0.224",
+        "split": "test",
+        "dataset": "AMI Corpus"
+      },
+      {
+        "metric": "WinDiff",
+        "value": "0.231",
+        "split": "test",
+        "dataset": "AMI Corpus"
+      },
+      {
+        "metric": "Pk",
+        "value": "0.334",
+        "split": "test",
+        "dataset": "ICSI Corpus"
+      },
+      {
+        "metric": "WinDiff",
+        "value": "0.354",
+        "split": "test",
+        "dataset": "ICSI Corpus"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Dataset Preprocessing",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "nltk"
+        ],
+        "dataset_used": [
+          "AMI Corpus",
+          "ICSI Corpus"
+        ],
+        "dataset_produced": [
+          "preprocessed corpora"
+        ]
+      },
+      {
+        "name": "Unsupervised Topic Segmentation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "transformers",
+          "sentence-transformers",
+          "BERT"
+        ],
+        "dataset_used": [
+          "preprocessed corpora"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "nltk"
+        ],
+        "dataset_used": [
+          "AMI Corpus",
+          "ICSI Corpus"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Unsupervised Topic Segmentation of Meetings with BERT Embeddings",
+      "predicate": "usedDataset",
+      "object": "AMI Corpus"
+    },
+    {
+      "subject": "Unsupervised Topic Segmentation of Meetings with BERT Embeddings",
+      "predicate": "usedDataset",
+      "object": "ICSI Corpus"
+    },
+    {
+      "subject": "Unsupervised Topic Segmentation of Meetings with BERT Embeddings",
+      "predicate": "usedSoftware",
+      "object": "BERT"
+    },
+    {
+      "subject": "Dataset Preprocessing",
+      "predicate": "usedSoftware",
+      "object": "nltk"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "usedSoftware",
+      "object": "nltk"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "Pk"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "WinDiff"
+    },
+    {
+      "subject": "Unsupervised Topic Segmentation",
+      "predicate": "usedMethod",
+      "object": "Cross-segment clustering"
+    },
+    {
+      "subject": "Unsupervised Topic Segmentation",
+      "predicate": "usedMethod",
+      "object": "TextTile"
+    },
+    {
+      "subject": "Alessandro Solbiati",
+      "predicate": "hasActivityRole",
+      "object": "Facebook, Inc."
+    },
+    {
+      "subject": "AMI Corpus",
+      "predicate": "derivedFrom",
+      "object": "null"
+    },
+    {
+      "subject": "ICSI Corpus",
+      "predicate": "derivedFrom",
+      "object": "null"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

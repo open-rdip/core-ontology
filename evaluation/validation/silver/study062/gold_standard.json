@@ -1,0 +1,165 @@
+{
+  "study_id": "study062",
+  "project": {
+    "title": "RESPECTING CAUSALITY IS ALL YOU NEED FOR TRAINING PHYSICS-INFORMED NEURAL NETWORKS",
+    "lead_organization": "University of Pennsylvania",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Python",
+        "version": "3.7.0"
+      },
+      {
+        "name": "scipy",
+        "version": "1.8.0"
+      },
+      {
+        "name": "numpy",
+        "version": "1.22.3"
+      },
+      {
+        "name": "torch",
+        "version": "1.11"
+      },
+      {
+        "name": "PyHessian",
+        "version": "0.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Lorenz system",
+        "format": "numeric",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Kuramoto-Sivashinsky equation",
+        "format": "numeric",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Navier-Stokes equations",
+        "format": "numeric",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Causal PINNs",
+        "description": "A re-formulation of PINNs loss functions that explicitly accounts for physical causality during model training using a temporal weighting scheme."
+      },
+      {
+        "name": "Physics-Informed Neural Networks (PINNs)",
+        "description": "Neural networks that encode partial differential equations into the loss function as a regularization term."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Sifan Wang",
+        "affiliation": "University of Pennsylvania",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Shyam Sankaran",
+        "affiliation": "University of Pennsylvania",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Paris Perdikaris",
+        "affiliation": "University of Pennsylvania",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Pennsylvania"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "3",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "relative L2 error",
+        "value": "> 10%",
+        "split": "test",
+        "dataset": "Navier-Stokes (turbulent flow at T=2)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "torch",
+          "numpy"
+        ],
+        "dataset_used": [
+          "Lorenz system",
+          "Kuramoto-Sivashinsky equation",
+          "Navier-Stokes equations"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Predictive Accuracy Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "scipy",
+          "numpy"
+        ],
+        "dataset_used": [
+          "Navier-Stokes equations"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Causal PINNs",
+      "predicate": "usedMethod",
+      "object": "Physics-Informed Neural Networks (PINNs)"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "Causal PINNs"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "seed"
+    },
+    {
+      "subject": "Predictive Accuracy Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    },
+    {
+      "subject": "Predictive Accuracy Evaluation",
+      "predicate": "generatesResult",
+      "object": "relative L2 error"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

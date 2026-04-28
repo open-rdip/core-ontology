@@ -1,0 +1,51 @@
+{
+  "study_id": "study075",
+  "repo_url": "https://github.com/arthijayaraman-lab/crease_ga",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "numpy",
+        "version": ""
+      },
+      {
+        "name": "matplotlib",
+        "version": ""
+      },
+      {
+        "name": "scipy",
+        "version": ""
+      },
+      {
+        "name": "numexpr",
+        "version": ""
+      },
+      {
+        "name": "py3dmol",
+        "version": ""
+      },
+      {
+        "name": "jupyter",
+        "version": ""
+      },
+      {
+        "name": "pip",
+        "version": ""
+      },
+      {
+        "name": "tensorflow",
+        "version": ""
+      },
+      {
+        "name": ".",
+        "version": ""
+      }
+    ],
+    "source": "conda",
+    "env_name": "crease_ga"
+  },
+  "seeds": [],
+  "license": "Other",
+  "errors": []
+}

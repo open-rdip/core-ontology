@@ -1,0 +1,174 @@
+{
+  "study_id": "study017",
+  "repo_url": "https://github.com/biomedsciai/histocartography",
+  "software_dependencies": [
+    {
+      "name": "torch",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dgl",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "h5py",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "networkx",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opencv-python",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Pillow",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "PyYAML",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-image",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "seaborn",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "python",
+        "version": "3.9"
+      },
+      {
+        "name": "pip",
+        "version": ""
+      },
+      {
+        "name": "dgl",
+        "version": ""
+      },
+      {
+        "name": "torch",
+        "version": ""
+      },
+      {
+        "name": "torchvision",
+        "version": ""
+      },
+      {
+        "name": "h5py",
+        "version": ""
+      },
+      {
+        "name": "matplotlib",
+        "version": ""
+      },
+      {
+        "name": "networkx",
+        "version": ""
+      },
+      {
+        "name": "opencv-python",
+        "version": ""
+      },
+      {
+        "name": "pandas",
+        "version": ""
+      },
+      {
+        "name": "Pillow",
+        "version": ""
+      },
+      {
+        "name": "PyYAML",
+        "version": ""
+      },
+      {
+        "name": "scikit-image",
+        "version": ""
+      },
+      {
+        "name": "scikit-learn",
+        "version": ""
+      },
+      {
+        "name": "scipy",
+        "version": ""
+      },
+      {
+        "name": "seaborn",
+        "version": ""
+      },
+      {
+        "name": "tqdm",
+        "version": ""
+      }
+    ],
+    "source": "conda",
+    "env_name": "histocartography"
+  },
+  "seeds": [],
+  "license": "Other",
+  "errors": []
+}

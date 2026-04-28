@@ -1,0 +1,84 @@
+{
+  "study_id": "study060",
+  "repo_url": "https://github.com/openai/jukebox",
+  "software_dependencies": [
+    {
+      "name": "fire",
+      "version": "0.1.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.45.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "soundfile",
+      "version": "0.10.3.post1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "unidecode",
+      "version": "1.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numba",
+      "version": "0.48.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "librosa",
+      "version": "0.7.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "mpi4py",
+      "version": "3.0.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "18",
+      "file": "apex/tests/distributed/synced_batchnorm/two_gpu_unit_test.py",
+      "context": "np.random.seed(18"
+    },
+    {
+      "value": "1",
+      "file": "apex/tests/distributed/synced_batchnorm/single_gpu_unit_test.py",
+      "context": "np.random.seed(1"
+    },
+    {
+      "value": "9876",
+      "file": "apex/tests/L0/run_mixed_adam/test_mixed_adam.py",
+      "context": "torch.cuda.manual_seed(9876"
+    },
+    {
+      "value": "13337",
+      "file": "apex/tests/L0/run_mixed_adam/test_fp16_optimizer.py",
+      "context": "torch.cuda.manual_seed(13337"
+    },
+    {
+      "value": "42",
+      "file": "apex/tests/L0/run_fused_layer_norm/test_fused_layer_norm.py",
+      "context": "torch.cuda.manual_seed(42"
+    },
+    {
+      "value": "0",
+      "file": "tensorboardX/tests/test_pr_curve.py",
+      "context": "np.random.seed(0"
+    }
+  ],
+  "license": "Other",
+  "errors": []
+}

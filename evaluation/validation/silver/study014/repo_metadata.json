@@ -1,0 +1,54 @@
+{
+  "study_id": "study014",
+  "repo_url": "https://github.com/open-mmlab/mmdetection3d",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "1",
+      "file": "projects/PETR/configs/petr_vovnet_gridmask_p4_800x320.py",
+      "context": "seed=1"
+    },
+    {
+      "value": "0",
+      "file": "tests/test_structures/test_bbox/test_box3d.py",
+      "context": "torch.manual_seed(0"
+    },
+    {
+      "value": "42",
+      "file": "tests/test_models/test_backbones/test_mink_resnet.py",
+      "context": "np.random.seed(42"
+    },
+    {
+      "value": "3",
+      "file": "tests/test_models/test_layers/test_vote_module.py",
+      "context": "seed=3"
+    },
+    {
+      "value": "1588147245",
+      "file": "configs/minkunet/minkunet18_w16_torchsparse_8xb2-amp-15e_semantickitti.py",
+      "context": "seed=1588147245"
+    },
+    {
+      "value": "1024",
+      "file": "configs/imvotenet/imvotenet_stage2_8xb16_sunrgbd-3d.py",
+      "context": "seed=1024"
+    },
+    {
+      "value": "8",
+      "file": "configs/imvotenet/imvotenet_stage2_8xb16_sunrgbd-3d.py",
+      "context": "seed=8"
+    },
+    {
+      "value": "4",
+      "file": "configs/groupfree3d/groupfree3d_head-L6-O256_4xb8_scannet-seg.py",
+      "context": "seed=4"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

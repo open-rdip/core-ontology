@@ -1,0 +1,186 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "CSAW-M Annotation Tool",
+        "version": "not specified"
+      },
+      {
+        "name": "Libra",
+        "version": "not specified"
+      },
+      {
+        "name": "OpenCV",
+        "version": "not specified"
+      },
+      {
+        "name": "PyTorch",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "CSAW-M",
+        "format": "PNG (8-bit and 16-bit)",
+        "access": "Gated (restricted access via SciLifeLab/Figshare)"
+      },
+      {
+        "name": "CSAW",
+        "format": "DICOM",
+        "access": "Private"
+      },
+      {
+        "name": "CSAW-S",
+        "format": "Digital Mammography",
+        "access": "Public"
+      },
+      {
+        "name": "ImageNet",
+        "format": "not specified",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Ordinal Classification"
+      },
+      {
+        "name": "Multi-hot encoding"
+      },
+      {
+        "name": "Pairwise Comparison"
+      },
+      {
+        "name": "Ternary Search Algorithm"
+      },
+      {
+        "name": "ResNet-34"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Moein Sorkhei",
+        "role": "Researcher"
+      },
+      {
+        "name": "Edward Azavedo",
+        "role": "Radiology Specialist"
+      },
+      {
+        "name": "Fredrik Strand",
+        "role": "Researcher/Radiologist"
+      },
+      {
+        "name": "Kevin Smith",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "KTH Royal Institute of Technology"
+      },
+      {
+        "name": "Karolinska Institutet"
+      },
+      {
+        "name": "SciLifeLab"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Image Resolution",
+        "value": "632x512"
+      },
+      {
+        "name": "Masking Levels",
+        "value": "8"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Kendall's tau_b",
+        "value": "not specified",
+        "split": "Public Test"
+      },
+      {
+        "metric": "AMAE",
+        "value": "not specified",
+        "split": "Public Test"
+      },
+      {
+        "metric": "F1-score",
+        "value": "not specified",
+        "split": "High-masking"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "CSAW population cohort collection",
+        "type": "DataCollectionActivity"
+      },
+      {
+        "name": "CSAW-M image preprocessing",
+        "type": "DataProcessingActivity"
+      },
+      {
+        "name": "Expert masking potential annotation",
+        "type": "DataProductionActivity"
+      },
+      {
+        "name": "Training ResNet-34 baseline models",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Development of the annotation tool",
+        "type": "SoftwareDevelopmentActivity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "CSAW-M image preprocessing",
+      "predicate": "usedSoftware",
+      "object": "OpenCV"
+    },
+    {
+      "subject": "Expert masking potential annotation",
+      "predicate": "usedSoftware",
+      "object": "CSAW-M Annotation Tool"
+    },
+    {
+      "subject": "Training ResNet-34 baseline models",
+      "predicate": "usedDataset",
+      "object": "CSAW-M"
+    },
+    {
+      "subject": "CSAW-M",
+      "predicate": "derivedFrom",
+      "object": "CSAW"
+    },
+    {
+      "subject": "CSAW-M image preprocessing",
+      "predicate": "generatesDataset",
+      "object": "CSAW-M"
+    },
+    {
+      "subject": "Training ResNet-34 baseline models",
+      "predicate": "usedMethod",
+      "object": "Multi-hot encoding"
+    },
+    {
+      "subject": "Training ResNet-34 baseline models",
+      "predicate": "generatesResult",
+      "object": "AMAE"
+    },
+    {
+      "subject": "CSAW-M image preprocessing",
+      "predicate": "follows",
+      "object": "CSAW population cohort collection"
+    },
+    {
+      "subject": "Expert masking potential annotation",
+      "predicate": "follows",
+      "object": "CSAW-M image preprocessing"
+    }
+  ]
+}

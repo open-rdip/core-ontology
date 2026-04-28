@@ -1,0 +1,303 @@
+{
+  "study_id": "study008",
+  "project": {
+    "title": "Language Adaptation on a Tight Academic Compute Budget: Tokenizer Swapping Works and Pure bfloat16 Is Enough",
+    "lead_organization": "Hasso Plattner Institute / University of Potsdam",
+    "funding": "German Federal Ministry for Education and Research (BMBF) through the project «KI-Servicezentrum Berlin Brandenburg (011S22092)"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Mistral-7B",
+        "version": "v0.1"
+      },
+      {
+        "name": "AdamW",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "torch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "cuda",
+        "version": "12.1.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "OSCAR23.01",
+        "format": "text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CulturaX",
+        "format": "text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MMLU",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "HellaSwag",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "TruthfulQA",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "ARC",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "LAMBADA",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "PAWS-X",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "AlGhafa-T",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Pure bfloat16 training",
+        "description": "Training without full-precision optimizer states or a model weight copy to reduce memory usage and increase speed on limited GPUs."
+      },
+      {
+        "name": "Tokenizer Swapping",
+        "description": "Replacing a base model's tokenizer with a specialized one for a target language to improve fertility and training efficiency."
+      },
+      {
+        "name": "Continued Pretraining",
+        "description": "Adapting an existing LLM to a target language by further training on domain-specific or language-specific corpora."
+      },
+      {
+        "name": "Embedding Initialization",
+        "description": "A technique to initialize new embeddings for a swapped tokenizer based on existing embeddings to facilitate faster re-learning."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Konstantin Dobler",
+        "affiliation": "Hasso Plattner Institute / University of Potsdam",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Gerard de Melo",
+        "affiliation": "Hasso Plattner Institute / University of Potsdam",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Hasso Plattner Institute"
+      },
+      {
+        "name": "University of Potsdam"
+      },
+      {
+        "name": "ELLIS Unit Potsdam"
+      },
+      {
+        "name": "German Federal Ministry for Education and Research (BMBF)"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "4e-5",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "256",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "training_steps",
+        "value": "7680",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "warmup_steps",
+        "value": "76",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "context_length",
+        "value": "4096",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.05",
+        "type": "xsd:float"
+      },
+      {
+        "name": "total_training_tokens",
+        "value": "8 billion",
+        "type": "xsd:string"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 22.04",
+        "gpu": "Nvidia A100 80GB",
+        "cuda": "12.1.1",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Avg. German test splits",
+        "value": "47.2",
+        "split": "test",
+        "dataset": "German test splits (pure bfloat16)"
+      },
+      {
+        "metric": "Avg. German test splits",
+        "value": "46.1",
+        "split": "test",
+        "dataset": "German test splits (mixed precision)"
+      },
+      {
+        "metric": "MMLU",
+        "value": "59.7",
+        "split": "test",
+        "dataset": "German (pure bfloat16)"
+      },
+      {
+        "metric": "HellaSwag",
+        "value": "35.9",
+        "split": "test",
+        "dataset": "German (pure bfloat16)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "German Language Adaptation",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "Mistral-7B",
+          "AdamW"
+        ],
+        "dataset_used": [
+          "OSCAR23.01"
+        ],
+        "dataset_produced": [
+          "German-adapted Mistral-7B"
+        ]
+      },
+      {
+        "name": "Arabic Hindsight Study",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [
+          "Mistral-7B"
+        ],
+        "dataset_used": [
+          "CulturaX"
+        ],
+        "dataset_produced": [
+          "Arabic-adapted Mistral-7B"
+        ]
+      },
+      {
+        "name": "Downstream Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "null"
+        ],
+        "dataset_used": [
+          "MMLU",
+          "HellaSwag",
+          "AlGhafa-T"
+        ],
+        "dataset_produced": [
+          "Benchmark Scores"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "German Language Adaptation",
+      "predicate": "usedMethod",
+      "object": "Pure bfloat16 training"
+    },
+    {
+      "subject": "German Language Adaptation",
+      "predicate": "usedMethod",
+      "object": "Tokenizer Swapping"
+    },
+    {
+      "subject": "German Language Adaptation",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "German Language Adaptation",
+      "predicate": "executedIn",
+      "object": "Ubuntu 22.04"
+    },
+    {
+      "subject": "Downstream Evaluation",
+      "predicate": "generatesResult",
+      "object": "Avg. German test splits"
+    },
+    {
+      "subject": "Downstream Evaluation",
+      "predicate": "follows",
+      "object": "German Language Adaptation"
+    },
+    {
+      "subject": "Arabic Hindsight Study",
+      "predicate": "follows",
+      "object": "German Language Adaptation"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

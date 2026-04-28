@@ -1,0 +1,75 @@
+{
+  "study_id": "study061",
+  "repo_url": "https://github.com/CMU-TBD/SocNavBench",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "python",
+        "version": "3.6.9"
+      },
+      {
+        "name": "pandas",
+        "version": "1.1.5"
+      },
+      {
+        "name": "pip",
+        "version": ""
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.2.*"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.3.4"
+      },
+      {
+        "name": "dotmap",
+        "version": "1.2.39"
+      },
+      {
+        "name": "pyopengl",
+        "version": "3.1.0"
+      },
+      {
+        "name": "pyassimp",
+        "version": "4.1.3"
+      },
+      {
+        "name": "scikit-image",
+        "version": "0.17.2"
+      },
+      {
+        "name": "scikit-fmm",
+        "version": "2019.1.30"
+      },
+      {
+        "name": "numpy",
+        "version": "1.19.2"
+      }
+    ],
+    "source": "conda",
+    "env_name": "socnavbench"
+  },
+  "seeds": [
+    {
+      "value": "1",
+      "file": "tests/unit_tests/test_lqr.py",
+      "context": "seed = 1"
+    },
+    {
+      "value": "2",
+      "file": "tests/unit_tests/test_dynamics.py",
+      "context": "seed=2"
+    },
+    {
+      "value": "999",
+      "file": "random_eps/random_eps_sampler.py",
+      "context": "seed = 999"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

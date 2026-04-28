@@ -1,0 +1,267 @@
+{
+  "study_id": "study034",
+  "project": {
+    "title": "Uni-3D: A Universal Model for Panoptic 3D Scene Reconstruction",
+    "lead_organization": "UC San Diego",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "cython",
+        "version": null
+      },
+      {
+        "name": "timm",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": null
+      },
+      {
+        "name": "opencv-python-headless",
+        "version": null
+      },
+      {
+        "name": "pycocotools",
+        "version": null
+      },
+      {
+        "name": "plyfile",
+        "version": null
+      },
+      {
+        "name": "pytorch",
+        "version": "2.1.2"
+      },
+      {
+        "name": "Uni-3D",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Hypersim",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "3D-Front",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "ScanNet",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Uni-3D",
+        "description": "A universal model with query-based representations for predicting segments of both object instances and scene layout from a single RGB image."
+      },
+      {
+        "name": "Transformer",
+        "description": "Used for 2D depth-aware panoptic segmentation to offer queries that serve as strong shape priors in 3D."
+      },
+      {
+        "name": "AdamW",
+        "description": "Optimization algorithm used for training the model."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Xiang Zhang",
+        "affiliation": "UC San Diego",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zeyuan Chen",
+        "affiliation": "UC San Diego",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Fangyin Wei",
+        "affiliation": "Princeton University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zhuowen Tu",
+        "affiliation": "UC San Diego",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "UC San Diego"
+      },
+      {
+        "name": "Princeton University"
+      },
+      {
+        "name": "Computer Vision Foundation"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "1e-4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.05",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "16",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_queries",
+        "value": "100",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "100",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "3",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": "NVIDIA A100",
+        "cuda": "11.8",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mAP_depth",
+        "value": "38.2",
+        "split": "test",
+        "dataset": "3D-Front"
+      },
+      {
+        "metric": "mAP_mesh",
+        "value": "24.5",
+        "split": "test",
+        "dataset": "3D-Front"
+      },
+      {
+        "metric": "PQ",
+        "value": "45.1",
+        "split": "test",
+        "dataset": "Hypersim"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Software Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "pytorch",
+          "timm"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Training",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "Uni-3D",
+          "AdamW"
+        ],
+        "dataset_used": [
+          "3D-Front",
+          "Hypersim"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "Uni-3D"
+        ],
+        "dataset_used": [
+          "ScanNet",
+          "3D-Front"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Uni-3D",
+      "predicate": "usedMethod",
+      "object": "Transformer"
+    },
+    {
+      "subject": "Uni-3D",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Uni-3D",
+      "predicate": "hasParameter",
+      "object": "batch_size"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "executedIn",
+      "object": "ComputingEnvironment"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedDataset",
+      "object": "3D-Front"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "mAP_depth"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "mAP_mesh"
+    },
+    {
+      "subject": "pytorch",
+      "predicate": "softwareDependency",
+      "object": "cython"
+    },
+    {
+      "subject": "Xiang Zhang",
+      "predicate": "hasActivityRole",
+      "object": "Software Development"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

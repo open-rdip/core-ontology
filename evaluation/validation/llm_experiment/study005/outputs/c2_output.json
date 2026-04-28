@@ -1,0 +1,171 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "eDiff-I",
+        "version": "arXiv:2211.01324v5"
+      },
+      {
+        "name": "T5 text encoder",
+        "version": "T5-XXL"
+      },
+      {
+        "name": "CLIP text encoder",
+        "version": "ViT-L/14"
+      },
+      {
+        "name": "CLIP image encoder",
+        "version": "ViT-L/14"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Proprietary internal dataset",
+        "format": "image-text pairs",
+        "access": "private"
+      },
+      {
+        "name": "COCO",
+        "format": "JSON/Images",
+        "access": "public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Ensemble of Expert Denoisers"
+      },
+      {
+        "name": "Paint-with-words"
+      },
+      {
+        "name": "Style transfer via CLIP image embedding"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yogesh Balaji",
+        "role": "Researcher"
+      },
+      {
+        "name": "Seungjun Nah",
+        "role": "Researcher"
+      },
+      {
+        "name": "Xun Huang",
+        "role": "Researcher"
+      },
+      {
+        "name": "Arash Vahdat",
+        "role": "Researcher"
+      },
+      {
+        "name": "Jiaming Song",
+        "role": "Researcher"
+      },
+      {
+        "name": "Qinsheng Zhang",
+        "role": "Researcher"
+      },
+      {
+        "name": "Karsten Kreis",
+        "role": "Researcher"
+      },
+      {
+        "name": "Miika Aittala",
+        "role": "Researcher"
+      },
+      {
+        "name": "Timo Aila",
+        "role": "Researcher"
+      },
+      {
+        "name": "Samuli Laine",
+        "role": "Researcher"
+      },
+      {
+        "name": "Bryan Catanzaro",
+        "role": "Researcher"
+      },
+      {
+        "name": "Tero Karras",
+        "role": "Researcher"
+      },
+      {
+        "name": "Ming-Yu Liu",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "NVIDIA Corporation"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "sigma_data",
+        "value": "0.5"
+      },
+      {
+        "name": "P_mean",
+        "value": "-1.2"
+      },
+      {
+        "name": "P_std",
+        "value": "1.2"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Pre-training shared diffusion model",
+        "type": "Training"
+      },
+      {
+        "name": "Specialized expert denoiser finetuning",
+        "type": "Training"
+      },
+      {
+        "name": "Zero-shot text-to-image synthesis",
+        "type": "Evaluation"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "FID",
+        "value": "6.95",
+        "split": "COCO zero-shot"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Pre-training shared diffusion model",
+      "predicate": "wasAssociatedWith",
+      "object": "Yogesh Balaji"
+    },
+    {
+      "subject": "eDiff-I",
+      "predicate": "used",
+      "object": "T5 text encoder"
+    },
+    {
+      "subject": "eDiff-I",
+      "predicate": "used",
+      "object": "CLIP text encoder"
+    },
+    {
+      "subject": "eDiff-I",
+      "predicate": "used",
+      "object": "CLIP image encoder"
+    },
+    {
+      "subject": "Specialized expert denoiser finetuning",
+      "predicate": "wasInformedBy",
+      "object": "Pre-training shared diffusion model"
+    },
+    {
+      "subject": "eDiff-I",
+      "predicate": "wasGeneratedBy",
+      "object": "Specialized expert denoiser finetuning"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "HistoCartography",
+        "version": "v1",
+        "dcterms:format": "Python API"
+      },
+      {
+        "name": "Deep Graph Library (DGL)",
+        "version": "0.4.3",
+        "dcterms:format": "Library"
+      },
+      {
+        "name": "PyTorch",
+        "version": "1.7.1",
+        "dcterms:format": "Framework"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.8.2",
+        "dcterms:format": "Library"
+      },
+      {
+        "name": "HoVerNet",
+        "dcterms:identifier": "Nuclei Detection Model"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "BRACS",
+        "format": "Tumor RoI",
+        "access": "Public"
+      },
+      {
+        "name": "BACH",
+        "format": "Tumor RoI",
+        "access": "Public"
+      },
+      {
+        "name": "SICAPv2",
+        "format": "WSI",
+        "access": "Public"
+      },
+      {
+        "name": "UZH",
+        "format": "TMA",
+        "access": "Public"
+      },
+      {
+        "name": "PanNuke",
+        "format": "Nuclei Segmentation"
+      },
+      {
+        "name": "MoNuSac",
+        "format": "Nuclei Segmentation"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Graph Isomorphism Network (GIN)"
+      },
+      {
+        "name": "Principal Neighborhood Aggregation (PNA)"
+      },
+      {
+        "name": "HACT-Net"
+      },
+      {
+        "name": "SegGini"
+      },
+      {
+        "name": "Vahadane Normalization"
+      },
+      {
+        "name": "Macenko Normalization"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Guillaume Jaume",
+        "role": "Lead Author"
+      },
+      {
+        "name": "Pushpak Pati",
+        "role": "Author"
+      },
+      {
+        "name": "Valentin Anklin",
+        "role": "Author"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "IBM Research, Zurich"
+      },
+      {
+        "name": "EPFL, Lausanne"
+      },
+      {
+        "name": "ETH, Zurich"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "k-NN Neighbors (k)",
+        "value": "5"
+      },
+      {
+        "name": "Threshold Distance",
+        "value": "50 pixels"
+      },
+      {
+        "name": "Hidden Units",
+        "value": "64"
+      },
+      {
+        "name": "MLP Head Units",
+        "value": "128"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "POWER8 (single-core)",
+        "gpu": "NVIDIA P100",
+        "cuda": "Not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Weighted F1",
+        "value": "90.7 ± 0.5",
+        "split": "BACH (HACT-Net)"
+      },
+      {
+        "metric": "Weighted F1",
+        "value": "61.5 ± 0.9",
+        "split": "BRACS (HACT-Net)"
+      },
+      {
+        "metric": "Average Dice",
+        "value": "66.0 ± 3.1",
+        "split": "UZH (SegGini)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Stain Normalization",
+        "type": "Preprocessing"
+      },
+      {
+        "name": "Nuclei Detection",
+        "type": "Preprocessing"
+      },
+      {
+        "name": "Graph Building",
+        "type": "Graph Analytics"
+      },
+      {
+        "name": "Model Training",
+        "type": "Machine Learning"
+      },
+      {
+        "name": "Model Explainability",
+        "type": "Evaluation"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Stain Normalization",
+      "predicate": "used",
+      "object": "HistoCartography"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "used",
+      "object": "BRACS"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "used",
+      "object": "PyTorch"
+    },
+    {
+      "subject": "HistoCartography",
+      "predicate": "wasAssociatedWith",
+      "object": "Guillaume Jaume"
+    },
+    {
+      "subject": "HistoCartography",
+      "predicate": "wasAssociatedWith",
+      "object": "IBM Research, Zurich"
+    },
+    {
+      "subject": "Nuclei Detection",
+      "predicate": "used",
+      "object": "HoVerNet"
+    },
+    {
+      "subject": "Graph Building",
+      "predicate": "wasInformedBy",
+      "object": "Nuclei Detection"
+    }
+  ]
+}

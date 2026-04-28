@@ -1,0 +1,243 @@
+{
+  "study_id": "study014",
+  "project": {
+    "title": "H3DNet: 3D Object Detection Using Hybrid Geometric Primitives",
+    "lead_organization": "The University of Texas at Austin",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "pytorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "mmdetection3d",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "ScanNet",
+        "format": "colorless 3D point cloud",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "SUN RGB-D",
+        "format": "colorless 3D point cloud",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "H3DNet",
+        "description": "An end-to-end neural network that predicts a hybrid and overcomplete set of geometric primitives to detect and refine 3D object bounding boxes."
+      },
+      {
+        "name": "Hybrid Geometric Primitives Prediction",
+        "description": "Predicting BB centers, BB face centers, and BB edge centers to provide accurate signals for object detection."
+      },
+      {
+        "name": "Parametric Distance Function Optimization",
+        "description": "Defining a distance function between an object and geometric primitives to enable continuous optimization of object proposals."
+      },
+      {
+        "name": "Matching and Refinement Module",
+        "description": "A module to classify object proposals and fine-tune geometric parameters and semantic labels."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zaiwei Zhang",
+        "affiliation": "The University of Texas at Austin",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Bo Sun",
+        "affiliation": "The University of Texas at Austin",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Haitao Yang",
+        "affiliation": "The University of Texas at Austin",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Qixing Huang",
+        "affiliation": "The University of Texas at Austin",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "The University of Texas at Austin"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "3D IoU threshold",
+        "value": "0.25",
+        "type": "xsd:float"
+      },
+      {
+        "name": "3D IoU threshold",
+        "value": "0.5",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "1",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "1588147245",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "1024",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "8",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "4",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "3",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "null",
+        "cuda": "null",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mAP",
+        "value": "67.2%",
+        "split": "test",
+        "dataset": "ScanNet"
+      },
+      {
+        "metric": "mAP",
+        "value": "60.1%",
+        "split": "test",
+        "dataset": "SUN RGB-D"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Geometric Primitive Prediction",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "mmdetection3d"
+        ],
+        "dataset_used": [
+          "ScanNet",
+          "SUN RGB-D"
+        ],
+        "dataset_produced": [
+          "BB centers, face centers, and edge centers"
+        ]
+      },
+      {
+        "name": "Object Proposal Generation",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [
+          "mmdetection3d"
+        ],
+        "dataset_used": [
+          "BB centers, face centers, and edge centers"
+        ],
+        "dataset_produced": [
+          "Object proposals"
+        ]
+      },
+      {
+        "name": "Classification and Refinement",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "mmdetection3d"
+        ],
+        "dataset_used": [
+          "Object proposals"
+        ],
+        "dataset_produced": [
+          "Detected 3D objects"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "H3DNet",
+      "predicate": "usedMethod",
+      "object": "Hybrid Geometric Primitives Prediction"
+    },
+    {
+      "subject": "H3DNet",
+      "predicate": "usedMethod",
+      "object": "Parametric Distance Function Optimization"
+    },
+    {
+      "subject": "Object Proposal Generation",
+      "predicate": "follows",
+      "object": "Geometric Primitive Prediction"
+    },
+    {
+      "subject": "Classification and Refinement",
+      "predicate": "follows",
+      "object": "Object Proposal Generation"
+    },
+    {
+      "subject": "Classification and Refinement",
+      "predicate": "generatesResult",
+      "object": "mAP"
+    },
+    {
+      "subject": "H3DNet",
+      "predicate": "usedDataset",
+      "object": "ScanNet"
+    },
+    {
+      "subject": "H3DNet",
+      "predicate": "usedDataset",
+      "object": "SUN RGB-D"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

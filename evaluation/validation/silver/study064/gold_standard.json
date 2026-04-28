@@ -1,0 +1,316 @@
+{
+  "study_id": "study064",
+  "project": {
+    "title": "FIERY: Future Instance Prediction in Bird's-Eye View from Surround Monocular Cameras",
+    "lead_organization": "Wayve",
+    "funding": "Toshiba Europe (grant G100453)"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Python",
+        "version": "3.7.10"
+      },
+      {
+        "name": "PyTorch",
+        "version": "1.7.0"
+      },
+      {
+        "name": "TorchVision",
+        "version": "0.8.1"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "10.1"
+      },
+      {
+        "name": "NumPy",
+        "version": "1.19.2"
+      },
+      {
+        "name": "SciPy",
+        "version": "1.5.2"
+      },
+      {
+        "name": "Pillow",
+        "version": "8.0.1"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.50.2"
+      },
+      {
+        "name": "PyTorch Lightning",
+        "version": "1.2.5"
+      },
+      {
+        "name": "EfficientNet-PyTorch",
+        "version": "0.7.0"
+      },
+      {
+        "name": "fvcore",
+        "version": "0.1.2.post20201122"
+      },
+      {
+        "name": "pip",
+        "version": "21.0.1"
+      },
+      {
+        "name": "NuScenes-devkit",
+        "version": "1.1.0"
+      },
+      {
+        "name": "Lyft-dataset-sdk",
+        "version": "0.0.8"
+      },
+      {
+        "name": "OpenCV-Python",
+        "version": "4.5.1.48"
+      },
+      {
+        "name": "MoviePy",
+        "version": "1.0.3"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "NuScenes",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Lyft",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "FIERY",
+        "description": "A probabilistic future prediction model in bird's-eye view from monocular cameras."
+      },
+      {
+        "name": "BEV transformation",
+        "description": "Orthographic bird's-eye view transformation from monocular camera inputs."
+      },
+      {
+        "name": "Spatial-temporal modeling",
+        "description": "Combining spatial and temporal information to predict future states."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Anthony Hu",
+        "affiliation": "Wayve",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jeffrey Hawke",
+        "affiliation": "Wayve",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zak Murez",
+        "affiliation": "Wayve",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Nikhil Mohan",
+        "affiliation": "Wayve",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Sofía Dudas",
+        "affiliation": "Wayve",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Alex Kendall",
+        "affiliation": "Wayve",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Vijay Badrinarayanan",
+        "affiliation": "Wayve",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Roberto Cipolla",
+        "affiliation": "University of Cambridge",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Wayve"
+      },
+      {
+        "name": "University of Cambridge"
+      },
+      {
+        "name": "Toshiba Europe"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "3e-4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "12",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "20",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "input_resolution",
+        "value": "224x480",
+        "type": "xsd:string"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "Tesla V100",
+        "cuda": "10.1",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "IoU",
+        "value": "59.4",
+        "split": "val",
+        "dataset": "NuScenes"
+      },
+      {
+        "metric": "VPQ",
+        "value": "50.2",
+        "split": "val",
+        "dataset": "NuScenes"
+      },
+      {
+        "metric": "IoU",
+        "value": "57.8",
+        "split": "val",
+        "dataset": "Lyft"
+      },
+      {
+        "metric": "VPQ",
+        "value": "50.0",
+        "split": "val",
+        "dataset": "Lyft"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Preprocessing",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "NuScenes-devkit",
+          "Lyft-dataset-sdk"
+        ],
+        "dataset_used": [
+          "NuScenes",
+          "Lyft"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "PyTorch",
+          "PyTorch Lightning"
+        ],
+        "dataset_used": [
+          "NuScenes",
+          "Lyft"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "NuScenes-devkit",
+          "Lyft-dataset-sdk"
+        ],
+        "dataset_used": [
+          "NuScenes",
+          "Lyft"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "FIERY"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedSoftware",
+      "object": "PyTorch"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "batch_size"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "executedIn",
+      "object": "Tesla V100"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "generatesResult",
+      "object": "IoU"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "generatesResult",
+      "object": "VPQ"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    },
+    {
+      "subject": "Data Preprocessing",
+      "predicate": "usedDataset",
+      "object": "NuScenes"
+    },
+    {
+      "subject": "Data Preprocessing",
+      "predicate": "usedDataset",
+      "object": "Lyft"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

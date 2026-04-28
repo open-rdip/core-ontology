@@ -1,0 +1,89 @@
+{
+  "study_id": "study090",
+  "repo_url": "https://github.com/megvii-basedetection/bevdepth",
+  "software_dependencies": [
+    {
+      "name": "numba",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nuscenes-devkit",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opencv-python-headless",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pytorch-lightning",
+      "version": "1.6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-image",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "setuptools",
+      "version": "59.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboardX",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "1.9.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.10.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "0",
+      "file": "test/test_dataset/test_nusc_mv_det_dataset.py",
+      "context": "np.random.seed(0"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

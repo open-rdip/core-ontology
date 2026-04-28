@@ -1,0 +1,20 @@
+{
+  "study_id": "study015",
+  "repo_url": "https://github.com/Yuriyzabegaev/FTHM-Solver",
+  "software_dependencies": [
+    {
+      "name": "pandas",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "porepy-petsc:latest"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "GPL",
+  "errors": []
+}

@@ -1,0 +1,143 @@
+{
+  "study_id": "study081",
+  "repo_url": "https://github.com/roedoejet/fastspeech2",
+  "software_dependencies": [
+    {
+      "name": "epitran",
+      "version": "1.9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "g2p",
+      "version": "0.5.20220318",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "g2p-en",
+      "version": "2.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "inflect",
+      "version": "4.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "librosa",
+      "version": "0.7.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nltk",
+      "version": "3.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numba",
+      "version": "0.48",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.19.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "panphon",
+      "version": "0.19",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pillow",
+      "version": "9.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pypinyin",
+      "version": "0.39.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyworld",
+      "version": "0.2.10",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "PyYAML",
+      "version": "5.4.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "0.23.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "soundfile",
+      "version": "0.10.3.post1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard",
+      "version": "2.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tgt",
+      "version": "1.4.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "1.7.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.46.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "unidecode",
+      "version": "1.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

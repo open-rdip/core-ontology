@@ -1,0 +1,164 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "HigherHRNet",
+        "version": "v3"
+      },
+      {
+        "name": "HRNet",
+        "version": "W32/W48"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COCO Keypoint Detection",
+        "format": "JSON/Images",
+        "access": "Public"
+      },
+      {
+        "name": "CrowdPose",
+        "format": "Images",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Bottom-up human pose estimation"
+      },
+      {
+        "name": "Multi-Resolution Supervision"
+      },
+      {
+        "name": "Multi-Resolution Heatmap Aggregation"
+      },
+      {
+        "name": "Associative Embedding"
+      },
+      {
+        "name": "Transposed Convolution (Deconvolution)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Bowen Cheng",
+        "role": "Researcher"
+      },
+      {
+        "name": "Bin Xiao",
+        "role": "Researcher"
+      },
+      {
+        "name": "Jingdong Wang",
+        "role": "Researcher"
+      },
+      {
+        "name": "Honghui Shi",
+        "role": "Researcher"
+      },
+      {
+        "name": "Thomas S. Huang",
+        "role": "Researcher"
+      },
+      {
+        "name": "Lei Zhang",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "UIUC"
+      },
+      {
+        "name": "Microsoft"
+      },
+      {
+        "name": "University of Oregon"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Gaussian kernel standard deviation",
+        "value": "2"
+      },
+      {
+        "name": "Learning rate",
+        "value": "1e-3"
+      },
+      {
+        "name": "Epochs",
+        "value": "300"
+      },
+      {
+        "name": "Optimizer",
+        "value": "Adam"
+      },
+      {
+        "name": "Heatmap loss weight",
+        "value": "1"
+      },
+      {
+        "name": "Grouping loss weight",
+        "value": "1e-3"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "AP",
+        "value": "70.5%",
+        "split": "COCO test-dev"
+      },
+      {
+        "metric": "AP",
+        "value": "67.6%",
+        "split": "CrowdPose test"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Trained HigherHRNet model",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Evaluated on COCO and CrowdPose",
+        "type": "DataAnalysisActivity"
+      },
+      {
+        "name": "Implemented HigherHRNet",
+        "type": "SoftwareDevelopmentActivity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Trained HigherHRNet model",
+      "predicate": "usedDataset",
+      "object": "COCO Keypoint Detection"
+    },
+    {
+      "subject": "Trained HigherHRNet model",
+      "predicate": "usedSoftware",
+      "object": "HRNet"
+    },
+    {
+      "subject": "Trained HigherHRNet model",
+      "predicate": "usedMethod",
+      "object": "Multi-Resolution Supervision"
+    },
+    {
+      "subject": "Trained HigherHRNet model",
+      "predicate": "hasParameter",
+      "object": "Gaussian kernel standard deviation"
+    },
+    {
+      "subject": "Evaluated on COCO and CrowdPose",
+      "predicate": "generatesResult",
+      "object": "AP: 70.5% (COCO test-dev)"
+    },
+    {
+      "subject": "HigherHRNet",
+      "predicate": "derivedFrom",
+      "object": "HRNet"
+    }
+  ]
+}

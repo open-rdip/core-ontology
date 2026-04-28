@@ -1,0 +1,135 @@
+{
+  "study_id": "study078",
+  "project": {
+    "title": "Shuffle-QUDIO: accelerate distributed VQE with trainability enhancement and measurement reduction",
+    "lead_organization": "The University of Sydney",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "torch",
+        "version": null
+      },
+      {
+        "name": "pennylane",
+        "version": null
+      },
+      {
+        "name": "torchvision",
+        "version": null
+      },
+      {
+        "name": "pyyaml",
+        "version": null
+      },
+      {
+        "name": "easydict",
+        "version": null
+      },
+      {
+        "name": "termcolor",
+        "version": null
+      },
+      {
+        "name": "tqdm",
+        "version": null
+      }
+    ],
+    "Dataset": [],
+    "Method": [
+      {
+        "name": "Shuffle-QUDIO",
+        "description": "A distributed variational quantum eigensolver scheme that incorporates shuffle operations into local Hamiltonians to reduce communication frequency and enhance trainability."
+      },
+      {
+        "name": "Quantum DIstributed Optimization (QUDIO)",
+        "description": "A scheme that partitions a quantum problem into subproblems allocated to multiple quantum machines for parallel optimization."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yang Qian",
+        "affiliation": "The University of Sydney",
+        "role": null
+      },
+      {
+        "name": "Yuxuan Du",
+        "affiliation": "JD Explore Academy",
+        "role": null
+      },
+      {
+        "name": "Dacheng Tao",
+        "affiliation": "JD Explore Academy",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "The University of Sydney"
+      },
+      {
+        "name": "JD Explore Academy"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "201",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Numerical Experiments",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "pennylane",
+          "torch"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Shuffle-QUDIO",
+      "predicate": "usedSoftware",
+      "object": "pennylane"
+    },
+    {
+      "subject": "Shuffle-QUDIO",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Numerical Experiments",
+      "predicate": "usedMethod",
+      "object": "Shuffle-QUDIO"
+    },
+    {
+      "subject": "train_pl_torch.py",
+      "predicate": "hasParameter",
+      "object": "seed"
+    },
+    {
+      "subject": "utils/vis_vqe_shuffle_time.py",
+      "predicate": "hasParameter",
+      "object": "seed"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

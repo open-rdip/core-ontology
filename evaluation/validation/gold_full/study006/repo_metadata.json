@@ -1,0 +1,174 @@
+{
+  "study_id": "study006",
+  "repo_url": "https://github.com/baitingluo/l-map",
+  "software_dependencies": [
+    {
+      "name": "torch",
+      "version": "1.12.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.23.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "gym",
+      "version": "0.22.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "mujoco-py",
+      "version": "2.1.2.14",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.3.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "typed-argument-parser",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "git",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "gitpython",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "einops",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "git",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wandb",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dm_control",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "python",
+        "version": "3.9"
+      },
+      {
+        "name": "pip",
+        "version": "18.0"
+      },
+      {
+        "name": "conda",
+        "version": "4.5.9"
+      },
+      {
+        "name": "patchelf",
+        "version": "0.9"
+      },
+      {
+        "name": "jpeg",
+        "version": ""
+      },
+      {
+        "name": "-f https://download.pytorch.org/whl/torch_stable.html",
+        "version": ""
+      },
+      {
+        "name": "torch",
+        "version": "1.12.0+cu116"
+      },
+      {
+        "name": "numpy",
+        "version": "1.23.2"
+      },
+      {
+        "name": "gym",
+        "version": "0.18.0"
+      },
+      {
+        "name": "mujoco-py",
+        "version": "2.1.2.14"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.3.4"
+      },
+      {
+        "name": "typed-argument-parser",
+        "version": ""
+      },
+      {
+        "name": "git+https://github.com/JannerM/d4rl.git@c3dd04da02acbf4de6cbaa1141deb4f958f03ca9",
+        "version": ""
+      },
+      {
+        "name": "scikit-image",
+        "version": "0.17.2"
+      },
+      {
+        "name": "scikit-video",
+        "version": "1.1.11"
+      },
+      {
+        "name": "gitpython",
+        "version": ""
+      },
+      {
+        "name": "einops",
+        "version": ""
+      },
+      {
+        "name": "git+https://github.com/aravindr93/mjrl@3871d93763d3b49c4741e6daeaebbc605fe140dc",
+        "version": ""
+      },
+      {
+        "name": "wandb",
+        "version": ""
+      },
+      {
+        "name": "dm_control",
+        "version": ""
+      }
+    ],
+    "source": "conda",
+    "env_name": "map"
+  },
+  "seeds": [
+    {
+      "value": "10",
+      "file": "latentplan/utils/distribution.py",
+      "context": "np.random.seed(10"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

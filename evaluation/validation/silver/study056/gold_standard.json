@@ -1,0 +1,292 @@
+{
+  "study_id": "study056",
+  "project": {
+    "title": "CALOHADRONIC: a diffusion model for the generation of hadronic showers",
+    "lead_organization": "Universität Hamburg",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "adam_mini",
+        "version": "1.1.1"
+      },
+      {
+        "name": "h5pickle",
+        "version": "0.4.2"
+      },
+      {
+        "name": "h5py",
+        "version": "3.10.0"
+      },
+      {
+        "name": "k-diffusion",
+        "version": "0.1.1.post1"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.10.1"
+      },
+      {
+        "name": "nflows",
+        "version": "0.14"
+      },
+      {
+        "name": "numpy",
+        "version": "1.26.3"
+      },
+      {
+        "name": "omegaconf",
+        "version": "1.4.1"
+      },
+      {
+        "name": "pandas",
+        "version": "2.2.0"
+      },
+      {
+        "name": "scipy",
+        "version": "1.12.0"
+      },
+      {
+        "name": "tensorboard",
+        "version": "2.17.1"
+      },
+      {
+        "name": "timm",
+        "version": "1.0.8"
+      },
+      {
+        "name": "torch",
+        "version": "2.4.0"
+      },
+      {
+        "name": "torchinfo",
+        "version": "1.8.0"
+      },
+      {
+        "name": "torchmetrics",
+        "version": "1.4.1"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.19.0"
+      },
+      {
+        "name": "POT",
+        "version": "0.9.5"
+      },
+      {
+        "name": "comet-ml",
+        "version": "3.44.4"
+      },
+      {
+        "name": "pyro-ppl",
+        "version": null
+      },
+      {
+        "name": "Geant4",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Geant4 showers",
+        "format": "point clouds",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CaloHadronic showers",
+        "format": "point clouds",
+        "access": "open",
+        "role": "produced",
+        "derived_from": "Geant4 showers"
+      }
+    ],
+    "Method": [
+      {
+        "name": "CaloHadronic",
+        "description": "A transformer-based diffusion model for geometry-independent generation of hadronic showers as point clouds."
+      },
+      {
+        "name": "Diffusion Model",
+        "description": "A generative model that learns to reverse a diffusion process to generate data from noise."
+      },
+      {
+        "name": "Transformer-based architecture",
+        "description": "An architecture utilizing attention mechanisms to handle point cloud data for shower simulation."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Thorsten Buss",
+        "affiliation": "Universität Hamburg",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Martina Mozzanica",
+        "affiliation": "Universität Hamburg",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Frank Gaede",
+        "affiliation": "Deutsches Elektronen-Synchrotron DESY",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Gregor Kasieczka",
+        "affiliation": "Universität Hamburg",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Anatolii Korol",
+        "affiliation": "Deutsches Elektronen-Synchrotron DESY",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Katja Krüger",
+        "affiliation": "Deutsches Elektronen-Synchrotron DESY",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Peter McKeown",
+        "affiliation": "Deutsches Elektronen-Synchrotron DESY",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Universität Hamburg"
+      },
+      {
+        "name": "Deutsches Elektronen-Synchrotron DESY"
+      },
+      {
+        "name": "CERN"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "incident_energy",
+        "value": "15 GeV",
+        "type": "xsd:string"
+      },
+      {
+        "name": "incident_energy",
+        "value": "50 GeV",
+        "type": "xsd:string"
+      },
+      {
+        "name": "incident_energy",
+        "value": "85 GeV",
+        "type": "xsd:string"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "linearity",
+        "value": "good agreement",
+        "split": "test",
+        "dataset": "CaloHadronic showers"
+      },
+      {
+        "metric": "relative resolution",
+        "value": "0.063",
+        "split": "test",
+        "dataset": "Geant4"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Shower Generation",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [
+          "torch",
+          "k-diffusion"
+        ],
+        "dataset_used": [
+          "Geant4 showers"
+        ],
+        "dataset_produced": [
+          "CaloHadronic showers"
+        ]
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "matplotlib",
+          "numpy",
+          "scipy"
+        ],
+        "dataset_used": [
+          "CaloHadronic showers",
+          "Geant4 showers"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "CaloHadronic",
+      "predicate": "usedMethod",
+      "object": "Diffusion Model"
+    },
+    {
+      "subject": "CaloHadronic",
+      "predicate": "usedMethod",
+      "object": "Transformer-based architecture"
+    },
+    {
+      "subject": "Shower Generation",
+      "predicate": "usedMethod",
+      "object": "CaloHadronic"
+    },
+    {
+      "subject": "Shower Generation",
+      "predicate": "generatesDataset",
+      "object": "CaloHadronic showers"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "linearity"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "relative resolution"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "follows",
+      "object": "Shower Generation"
+    },
+    {
+      "subject": "CaloHadronic showers",
+      "predicate": "derivedFrom",
+      "object": "Geant4 showers"
+    },
+    {
+      "subject": "torch",
+      "predicate": "softwareDependency",
+      "object": "torchvision"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

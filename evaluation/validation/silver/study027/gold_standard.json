@@ -1,0 +1,216 @@
+{
+  "study_id": "study027",
+  "project": {
+    "title": "A deep learning framework for efficient pathology image analysis",
+    "lead_organization": "Else Kroener Fresenius Center for Digital Health, Faculty of Medicine and University Hospital Carl Gustav Carus, TUD Dresden University of Technology",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "absl-py",
+        "version": "1.0.0"
+      },
+      {
+        "name": "addict",
+        "version": "2.4.0"
+      },
+      {
+        "name": "anyio",
+        "version": "3.5.0"
+      },
+      {
+        "name": "argon2-cffi",
+        "version": "21.3.0"
+      },
+      {
+        "name": "einops",
+        "version": "0.6.1"
+      },
+      {
+        "name": "CHIEF",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "EAGLE",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "Virchow2",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "CPTAC BRCA",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": "CPTAC"
+      },
+      {
+        "name": "CPTAC COAD",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": "CPTAC"
+      },
+      {
+        "name": "CPTAC LUAD",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": "CPTAC"
+      },
+      {
+        "name": "DACHS",
+        "format": "images",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "CHIEF",
+        "description": "A deep learning framework for efficient pathology image analysis using attention-based heatmaps."
+      },
+      {
+        "name": "ABMIL",
+        "description": "Attention-based Deep Multiple Instance Learning used as a baseline and comparative method."
+      },
+      {
+        "name": "EAGLE",
+        "description": "A visualization tool for identifying the top-25 tiles set associated with specific pathology predictions."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Peter Neidlinger",
+        "affiliation": "Else Kroener Fresenius Center for Digital Health, TUD Dresden University of Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Tim Lenz",
+        "affiliation": "Else Kroener Fresenius Center for Digital Health, TUD Dresden University of Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jakob Nikolas Kather",
+        "affiliation": "Else Kroener Fresenius Center for Digital Health, TUD Dresden University of Technology",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Else Kroener Fresenius Center for Digital Health, TUD Dresden University of Technology"
+      },
+      {
+        "name": "Institute of Pathology, University Medical Center Mainz"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "7",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "1",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "attention heatmap visualization",
+        "value": "qualitative",
+        "split": "test",
+        "dataset": "CPTAC BRCA"
+      },
+      {
+        "metric": "attention heatmap visualization",
+        "value": "qualitative",
+        "split": "test",
+        "dataset": "DACHS"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Downstream Classification",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "CHIEF",
+          "Virchow2"
+        ],
+        "dataset_used": [
+          "CPTAC BRCA",
+          "CPTAC COAD",
+          "CPTAC LUAD",
+          "DACHS"
+        ],
+        "dataset_produced": [
+          "Attention Heatmaps"
+        ]
+      },
+      {
+        "name": "Tile Visualization",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "EAGLE"
+        ],
+        "dataset_used": [
+          "Attention Heatmaps"
+        ],
+        "dataset_produced": [
+          "Top-25 tile set"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "CHIEF",
+      "predicate": "usedSoftware",
+      "object": "einops"
+    },
+    {
+      "subject": "Downstream Classification",
+      "predicate": "usedMethod",
+      "object": "ABMIL"
+    },
+    {
+      "subject": "Downstream Classification",
+      "predicate": "usedMethod",
+      "object": "CHIEF"
+    },
+    {
+      "subject": "Downstream Classification",
+      "predicate": "generatesDataset",
+      "object": "Attention Heatmaps"
+    },
+    {
+      "subject": "Tile Visualization",
+      "predicate": "usedMethod",
+      "object": "EAGLE"
+    },
+    {
+      "subject": "Tile Visualization",
+      "predicate": "follows",
+      "object": "Downstream Classification"
+    },
+    {
+      "subject": "Peter Neidlinger",
+      "predicate": "hasActivityRole",
+      "object": "Downstream Classification"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

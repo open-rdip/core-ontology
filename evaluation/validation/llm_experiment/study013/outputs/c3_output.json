@@ -1,0 +1,213 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "YeastSpotter",
+        "version": "not specified"
+      },
+      {
+        "name": "Scikit-Learn",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COOS-7",
+        "format": "tiff",
+        "access": "https://zenodo.org/record/3386336"
+      },
+      {
+        "name": "ImageNet",
+        "format": "not specified",
+        "access": "public"
+      },
+      {
+        "name": "CIFAR",
+        "format": "not specified",
+        "access": "public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Haralick texture features"
+      },
+      {
+        "name": "DeepLoc CNN"
+      },
+      {
+        "name": "VGG16"
+      },
+      {
+        "name": "Paired Cell Inpainting (PCI)"
+      },
+      {
+        "name": "k-nearest neighbor classifier"
+      },
+      {
+        "name": "L1 Logistic Regression"
+      },
+      {
+        "name": "Random Forest"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Alex X. Lu",
+        "role": "Lead Researcher"
+      },
+      {
+        "name": "Wiebke Schormann",
+        "role": "Researcher"
+      },
+      {
+        "name": "David W. Andrews",
+        "role": "Researcher"
+      },
+      {
+        "name": "Amy X. Lu",
+        "role": "Researcher"
+      },
+      {
+        "name": "Marzyeh Ghassemi",
+        "role": "Researcher"
+      },
+      {
+        "name": "Alan M. Moses",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Toronto"
+      },
+      {
+        "name": "Sunnybrook Research Institute"
+      },
+      {
+        "name": "Vector Institute"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "batch size",
+        "value": "128"
+      },
+      {
+        "name": "iterations",
+        "value": "10,000"
+      },
+      {
+        "name": "k",
+        "value": "11"
+      },
+      {
+        "name": "n_estimators",
+        "value": "[20, 40, 60, 80, 120, 140, 160, 180, 200]"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "Nvidia GPU",
+        "cuda": "not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Class-Balanced Error",
+        "value": "1.2%",
+        "split": "Test1 (DeepLoc End-to-End)"
+      },
+      {
+        "metric": "Class-Balanced Error",
+        "value": "7.4%",
+        "split": "Test3 (DeepLoc End-to-End)"
+      },
+      {
+        "metric": "Class-Balanced Error",
+        "value": "5.4%",
+        "split": "Test4 (DeepLoc End-to-End)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Microscopy Imaging",
+        "type": "DataCollectionActivity"
+      },
+      {
+        "name": "Cell Segmentation with YeastSpotter",
+        "type": "DataProcessingActivity"
+      },
+      {
+        "name": "COOS-7 Dataset Curation",
+        "type": "DataProductionActivity"
+      },
+      {
+        "name": "Classification Benchmarking",
+        "type": "DataAnalysisActivity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Microscopy Imaging",
+      "predicate": "generatesDataset",
+      "object": "COOS-7"
+    },
+    {
+      "subject": "Cell Segmentation with YeastSpotter",
+      "predicate": "usedSoftware",
+      "object": "YeastSpotter"
+    },
+    {
+      "subject": "Cell Segmentation with YeastSpotter",
+      "predicate": "follows",
+      "object": "Microscopy Imaging"
+    },
+    {
+      "subject": "COOS-7 Dataset Curation",
+      "predicate": "generatesDataset",
+      "object": "COOS-7"
+    },
+    {
+      "subject": "Classification Benchmarking",
+      "predicate": "usedDataset",
+      "object": "COOS-7"
+    },
+    {
+      "subject": "Classification Benchmarking",
+      "predicate": "usedMethod",
+      "object": "DeepLoc CNN"
+    },
+    {
+      "subject": "Classification Benchmarking",
+      "predicate": "usedMethod",
+      "object": "Random Forest"
+    },
+    {
+      "subject": "Classification Benchmarking",
+      "predicate": "usedSoftware",
+      "object": "Scikit-Learn"
+    },
+    {
+      "subject": "Classification Benchmarking",
+      "predicate": "hasParameter",
+      "object": "batch size"
+    },
+    {
+      "subject": "Classification Benchmarking",
+      "predicate": "generatesResult",
+      "object": "Class-Balanced Error"
+    },
+    {
+      "subject": "Classification Benchmarking",
+      "predicate": "executedIn",
+      "object": "Nvidia GPU"
+    },
+    {
+      "subject": "COOS-7",
+      "predicate": "derivedFrom",
+      "object": "ImageNet"
+    }
+  ]
+}

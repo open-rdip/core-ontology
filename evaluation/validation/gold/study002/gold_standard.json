@@ -1,0 +1,287 @@
+{
+  "study_id": "study002",
+  "project": {
+    "title": "Kronecker Decomposition for Knowledge Graph Embeddings",
+    "lead_organization": "Paderborn University",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "torch",
+        "version": "2.5.1"
+      },
+      {
+        "name": "lightning",
+        "version": "2.5.0.post0"
+      },
+      {
+        "name": "pandas",
+        "version": "2.1.0"
+      },
+      {
+        "name": "polars",
+        "version": "0.16.14"
+      },
+      {
+        "name": "pyarrow",
+        "version": "11.0.0"
+      },
+      {
+        "name": "rdflib",
+        "version": "7.0.0"
+      },
+      {
+        "name": "tiktoken",
+        "version": "0.5.1"
+      },
+      {
+        "name": "pykeen",
+        "version": "1.10.2"
+      },
+      {
+        "name": "psutil",
+        "version": "5.9.4"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.8.2"
+      },
+      {
+        "name": "zstandard",
+        "version": "0.21.0"
+      },
+      {
+        "name": "pytest",
+        "version": "7.2.2"
+      },
+      {
+        "name": "ruff",
+        "version": "0.0.284"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.2.2"
+      },
+      {
+        "name": "sphinx",
+        "version": "7.2.6"
+      },
+      {
+        "name": "sphinx-autoapi",
+        "version": "3.0.0"
+      },
+      {
+        "name": "myst-parser",
+        "version": "2.0.0"
+      },
+      {
+        "name": "sphinx_rtd_theme",
+        "version": "2.0.0"
+      },
+      {
+        "name": "sphinx-theme",
+        "version": "1.0"
+      },
+      {
+        "name": "sphinxcontrib-plantuml",
+        "version": "0.27"
+      },
+      {
+        "name": "plantuml-local-client",
+        "version": "1.2022.6"
+      },
+      {
+        "name": "dice-embeddings",
+        "version": "latest"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Freebase",
+        "format": "RDF",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Wikitext-2",
+        "format": "text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Kronecker Decomposition (KD)",
+        "description": "A technique to reduce the number of parameters in a knowledge graph embedding model by splitting large embedding matrices into smaller ones during training."
+      },
+      {
+        "name": "Link Prediction",
+        "description": "The task of predicting whether a triple is likely to be true in a knowledge graph."
+      },
+      {
+        "name": "Label Smoothing (LS)",
+        "description": "An implicit calibration method that transforms probability distributions to less extreme ones to improve robustness."
+      },
+      {
+        "name": "Label Relaxation (LR)",
+        "description": "A generalization of label smoothing that models the target as a credal set of candidate probability distributions."
+      },
+      {
+        "name": "1vsAll",
+        "description": "A training strategy where for each positive triple, all possible tail perturbed triples are considered as negative examples."
+      },
+      {
+        "name": "KvsAll",
+        "description": "A training strategy that constructs multi-label binary vectors for each head-relation pair."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Caglar Demir",
+        "affiliation": "Paderborn University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Julian Lienen",
+        "affiliation": "Paderborn University",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Axel-Cyrille Ngonga Ngomo",
+        "affiliation": "Paderborn University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Paderborn University"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "embedding_size",
+        "value": "200",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "smoothing_parameter_alpha",
+        "value": "0.1",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "null",
+        "cuda": "null",
+        "ram": "33 GB"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "MRR",
+        "value": "0.1",
+        "split": "test",
+        "dataset": "benchmark"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Software Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "python",
+          "torch"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "dice-embeddings"
+        ]
+      },
+      {
+        "name": "Model Training",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [
+          "torch",
+          "lightning"
+        ],
+        "dataset_used": [
+          "Freebase"
+        ],
+        "dataset_produced": [
+          "pre-trained models"
+        ]
+      },
+      {
+        "name": "Link Prediction Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "pykeen"
+        ],
+        "dataset_used": [
+          "Freebase"
+        ],
+        "dataset_produced": [
+          "Evaluation Results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Model Training",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "Kronecker Decomposition (KD)"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "embedding_size"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "executedIn",
+      "object": "Linux"
+    },
+    {
+      "subject": "Link Prediction Evaluation",
+      "predicate": "generatesResult",
+      "object": "MRR"
+    },
+    {
+      "subject": "Link Prediction Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    },
+    {
+      "subject": "dice-embeddings",
+      "predicate": "softwareDependency",
+      "object": "torch"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

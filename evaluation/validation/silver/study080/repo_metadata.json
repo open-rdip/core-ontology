@@ -1,0 +1,953 @@
+{
+  "study_id": "study080",
+  "repo_url": "https://github.com/real-stanford/cow",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "_libgcc_mutex",
+        "version": "main"
+      },
+      {
+        "name": "_openmp_mutex",
+        "version": "1_gnu"
+      },
+      {
+        "name": "attrs",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "brotli",
+        "version": "he6710b0_2"
+      },
+      {
+        "name": "bzip2",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "c-ares",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "ca-certificates",
+        "version": "ha878542_0"
+      },
+      {
+        "name": "certifi",
+        "version": "py37h89c1867_0"
+      },
+      {
+        "name": "cmake",
+        "version": "h52cb24c_0"
+      },
+      {
+        "name": "cycler",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "dbus",
+        "version": "hb2f20db_0"
+      },
+      {
+        "name": "expat",
+        "version": "h295c915_0"
+      },
+      {
+        "name": "ffmpeg",
+        "version": "hf484d3e_0"
+      },
+      {
+        "name": "fontconfig",
+        "version": "h6c09931_0"
+      },
+      {
+        "name": "fonttools",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "freetype",
+        "version": "h70c0345_0"
+      },
+      {
+        "name": "giflib",
+        "version": "h7b6447c_0"
+      },
+      {
+        "name": "gitdb",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "gitpython",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "glib",
+        "version": "h4ff587b_1"
+      },
+      {
+        "name": "gmp",
+        "version": "h295c915_3"
+      },
+      {
+        "name": "gnutls",
+        "version": "he1e5248_0"
+      },
+      {
+        "name": "gst-plugins-base",
+        "version": "hbbd80ab_1"
+      },
+      {
+        "name": "gstreamer",
+        "version": "h28cd5cc_2"
+      },
+      {
+        "name": "habitat-sim",
+        "version": "0.2.1"
+      },
+      {
+        "name": "headless",
+        "version": ""
+      },
+      {
+        "name": "icu",
+        "version": "he6710b0_3"
+      },
+      {
+        "name": "imageio",
+        "version": "pyhcf75d05_0"
+      },
+      {
+        "name": "imageio-ffmpeg",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "jbig",
+        "version": "h7f98852_2003"
+      },
+      {
+        "name": "jpeg",
+        "version": "h166bdaf_1"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "py37h7cecad7_1"
+      },
+      {
+        "name": "krb5",
+        "version": "hac12032_0"
+      },
+      {
+        "name": "lame",
+        "version": "h7f98852_1001"
+      },
+      {
+        "name": "lcms2",
+        "version": "h3be6417_0"
+      },
+      {
+        "name": "ld_impl_linux-64",
+        "version": "h1181459_1"
+      },
+      {
+        "name": "lerc",
+        "version": "h2531618_0"
+      },
+      {
+        "name": "libblas",
+        "version": "15_linux64_openblas"
+      },
+      {
+        "name": "libcblas",
+        "version": "15_linux64_openblas"
+      },
+      {
+        "name": "libcurl",
+        "version": "h0b77cf5_0"
+      },
+      {
+        "name": "libdeflate",
+        "version": "h27cfd23_5"
+      },
+      {
+        "name": "libedit",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "libev",
+        "version": "h7f8727e_1"
+      },
+      {
+        "name": "libffi",
+        "version": "he6710b0_2"
+      },
+      {
+        "name": "libgcc-ng",
+        "version": "h1234567_1"
+      },
+      {
+        "name": "libgfortran-ng",
+        "version": "h69a702a_16"
+      },
+      {
+        "name": "libgfortran5",
+        "version": "hdcd56e2_16"
+      },
+      {
+        "name": "libgomp",
+        "version": "h1234567_1"
+      },
+      {
+        "name": "libiconv",
+        "version": "h7f8727e_2"
+      },
+      {
+        "name": "libidn2",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "liblapack",
+        "version": "15_linux64_openblas"
+      },
+      {
+        "name": "libllvm11",
+        "version": "h3826bc1_1"
+      },
+      {
+        "name": "libnghttp2",
+        "version": "hce63b2e_0"
+      },
+      {
+        "name": "libopenblas",
+        "version": "h043d6bf_1"
+      },
+      {
+        "name": "libpng",
+        "version": "h21135ba_2"
+      },
+      {
+        "name": "libssh2",
+        "version": "h8f2d780_0"
+      },
+      {
+        "name": "libstdcxx-ng",
+        "version": "h1234567_1"
+      },
+      {
+        "name": "libtasn1",
+        "version": "h27cfd23_0"
+      },
+      {
+        "name": "libtiff",
+        "version": "hf544144_1"
+      },
+      {
+        "name": "libunistring",
+        "version": "h27cfd23_0"
+      },
+      {
+        "name": "libuuid",
+        "version": "h7f8727e_2"
+      },
+      {
+        "name": "libwebp",
+        "version": "h55f646e_0"
+      },
+      {
+        "name": "libwebp-base",
+        "version": "h7f98852_1"
+      },
+      {
+        "name": "libxcb",
+        "version": "h7f98852_1004"
+      },
+      {
+        "name": "libxml2",
+        "version": "h74e7548_0"
+      },
+      {
+        "name": "llvmlite",
+        "version": "py37h4ff587b_0"
+      },
+      {
+        "name": "lz4-c",
+        "version": "h9c3ff4c_1"
+      },
+      {
+        "name": "matplotlib",
+        "version": "py37h06a4308_1"
+      },
+      {
+        "name": "matplotlib-base",
+        "version": "py37ha18d171_1"
+      },
+      {
+        "name": "munkres",
+        "version": "py_0"
+      },
+      {
+        "name": "ncurses",
+        "version": "h7f8727e_2"
+      },
+      {
+        "name": "nettle",
+        "version": "hbbd107a_1"
+      },
+      {
+        "name": "numba",
+        "version": "py37h51133e4_0"
+      },
+      {
+        "name": "numpy",
+        "version": "py37h976b520_0"
+      },
+      {
+        "name": "olefile",
+        "version": "pyh9f0ad1d_1"
+      },
+      {
+        "name": "openh264",
+        "version": "h4ff587b_0"
+      },
+      {
+        "name": "openjpeg",
+        "version": "hb52868f_1"
+      },
+      {
+        "name": "openssl",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "packaging",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "pcre",
+        "version": "h295c915_0"
+      },
+      {
+        "name": "pip",
+        "version": "py37h06a4308_0"
+      },
+      {
+        "name": "pthread-stubs",
+        "version": "h36c2ea0_1001"
+      },
+      {
+        "name": "pyparsing",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "pyqt",
+        "version": "py37h05f1152_2"
+      },
+      {
+        "name": "python",
+        "version": "h12debd9_0"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "python_abi",
+        "version": "2_cp37m"
+      },
+      {
+        "name": "qt",
+        "version": "h5867ecd_1"
+      },
+      {
+        "name": "quaternion",
+        "version": "py37h540881e_0"
+      },
+      {
+        "name": "readline",
+        "version": "h7f8727e_1"
+      },
+      {
+        "name": "rhash",
+        "version": "h3c74f83_1"
+      },
+      {
+        "name": "scipy",
+        "version": "py37hf2a6cf1_0"
+      },
+      {
+        "name": "setuptools",
+        "version": "py37h06a4308_0"
+      },
+      {
+        "name": "sip",
+        "version": "py37hf484d3e_0"
+      },
+      {
+        "name": "six",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "smmap",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "sqlite",
+        "version": "hc218d9a_0"
+      },
+      {
+        "name": "tbb",
+        "version": "hd09550d_0"
+      },
+      {
+        "name": "tk",
+        "version": "h1ccaba5_0"
+      },
+      {
+        "name": "tornado",
+        "version": "py37h540881e_3"
+      },
+      {
+        "name": "tqdm",
+        "version": "py37h06a4308_0"
+      },
+      {
+        "name": "typing-extensions",
+        "version": "hd8ed1ab_1"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "pyha770c72_1"
+      },
+      {
+        "name": "wheel",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "xorg-fixesproto",
+        "version": "h7f98852_1002"
+      },
+      {
+        "name": "xorg-inputproto",
+        "version": "h7f98852_1002"
+      },
+      {
+        "name": "xorg-kbproto",
+        "version": "h7f98852_1002"
+      },
+      {
+        "name": "xorg-libx11",
+        "version": "h7f98852_0"
+      },
+      {
+        "name": "xorg-libxau",
+        "version": "h7f98852_0"
+      },
+      {
+        "name": "xorg-libxcursor",
+        "version": "h7f98852_0"
+      },
+      {
+        "name": "xorg-libxdmcp",
+        "version": "h7f98852_0"
+      },
+      {
+        "name": "xorg-libxext",
+        "version": "h7f98852_1"
+      },
+      {
+        "name": "xorg-libxfixes",
+        "version": "h7f98852_1004"
+      },
+      {
+        "name": "xorg-libxi",
+        "version": "h7f98852_0"
+      },
+      {
+        "name": "xorg-libxinerama",
+        "version": "h9c3ff4c_1001"
+      },
+      {
+        "name": "xorg-libxrandr",
+        "version": "h7f98852_1"
+      },
+      {
+        "name": "xorg-libxrender",
+        "version": "h7f98852_1003"
+      },
+      {
+        "name": "xorg-randrproto",
+        "version": "h7f98852_1001"
+      },
+      {
+        "name": "xorg-renderproto",
+        "version": "h7f98852_1002"
+      },
+      {
+        "name": "xorg-xextproto",
+        "version": "h7f98852_1002"
+      },
+      {
+        "name": "xorg-xproto",
+        "version": "h27cfd23_1007"
+      },
+      {
+        "name": "xz",
+        "version": "h7f8727e_1"
+      },
+      {
+        "name": "zlib",
+        "version": "h7f8727e_2"
+      },
+      {
+        "name": "zstd",
+        "version": "ha4553b6_0"
+      },
+      {
+        "name": "absl-py",
+        "version": "1.1.0"
+      },
+      {
+        "name": "ai2thor",
+        "version": "4.3.0"
+      },
+      {
+        "name": "aiohttp",
+        "version": "3.8.1"
+      },
+      {
+        "name": "aiosignal",
+        "version": "1.2.0"
+      },
+      {
+        "name": "allenact",
+        "version": "0.5.1"
+      },
+      {
+        "name": "allenact-plugins",
+        "version": "0.5.1"
+      },
+      {
+        "name": "astunparse",
+        "version": "1.6.3"
+      },
+      {
+        "name": "async-timeout",
+        "version": "4.0.2"
+      },
+      {
+        "name": "asynctest",
+        "version": "0.13.0"
+      },
+      {
+        "name": "aws-requests-auth",
+        "version": "0.4.3"
+      },
+      {
+        "name": "botocore",
+        "version": "1.27.18"
+      },
+      {
+        "name": "box2d-py",
+        "version": "2.3.8"
+      },
+      {
+        "name": "cachetools",
+        "version": "5.2.0"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "2.0.12"
+      },
+      {
+        "name": "click",
+        "version": "8.1.3"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "1.6.0"
+      },
+      {
+        "name": "colour",
+        "version": "0.1.5"
+      },
+      {
+        "name": "datasets",
+        "version": "2.3.2"
+      },
+      {
+        "name": "decorator",
+        "version": "4.4.2"
+      },
+      {
+        "name": "dill",
+        "version": "0.3.5.1"
+      },
+      {
+        "name": "docker-pycreds",
+        "version": "0.4.0"
+      },
+      {
+        "name": "filelock",
+        "version": "3.7.1"
+      },
+      {
+        "name": "flask",
+        "version": "2.1.2"
+      },
+      {
+        "name": "flatbuffers",
+        "version": "1.12"
+      },
+      {
+        "name": "frozenlist",
+        "version": "1.3.0"
+      },
+      {
+        "name": "fsspec",
+        "version": "2022.5.0"
+      },
+      {
+        "name": "ftfy",
+        "version": "6.1.1"
+      },
+      {
+        "name": "gast",
+        "version": "0.4.0"
+      },
+      {
+        "name": "google-auth",
+        "version": "2.8.0"
+      },
+      {
+        "name": "google-auth-oauthlib",
+        "version": "0.4.6"
+      },
+      {
+        "name": "google-pasta",
+        "version": "0.2.0"
+      },
+      {
+        "name": "grpcio",
+        "version": "1.47.0"
+      },
+      {
+        "name": "gym",
+        "version": "0.19.0"
+      },
+      {
+        "name": "gym-minigrid",
+        "version": "1.0.3"
+      },
+      {
+        "name": "gym-notices",
+        "version": "0.0.8"
+      },
+      {
+        "name": "h5py",
+        "version": "3.7.0"
+      },
+      {
+        "name": "huggingface-hub",
+        "version": "0.8.1"
+      },
+      {
+        "name": "idna",
+        "version": "3.3"
+      },
+      {
+        "name": "importlib-metadata",
+        "version": "4.12.0"
+      },
+      {
+        "name": "itsdangerous",
+        "version": "2.1.2"
+      },
+      {
+        "name": "jinja2",
+        "version": "3.1.2"
+      },
+      {
+        "name": "jmespath",
+        "version": "1.0.1"
+      },
+      {
+        "name": "joblib",
+        "version": "1.1.0"
+      },
+      {
+        "name": "keras",
+        "version": "2.9.0"
+      },
+      {
+        "name": "keras-preprocessing",
+        "version": "1.1.2"
+      },
+      {
+        "name": "libclang",
+        "version": "14.0.1"
+      },
+      {
+        "name": "markdown",
+        "version": "3.3.7"
+      },
+      {
+        "name": "markupsafe",
+        "version": "2.1.1"
+      },
+      {
+        "name": "moviepy",
+        "version": "1.0.3"
+      },
+      {
+        "name": "msgpack",
+        "version": "1.0.4"
+      },
+      {
+        "name": "multidict",
+        "version": "6.0.2"
+      },
+      {
+        "name": "multiprocess",
+        "version": "0.70.13"
+      },
+      {
+        "name": "networkx",
+        "version": "2.6.3"
+      },
+      {
+        "name": "oauthlib",
+        "version": "3.2.0"
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.6.0.66"
+      },
+      {
+        "name": "opt-einsum",
+        "version": "3.3.0"
+      },
+      {
+        "name": "pandas",
+        "version": "1.3.5"
+      },
+      {
+        "name": "pathtools",
+        "version": "0.1.2"
+      },
+      {
+        "name": "patsy",
+        "version": "0.5.2"
+      },
+      {
+        "name": "pickle5",
+        "version": "0.0.12"
+      },
+      {
+        "name": "pillow",
+        "version": "8.4.0"
+      },
+      {
+        "name": "proglog",
+        "version": "0.1.10"
+      },
+      {
+        "name": "progressbar2",
+        "version": "4.0.0"
+      },
+      {
+        "name": "promise",
+        "version": "2.3"
+      },
+      {
+        "name": "protobuf",
+        "version": "3.19.4"
+      },
+      {
+        "name": "psutil",
+        "version": "5.9.1"
+      },
+      {
+        "name": "pyarrow",
+        "version": "8.0.0"
+      },
+      {
+        "name": "pyasn1",
+        "version": "0.4.8"
+      },
+      {
+        "name": "pyasn1-modules",
+        "version": "0.2.8"
+      },
+      {
+        "name": "pyglet",
+        "version": "1.5.26"
+      },
+      {
+        "name": "pyquaternion",
+        "version": "0.9.9"
+      },
+      {
+        "name": "python-utils",
+        "version": "3.3.3"
+      },
+      {
+        "name": "python-xlib",
+        "version": "0.31"
+      },
+      {
+        "name": "pytz",
+        "version": "2022.1"
+      },
+      {
+        "name": "pyyaml",
+        "version": "6.0"
+      },
+      {
+        "name": "regex",
+        "version": "2022.6.2"
+      },
+      {
+        "name": "requests",
+        "version": "2.28.0"
+      },
+      {
+        "name": "requests-oauthlib",
+        "version": "1.3.1"
+      },
+      {
+        "name": "responses",
+        "version": "0.18.0"
+      },
+      {
+        "name": "rsa",
+        "version": "4.8"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.0.2"
+      },
+      {
+        "name": "sentry-sdk",
+        "version": "1.9.0"
+      },
+      {
+        "name": "setproctitle",
+        "version": "1.2.3"
+      },
+      {
+        "name": "shortuuid",
+        "version": "1.0.9"
+      },
+      {
+        "name": "tensorboard",
+        "version": "2.9.1"
+      },
+      {
+        "name": "tensorboard-data-server",
+        "version": "0.6.1"
+      },
+      {
+        "name": "tensorboard-plugin-wit",
+        "version": "1.8.1"
+      },
+      {
+        "name": "tensorboardx",
+        "version": "2.5.1"
+      },
+      {
+        "name": "tensorflow",
+        "version": "2.9.1"
+      },
+      {
+        "name": "tensorflow-estimator",
+        "version": "2.9.0"
+      },
+      {
+        "name": "tensorflow-io-gcs-filesystem",
+        "version": "0.26.0"
+      },
+      {
+        "name": "termcolor",
+        "version": "1.1.0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.1.0"
+      },
+      {
+        "name": "timm",
+        "version": "0.6.7"
+      },
+      {
+        "name": "tokenizers",
+        "version": "0.12.1"
+      },
+      {
+        "name": "torch",
+        "version": "1.11.0"
+      },
+      {
+        "name": "torchaudio",
+        "version": "0.11.0"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.12.0"
+      },
+      {
+        "name": "transformers",
+        "version": "4.21.1"
+      },
+      {
+        "name": "trimesh",
+        "version": "3.14.0"
+      },
+      {
+        "name": "urllib3",
+        "version": "1.26.9"
+      },
+      {
+        "name": "wandb",
+        "version": "0.13.2"
+      },
+      {
+        "name": "wcwidth",
+        "version": "0.2.5"
+      },
+      {
+        "name": "werkzeug",
+        "version": "2.1.2"
+      },
+      {
+        "name": "wrapt",
+        "version": "1.14.1"
+      },
+      {
+        "name": "xxhash",
+        "version": "3.0.0"
+      },
+      {
+        "name": "yacs",
+        "version": "0.1.8"
+      },
+      {
+        "name": "yarl",
+        "version": "1.7.2"
+      },
+      {
+        "name": "zipp",
+        "version": "3.8.0"
+      }
+    ],
+    "source": "conda",
+    "env_name": "cow"
+  },
+  "seeds": [
+    {
+      "value": "0",
+      "file": "habitat_mp3d_runner.py",
+      "context": "seed=0"
+    }
+  ],
+  "license": "",
+  "errors": []
+}

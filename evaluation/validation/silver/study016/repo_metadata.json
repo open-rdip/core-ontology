@@ -1,0 +1,35 @@
+{
+  "study_id": "study016",
+  "repo_url": "https://github.com/avalon-benchmark/avalon",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "ubuntu:20.04 as base",
+    "os": "Ubuntu 20.04"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "0",
+      "file": "notebooks/evaluate_worlds.sync.py",
+      "context": "seed=0"
+    },
+    {
+      "value": "42",
+      "file": "notebooks/gym_interface_example.sync.py",
+      "context": "seed=42"
+    },
+    {
+      "value": "10000",
+      "file": "notebooks/create_oculus_build.sync.py",
+      "context": "seed=10000"
+    },
+    {
+      "value": "2",
+      "file": "avalon/for_humans.py",
+      "context": "seed=2"
+    }
+  ],
+  "license": "GPL",
+  "errors": []
+}

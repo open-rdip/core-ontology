@@ -1,0 +1,223 @@
+{
+  "study_id": "study044",
+  "project": {
+    "title": "Soft Thinking: Unlocking the Reasoning Potential of LLMs in Continuous Concept Space",
+    "lead_organization": "University of California, Santa Barbara",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "SGLang",
+        "version": null
+      },
+      {
+        "name": "PyTorch",
+        "version": null
+      },
+      {
+        "name": "CUDA",
+        "version": "12.4.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "GSM8K",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MATH",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "HumanEval",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MBPP",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Soft Thinking",
+        "description": "A zero-shot inference method that replaces discrete chain-of-thought tokens with weighted average embeddings (concept tokens) in a continuous space."
+      },
+      {
+        "name": "Entropy-based Early Stopping",
+        "description": "A mechanism to terminate the reasoning process when the entropy of the concept token distribution falls below a threshold."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhen Zhang",
+        "affiliation": "University of California, Santa Barbara",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Xin Eric Wang",
+        "affiliation": "University of California, Santa Cruz",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Xuehai He",
+        "affiliation": "University of California, Santa Cruz",
+        "role": "Software Engineer"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of California, Santa Barbara"
+      },
+      {
+        "name": "University of California, Santa Cruz"
+      },
+      {
+        "name": "Microsoft"
+      },
+      {
+        "name": "LMSYS Org"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "early_stopping_entropy_threshold",
+        "value": "null",
+        "type": "xsd:float"
+      },
+      {
+        "name": "early_stopping_length_threshold",
+        "value": "null",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "top-k",
+        "value": "null",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "1",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "2023",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 22.04",
+        "gpu": "NVIDIA",
+        "cuda": "12.4.1",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "accuracy",
+        "value": "up to 2.48% improvement",
+        "split": "test",
+        "dataset": "math and coding datasets"
+      },
+      {
+        "metric": "generation length reduction",
+        "value": "22.4%",
+        "split": "test",
+        "dataset": "math and coding datasets"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Soft Thinking Inference",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "SGLang",
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "GSM8K",
+          "MATH",
+          "HumanEval",
+          "MBPP"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Benchmark Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "SGLang"
+        ],
+        "dataset_used": [
+          "GSM8K",
+          "MATH"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Soft Thinking",
+      "predicate": "usedSoftware",
+      "object": "SGLang"
+    },
+    {
+      "subject": "Soft Thinking",
+      "predicate": "usedMethod",
+      "object": "Entropy-based Early Stopping"
+    },
+    {
+      "subject": "Soft Thinking Inference",
+      "predicate": "executedIn",
+      "object": "Ubuntu 22.04"
+    },
+    {
+      "subject": "Soft Thinking Inference",
+      "predicate": "hasParameter",
+      "object": "early_stopping_entropy_threshold"
+    },
+    {
+      "subject": "Benchmark Evaluation",
+      "predicate": "follows",
+      "object": "Soft Thinking Inference"
+    },
+    {
+      "subject": "Benchmark Evaluation",
+      "predicate": "generatesResult",
+      "object": "accuracy"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,275 @@
+{
+  "study_id": "study016",
+  "project": {
+    "title": "Avalon: A Benchmark for RL Generalization Using Procedurally Generated Worlds",
+    "lead_organization": "Generally Intelligent",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Godot",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "Habitat-Sim",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Avalon",
+        "format": "procedural 3D worlds",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Latent Macro Action Planner (L-MAP)",
+        "description": "A method for learning a set of temporally extended macro-actions through a state-conditional Vector Quantized Variational Autoencoder (VQ-VAE)."
+      },
+      {
+        "name": "Monte Carlo tree search (MCTS)",
+        "description": "A search algorithm used during planning to account for stochasticity in the environment and behavior policy."
+      },
+      {
+        "name": "Procedural generation",
+        "description": "A method for creating diverse 3D worlds where tasks are differentiated by altering the environment."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Joshua Albrecht",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Abraham J. Fetterman",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Bryden Fogelman",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ellie Kitanidis",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Bartosz Wróblewski",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Nicole Seo",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Michael Rosenthal",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Maksis Knutins",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Zachary Polizzi",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "James B. Simon",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Kanjun Qiu",
+        "affiliation": "Generally Intelligent",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Generally Intelligent"
+      },
+      {
+        "name": "Vanderbilt University"
+      },
+      {
+        "name": "Pennsylvania State University"
+      },
+      {
+        "name": "Nissan Advanced Technology Center"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Cfall",
+        "value": "0.00002",
+        "type": "xsd:float"
+      },
+      {
+        "name": "Cmove",
+        "value": "0",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "MCTS iterations",
+        "value": "100",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "alpha",
+        "value": "0.1",
+        "type": "xsd:float"
+      },
+      {
+        "name": "epsilon",
+        "value": "1",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "10000",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "2",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 20.04",
+        "gpu": "2080TI",
+        "cuda": "null",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "steps per second",
+        "value": "2,880",
+        "split": "test",
+        "dataset": "Small GLES2 (basic)"
+      },
+      {
+        "metric": "steps per second",
+        "value": "11,730",
+        "split": "test",
+        "dataset": "Small GLES2 (basic) multi-process"
+      },
+      {
+        "metric": "optimality gap score",
+        "value": "0.71",
+        "split": "test",
+        "dataset": "eat (MT-TB)"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "World Generation",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [
+          "Godot"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Avalon"
+        ]
+      },
+      {
+        "name": "RL Agent Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "Godot"
+        ],
+        "dataset_used": [
+          "Avalon"
+        ],
+        "dataset_produced": [
+          "Trained RL Agents"
+        ]
+      },
+      {
+        "name": "Generalization Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "Godot"
+        ],
+        "dataset_used": [
+          "Trained RL Agents",
+          "Avalon"
+        ],
+        "dataset_produced": [
+          "Optimality gap scores"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Avalon",
+      "predicate": "usedMethod",
+      "object": "Procedural generation"
+    },
+    {
+      "subject": "RL Agent Training",
+      "predicate": "usedSoftware",
+      "object": "Godot"
+    },
+    {
+      "subject": "Generalization Evaluation",
+      "predicate": "generatesResult",
+      "object": "optimality gap score"
+    },
+    {
+      "subject": "RL Agent Training",
+      "predicate": "follows",
+      "object": "World Generation"
+    },
+    {
+      "subject": "Generalization Evaluation",
+      "predicate": "follows",
+      "object": "RL Agent Training"
+    },
+    {
+      "subject": "RL Agent Training",
+      "predicate": "hasParameter",
+      "object": "Cfall"
+    },
+    {
+      "subject": "Generalization Evaluation",
+      "predicate": "executedIn",
+      "object": "Ubuntu 20.04"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

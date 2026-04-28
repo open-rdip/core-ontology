@@ -1,0 +1,223 @@
+{
+  "study_id": "study021",
+  "project": {
+    "title": "Semantic Diversity-aware Prototype-based Learning for Unbiased Scene Graph Generation",
+    "lead_organization": "Korea Advanced Institute of Science and Technology (KAIST)",
+    "funding": "National Research Foundation of Korea (NRF) grant (2022R1A2C1004172), IITP grant (2021-0-01343, 2022-0-00959)"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "PyTorch",
+        "version": "1.10.0"
+      },
+      {
+        "name": "CUDA",
+        "version": "11.3"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Visual Genome",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "GQA",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Semantic Diversity-aware Prototype-based Learning (DPL)",
+        "description": "A framework that learns regions in the semantic space covered by each predicate to distinguish among various semantics and achieve unbiased scene graph generation."
+      },
+      {
+        "name": "Probabilistic Prototype Sampling",
+        "description": "A method to represent the semantic diversity of a predicate by sampling from a distribution in the semantic space."
+      },
+      {
+        "name": "Prototype-based Semantic Decoupling",
+        "description": "A technique to distinguish different semantics of a single predicate using multiple prototypes."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Jaehyeong Jeon",
+        "affiliation": "Korea Advanced Institute of Science and Technology (KAIST)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Kibum Kim",
+        "affiliation": "Korea Advanced Institute of Science and Technology (KAIST)",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Kanghoon Yoon",
+        "affiliation": "Korea Advanced Institute of Science and Technology (KAIST)",
+        "role": "Data Collector"
+      },
+      {
+        "name": "Chanyoung Park",
+        "affiliation": "Korea Advanced Institute of Science and Technology (KAIST)",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Korea Advanced Institute of Science and Technology (KAIST)"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "1e-3",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "12",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "16",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "weight_decay",
+        "value": "1e-4",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "666",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 16.04",
+        "gpu": "NVIDIA RTX 3090",
+        "cuda": "11.3",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mR@50",
+        "value": "18.3",
+        "split": "test",
+        "dataset": "Visual Genome"
+      },
+      {
+        "metric": "mR@100",
+        "value": "21.6",
+        "split": "test",
+        "dataset": "Visual Genome"
+      },
+      {
+        "metric": "mR@50",
+        "value": "13.6",
+        "split": "test",
+        "dataset": "GQA"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Implementation",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Training",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "Visual Genome",
+          "GQA"
+        ],
+        "dataset_produced": [
+          "Trained DPL weights"
+        ]
+      },
+      {
+        "name": "Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "Visual Genome",
+          "GQA",
+          "Trained DPL weights"
+        ],
+        "dataset_produced": [
+          "SGG performance metrics"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "DPL",
+      "predicate": "usedMethod",
+      "object": "Probabilistic Prototype Sampling"
+    },
+    {
+      "subject": "DPL",
+      "predicate": "usedMethod",
+      "object": "Prototype-based Semantic Decoupling"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "batch_size"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "executedIn",
+      "object": "Ubuntu 16.04"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "generatesResult",
+      "object": "mR@50"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "follows",
+      "object": "Implementation"
+    },
+    {
+      "subject": "Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

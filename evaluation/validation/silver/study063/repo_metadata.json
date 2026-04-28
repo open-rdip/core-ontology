@@ -1,0 +1,222 @@
+{
+  "study_id": "study063",
+  "repo_url": "https://github.com/k2-fsa/icefall",
+  "software_dependencies": [
+    {
+      "name": "kaldifst",
+      "version": "1.7.0",
+      "constraint": ">",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "kaldilm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "kaldialign",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "num2words",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "kaldi-decoder",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.1.96",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pypinyin",
+      "version": "0.50.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "typeguard",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dill",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "onnx",
+      "version": "1.15.0",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.16.3",
+      "constraint": ">=",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "onnxoptimizer",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "onnxsim",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "onnxconverter_common",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "black",
+      "version": "22.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "isort",
+      "version": "5.10.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "flake8",
+      "version": "5.0.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pycantonese",
+      "version": "3.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "packaging",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "10",
+      "file": "egs/multi_zh-hans/ASR/zipformer/scaling.py",
+      "context": "seed = 10"
+    },
+    {
+      "value": "20220727",
+      "file": "egs/multi_zh-hans/ASR/zipformer/onnx_check.py",
+      "context": "torch.manual_seed(20220727"
+    },
+    {
+      "value": "42",
+      "file": "egs/multi_ja_en/ASR/local/compute_fbank_reazonspeech.py",
+      "context": "SEED = 42"
+    },
+    {
+      "value": "1234",
+      "file": "egs/ljspeech/TTS/matcha/hifigan/meldataset.py",
+      "context": "random.seed(1234"
+    },
+    {
+      "value": "20230207",
+      "file": "egs/commonvoice/ASR/pruned_transducer_stateless7_streaming/onnx_check.py",
+      "context": "torch.manual_seed(20230207"
+    },
+    {
+      "value": "0",
+      "file": "egs/commonvoice/ASR/pruned_transducer_stateless7_streaming/export.py",
+      "context": "torch.manual_seed(0"
+    },
+    {
+      "value": "20211105",
+      "file": "egs/mgb2/ASR/conformer_ctc/test_label_smoothing.py",
+      "context": "torch.manual_seed(20211105"
+    },
+    {
+      "value": "20220410",
+      "file": "egs/librispeech/ASR/conv_emformer_transducer_stateless2/streaming_decode.py",
+      "context": "torch.manual_seed(20220410"
+    },
+    {
+      "value": "20220730",
+      "file": "egs/librispeech/ASR/lstm_transducer_stateless3/test_scaling_converter.py",
+      "context": "torch.manual_seed(20220730"
+    },
+    {
+      "value": "20220810",
+      "file": "egs/librispeech/ASR/lstm_transducer_stateless3/streaming_decode.py",
+      "context": "torch.manual_seed(20220810"
+    },
+    {
+      "value": "20221011",
+      "file": "egs/librispeech/ASR/pruned_transducer_stateless7/test_onnx.py",
+      "context": "torch.manual_seed(20221011"
+    },
+    {
+      "value": "20220329",
+      "file": "egs/librispeech/ASR/pruned_stateless_emformer_rnnt2/test_emformer.py",
+      "context": "torch.manual_seed(20220329"
+    },
+    {
+      "value": "20211202",
+      "file": "egs/librispeech/ASR/transducer/test_rnn.py",
+      "context": "torch.manual_seed(20211202"
+    },
+    {
+      "value": "20220216",
+      "file": "egs/librispeech/ASR/transducer_stateless_multi_datasets/test_asr_datamodule.py",
+      "context": "seed = 20220216"
+    },
+    {
+      "value": "666",
+      "file": "egs/wenetspeech4tts/TTS/f5-tts/infer.py",
+      "context": "random.seed(666"
+    },
+    {
+      "value": "20211122",
+      "file": "icefall/rnn_lm/test_model.py",
+      "context": "torch.manual_seed(20211122"
+    },
+    {
+      "value": "20230420",
+      "file": "icefall/rnn_lm/check-onnx.py",
+      "context": "torch.manual_seed(20230420"
+    },
+    {
+      "value": "20230423",
+      "file": "icefall/rnn_lm/check-onnx-streaming.py",
+      "context": "torch.manual_seed(20230423"
+    }
+  ],
+  "license": "Apache-2.0",
+  "errors": []
+}

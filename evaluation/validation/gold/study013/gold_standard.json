@@ -1,0 +1,293 @@
+{
+  "study_id": "study013",
+  "project": {
+    "title": "The Cells Out of Sample (COOS) dataset and benchmarks for measuring out-of-sample generalization of image classifiers",
+    "lead_organization": "University of Toronto",
+    "funding": "CIFAR AI Chair, and the Baidu Scholarship Program 2019"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "alembic",
+        "version": "1.0.8"
+      },
+      {
+        "name": "amqp",
+        "version": "2.4.2"
+      },
+      {
+        "name": "celery",
+        "version": "4.1.1"
+      },
+      {
+        "name": "elasticsearch",
+        "version": "7.0.5"
+      },
+      {
+        "name": "YeastSpotter",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COOS-7",
+        "format": "tiff",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      },
+      {
+        "name": "Training",
+        "format": "tiff",
+        "access": "open",
+        "role": "used",
+        "derived_from": "COOS-7"
+      },
+      {
+        "name": "Test1",
+        "format": "tiff",
+        "access": "open",
+        "role": "used",
+        "derived_from": "COOS-7"
+      },
+      {
+        "name": "Test2",
+        "format": "tiff",
+        "access": "open",
+        "role": "used",
+        "derived_from": "COOS-7"
+      },
+      {
+        "name": "Test3",
+        "format": "tiff",
+        "access": "open",
+        "role": "used",
+        "derived_from": "COOS-7"
+      },
+      {
+        "name": "Test4",
+        "format": "tiff",
+        "access": "open",
+        "role": "used",
+        "derived_from": "COOS-7"
+      },
+      {
+        "name": "CIFAR",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "ImageNet",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Raw microscopy images",
+        "format": "tiff",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Supervised deep CNN",
+        "description": "End-to-end classification using a supervised deep convolutional neural network."
+      },
+      {
+        "name": "Self-supervised CNN",
+        "description": "A method using representations learned from a self-supervised convolutional neural network."
+      },
+      {
+        "name": "Transferred neural network features",
+        "description": "Classification using features transferred from pre-trained neural networks."
+      },
+      {
+        "name": "YeastSpotter segmentation",
+        "description": "A trained mask-RCNN used to segment nucleus channels into individual cell crops."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Alex X. Lu",
+        "affiliation": "University of Toronto",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Wiebke Schormann",
+        "affiliation": "Sunnybrook Research Institute",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "David W. Andrews",
+        "affiliation": "Sunnybrook Research Institute",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Amy X. Lu",
+        "affiliation": "University of Toronto",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Marzyeh Ghassemi",
+        "affiliation": "University of Toronto",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Alan M. Moses",
+        "affiliation": "University of Toronto",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Toronto"
+      },
+      {
+        "name": "Sunnybrook Research Institute"
+      },
+      {
+        "name": "Vector Institute"
+      },
+      {
+        "name": "CAGEF"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "image_size",
+        "value": "64x64",
+        "type": "xsd:string"
+      },
+      {
+        "name": "bit_depth",
+        "value": "16-bit",
+        "type": "xsd:string"
+      },
+      {
+        "name": "num_classes",
+        "value": "7",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "total_images",
+        "value": "132,209",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "null",
+        "cuda": "null",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "accuracy",
+        "value": "0.990",
+        "split": "test",
+        "dataset": "Test1"
+      },
+      {
+        "metric": "accuracy",
+        "value": "0.979",
+        "split": "test",
+        "dataset": "Test3"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Collection",
+        "type": "DataCollectionActivity",
+        "order": 1,
+        "software_used": [
+          "PerkinElmer OPERA® QHS"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Raw microscopy images"
+        ]
+      },
+      {
+        "name": "Image Processing",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [
+          "YeastSpotter"
+        ],
+        "dataset_used": [
+          "Raw microscopy images"
+        ],
+        "dataset_produced": [
+          "COOS-7"
+        ]
+      },
+      {
+        "name": "Benchmarking",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "Training",
+          "Test1",
+          "Test2",
+          "Test3",
+          "Test4"
+        ],
+        "dataset_produced": [
+          "Evaluation results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "COOS-7",
+      "predicate": "derivedFrom",
+      "object": "Raw microscopy images"
+    },
+    {
+      "subject": "Test1",
+      "predicate": "derivedFrom",
+      "object": "COOS-7"
+    },
+    {
+      "subject": "Test4",
+      "predicate": "derivedFrom",
+      "object": "COOS-7"
+    },
+    {
+      "subject": "Image Processing",
+      "predicate": "usedSoftware",
+      "object": "YeastSpotter"
+    },
+    {
+      "subject": "Benchmarking",
+      "predicate": "usedMethod",
+      "object": "Supervised deep CNN"
+    },
+    {
+      "subject": "Benchmarking",
+      "predicate": "generatesResult",
+      "object": "accuracy"
+    },
+    {
+      "subject": "Benchmarking",
+      "predicate": "follows",
+      "object": "Image Processing"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

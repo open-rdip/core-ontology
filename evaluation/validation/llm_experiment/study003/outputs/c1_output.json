@@ -1,0 +1,224 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "MMDetection",
+        "version": "not specified"
+      },
+      {
+        "name": "LabelMe",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COD10K-D",
+        "format": "Bounding box and class labels",
+        "access": "https://github.com/zhimengXin/RCOD"
+      },
+      {
+        "name": "NC4K-D",
+        "format": "Bounding box and class labels",
+        "access": "https://github.com/zhimengXin/RCOD"
+      },
+      {
+        "name": "CAMO-D",
+        "format": "Bounding box and class labels",
+        "access": "https://github.com/zhimengXin/RCOD"
+      },
+      {
+        "name": "COD10K-v2",
+        "format": "Mask labels (segmentation)",
+        "access": "Public"
+      },
+      {
+        "name": "NC4K",
+        "format": "Mask labels (segmentation)",
+        "access": "Public"
+      },
+      {
+        "name": "CAMO",
+        "format": "Mask labels (segmentation)",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Camouflage-Aware Feature Refinement (CAFR)"
+      },
+      {
+        "name": "Adaptive Gradient Propagation (AGP) module"
+      },
+      {
+        "name": "Sparse Feature Refinement (SFR) module"
+      },
+      {
+        "name": "Grounding DINO (GDino)"
+      },
+      {
+        "name": "GLIP"
+      },
+      {
+        "name": "YOLO-World"
+      },
+      {
+        "name": "Faster R-CNN"
+      },
+      {
+        "name": "Deformable DETR"
+      },
+      {
+        "name": "Swin Transformer (feature extractor)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhimeng Xin",
+        "role": "Author (Huazhong University of Science and Technology)"
+      },
+      {
+        "name": "Tianxu Wu",
+        "role": "Author"
+      },
+      {
+        "name": "Shiming Chen",
+        "role": "Author"
+      },
+      {
+        "name": "Shuo Ye",
+        "role": "Author"
+      },
+      {
+        "name": "Zijing Xie",
+        "role": "Author"
+      },
+      {
+        "name": "Yixiong Zou",
+        "role": "Author"
+      },
+      {
+        "name": "Xinge You",
+        "role": "Author"
+      },
+      {
+        "name": "Yufei Guo",
+        "role": "Author (Intelligent Science and Technology Academy of CASIC)"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Huazhong University of Science and Technology"
+      },
+      {
+        "name": "Intelligent Science and Technology Academy of CASIC"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Initial learning rate",
+        "value": "0.0003"
+      },
+      {
+        "name": "Momentum",
+        "value": "0.05"
+      },
+      {
+        "name": "SFR crop size (W, H)",
+        "value": "200, 200"
+      },
+      {
+        "name": "SFR grid options",
+        "value": "2x2, 3x3, 4x4"
+      },
+      {
+        "name": "Optimizer",
+        "value": "AdamW"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "Number of random seed groups",
+        "value": "10"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "used (implied by additional usage note)",
+        "cuda": "used (mentioned in offline/online implementation comparison)"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mAP",
+        "value": "not explicitly listed in text for final model (referenced in Table IV)",
+        "split": "Test set"
+      },
+      {
+        "metric": "FLOPs (GDino + CAFR Swin-L)",
+        "value": "524.68 G",
+        "split": "Inference"
+      },
+      {
+        "metric": "Parameters (GDino + CAFR Swin-L)",
+        "value": "222 M",
+        "split": "N/A"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Dataset Annotation",
+        "type": "Data Preparation"
+      },
+      {
+        "name": "Model Fine-tuning with AGP",
+        "type": "Training"
+      },
+      {
+        "name": "Synthetic Data Generation with SFR",
+        "type": "Data Augmentation"
+      },
+      {
+        "name": "Quantitative Comparison with Segmentation",
+        "type": "Evaluation"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "CAFR",
+      "predicate": "incorporates",
+      "object": "AGP module"
+    },
+    {
+      "subject": "CAFR",
+      "predicate": "incorporates",
+      "object": "SFR module"
+    },
+    {
+      "subject": "COD10K-D",
+      "predicate": "derived from",
+      "object": "COD10K-v2"
+    },
+    {
+      "subject": "NC4K-D",
+      "predicate": "derived from",
+      "object": "NC4K"
+    },
+    {
+      "subject": "CAMO-D",
+      "predicate": "derived from",
+      "object": "CAMO"
+    },
+    {
+      "subject": "AGP module",
+      "predicate": "fine-tunes",
+      "object": "Swin Transformer"
+    },
+    {
+      "subject": "Zhimeng Xin",
+      "predicate": "affiliated with",
+      "object": "Huazhong University of Science and Technology"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "study_id": "study019",
+  "project": {
+    "title": "Res2Net: A New Multi-scale Backbone Architecture",
+    "lead_organization": "Nankai University",
+    "funding": "Major Project of NSFC (61632011), NSFC (61922046), and Tianjin Natural Science Foundation (18ZXZNGX00110)"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "PyTorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "MMDetection",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "CIFAR-100",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "ImageNet",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MS COCO",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "PASCAL VOC",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "DUTS",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Res2Net",
+        "description": "A novel building block for CNNs that constructs hierarchical residual-like connections within a single residual block to represent multi-scale features at a granular level."
+      },
+      {
+        "name": "Structural Re-parameterization",
+        "description": "A technique used to decouple the training-time multi-branch topology from the inference-time plain body."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Shang-Hua Gao",
+        "affiliation": "Nankai University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ming-Ming Cheng",
+        "affiliation": "Nankai University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Kai Zhao",
+        "affiliation": "Nankai University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Xin-Yu Zhang",
+        "affiliation": "Nankai University",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Ming-Hsuan Yang",
+        "affiliation": "University of California, Merced",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Philip Torr",
+        "affiliation": "Oxford University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Nankai University"
+      },
+      {
+        "name": "University of California, Merced"
+      },
+      {
+        "name": "Oxford University"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "0.1",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "256",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.0001",
+        "type": "xsd:float"
+      },
+      {
+        "name": "momentum",
+        "value": "0.9",
+        "type": "xsd:float"
+      },
+      {
+        "name": "num_epochs",
+        "value": "100",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "4 NVIDIA Titan Xp GPUs",
+        "cuda": "exact version not specified",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "top-1 error",
+        "value": "20.81",
+        "split": "val",
+        "dataset": "ImageNet"
+      },
+      {
+        "metric": "mAP",
+        "value": "39.2",
+        "split": "val",
+        "dataset": "MS COCO"
+      },
+      {
+        "metric": "F-measure",
+        "value": "0.884",
+        "split": "test",
+        "dataset": "DUTS"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Software Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "PyTorch",
+          "MMDetection"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Training",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "ImageNet",
+          "CIFAR-100"
+        ],
+        "dataset_produced": [
+          "Trained Res2Net weights"
+        ]
+      },
+      {
+        "name": "Downstream Task Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "MMDetection"
+        ],
+        "dataset_used": [
+          "MS COCO",
+          "Trained Res2Net weights"
+        ],
+        "dataset_produced": [
+          "Evaluation results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Res2Net",
+      "predicate": "usedSoftware",
+      "object": "PyTorch"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "batch_size"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "executedIn",
+      "object": "4 NVIDIA Titan Xp GPUs"
+    },
+    {
+      "subject": "Downstream Task Evaluation",
+      "predicate": "generatesResult",
+      "object": "mAP"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "follows",
+      "object": "Software Development"
+    },
+    {
+      "subject": "Downstream Task Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

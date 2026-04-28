@@ -1,0 +1,521 @@
+{
+  "study_id": "study059",
+  "repo_url": "https://github.com/raipranav/fcl-fedseit",
+  "software_dependencies": [
+    {
+      "name": "absl-py",
+      "version": "0.14.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "alembic",
+      "version": "1.4.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "astunparse",
+      "version": "1.6.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cachetools",
+      "version": "4.2.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "certifi",
+      "version": "2021.5.30",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "2.0.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "click",
+      "version": "7.1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cloudpickle",
+      "version": "2.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cycler",
+      "version": "0.10.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "databricks-cli",
+      "version": "0.15.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "docker",
+      "version": "5.0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "entrypoints",
+      "version": "0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask",
+      "version": "1.1.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Flask-SocketIO",
+      "version": "4.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "flatbuffers",
+      "version": "1.12",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "gast",
+      "version": "0.3.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "gensim",
+      "version": "4.1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "gitdb",
+      "version": "4.0.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "GitPython",
+      "version": "3.1.24",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "google-auth",
+      "version": "1.35.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "google-auth-oauthlib",
+      "version": "0.4.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "google-pasta",
+      "version": "0.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "greenlet",
+      "version": "1.1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "grpcio",
+      "version": "1.32.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "gunicorn",
+      "version": "20.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "h5py",
+      "version": "2.10.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "idna",
+      "version": "3.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "itsdangerous",
+      "version": "1.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Jinja2",
+      "version": "2.11.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "joblib",
+      "version": "1.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Keras-Preprocessing",
+      "version": "1.1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.3.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Mako",
+      "version": "1.1.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Markdown",
+      "version": "3.3.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "2.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.3.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "mlflow",
+      "version": "1.14.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.19.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "oauthlib",
+      "version": "3.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "opt-einsum",
+      "version": "3.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "1.2.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Pillow",
+      "version": "8.3.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "prometheus-client",
+      "version": "0.11.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "prometheus-flask-exporter",
+      "version": "0.18.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "protobuf",
+      "version": "3.18.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyasn1",
+      "version": "0.4.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyasn1-modules",
+      "version": "0.2.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyparsing",
+      "version": "2.4.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.8.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-editor",
+      "version": "1.0.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-engineio",
+      "version": "3.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-socketio",
+      "version": "4.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pytz",
+      "version": "2021.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "PyYAML",
+      "version": "5.4.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "querystring-parser",
+      "version": "1.2.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "requests",
+      "version": "2.26.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "requests-oauthlib",
+      "version": "1.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "rsa",
+      "version": "4.7.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "0.24.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.6.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "six",
+      "version": "1.15.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "smart-open",
+      "version": "5.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "smmap",
+      "version": "4.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "socketIO-client",
+      "version": "0.7.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "SQLAlchemy",
+      "version": "1.4.25",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sqlparse",
+      "version": "0.4.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tabulate",
+      "version": "0.8.9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard",
+      "version": "2.6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard-data-server",
+      "version": "0.6.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorboard-plugin-wit",
+      "version": "1.8.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorflow",
+      "version": "2.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorflow-addons",
+      "version": "0.12.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tensorflow-estimator",
+      "version": "2.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "termcolor",
+      "version": "1.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "1.8.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.9.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.59.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "typeguard",
+      "version": "2.12.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "3.7.4.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "urllib3",
+      "version": "1.26.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "websocket-client",
+      "version": "1.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Werkzeug",
+      "version": "1.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wrapt",
+      "version": "1.12.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "xlwt",
+      "version": "1.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

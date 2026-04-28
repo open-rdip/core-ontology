@@ -1,0 +1,160 @@
+You are an expert research metadata annotator using the RDIP ontology.
+Extract structured metadata from this research paper and its repository.
+
+══════════════════════════════════════
+PAPER METADATA
+══════════════════════════════════════
+Study ID: study031
+Title: Towards Phytoplankton Parasite Detection Using Autoencoders
+arXiv: 2303.08744
+Repository: https://github.com/boortel/ae-reconstruction-and-feature-based-ad
+
+══════════════════════════════════════
+REPOSITORY METADATA (auto-extracted)
+══════════════════════════════════════
+Software dependencies (from requirements.txt):
+  - absl-py==1.3.0
+  - albumentations==1.3.0
+  - asttokens==2.4.1
+  - astunparse==1.6.3
+  - attrs==23.2.0
+  - backcall==0.2.0
+  - beautifulsoup4==4.12.3
+  - bleach==6.1.0
+  - cachetools==5.2.0
+  - certifi==2022.9.24
+  - charset-normalizer==2.1.1
+  - contourpy==1.0.5
+  - cycler==0.11.0
+  - decorator==5.1.1
+  - defusedxml==0.7.1
+  - docopt==0.6.2
+  - executing==2.0.1
+  - fastjsonschema==2.20.0
+  - fishervector==0.1
+  - flatbuffers==22.9.24
+  - fonttools==4.37.4
+  - gast==0.4.0
+  - google-auth==2.13.0
+  - google-auth-oauthlib==0.4.6
+  - google-pasta==0.2.0
+  - grpcio==1.50.0
+  - h5py==3.7.0
+  - idna==3.4
+  - ImageHash==4.3.1
+  - imageio==2.22.2
+  - importlib-metadata==5.0.0
+  - ipython==8.12.3
+  - jedi==0.19.1
+  - Jinja2==3.1.4
+  - joblib==1.2.0
+  - jsonschema==4.23.0
+  - jsonschema-specifications==2023.12.1
+  - jupyter_client==8.6.2
+  - jupyter_core==5.7.2
+  - jupyterlab_pygments==0.3.0
+
+Conda dependencies (from environment.yml):
+  - _libgcc_mutex=main
+  - _openmp_mutex=1_gnu
+  - bzip2=h5eee18b_6
+  - ca-certificates=h06a4308_0
+  - ld_impl_linux-64=h1181459_1
+  - libffi=h6a678d5_1
+  - libgcc-ng=h1234567_1
+  - libgomp=h1234567_1
+  - libstdcxx-ng=h1234567_1
+  - libuuid=h5eee18b_0
+  - ncurses=h6a678d5_0
+  - openssl=h5eee18b_0
+  - pip=py310h06a4308_0
+  - python=h955ad1f_1
+  - readline=h5eee18b_0
+  - setuptools=py310h06a4308_0
+  - sqlite=h5eee18b_0
+  - tk=h39e8969_0
+  - tzdata=h04d1e81_0
+  - wheel=py310h06a4308_0
+  - xz=h5eee18b_1
+  - zlib=h5eee18b_1
+  - absl-py=1.3.0
+  - albumentations=1.3.0
+  - asttokens=2.4.1
+  - astunparse=1.6.3
+  - attrs=23.2.0
+  - backcall=0.2.0
+  - beautifulsoup4=4.12.3
+  - bleach=6.1.0
+
+Random seeds found in main code:
+  - seed=42 (in ModelTrainAndEval.py)
+
+Repository license: GPL
+
+══════════════════════════════════════
+PAPER TEXT
+══════════════════════════════════════
+[The paper PDF is attached separately in this conversation]
+
+══════════════════════════════════════
+EXTRACTION TASK
+══════════════════════════════════════
+
+Extract ALL of the following from the attached paper and the repository metadata above.
+Be CONSERVATIVE — only extract what is explicitly stated.
+Mark uncertain items with [UNCERTAIN].
+
+Return ONLY valid JSON in this EXACT format (no markdown fences, no explanation before or after):
+
+{
+  "study_id": "study031",
+  "project": {
+    "title": "...",
+    "lead_organization": "first author's affiliation",
+    "funding": "from acknowledgments section, or null"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {"name": "...", "version": "exact version from repo or paper"}
+    ],
+    "Dataset": [
+      {"name": "...", "format": "CSV|JSON|images|etc", "access": "open|restricted", "role": "used|produced", "derived_from": "parent dataset name or null"}
+    ],
+    "Method": [
+      {"name": "...", "description": "one sentence"}
+    ],
+    "Person": [
+      {"name": "...", "affiliation": "...", "role": "Principal Investigator|Software Engineer|Data Collector|..."}
+    ],
+    "Organization": [
+      {"name": "..."}
+    ],
+    "Parameter": [
+      {"name": "learning_rate|batch_size|num_epochs|etc", "value": "...", "type": "xsd:float|xsd:integer|xsd:string"}
+    ],
+    "RandomSeed": [
+      {"name": "random_seed", "value": "...", "source": "paper|repo"}
+    ],
+    "ComputingEnvironment": [
+      {"os": "...", "gpu": "...", "cuda": "...", "ram": "..."}
+    ],
+    "EvaluationResult": [
+      {"metric": "accuracy|F1|mAP|AUC|etc", "value": "...", "split": "test|val|train", "dataset": "dataset name"}
+    ],
+    "Activity": [
+      {"name": "descriptive name", "type": "DataCollectionActivity|DataProcessingActivity|DataProductionActivity|DataAnalysisActivity|SoftwareDevelopmentActivity", "order": 1, "software_used": ["..."], "dataset_used": ["..."], "dataset_produced": ["..."]}
+    ]
+  },
+  "relations": [
+    {"subject": "entity name", "predicate": "usedSoftware|usedDataset|generatesDataset|usedMethod|hasParameter|executedIn|generatesResult|derivedFrom|follows|softwareDependency|hasActivityRole", "object": "entity name"}
+  ]
+}
+
+IMPORTANT RULES:
+1. Software versions: prefer exact versions from repo (requirements.txt) over paper text.
+2. Include random seeds found in repo metadata above.
+3. Activities must have an ORDER field (1, 2, 3...) showing execution sequence.
+4. For each activity, list which software, datasets, and methods it uses/produces.
+5. Relations must use the EXACT predicate names listed above.
+6. Evaluation metrics: include the EXACT numeric value and which split (test/val/train).
+7. If something is not mentioned, omit it — do NOT fabricate.

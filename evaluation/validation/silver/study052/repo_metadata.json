@@ -1,0 +1,113 @@
+{
+  "study_id": "study052",
+  "repo_url": "https://github.com/nonparametric-adversarial/nonparametric",
+  "software_dependencies": [
+    {
+      "name": "tensorflow",
+      "version": "1.12.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "keras",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "autovar",
+      "version": "0.0.1a3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cleverhans",
+      "version": "3.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cvxopt",
+      "version": "1.2.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cvxpy",
+      "version": "1.0.21",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Cython",
+      "version": "0.29.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "joblib",
+      "version": "0.13.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jupyter",
+      "version": "1.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.0.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "mkdir-p",
+      "version": "0.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "mnist",
+      "version": "0.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.16.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "0.24.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "0",
+      "file": "nnattack/attacks/blackbox/blackbox_attack.py",
+      "context": "torch.manual_seed(0"
+    }
+  ],
+  "license": "",
+  "errors": []
+}

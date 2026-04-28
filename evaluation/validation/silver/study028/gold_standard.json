@@ -1,0 +1,352 @@
+{
+  "study_id": "study028",
+  "project": {
+    "title": "Anatomy-aware Self-supervised Learning for Anomaly Detection in Chest Radiographs",
+    "lead_organization": "Osaka University",
+    "funding": "Japan Society for the Promotion of Science (JSPS) KAKENHI"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "absl-py",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "aiohttp",
+        "version": "py39h7f8727e_0"
+      },
+      {
+        "name": "aiosignal",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "alabaster",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "anaconda",
+        "version": "py39_1"
+      },
+      {
+        "name": "anaconda-client",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "anaconda-project",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "anyio",
+        "version": "py39h06a4308_1"
+      },
+      {
+        "name": "appdirs",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "argh",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "argon2-cffi",
+        "version": "py39h27cfd23_1"
+      },
+      {
+        "name": "arrow",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "asn1crypto",
+        "version": "py_0"
+      },
+      {
+        "name": "astroid",
+        "version": "py39h06a4308_0"
+      },
+      {
+        "name": "astropy",
+        "version": "py39h09021b7_0"
+      },
+      {
+        "name": "async-timeout",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "async_generator",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "atomicwrites",
+        "version": "py_0"
+      },
+      {
+        "name": "attrs",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "autopep8",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "babel",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "backcall",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "backports",
+        "version": "pyhd3eb1b0_2"
+      },
+      {
+        "name": "backports.shutil_get_terminal_size",
+        "version": "pyhd3eb1b0_3"
+      },
+      {
+        "name": "beautifulsoup4",
+        "version": "pyh06a4308_0"
+      },
+      {
+        "name": "binaryornot",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "bitarray",
+        "version": "py39h7f8727e_1"
+      },
+      {
+        "name": "PyTorch",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "ChestX-ray14",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "VinDr-CXR",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "CXR-Pneumolysis",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "AnatPaste",
+        "description": "An anatomy-aware pasting augmentation tool that uses a threshold-based lung segmentation pretext task to create anomalies in normal chest radiographs for model pretraining."
+      },
+      {
+        "name": "Threshold-based Lung Segmentation",
+        "description": "A method to automatically extract lung area from chest radiographs using pixel intensity thresholds."
+      },
+      {
+        "name": "Self-supervised Learning (SSL)",
+        "description": "A training method to learn data-specific features from unlabeled data through pretext tasks."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Junya Sato",
+        "affiliation": "Osaka University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Yuki Suzuki",
+        "affiliation": "Osaka University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Tomohiro Wataya",
+        "affiliation": "Osaka University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Daiki Nishigaki",
+        "affiliation": "Osaka University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Kosuke Kita",
+        "affiliation": "Osaka University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Kazuki Yamagata",
+        "affiliation": "Osaka University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Noriyuki Tomiyama",
+        "affiliation": "Osaka University",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Shoji Kido",
+        "affiliation": "Osaka University",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Osaka University"
+      },
+      {
+        "name": "Osaka Metropolitan University"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "1e-4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "8",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "100",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "AUC",
+        "value": "92.1%",
+        "split": "test",
+        "dataset": "ChestX-ray14"
+      },
+      {
+        "metric": "AUC",
+        "value": "78.7%",
+        "split": "test",
+        "dataset": "VinDr-CXR"
+      },
+      {
+        "metric": "AUC",
+        "value": "81.9%",
+        "split": "test",
+        "dataset": "CXR-Pneumolysis"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Augmentation",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "AnatPaste"
+        ],
+        "dataset_used": [
+          "ChestX-ray14"
+        ],
+        "dataset_produced": [
+          "Augmented CXR images"
+        ]
+      },
+      {
+        "name": "Model Pretraining",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "Augmented CXR images"
+        ],
+        "dataset_produced": [
+          "Pretrained SSL model"
+        ]
+      },
+      {
+        "name": "Anomaly Detection Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "PyTorch"
+        ],
+        "dataset_used": [
+          "VinDr-CXR",
+          "CXR-Pneumolysis"
+        ],
+        "dataset_produced": [
+          "AUC metrics"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "AnatPaste",
+      "predicate": "usedMethod",
+      "object": "Threshold-based Lung Segmentation"
+    },
+    {
+      "subject": "Model Pretraining",
+      "predicate": "usedMethod",
+      "object": "Self-supervised Learning (SSL)"
+    },
+    {
+      "subject": "Model Pretraining",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Anomaly Detection Evaluation",
+      "predicate": "generatesResult",
+      "object": "AUC"
+    },
+    {
+      "subject": "Data Augmentation",
+      "predicate": "usedSoftware",
+      "object": "AnatPaste"
+    },
+    {
+      "subject": "Model Pretraining",
+      "predicate": "follows",
+      "object": "Data Augmentation"
+    },
+    {
+      "subject": "Anomaly Detection Evaluation",
+      "predicate": "follows",
+      "object": "Model Pretraining"
+    },
+    {
+      "subject": "Junya Sato",
+      "predicate": "hasActivityRole",
+      "object": "Model Pretraining"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

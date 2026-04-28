@@ -1,0 +1,173 @@
+# RDIP Triples — study017
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study017_Project a rdip:ResearchProject ;
+    rdip:title "HistoCartography: A Toolkit for Graph Analytics in Digital Pathology" ;
+    .
+
+ex:study017_Org1 a vivo:Organization ;
+    rdfs:label "IBM Research, Zurich" .
+ex:study017_Org2 a vivo:Organization ;
+    rdfs:label "EPFL, Lausanne" .
+ex:study017_Org3 a vivo:Organization ;
+    rdfs:label "ETH, Zurich" .
+ex:study017_Project rdip:hasLeadOrganization ex:study017_Org1 .
+
+ex:study017_Person1 a vivo:Person ;
+    rdfs:label "Guillaume Jaume" .
+ex:study017_Project rdip:hasParticipant ex:study017_Person1 .
+ex:study017_Person2 a vivo:Person ;
+    rdfs:label "Pushpak Pati" .
+ex:study017_Project rdip:hasParticipant ex:study017_Person2 .
+ex:study017_Person3 a vivo:Person ;
+    rdfs:label "Valentin Anklin" .
+ex:study017_Project rdip:hasParticipant ex:study017_Person3 .
+ex:study017_Person4 a vivo:Person ;
+    rdfs:label "Antonio Foncubierta" .
+ex:study017_Project rdip:hasParticipant ex:study017_Person4 .
+ex:study017_Person5 a vivo:Person ;
+    rdfs:label "Maria Gabrani" .
+ex:study017_Project rdip:hasParticipant ex:study017_Person5 .
+
+ex:study017_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "python" ;
+    rdip:version "3.9" ;
+    .
+ex:study017_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "HistoCartography" ;
+    .
+ex:study017_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "torch" ;
+    .
+ex:study017_Sw4 a rdip:SoftwareApplication ;
+    rdip:title "dgl" ;
+    .
+ex:study017_Sw5 a rdip:SoftwareApplication ;
+    rdip:title "scikit-image" ;
+    .
+ex:study017_Sw6 a rdip:SoftwareApplication ;
+    rdip:title "opencv-python" ;
+    .
+
+ex:study017_Dataset1 a dcat:Dataset ;
+    rdip:title "BRACS" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study017_Dataset2 a dcat:Dataset ;
+    rdip:title "TCGA-BRCA" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study017_Dataset3 a dcat:Dataset ;
+    rdip:title "RoI" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "restricted" ;
+    .
+ex:study017_Dataset4 a dcat:Dataset ;
+    rdip:title "WSI" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "restricted" ;
+    .
+
+ex:study017_Method1 a rdip:Method ;
+    rdip:title "Vahadane Normalization" ;
+    rdip:description "A stain normalization technique used during preprocessing to standardize the appearance of histopathology images." ;
+    .
+ex:study017_Method2 a rdip:Method ;
+    rdip:title "Macenko Normalization" ;
+    rdip:description "A method for stain normalization based on singular value decomposition of the optical density transformation." ;
+    .
+ex:study017_Method3 a rdip:Method ;
+    rdip:title "Cell Graph (CG) Construction" ;
+    rdip:description "Representing tissue by detecting nuclei as nodes and defining edges based on spatial proximity or connectivity." ;
+    .
+ex:study017_Method4 a rdip:Method ;
+    rdip:title "Tissue Graph (TG) Construction" ;
+    rdip:description "Representing tissue by detecting super-pixels or regions as nodes to capture higher-level architectural patterns." ;
+    .
+
+ex:study017_Param1 a rdip:Parameter ;
+    rdip:parameterName "k" ;
+    rdip:parameterValue "5" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study017_Param2 a rdip:Parameter ;
+    rdip:parameterName "image_size" ;
+    rdip:parameterValue "1000^2" ;
+    rdip:parameterDataType "xsd:string" ;
+    .
+ex:study017_Param3 a rdip:Parameter ;
+    rdip:parameterName "image_size" ;
+    rdip:parameterValue "2500^2" ;
+    rdip:parameterDataType "xsd:string" ;
+    .
+ex:study017_Param4 a rdip:Parameter ;
+    rdip:parameterName "image_size" ;
+    rdip:parameterValue "5000^2" ;
+    rdip:parameterDataType "xsd:string" ;
+    .
+
+ex:study017_Env1 a rdip:ComputingEnvironment ;
+    rdip:gpuModel "NVIDIA P100" ;
+    .
+ex:study017_Env2 a rdip:ComputingEnvironment ;
+    rdip:hardwareSpec "single-core POWER8 processor" ;
+    .
+
+ex:study017_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "Processing Time" ;
+    rdip:metricValue "1.77" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Tumor" ;
+    rdip:metricDataType "xsd:float" .
+ex:study017_Result2 a rdip:EvaluationResult ;
+    rdip:metricName "Processing Time" ;
+    rdip:metricValue "0.80" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Tumor" ;
+    rdip:metricDataType "xsd:float" .
+ex:study017_Result3 a rdip:EvaluationResult ;
+    rdip:metricName "Processing Time" ;
+    rdip:metricValue "186.10" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "WSI" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study017_Act1 a rdip:DataProcessingActivity ;
+    rdip:title "Preprocessing" ;
+    rdip:isPartOfProject ex:study017_Project ;
+    .
+ex:study017_Project rdip:hasActivity ex:study017_Act1 .
+ex:study017_Act2 a rdip:DataProcessingActivity ;
+    rdip:title "Graph Construction" ;
+    rdip:isPartOfProject ex:study017_Project ;
+    .
+ex:study017_Project rdip:hasActivity ex:study017_Act2 .
+ex:study017_Act3 a rdip:DataAnalysisActivity ;
+    rdip:title "Performance Benchmarking" ;
+    rdip:isPartOfProject ex:study017_Project ;
+    .
+ex:study017_Project rdip:hasActivity ex:study017_Act3 .
+
+# ═══ RELATIONS ═══
+ex:study017_Sw2 rdip:softwareDependency ex:study017_Sw3 .
+ex:study017_Sw2 rdip:softwareDependency ex:study017_Sw4 .
+ex:study017_Act1 rdip:usedMethod ex:study017_Method1 .
+ex:study017_Act2 rdip:usedMethod ex:study017_Method3 .
+ex:study017_Act3 rdip:generatesResult ex:study017_Result3 .
+ex:study017_Act2 rdip:follows ex:study017_Act1 .
+ex:study017_Act3 rdip:follows ex:study017_Act2 .
+ex:study017_Act3 rdip:executedIn ex:study017_Env1 .
+
+# ═══ END (8 resolved, 0 unresolved) ═══

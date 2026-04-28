@@ -1,0 +1,266 @@
+{
+  "study_id": "study086",
+  "project": {
+    "title": "ProFLingo: A Fingerprinting-based Intellectual Property Protection Scheme for Large Language Models",
+    "lead_organization": "Virginia Tech",
+    "funding": "National Science Foundation under grants CNS-1923718, CNS-2312151, CNS-2312152, and the Commonwealth Cyber Initiative (CCI)"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "anthropic",
+        "version": "0.25.6"
+      },
+      {
+        "name": "datasets",
+        "version": "2.18.0"
+      },
+      {
+        "name": "fschat",
+        "version": "0.2.36"
+      },
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "openai",
+        "version": "1.23.2"
+      },
+      {
+        "name": "pandas",
+        "version": "2.2.2"
+      },
+      {
+        "name": "peft",
+        "version": "0.10.0"
+      },
+      {
+        "name": "torch",
+        "version": "2.2.2"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.66.2"
+      },
+      {
+        "name": "transformers",
+        "version": "4.39.3"
+      },
+      {
+        "name": "trl",
+        "version": "0.8.4"
+      },
+      {
+        "name": "sentencepiece",
+        "version": "0.2.0"
+      },
+      {
+        "name": "accelerate",
+        "version": "0.28.0"
+      },
+      {
+        "name": "psutil",
+        "version": "5.9.8"
+      },
+      {
+        "name": "bitsandbytes",
+        "version": "0.43.1"
+      },
+      {
+        "name": "protobuf",
+        "version": "5.26.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "OpenHermes 2.5",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Fingerprinting Dataset",
+        "format": "JSON",
+        "access": "restricted",
+        "role": "produced",
+        "derived_from": "OpenHermes 2.5"
+      }
+    ],
+    "Method": [
+      {
+        "name": "ProFLingo",
+        "description": "A black-box fingerprinting-based IP protection scheme for LLMs that generates queries to elicit unique responses for establishing model ownership."
+      },
+      {
+        "name": "Fingerprint Generation",
+        "description": "Leveraging an LLM generator to create specialized queries that evoke low-probability responses from the target model."
+      },
+      {
+        "name": "Fingerprint Verification",
+        "description": "Using a hypothesis testing-based verification method to determine if a suspect model is a derivative of the original model."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Heng Jin",
+        "affiliation": "Virginia Tech",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Chaoyu Zhang",
+        "affiliation": "Virginia Tech",
+        "role": null
+      },
+      {
+        "name": "Shanghao Shi",
+        "affiliation": "Virginia Tech",
+        "role": null
+      },
+      {
+        "name": "Wenjing Lou",
+        "affiliation": "Virginia Tech",
+        "role": null
+      },
+      {
+        "name": "Y. Thomas Hou",
+        "affiliation": "Virginia Tech",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Virginia Tech"
+      },
+      {
+        "name": "National Science Foundation"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "2e-5",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "128",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "3",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": "NVIDIA A100",
+        "cuda": null,
+        "ram": "80GB"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "TPR",
+        "value": "1.0",
+        "split": "test",
+        "dataset": "Fingerprinting Dataset"
+      },
+      {
+        "metric": "FPR",
+        "value": "0.0",
+        "split": "test",
+        "dataset": "Fingerprinting Dataset"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Fingerprint Generation",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [
+          "transformers",
+          "torch"
+        ],
+        "dataset_used": [
+          "OpenHermes 2.5"
+        ],
+        "dataset_produced": [
+          "Fingerprinting Dataset"
+        ]
+      },
+      {
+        "name": "Model Fine-tuning (Attacker)",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "peft",
+          "trl"
+        ],
+        "dataset_used": [
+          "OpenHermes 2.5"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "IP Verification",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "numpy",
+          "pandas"
+        ],
+        "dataset_used": [
+          "Fingerprinting Dataset"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "ProFLingo",
+      "predicate": "usedDataset",
+      "object": "OpenHermes 2.5"
+    },
+    {
+      "subject": "Fingerprint Generation",
+      "predicate": "generatesDataset",
+      "object": "Fingerprinting Dataset"
+    },
+    {
+      "subject": "IP Verification",
+      "predicate": "generatesResult",
+      "object": "TPR"
+    },
+    {
+      "subject": "ProFLingo",
+      "predicate": "usedSoftware",
+      "object": "transformers"
+    },
+    {
+      "subject": "transformers",
+      "predicate": "softwareDependency",
+      "object": "torch"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

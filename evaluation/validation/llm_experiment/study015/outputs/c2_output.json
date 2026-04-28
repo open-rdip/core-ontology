@@ -1,0 +1,130 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Gmsh",
+        "version": "not specified"
+      },
+      {
+        "name": "PETSc/TAO",
+        "version": "3.19"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Numerical experiments of fluid injection into fractured porous media",
+        "format": "Simulated",
+        "access": "Restricted/Implicit"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Fixed-stress approximation"
+      },
+      {
+        "name": "Constrained Pressure Residual (CPR)"
+      },
+      {
+        "name": "System-AMG"
+      },
+      {
+        "name": "Semi-smooth Newton method"
+      },
+      {
+        "name": "Multi-point flux approximation (MPFA)"
+      },
+      {
+        "name": "Multi-point stress approximation (MPSA)"
+      },
+      {
+        "name": "Implicit Euler scheme"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yury Zabegaev",
+        "role": "Corresponding Author"
+      },
+      {
+        "name": "Inga Berre",
+        "role": "Author"
+      },
+      {
+        "name": "Eirik Keilegavlen",
+        "role": "Author"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Center for Modeling of Coupled Subsurface Dynamics, Department of Mathematics, University of Bergen"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Biot coefficient (alpha)",
+        "value": "not specified"
+      },
+      {
+        "name": "Friction coefficient",
+        "value": "variable"
+      },
+      {
+        "name": "Peclét number",
+        "value": "variable"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "GMRES iterations",
+        "value": "Scales well",
+        "split": "Grid refinement experiments"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Numerical modeling of fracture contact thermo-poromechanics",
+        "type": "Simulation"
+      },
+      {
+        "name": "Development of nested Schur complement preconditioner",
+        "type": "Algorithm Design"
+      },
+      {
+        "name": "Grid refinement experiments",
+        "type": "Evaluation"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Numerical modeling of fracture contact thermo-poromechanics",
+      "predicate": "used",
+      "object": "Gmsh"
+    },
+    {
+      "subject": "Development of nested Schur complement preconditioner",
+      "predicate": "wasAssociatedWith",
+      "object": "Yury Zabegaev"
+    },
+    {
+      "subject": "Development of nested Schur complement preconditioner",
+      "predicate": "wasAssociatedWith",
+      "object": "Inga Berre"
+    },
+    {
+      "subject": "Development of nested Schur complement preconditioner",
+      "predicate": "wasAssociatedWith",
+      "object": "Eirik Keilegavlen"
+    },
+    {
+      "subject": "Numerical experiments of fluid injection into fractured porous media",
+      "predicate": "wasGeneratedBy",
+      "object": "Numerical modeling of fracture contact thermo-poromechanics"
+    },
+    {
+      "subject": "Numerical modeling of fracture contact thermo-poromechanics",
+      "predicate": "used",
+      "object": "Fixed-stress approximation"
+    }
+  ]
+}

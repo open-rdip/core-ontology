@@ -1,0 +1,135 @@
+{
+  "study_id": "study004",
+  "repo_url": "https://github.com/impredicative/irc-url-title-bot",
+  "software_dependencies": [
+    {
+      "name": "beautifulsoup4",
+      "version": "4.10.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cachetools",
+      "version": "5.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "certifi",
+      "version": "2021.10.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "filelock",
+      "version": "3.6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "humanize",
+      "version": "4.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "idna",
+      "version": "3.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ircstyle",
+      "version": "0.1.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "lxml",
+      "version": "4.8.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "miniirc",
+      "version": "1.6.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "packaging",
+      "version": "21.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pikepdf",
+      "version": "5.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pillow",
+      "version": "9.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "platformdirs",
+      "version": "2.5.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.0.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ruamel-yaml",
+      "version": "0.17.21",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ruamel-yaml-clib",
+      "version": "0.2.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "soupsieve",
+      "version": "2.3.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "uritools",
+      "version": "4.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "urlextract",
+      "version": "1.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "urltitle",
+      "version": "0.3.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "python:3.9-slim-buster as build",
+    "python_version": "3.9"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "Other",
+  "errors": []
+}

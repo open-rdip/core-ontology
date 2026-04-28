@@ -1,0 +1,252 @@
+{
+  "study_id": "study031",
+  "project": {
+    "title": "Towards Phytoplankton Parasite Detection Using Autoencoders",
+    "lead_organization": "Computer Vision and Pattern Recognition Laboratory, Department of Computational Engineering, Lappeenranta-Lahti University of Technology LUT",
+    "funding": "Academy of Finland (projects 317373 and 335654), Nessling Foundation, and Walter Ahlström Foundation"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "absl-py",
+        "version": "1.3.0"
+      },
+      {
+        "name": "albumentations",
+        "version": "1.3.0"
+      },
+      {
+        "name": "asttokens",
+        "version": "2.4.1"
+      },
+      {
+        "name": "astunparse",
+        "version": "1.6.3"
+      },
+      {
+        "name": "attrs",
+        "version": "23.2.0"
+      },
+      {
+        "name": "backcall",
+        "version": "0.2.0"
+      },
+      {
+        "name": "beautifulsoup4",
+        "version": "4.12.3"
+      },
+      {
+        "name": "bleach",
+        "version": "6.1.0"
+      },
+      {
+        "name": "TensorFlow",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "Label Studio",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Phytoplankton anomaly dataset",
+        "format": "images",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      },
+      {
+        "name": "SYKE-Järvi-2021",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Denoising Autoencoder",
+        "description": "A neural network trained to reconstruct original images from corrupted versions to learn robust feature representations."
+      },
+      {
+        "name": "Anomaly Detection",
+        "description": "The process of identifying rare items, events or observations which raise suspicions by differing significantly from the majority of the data."
+      },
+      {
+        "name": "Reconstruction-based Anomaly Detection",
+        "description": "Detecting anomalies by calculating the reconstruction error between the input image and the autoencoder output."
+      },
+      {
+        "name": "Feature-based Anomaly Detection",
+        "description": "Detecting anomalies using a classifier or distance metric applied to the latent features extracted by the autoencoder."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Simon Bilik",
+        "affiliation": "Lappeenranta-Lahti University of Technology LUT",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Daniel Batrakhanov",
+        "affiliation": "Lappeenranta-Lahti University of Technology LUT",
+        "role": "Software Engineer"
+      },
+      {
+        "name": "Tuomas Eerola",
+        "affiliation": "Lappeenranta-Lahti University of Technology LUT",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Lappeenranta-Lahti University of Technology LUT"
+      },
+      {
+        "name": "Brno University of Technology"
+      },
+      {
+        "name": "Finnish Environment Institute"
+      },
+      {
+        "name": "University of Turku"
+      },
+      {
+        "name": "Åbo Akademi University"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "0.001",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "32",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "epochs",
+        "value": "100",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "NVIDIA GPU",
+        "cuda": "exact version not specified",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "AUC",
+        "value": "0.91",
+        "split": "test",
+        "dataset": "Phytoplankton anomaly dataset"
+      },
+      {
+        "metric": "F1",
+        "value": "0.84",
+        "split": "test",
+        "dataset": "Phytoplankton anomaly dataset"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Labeling",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "Label Studio"
+        ],
+        "dataset_used": [
+          "SYKE-Järvi-2021"
+        ],
+        "dataset_produced": [
+          "Phytoplankton anomaly dataset"
+        ]
+      },
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "TensorFlow"
+        ],
+        "dataset_used": [
+          "Phytoplankton anomaly dataset"
+        ],
+        "dataset_produced": [
+          "Trained Autoencoder Model"
+        ]
+      },
+      {
+        "name": "Anomaly Detection Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "TensorFlow"
+        ],
+        "dataset_used": [
+          "Trained Autoencoder Model",
+          "Phytoplankton anomaly dataset"
+        ],
+        "dataset_produced": [
+          "Evaluation Results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "Denoising Autoencoder"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Anomaly Detection Evaluation",
+      "predicate": "usedMethod",
+      "object": "Reconstruction-based Anomaly Detection"
+    },
+    {
+      "subject": "Anomaly Detection Evaluation",
+      "predicate": "generatesResult",
+      "object": "AUC"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "follows",
+      "object": "Data Labeling"
+    },
+    {
+      "subject": "Anomaly Detection Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    },
+    {
+      "subject": "Simon Bilik",
+      "predicate": "hasActivityRole",
+      "object": "Model Training"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

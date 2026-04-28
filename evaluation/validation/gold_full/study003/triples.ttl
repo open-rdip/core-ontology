@@ -1,0 +1,174 @@
+# RDIP Triples — study003
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study003_Project a rdip:ResearchProject ;
+    rdip:title "Toward Realistic Camouflaged Object Detection: Benchmarks and Method" ;
+    .
+
+ex:study003_Org1 a vivo:Organization ;
+    rdfs:label "Huazhong University of Science and Technology" .
+ex:study003_Org2 a vivo:Organization ;
+    rdfs:label "Intelligent Science and Technology Academy of CASIC" .
+ex:study003_Project rdip:hasLeadOrganization ex:study003_Org1 .
+
+ex:study003_Person1 a vivo:Person ;
+    rdfs:label "Zhimeng Xin" .
+ex:study003_Project rdip:hasParticipant ex:study003_Person1 .
+ex:study003_Person2 a vivo:Person ;
+    rdfs:label "Tianxu Wu" .
+ex:study003_Project rdip:hasParticipant ex:study003_Person2 .
+ex:study003_Person3 a vivo:Person ;
+    rdfs:label "Yufei Guo" .
+ex:study003_Project rdip:hasParticipant ex:study003_Person3 .
+
+ex:study003_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "LabelMe" ;
+    .
+ex:study003_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "PyTorch" ;
+    .
+ex:study003_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "mmdet" ;
+    .
+ex:study003_Sw4 a rdip:SoftwareApplication ;
+    rdip:title "GLIP" ;
+    .
+ex:study003_Sw5 a rdip:SoftwareApplication ;
+    rdip:title "Grounding DINO" ;
+    .
+ex:study003_Sw6 a rdip:SoftwareApplication ;
+    rdip:title "YOLO-World" ;
+    .
+
+ex:study003_Dataset1 a dcat:Dataset ;
+    rdip:title "COD10K-D" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study003_Dataset2 a dcat:Dataset ;
+    rdip:title "NC4K-D" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study003_Dataset3 a dcat:Dataset ;
+    rdip:title "CAMO-D" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study003_Dataset4 a dcat:Dataset ;
+    rdip:title "COD10K-v2" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study003_Dataset5 a dcat:Dataset ;
+    rdip:title "NC4K" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study003_Dataset6 a dcat:Dataset ;
+    rdip:title "CAMO" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+
+ex:study003_Method1 a rdip:Method ;
+    rdip:title "Camouflage-Aware Feature Refinement (CAFR)" ;
+    rdip:description "A fine-tuning strategy utilizing prior knowledge of large models to understand distinctions between background and foreground in RCOD tasks." ;
+    .
+ex:study003_Method2 a rdip:Method ;
+    rdip:title "Adaptive Gradient Propagation (AGP)" ;
+    rdip:description "A module that fine-tunes all feature extractor layers by restricting the proportion of gradient return to refine class-specific features." ;
+    .
+ex:study003_Method3 a rdip:Method ;
+    rdip:title "Sparse Feature Refinement (SFR)" ;
+    rdip:description "A module that optimizes transformer-based feature extractors by reducing the size of camouflaged objects to focus on local class-specific features." ;
+    .
+
+ex:study003_Param1 a rdip:Parameter ;
+    rdip:parameterName "box_crop_width" ;
+    rdip:parameterValue "200" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study003_Param2 a rdip:Parameter ;
+    rdip:parameterName "box_crop_height" ;
+    rdip:parameterValue "200" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study003_Param3 a rdip:Parameter ;
+    rdip:parameterName "batch_size_SFR_assumption" ;
+    rdip:parameterValue "16" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study003_Param4 a rdip:Parameter ;
+    rdip:parameterName "training_images_COD10K-D" ;
+    rdip:parameterValue "6000" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study003_Param5 a rdip:Parameter ;
+    rdip:parameterName "test_images_COD10K-D" ;
+    rdip:parameterValue "4000" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study003_Seed1 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "0" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study003_Seed2 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "42" ;
+    rdip:parameterDataType "xsd:integer" .
+
+ex:study003_Env1 a rdip:ComputingEnvironment ;
+    rdip:osVersion "Ubuntu" ;
+    .
+
+ex:study003_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "S_alpha" ;
+    rdip:metricValue "77.0" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "SINet" ;
+    rdip:metricDataType "xsd:float" .
+ex:study003_Result2 a rdip:EvaluationResult ;
+    rdip:metricName "S_alpha" ;
+    rdip:metricValue "81.1" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "SegMaR" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study003_Act1 a rdip:DataProductionActivity ;
+    rdip:title "Dataset Annotation" ;
+    rdip:isPartOfProject ex:study003_Project ;
+    .
+ex:study003_Project rdip:hasActivity ex:study003_Act1 .
+ex:study003_Act2 a rdip:SoftwareDevelopmentActivity ;
+    rdip:title "Model Fine-tuning" ;
+    rdip:isPartOfProject ex:study003_Project ;
+    .
+ex:study003_Project rdip:hasActivity ex:study003_Act2 .
+ex:study003_Act3 a rdip:DataAnalysisActivity ;
+    rdip:title "Performance Evaluation" ;
+    rdip:isPartOfProject ex:study003_Project ;
+    .
+ex:study003_Project rdip:hasActivity ex:study003_Act3 .
+
+# ═══ RELATIONS ═══
+ex:study003_Act1 rdip:usedSoftware ex:study003_Sw1 .
+ex:study003_Act1 rdip:usedDataset ex:study003_Dataset4 .
+ex:study003_Dataset1 rdip:derivedFrom ex:study003_Dataset4 .
+ex:study003_Act2 rdip:usedMethod ex:study003_Method2 .
+ex:study003_Act2 rdip:usedMethod ex:study003_Method3 .
+ex:study003_Act2 rdip:follows ex:study003_Act1 .
+ex:study003_Act3 rdip:follows ex:study003_Act2 .
+ex:study003_Act3 rdip:generatesResult ex:study003_Result2 .
+
+# ═══ END (8 resolved, 0 unresolved) ═══

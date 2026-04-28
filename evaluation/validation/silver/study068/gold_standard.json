@@ -1,0 +1,337 @@
+{
+  "study_id": "study068",
+  "project": {
+    "title": "RL-GAN-Net: A Reinforcement Learning Agent Controlled GAN Network for Real-Time Point Cloud Shape Completion",
+    "lead_organization": "KAIST",
+    "funding": "National Research Foundation of Korea (NRF) grant funded by the Korea government (MSIT) (No. 2017R1A2B4011928, 2019R1A2C2006122) and the KAIST-KUSTAR project"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "absl-py",
+        "version": "0.8.1"
+      },
+      {
+        "name": "astor",
+        "version": "0.8.0"
+      },
+      {
+        "name": "attrs",
+        "version": "19.3.0"
+      },
+      {
+        "name": "backcall",
+        "version": "0.1.0"
+      },
+      {
+        "name": "bleach",
+        "version": "3.1.4"
+      },
+      {
+        "name": "cachetools",
+        "version": "3.1.1"
+      },
+      {
+        "name": "certifi",
+        "version": "2019.9.11"
+      },
+      {
+        "name": "chardet",
+        "version": "3.0.4"
+      },
+      {
+        "name": "cycler",
+        "version": "0.10.0"
+      },
+      {
+        "name": "decorator",
+        "version": "4.4.1"
+      },
+      {
+        "name": "defusedxml",
+        "version": "0.6.0"
+      },
+      {
+        "name": "entrypoints",
+        "version": "0.3"
+      },
+      {
+        "name": "faiss",
+        "version": "1.5.3"
+      },
+      {
+        "name": "gast",
+        "version": "0.2.2"
+      },
+      {
+        "name": "google-auth",
+        "version": "1.7.1"
+      },
+      {
+        "name": "google-auth-oauthlib",
+        "version": "0.4.1"
+      },
+      {
+        "name": "google-pasta",
+        "version": "0.1.8"
+      },
+      {
+        "name": "grpcio",
+        "version": "1.25.0"
+      },
+      {
+        "name": "h5py",
+        "version": "2.10.0"
+      },
+      {
+        "name": "idna",
+        "version": "2.8"
+      },
+      {
+        "name": "importlib-metadata",
+        "version": "0.23"
+      },
+      {
+        "name": "ipykernel",
+        "version": "5.1.3"
+      },
+      {
+        "name": "ipython",
+        "version": "7.9.0"
+      },
+      {
+        "name": "ipython-genutils",
+        "version": "0.2.0"
+      },
+      {
+        "name": "jedi",
+        "version": "0.15.1"
+      },
+      {
+        "name": "Jinja2",
+        "version": "2.10.3"
+      },
+      {
+        "name": "joblib",
+        "version": "0.14.0"
+      },
+      {
+        "name": "json5",
+        "version": "0.8.5"
+      },
+      {
+        "name": "jsonschema",
+        "version": "3.2.0"
+      },
+      {
+        "name": "jupyter-client",
+        "version": "5.3.4"
+      },
+      {
+        "name": "jupyter-core",
+        "version": "4.6.1"
+      },
+      {
+        "name": "jupyterlab",
+        "version": "1.2.3"
+      },
+      {
+        "name": "jupyterlab-server",
+        "version": "1.0.6"
+      },
+      {
+        "name": "Keras-Applications",
+        "version": "1.0.8"
+      },
+      {
+        "name": "Keras-Preprocessing",
+        "version": "1.1.0"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.1.0"
+      },
+      {
+        "name": "Markdown",
+        "version": "3.1.1"
+      },
+      {
+        "name": "MarkupSafe",
+        "version": "1.1.1"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.1.2"
+      },
+      {
+        "name": "mistune",
+        "version": "0.8.4"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "ShapeNet",
+        "format": "point cloud",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "RL-GAN-Net",
+        "description": "A framework where a reinforcement learning agent controls a generative adversarial network (GAN) to complete point cloud shapes in real-time."
+      },
+      {
+        "name": "Latent Space GAN (l-GAN)",
+        "description": "A GAN trained on the latent space representation of point clouds to improve stability and training efficiency."
+      },
+      {
+        "name": "Reinforcement Learning Agent",
+        "description": "An agent that finds the optimal input for the GAN to generate a shape matching the incomplete input point cloud."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Muhammad Sarmad",
+        "affiliation": "KAIST",
+        "role": "Data Collector"
+      },
+      {
+        "name": "Hyunjoo Jenny Lee",
+        "affiliation": "KAIST",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Young Min Kim",
+        "affiliation": "KIST, SNU",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "KAIST"
+      },
+      {
+        "name": "KIST"
+      },
+      {
+        "name": "SNU"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "latent_dimension",
+        "value": "128",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "batch_size",
+        "value": "32",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "learning_rate",
+        "value": "0.0001",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "42",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "Chamfer Distance",
+        "value": "0.0021",
+        "split": "test",
+        "dataset": "ShapeNet"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "GAN Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "Keras-Applications"
+        ],
+        "dataset_used": [
+          "ShapeNet"
+        ],
+        "dataset_produced": [
+          "trained GAN model"
+        ]
+      },
+      {
+        "name": "RL Agent Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "joblib"
+        ],
+        "dataset_used": [
+          "ShapeNet"
+        ],
+        "dataset_produced": [
+          "trained RL agent"
+        ]
+      },
+      {
+        "name": "Point Cloud Completion",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "faiss",
+          "matplotlib"
+        ],
+        "dataset_used": [
+          "ShapeNet"
+        ],
+        "dataset_produced": [
+          "completed point clouds"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "RL-GAN-Net",
+      "predicate": "usedMethod",
+      "object": "Latent Space GAN (l-GAN)"
+    },
+    {
+      "subject": "RL-GAN-Net",
+      "predicate": "usedMethod",
+      "object": "Reinforcement Learning Agent"
+    },
+    {
+      "subject": "GAN Training",
+      "predicate": "usedDataset",
+      "object": "ShapeNet"
+    },
+    {
+      "subject": "RL Agent Training",
+      "predicate": "usedSoftware",
+      "object": "joblib"
+    },
+    {
+      "subject": "Point Cloud Completion",
+      "predicate": "generatesResult",
+      "object": "Chamfer Distance"
+    },
+    {
+      "subject": "generate_noisy_point_clouds.py",
+      "predicate": "hasParameter",
+      "object": "seed"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

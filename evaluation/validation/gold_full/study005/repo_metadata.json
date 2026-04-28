@@ -1,0 +1,145 @@
+{
+  "study_id": "study005",
+  "repo_url": "https://github.com/cross-domain-compositing/cross-domain-compositing",
+  "software_dependencies": [],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "python",
+        "version": "3.8.5"
+      },
+      {
+        "name": "pip",
+        "version": "20.3"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "11.3"
+      },
+      {
+        "name": "pytorch",
+        "version": "1.11.0"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.12.0"
+      },
+      {
+        "name": "numpy",
+        "version": "1.19.2"
+      },
+      {
+        "name": "albumentations",
+        "version": "0.4.3"
+      },
+      {
+        "name": "diffusers",
+        "version": ""
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.1.2.30"
+      },
+      {
+        "name": "pudb",
+        "version": "2019.2"
+      },
+      {
+        "name": "invisible-watermark",
+        "version": ""
+      },
+      {
+        "name": "imageio",
+        "version": "2.9.0"
+      },
+      {
+        "name": "imageio-ffmpeg",
+        "version": "0.4.2"
+      },
+      {
+        "name": "pytorch-lightning",
+        "version": "1.4.2"
+      },
+      {
+        "name": "omegaconf",
+        "version": "2.1.1"
+      },
+      {
+        "name": "test-tube",
+        "version": "0.7.5"
+      },
+      {
+        "name": "streamlit",
+        "version": "0.73.1"
+      },
+      {
+        "name": "einops",
+        "version": "0.3.0"
+      },
+      {
+        "name": "torch-fidelity",
+        "version": "0.3.0"
+      },
+      {
+        "name": "transformers",
+        "version": "4.19.2"
+      },
+      {
+        "name": "torchmetrics",
+        "version": "0.6.0"
+      },
+      {
+        "name": "kornia",
+        "version": "0.6"
+      },
+      {
+        "name": "scikit-learn",
+        "version": ""
+      },
+      {
+        "name": "h5py",
+        "version": ""
+      },
+      {
+        "name": "plyfile",
+        "version": ""
+      },
+      {
+        "name": "trimesh",
+        "version": ""
+      },
+      {
+        "name": "natsort",
+        "version": ""
+      },
+      {
+        "name": "PyMCubes",
+        "version": ""
+      },
+      {
+        "name": "-e git+https://github.com/CompVis/taming-transformers.git@master#egg",
+        "version": "taming-transformers"
+      },
+      {
+        "name": "-e git+https://github.com/openai/CLIP.git@main#egg",
+        "version": "clip"
+      },
+      {
+        "name": "-e .",
+        "version": ""
+      }
+    ],
+    "source": "conda",
+    "env_name": "ldm"
+  },
+  "seeds": [
+    {
+      "value": "42",
+      "file": "data/organize_data.py",
+      "context": "seed = 42"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

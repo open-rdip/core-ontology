@@ -1,0 +1,160 @@
+{
+  "study_id": "study050",
+  "project": {
+    "title": "What Did You Think Would Happen? Explaining Agent Behaviour through Intended Outcomes",
+    "lead_organization": "CVSSP, University of Surrey",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "cudatoolkit",
+        "version": "hfd86e86_1"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "py37hfd86e86_0"
+      },
+      {
+        "name": "libgcc-ng",
+        "version": "hdf63c60_0"
+      },
+      {
+        "name": "libstdcxx-ng",
+        "version": "hdf63c60_0"
+      },
+      {
+        "name": "lz4-c",
+        "version": "heb0550a_3"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Cartpole",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Gridworld",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Intended Outcome Explanation",
+        "description": "A novel form of explanation for Reinforcement Learning that describes the outcome an agent is trying to achieve by its actions."
+      },
+      {
+        "name": "Monte Carlo control",
+        "description": "A reinforcement learning method used for policy evaluation and improvement."
+      },
+      {
+        "name": "Q-learning",
+        "description": "A model-free reinforcement learning algorithm to learn the value of an action in a particular state."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Herman Yau",
+        "affiliation": "CVSSP, University of Surrey",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Chris Russell",
+        "affiliation": "Amazon Web Services",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Simon Hadfield",
+        "affiliation": "CVSSP, University of Surrey",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "CVSSP, University of Surrey"
+      },
+      {
+        "name": "Amazon Web Services"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "Q(s, a0)",
+        "value": "14.9908",
+        "split": "test",
+        "dataset": "Cartpole"
+      },
+      {
+        "metric": "Q(s, a1)",
+        "value": "14.9858",
+        "split": "test",
+        "dataset": "Cartpole"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Agent Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "cudatoolkit"
+        ],
+        "dataset_used": [
+          "Cartpole",
+          "Gridworld"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Intention Extraction",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [
+          "Cartpole"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Agent Training",
+      "predicate": "usedMethod",
+      "object": "Q-learning"
+    },
+    {
+      "subject": "Agent Training",
+      "predicate": "usedMethod",
+      "object": "Monte Carlo control"
+    },
+    {
+      "subject": "Intention Extraction",
+      "predicate": "usedMethod",
+      "object": "Intended Outcome Explanation"
+    },
+    {
+      "subject": "Intention Extraction",
+      "predicate": "generatesResult",
+      "object": "Q(s, a0)"
+    },
+    {
+      "subject": "Agent Training",
+      "predicate": "usedDataset",
+      "object": "Cartpole"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

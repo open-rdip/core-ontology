@@ -1,0 +1,200 @@
+{
+  "study_id": "study070",
+  "project": {
+    "title": "In-Context Learning for Few-Shot Dialogue State Tracking",
+    "lead_organization": "University of Washington",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "sqlparse",
+        "version": null
+      },
+      {
+        "name": "sentence-transformers",
+        "version": null
+      },
+      {
+        "name": "openai",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "MultiWOZ 2.1",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MultiWOZ 2.4",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": "MultiWOZ 2.1"
+      }
+    ],
+    "Method": [
+      {
+        "name": "IC-DST",
+        "description": "An in-context learning framework for dialogue state tracking that reformulates the task into a text-to-SQL problem and retrieves exemplars for few-shot prompting."
+      },
+      {
+        "name": "Text-to-SQL Reformulation",
+        "description": "Reformulating dialogue state tracking into a text-to-SQL problem to better leverage tabular domain descriptions in language model prompts."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yushi Hu",
+        "affiliation": "University of Washington",
+        "role": null
+      },
+      {
+        "name": "Chia-Hsuan Lee",
+        "affiliation": "University of Washington",
+        "role": null
+      },
+      {
+        "name": "Tianbao Xie",
+        "affiliation": "University of Hong Kong",
+        "role": null
+      },
+      {
+        "name": "Tao Yu",
+        "affiliation": "University of Hong Kong",
+        "role": null
+      },
+      {
+        "name": "Noah A. Smith",
+        "affiliation": "University of Washington; Allen Institute for Artificial Intelligence",
+        "role": null
+      },
+      {
+        "name": "Mari Ostendorf",
+        "affiliation": "University of Washington",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Washington"
+      },
+      {
+        "name": "University of Hong Kong"
+      },
+      {
+        "name": "Allen Institute for Artificial Intelligence"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "88",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "2",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "JGA",
+        "value": "18.44",
+        "split": "test",
+        "dataset": "MultiWOZ 2.1"
+      },
+      {
+        "metric": "JGA",
+        "value": "19.29",
+        "split": "test",
+        "dataset": "MultiWOZ 2.4"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Dataset Preprocessing",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "MultiWOZ 2.1"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Exemplar Retrieval",
+        "type": "DataProcessingActivity",
+        "order": 2,
+        "software_used": [
+          "sentence-transformers"
+        ],
+        "dataset_used": [
+          "MultiWOZ 2.1"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Zero-shot and Few-shot Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "openai",
+          "sqlparse"
+        ],
+        "dataset_used": [
+          "MultiWOZ 2.1",
+          "MultiWOZ 2.4"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "IC-DST",
+      "predicate": "usedMethod",
+      "object": "Text-to-SQL Reformulation"
+    },
+    {
+      "subject": "Exemplar Retrieval",
+      "predicate": "usedSoftware",
+      "object": "sentence-transformers"
+    },
+    {
+      "subject": "Zero-shot and Few-shot Evaluation",
+      "predicate": "usedSoftware",
+      "object": "openai"
+    },
+    {
+      "subject": "Zero-shot and Few-shot Evaluation",
+      "predicate": "usedSoftware",
+      "object": "sqlparse"
+    },
+    {
+      "subject": "Zero-shot and Few-shot Evaluation",
+      "predicate": "generatesResult",
+      "object": "JGA"
+    },
+    {
+      "subject": "MultiWOZ 2.4",
+      "predicate": "derivedFrom",
+      "object": "MultiWOZ 2.1"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

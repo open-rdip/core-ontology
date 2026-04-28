@@ -1,0 +1,232 @@
+{
+  "study_id": "study083",
+  "project": {
+    "title": "Scalable Kernel Logistic Regression with Nyström Approximation: Theoretical Analysis and Application to Discrete Choice Modelling",
+    "lead_organization": "University of Castilla-La Mancha",
+    "funding": "Spanish Ministry of Science and Innovation (Project PID2021-122209OB-C33), the regional government of Castilla-La Mancha (Project SBPLY/19/180501/000201), and the European Union (European Regional Development Fund)."
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "python",
+        "version": "3.7"
+      },
+      {
+        "name": "numpy",
+        "version": "1.15.0"
+      },
+      {
+        "name": "scipy",
+        "version": null
+      },
+      {
+        "name": "pandas",
+        "version": null
+      },
+      {
+        "name": "tqdm",
+        "version": null
+      },
+      {
+        "name": "ipython",
+        "version": null
+      },
+      {
+        "name": "matplotlib",
+        "version": null
+      },
+      {
+        "name": "scikit-learn",
+        "version": null
+      },
+      {
+        "name": "pympler",
+        "version": null
+      },
+      {
+        "name": "pyscaffold",
+        "version": null
+      },
+      {
+        "name": "sphinx_rtd_theme",
+        "version": null
+      },
+      {
+        "name": "jupyterlab",
+        "version": null
+      },
+      {
+        "name": "pylint",
+        "version": null
+      },
+      {
+        "name": "pytest",
+        "version": null
+      },
+      {
+        "name": "twine",
+        "version": null
+      },
+      {
+        "name": "tox",
+        "version": null
+      },
+      {
+        "name": "nbdime",
+        "version": null
+      },
+      {
+        "name": "nbstripout",
+        "version": null
+      },
+      {
+        "name": "sphinx",
+        "version": null
+      },
+      {
+        "name": "recommonmark",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Swissmetro",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Optima",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "London Passenger Mode Choice",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Kernel Logistic Regression (KLR)",
+        "description": "A non-linear classification method that extends logistic regression using kernel functions to map data into high-dimensional feature spaces."
+      },
+      {
+        "name": "Nyström Approximation",
+        "description": "A technique used to find low-rank approximations of large kernel matrices to improve the scalability of kernel methods."
+      }
+    ],
+    "Person": [
+      {
+        "name": "José Ángel Martín-Baos",
+        "affiliation": "University of Castilla-La Mancha",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ricardo García-Ródenas",
+        "affiliation": "University of Castilla-La Mancha",
+        "role": null
+      },
+      {
+        "name": "Luis Rodriguez-Benitez",
+        "affiliation": "University of Castilla-La Mancha",
+        "role": null
+      },
+      {
+        "name": "Michel Bierlaire",
+        "affiliation": "Ecole Polytechnique Fédérale de Lausanne",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Castilla-La Mancha"
+      },
+      {
+        "name": "Ecole Polytechnique Fédérale de Lausanne"
+      },
+      {
+        "name": "Spanish Ministry of Science and Innovation"
+      },
+      {
+        "name": "European Union"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Mathematical Analysis",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Software Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "python",
+          "numpy",
+          "scipy"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Empirical Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "python"
+        ],
+        "dataset_used": [
+          "Swissmetro",
+          "Optima",
+          "London Passenger Mode Choice"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Kernel Logistic Regression (KLR)",
+      "predicate": "usedMethod",
+      "object": "Nyström Approximation"
+    },
+    {
+      "subject": "Empirical Evaluation",
+      "predicate": "usedDataset",
+      "object": "Swissmetro"
+    },
+    {
+      "subject": "Empirical Evaluation",
+      "predicate": "usedDataset",
+      "object": "Optima"
+    },
+    {
+      "subject": "Empirical Evaluation",
+      "predicate": "usedDataset",
+      "object": "London Passenger Mode Choice"
+    },
+    {
+      "subject": "Software Development",
+      "predicate": "usedSoftware",
+      "object": "python"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,176 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "DeepSpeed",
+        "version": "not specified"
+      },
+      {
+        "name": "Hugging Face Transformers",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Wikitext-2",
+        "format": "Natural Language Text",
+        "access": "Public"
+      },
+      {
+        "name": "PTB (Penn Treebank)",
+        "format": "Natural Language Text",
+        "access": "Public"
+      },
+      {
+        "name": "C4 (Colossal Clean Crawled Corpus)",
+        "format": "Natural Language Text",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Post-training quantization (PTQ)"
+      },
+      {
+        "name": "Round-to-nearest (RTN)"
+      },
+      {
+        "name": "GPTQ"
+      },
+      {
+        "name": "ZeroQuant (ZQ-Global)"
+      },
+      {
+        "name": "ZeroQuant variant (ZQ-Local)"
+      },
+      {
+        "name": "Low-Rank Compensation (LoRC)"
+      },
+      {
+        "name": "Fine-grained quantization (FGQ)"
+      },
+      {
+        "name": "Quantization-aware training (QAT)"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Zhewei Yao",
+        "role": "Researcher / Author"
+      },
+      {
+        "name": "Xiaoxia Wu",
+        "role": "Researcher / Author"
+      },
+      {
+        "name": "Cheng Li",
+        "role": "Researcher / Author"
+      },
+      {
+        "name": "Stephen Youn",
+        "role": "Researcher / Author"
+      },
+      {
+        "name": "Yuxiong He",
+        "role": "Researcher / Author"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Microsoft"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Block size",
+        "value": "32, 64, 128, 256, 512, 1024"
+      },
+      {
+        "name": "Learning rate",
+        "value": "1e-3, 5e-4, 1e-4, 5e-5, 1e-5"
+      },
+      {
+        "name": "LoRC dimension",
+        "value": "8"
+      },
+      {
+        "name": "Dropout rate",
+        "value": "0.05, 0.1"
+      },
+      {
+        "name": "Optimizer",
+        "value": "Adam"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "Fixed random seed",
+        "value": "123, 234, 456"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "Modern GPUs (e.g., for block-k quantization implementation)",
+        "cuda": "not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Perplexity (PPL)",
+        "value": "Varies by model (e.g., BLOOM-176B W16A16: 10.90)",
+        "split": "Zero-shot validation"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Sensitivity Analysis",
+        "type": "Research Phase"
+      },
+      {
+        "name": "PTQ Method Evaluation and Comparison",
+        "type": "Research Phase"
+      },
+      {
+        "name": "Proposed Method Development (LoRC)",
+        "type": "Research Phase"
+      },
+      {
+        "name": "Large-scale experimentation (>10,000 experiments)",
+        "type": "Research Phase"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Microsoft",
+      "predicate": "employed",
+      "object": "Zhewei Yao"
+    },
+    {
+      "subject": "LoRC",
+      "predicate": "reduces",
+      "object": "Quantization error"
+    },
+    {
+      "subject": "GPTQ",
+      "predicate": "optimizes",
+      "object": "Weight-only quantization"
+    },
+    {
+      "subject": "ZeroQuant",
+      "predicate": "optimizes",
+      "object": "Weight and activation quantization"
+    },
+    {
+      "subject": "Sensitivity Analysis",
+      "predicate": "precedes",
+      "object": "Proposed Method Development"
+    },
+    {
+      "subject": "LoRC",
+      "predicate": "uses",
+      "object": "Singular Value Decomposition (SVD)"
+    }
+  ]
+}

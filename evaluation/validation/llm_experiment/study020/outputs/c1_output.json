@@ -1,0 +1,221 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "Libra",
+        "version": "not specified"
+      },
+      {
+        "name": "CSAW-M Annotation Tool",
+        "version": "not specified"
+      },
+      {
+        "name": "PyTorch",
+        "version": "not specified"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "not specified"
+      },
+      {
+        "name": "OpenCV",
+        "version": "not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "CSAW-M",
+        "format": "PNG (16-bit and 8-bit), CSV",
+        "access": "Restricted/Gated (Figshare)"
+      },
+      {
+        "name": "CSAW",
+        "format": "DICOM",
+        "access": "Private population cohort"
+      },
+      {
+        "name": "CSAW-S",
+        "format": "not specified",
+        "access": "Public"
+      },
+      {
+        "name": "ImageNet",
+        "format": "not specified",
+        "access": "Public"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Ordinal Classification"
+      },
+      {
+        "name": "Multi-hot encoding"
+      },
+      {
+        "name": "Ternary Search (for annotation)"
+      },
+      {
+        "name": "Binary Search (for annotation)"
+      },
+      {
+        "name": "ResNet34"
+      },
+      {
+        "name": "Pairwise Comparison"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Moein Sorkhei",
+        "role": "Lead Researcher"
+      },
+      {
+        "name": "Edward Azavedo",
+        "role": "Researcher/Expert"
+      },
+      {
+        "name": "Athanasios Zouzos",
+        "role": "Researcher"
+      },
+      {
+        "name": "Yue Liu",
+        "role": "Researcher"
+      },
+      {
+        "name": "Karin Dembrower",
+        "role": "Researcher/Expert"
+      },
+      {
+        "name": "Fredrik Strand",
+        "role": "Researcher"
+      },
+      {
+        "name": "Hossein Azizpour",
+        "role": "Researcher"
+      },
+      {
+        "name": "Dimitra Ntoula",
+        "role": "Researcher"
+      },
+      {
+        "name": "Kevin Smith",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "KTH Royal Institute of Technology"
+      },
+      {
+        "name": "SciLifeLab"
+      },
+      {
+        "name": "Karolinska Institutet"
+      },
+      {
+        "name": "Karolinska University Hospital"
+      },
+      {
+        "name": "Saint Göran Hospital"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Image Resolution",
+        "value": "632x512"
+      },
+      {
+        "name": "Masking Levels",
+        "value": "8"
+      },
+      {
+        "name": "Age range of participants",
+        "value": "40 to 74"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "Initial seed list for private test set",
+        "value": "6 sorted mammograms"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "not specified",
+        "gpu": "not specified",
+        "cuda": "not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Kendall's tau_b",
+        "value": "not specified",
+        "split": "Public test"
+      },
+      {
+        "metric": "Average Mean Absolute Error (AMAE)",
+        "value": "not specified",
+        "split": "Public test"
+      },
+      {
+        "metric": "Odds Ratio",
+        "value": "3.2 (top vs first quartile)",
+        "split": "Interval cancer prediction"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Image Selection",
+        "type": "Data Preparation"
+      },
+      {
+        "name": "Image Preprocessing",
+        "type": "Data Preparation"
+      },
+      {
+        "name": "Annotation via Pairwise Comparison",
+        "type": "Data Labeling"
+      },
+      {
+        "name": "Model Training (ResNet34)",
+        "type": "Modeling"
+      },
+      {
+        "name": "Expert Agreement Analysis",
+        "type": "Evaluation"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "CSAW-M",
+      "predicate": "subsetOf",
+      "object": "CSAW"
+    },
+    {
+      "subject": "Moein Sorkhei",
+      "predicate": "affiliatedWith",
+      "object": "KTH Royal Institute of Technology"
+    },
+    {
+      "subject": "Libra",
+      "predicate": "usedFor",
+      "object": "Breast density computation"
+    },
+    {
+      "subject": "ResNet34 multi-hot",
+      "predicate": "outperforms",
+      "object": "ResNet34 one-hot"
+    },
+    {
+      "subject": "Activity: Image Selection",
+      "predicate": "precedes",
+      "object": "Activity: Image Preprocessing"
+    },
+    {
+      "subject": "Activity: Image Preprocessing",
+      "predicate": "precedes",
+      "object": "Activity: Annotation via Pairwise Comparison"
+    }
+  ]
+}

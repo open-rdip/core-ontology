@@ -1,0 +1,65 @@
+{
+  "study_id": "study051",
+  "repo_url": "https://github.com/benjaminbrindle/vista_ssm",
+  "software_dependencies": [
+    {
+      "name": "numpy",
+      "version": "1.24.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "2.0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.9.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.10.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "aeon",
+      "version": "0.8.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "folium",
+      "version": "0.16.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "networkx",
+      "version": "3.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "1",
+      "file": "vista_ssm/vista_ssm_Funcs.py",
+      "context": "seed=1"
+    }
+  ],
+  "license": "MIT",
+  "errors": []
+}

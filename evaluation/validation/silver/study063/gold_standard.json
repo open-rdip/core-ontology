@@ -1,0 +1,273 @@
+{
+  "study_id": "study063",
+  "project": {
+    "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+    "lead_organization": "OpenAI",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "kaldifst",
+        "version": "1.7.0"
+      },
+      {
+        "name": "sentencepiece",
+        "version": "0.1.96"
+      },
+      {
+        "name": "pypinyin",
+        "version": "0.50.0"
+      },
+      {
+        "name": "onnx",
+        "version": "1.15.0"
+      },
+      {
+        "name": "onnxruntime",
+        "version": "1.16.3"
+      },
+      {
+        "name": "black",
+        "version": "22.3.0"
+      },
+      {
+        "name": "isort",
+        "version": "5.10.1"
+      },
+      {
+        "name": "flake8",
+        "version": "5.0.4"
+      },
+      {
+        "name": "pycantonese",
+        "version": "3.4.0"
+      },
+      {
+        "name": "kaldilm",
+        "version": null
+      },
+      {
+        "name": "kaldialign",
+        "version": null
+      },
+      {
+        "name": "kaldi-decoder",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Whisper training data",
+        "format": "audio/text",
+        "access": "restricted",
+        "role": "used",
+        "derived_from": "Internet transcripts"
+      },
+      {
+        "name": "LibriSpeech",
+        "format": "audio",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Common Voice",
+        "format": "audio",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Weak Supervision",
+        "description": "Training on a large-scale dataset of 680,000 hours of multilingual and multitask audio-transcript pairs collected from the internet."
+      },
+      {
+        "name": "Zero-shot transfer",
+        "description": "Evaluating the model on standard benchmarks without any task-specific fine-tuning."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Alec Radford",
+        "affiliation": "OpenAI",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jong Wook Kim",
+        "affiliation": "OpenAI",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Tao Xu",
+        "affiliation": "OpenAI",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Greg Brockman",
+        "affiliation": "OpenAI",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Christine McLeavey",
+        "affiliation": "OpenAI",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ilya Sutskever",
+        "affiliation": "OpenAI",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "OpenAI"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "training_hours",
+        "value": "680,000",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "10",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "20220727",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "1234",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "20230207",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "20211105",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "20220730",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "20221011",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [
+      {
+        "metric": "WER",
+        "value": "12.8",
+        "split": "test",
+        "dataset": "wav2vec2-base-960h"
+      },
+      {
+        "metric": "WER",
+        "value": "7.2",
+        "split": "test",
+        "dataset": "wav2vec2-large-960h-lv60-self"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Data Collection and Filtering",
+        "type": "DataCollectionActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "Internet transcripts"
+        ],
+        "dataset_produced": [
+          "Whisper training data"
+        ]
+      },
+      {
+        "name": "Large-Scale Training",
+        "type": "DataProductionActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [
+          "Whisper training data"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Zero-shot Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "onnxruntime",
+          "sentencepiece"
+        ],
+        "dataset_used": [
+          "LibriSpeech",
+          "Common Voice"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Large-Scale Training",
+      "predicate": "usedMethod",
+      "object": "Weak Supervision"
+    },
+    {
+      "subject": "Large-Scale Training",
+      "predicate": "usedDataset",
+      "object": "Whisper training data"
+    },
+    {
+      "subject": "Zero-shot Evaluation",
+      "predicate": "usedMethod",
+      "object": "Zero-shot transfer"
+    },
+    {
+      "subject": "Zero-shot Evaluation",
+      "predicate": "usedDataset",
+      "object": "LibriSpeech"
+    },
+    {
+      "subject": "Zero-shot Evaluation",
+      "predicate": "generatesResult",
+      "object": "WER"
+    },
+    {
+      "subject": "Zero-shot Evaluation",
+      "predicate": "follows",
+      "object": "Large-Scale Training"
+    },
+    {
+      "subject": "Large-Scale Training",
+      "predicate": "follows",
+      "object": "Data Collection and Filtering"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

@@ -1,0 +1,161 @@
+# RDIP Triples — study022
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study022_Project a rdip:ResearchProject ;
+    rdip:title "TransAct: Transformer-based Realtime User Action Model for Recommendation at Pinterest" ;
+    .
+
+ex:study022_Org1 a vivo:Organization ;
+    rdfs:label "Pinterest" .
+ex:study022_Project rdip:hasLeadOrganization ex:study022_Org1 .
+
+ex:study022_Person1 a vivo:Person ;
+    rdfs:label "Xue Xia" .
+ex:study022_Project rdip:hasParticipant ex:study022_Person1 .
+ex:study022_Person2 a vivo:Person ;
+    rdfs:label "Dhruvil Deven Badani" .
+ex:study022_Project rdip:hasParticipant ex:study022_Person2 .
+ex:study022_Person3 a vivo:Person ;
+    rdfs:label "Saurabh Vishwas Joshi" .
+ex:study022_Project rdip:hasParticipant ex:study022_Person3 .
+ex:study022_Person4 a vivo:Person ;
+    rdfs:label "Pong Eksombatchai" .
+ex:study022_Project rdip:hasParticipant ex:study022_Person4 .
+ex:study022_Person5 a vivo:Person ;
+    rdfs:label "Po-Wei Wang" .
+ex:study022_Project rdip:hasParticipant ex:study022_Person5 .
+ex:study022_Person6 a vivo:Person ;
+    rdfs:label "Nazanin Farahpour" .
+ex:study022_Project rdip:hasParticipant ex:study022_Person6 .
+ex:study022_Person7 a vivo:Person ;
+    rdfs:label "Andrew Zhai" .
+ex:study022_Project rdip:hasParticipant ex:study022_Person7 .
+
+ex:study022_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "polars" ;
+    rdip:version "1.0.0" ;
+    .
+ex:study022_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "FuxiCTR" ;
+    .
+ex:study022_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "PyTorch" ;
+    .
+ex:study022_Sw4 a rdip:SoftwareApplication ;
+    rdip:title "TensorFlow" ;
+    .
+
+ex:study022_Dataset1 a dcat:Dataset ;
+    rdip:title "Pinterest Homefeed Dataset" ;
+    rdip:dataFormat "restricted" ;
+    rdip:accessLevel "restricted" ;
+    .
+
+ex:study022_Method1 a rdip:Method ;
+    rdip:title "TransAct" ;
+    rdip:description "A sequential model based on a Transformer architecture that extracts users' short-term preferences from their realtime activities for recommendation." ;
+    .
+ex:study022_Method2 a rdip:Method ;
+    rdip:title "End-to-end sequential modeling" ;
+    rdip:description "A method to learn user representations directly from raw action sequences during the ranking process." ;
+    .
+ex:study022_Method3 a rdip:Method ;
+    rdip:title "Hybrid ranking approach" ;
+    rdip:description "A technique combining end-to-end sequential modeling with batch-generated user embeddings to capture both short-term and long-term interests." ;
+    .
+
+ex:study022_Param1 a rdip:Parameter ;
+    rdip:parameterName "hidden_units" ;
+    rdip:parameterValue "256" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study022_Param2 a rdip:Parameter ;
+    rdip:parameterName "num_heads" ;
+    rdip:parameterValue "4" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study022_Param3 a rdip:Parameter ;
+    rdip:parameterName "num_layers" ;
+    rdip:parameterValue "2" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study022_Param4 a rdip:Parameter ;
+    rdip:parameterName "sequence_length" ;
+    rdip:parameterValue "100" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study022_Param5 a rdip:Parameter ;
+    rdip:parameterName "w_repin" ;
+    rdip:parameterValue "100" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study022_Param6 a rdip:Parameter ;
+    rdip:parameterName "w_click" ;
+    rdip:parameterValue "100" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study022_Seed1 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "2019" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study022_Seed2 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "20222023" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study022_Seed3 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "1029" ;
+    rdip:parameterDataType "xsd:integer" .
+
+ex:study022_Env1 a rdip:ComputingEnvironment ;
+    .
+
+ex:study022_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "REPIN_GAINS" ;
+    rdip:metricValue "5.2%" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Pinterest Homefeed Dataset" ;
+    rdip:metricDataType "xsd:float" .
+ex:study022_Result2 a rdip:EvaluationResult ;
+    rdip:metricName "CLICK_GAINS" ;
+    rdip:metricValue "2.4%" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Pinterest Homefeed Dataset" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study022_Act1 a rdip:DataProcessingActivity ;
+    rdip:title "Data Processing" ;
+    rdip:isPartOfProject ex:study022_Project ;
+    .
+ex:study022_Project rdip:hasActivity ex:study022_Act1 .
+ex:study022_Act2 a rdip:SoftwareDevelopmentActivity ;
+    rdip:title "Model Training" ;
+    rdip:isPartOfProject ex:study022_Project ;
+    .
+ex:study022_Project rdip:hasActivity ex:study022_Act2 .
+ex:study022_Act3 a rdip:DataAnalysisActivity ;
+    rdip:title "Online A/B Testing" ;
+    rdip:isPartOfProject ex:study022_Project ;
+    .
+ex:study022_Project rdip:hasActivity ex:study022_Act3 .
+
+# ═══ RELATIONS ═══
+ex:study022_Act2 rdip:usedMethod ex:study022_Method2 .
+ex:study022_Act2 rdip:hasParameter ex:study022_Param2 .
+ex:study022_Act2 rdip:hasParameter ex:study022_Param4 .
+ex:study022_Act3 rdip:generatesResult ex:study022_Result1 .
+ex:study022_Act2 rdip:follows ex:study022_Act1 .
+ex:study022_Act3 rdip:follows ex:study022_Act2 .
+ex:study022_Act1 rdip:usedSoftware ex:study022_Sw1 .
+
+# ═══ END (7 resolved, 0 unresolved) ═══

@@ -1,0 +1,21 @@
+{
+  "study_id": "study054",
+  "repo_url": "https://github.com/6lackmitchell/ccbf-control",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "6lackmitchell/ubuntu22-ros2-python3.10-poetry",
+    "python_version": "3.10",
+    "os": "Ubuntu"
+  },
+  "conda": {},
+  "seeds": [
+    {
+      "value": "1",
+      "file": "src/ccbf/core/controllers/consolidated_cbf_controller.py",
+      "context": "np.random.seed(1"
+    }
+  ],
+  "license": "",
+  "errors": []
+}

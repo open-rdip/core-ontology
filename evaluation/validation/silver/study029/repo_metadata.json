@@ -1,0 +1,1209 @@
+{
+  "study_id": "study029",
+  "repo_url": "https://github.com/zhimengj0326/gradient_rewiring_editing",
+  "software_dependencies": [
+    {
+      "name": "asttokens",
+      "version": "2.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "backcall",
+      "version": "0.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "backports.functools-lru-cache",
+      "version": "1.6.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "blessed",
+      "version": "1.20.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "certifi",
+      "version": "2023.5.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cmake",
+      "version": "3.26.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "comm",
+      "version": "0.1.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "contourpy",
+      "version": "1.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cycler",
+      "version": "0.11.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Cython",
+      "version": "0.29.20",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "daqp",
+      "version": "0.5.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "debugpy",
+      "version": "1.6.7",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "decorator",
+      "version": "5.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "dspar",
+      "version": "0.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ecos",
+      "version": "2.0.12",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "editable-gnn",
+      "version": "0.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "entrypoints",
+      "version": "0.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "executing",
+      "version": "1.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "fastgnn",
+      "version": "0.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "filelock",
+      "version": "3.12.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "fonttools",
+      "version": "4.42.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "googledrivedownloader",
+      "version": "0.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "gpustat",
+      "version": "1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "higher",
+      "version": "0.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "idna",
+      "version": "3.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "importlib-resources",
+      "version": "6.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ipdb",
+      "version": "0.13.13",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ipykernel",
+      "version": "6.25.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ipython",
+      "version": "8.12.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "isodate",
+      "version": "0.6.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jedi",
+      "version": "0.18.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jmpy3",
+      "version": "1.0.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "joblib",
+      "version": "1.3.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jupyter-client",
+      "version": "7.3.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "jupyter_core",
+      "version": "4.12.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.4.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "lit",
+      "version": "16.0.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "littleutils",
+      "version": "0.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "2.1.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.7.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib-inline",
+      "version": "0.1.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nest-asyncio",
+      "version": "1.5.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "networkx",
+      "version": "3.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.24.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-cublas-cu11",
+      "version": "11.10.3.66",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-cuda-cupti-cu11",
+      "version": "11.7.101",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu11",
+      "version": "11.7.99",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu11",
+      "version": "11.7.99",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-cudnn-cu11",
+      "version": "8.5.0.96",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-cufft-cu11",
+      "version": "10.9.0.58",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-curand-cu11",
+      "version": "10.2.10.91",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-cusolver-cu11",
+      "version": "11.4.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-cusparse-cu11",
+      "version": "11.7.4.91",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-ml-py",
+      "version": "12.535.77",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-nccl-cu11",
+      "version": "2.14.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nvidia-nvtx-cu11",
+      "version": "11.7.91",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ogb",
+      "version": "1.3.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "osqp",
+      "version": "0.6.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "outdated",
+      "version": "0.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "packaging",
+      "version": "23.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pandas",
+      "version": "2.0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "parso",
+      "version": "0.8.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pexpect",
+      "version": "4.8.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pickleshare",
+      "version": "0.7.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Pillow",
+      "version": "10.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pip",
+      "version": "23.1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "prompt-toolkit",
+      "version": "3.0.39",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "psutil",
+      "version": "5.9.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "ptyprocess",
+      "version": "0.7.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pure-eval",
+      "version": "0.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyg-lib",
+      "version": "0.2.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "Pygments",
+      "version": "2.15.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.0.9",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.8.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pytz",
+      "version": "2023.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyzmq",
+      "version": "25.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "qdldl",
+      "version": "0.1.7.post0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "qpsolvers",
+      "version": "3.4.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "rdflib",
+      "version": "6.3.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "requests",
+      "version": "2.31.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.10.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scs",
+      "version": "3.2.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "setuptools",
+      "version": "67.8.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "six",
+      "version": "1.16.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "stack-data",
+      "version": "0.6.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "sympy",
+      "version": "1.12",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.1.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tomli",
+      "version": "2.0.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "2.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch-cluster",
+      "version": "1.6.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch-geometric",
+      "version": "2.3.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch-scatter",
+      "version": "2.1.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch-sparse",
+      "version": "0.6.17",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch-spline-conv",
+      "version": "1.2.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tornado",
+      "version": "6.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.65.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "traitlets",
+      "version": "5.9.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "triton",
+      "version": "2.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.7.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tzdata",
+      "version": "2023.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "UNKNOWN",
+      "version": "0.0.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.0.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.2.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "wheel",
+      "version": "0.38.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "yacs",
+      "version": "0.1.8",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "zipp",
+      "version": "3.16.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {
+    "deps": [
+      {
+        "name": "_libgcc_mutex",
+        "version": "main"
+      },
+      {
+        "name": "_openmp_mutex",
+        "version": "1_gnu"
+      },
+      {
+        "name": "asttokens",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "backcall",
+        "version": "pyh9f0ad1d_0"
+      },
+      {
+        "name": "backports",
+        "version": "pyhd8ed1ab_3"
+      },
+      {
+        "name": "backports.functools_lru_cache",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "ca-certificates",
+        "version": "hbcca054_0"
+      },
+      {
+        "name": "comm",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "debugpy",
+        "version": "py38h6a678d5_0"
+      },
+      {
+        "name": "decorator",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "entrypoints",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "executing",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "ipykernel",
+        "version": "pyh71e2992_0"
+      },
+      {
+        "name": "jupyter_client",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "jupyter_core",
+        "version": "py38h578d9bd_0"
+      },
+      {
+        "name": "ld_impl_linux-64",
+        "version": "h1181459_1"
+      },
+      {
+        "name": "libffi",
+        "version": "h6a678d5_0"
+      },
+      {
+        "name": "libgcc-ng",
+        "version": "h1234567_1"
+      },
+      {
+        "name": "libgomp",
+        "version": "h1234567_1"
+      },
+      {
+        "name": "libsodium",
+        "version": "h36c2ea0_1"
+      },
+      {
+        "name": "libstdcxx-ng",
+        "version": "h1234567_1"
+      },
+      {
+        "name": "matplotlib-inline",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "ncurses",
+        "version": "h6a678d5_0"
+      },
+      {
+        "name": "nest-asyncio",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "openssl",
+        "version": "h7f8727e_0"
+      },
+      {
+        "name": "packaging",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "parso",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "pexpect",
+        "version": "pyh1a96a4e_2"
+      },
+      {
+        "name": "pickleshare",
+        "version": "py_1003"
+      },
+      {
+        "name": "pip",
+        "version": "py38h06a4308_0"
+      },
+      {
+        "name": "prompt-toolkit",
+        "version": "pyha770c72_0"
+      },
+      {
+        "name": "prompt_toolkit",
+        "version": "hd8ed1ab_0"
+      },
+      {
+        "name": "ptyprocess",
+        "version": "pyhd3deb0d_0"
+      },
+      {
+        "name": "pure_eval",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "python",
+        "version": "h955ad1f_0"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "python_abi",
+        "version": "2_cp38"
+      },
+      {
+        "name": "pyzmq",
+        "version": "py38h6a678d5_0"
+      },
+      {
+        "name": "readline",
+        "version": "h5eee18b_0"
+      },
+      {
+        "name": "setuptools",
+        "version": "py38h06a4308_0"
+      },
+      {
+        "name": "six",
+        "version": "pyh6c4a22f_0"
+      },
+      {
+        "name": "sqlite",
+        "version": "h5eee18b_0"
+      },
+      {
+        "name": "stack_data",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "tk",
+        "version": "h1ccaba5_0"
+      },
+      {
+        "name": "tornado",
+        "version": "py38h0a891b7_3"
+      },
+      {
+        "name": "traitlets",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "pyha770c72_0"
+      },
+      {
+        "name": "wcwidth",
+        "version": "pyhd8ed1ab_0"
+      },
+      {
+        "name": "wheel",
+        "version": "py38h06a4308_0"
+      },
+      {
+        "name": "xz",
+        "version": "h5eee18b_0"
+      },
+      {
+        "name": "zeromq",
+        "version": "h9c3ff4c_1"
+      },
+      {
+        "name": "zlib",
+        "version": "h5eee18b_0"
+      },
+      {
+        "name": "blessed",
+        "version": "1.20.0"
+      },
+      {
+        "name": "certifi",
+        "version": "2023.5.7"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.2.0"
+      },
+      {
+        "name": "cmake",
+        "version": "3.26.4"
+      },
+      {
+        "name": "contourpy",
+        "version": "1.1.0"
+      },
+      {
+        "name": "cycler",
+        "version": "0.11.0"
+      },
+      {
+        "name": "cython",
+        "version": "0.29.20"
+      },
+      {
+        "name": "daqp",
+        "version": "0.5.1"
+      },
+      {
+        "name": "ecos",
+        "version": "2.0.12"
+      },
+      {
+        "name": "filelock",
+        "version": "3.12.2"
+      },
+      {
+        "name": "fonttools",
+        "version": "4.42.0"
+      },
+      {
+        "name": "googledrivedownloader",
+        "version": "0.4"
+      },
+      {
+        "name": "gpustat",
+        "version": "1.1"
+      },
+      {
+        "name": "higher",
+        "version": "0.2.1"
+      },
+      {
+        "name": "idna",
+        "version": "3.4"
+      },
+      {
+        "name": "importlib-resources",
+        "version": "6.0.1"
+      },
+      {
+        "name": "ipdb",
+        "version": "0.13.13"
+      },
+      {
+        "name": "ipython",
+        "version": "8.12.2"
+      },
+      {
+        "name": "isodate",
+        "version": "0.6.1"
+      },
+      {
+        "name": "jedi",
+        "version": "0.18.2"
+      },
+      {
+        "name": "jinja2",
+        "version": "3.1.2"
+      },
+      {
+        "name": "jmpy3",
+        "version": "1.0.6"
+      },
+      {
+        "name": "joblib",
+        "version": "1.3.1"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.4.4"
+      },
+      {
+        "name": "lit",
+        "version": "16.0.6"
+      },
+      {
+        "name": "littleutils",
+        "version": "0.2.2"
+      },
+      {
+        "name": "markupsafe",
+        "version": "2.1.3"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.7.2"
+      },
+      {
+        "name": "mpmath",
+        "version": "1.3.0"
+      },
+      {
+        "name": "networkx",
+        "version": "3.1"
+      },
+      {
+        "name": "numpy",
+        "version": "1.24.4"
+      },
+      {
+        "name": "nvidia-cublas-cu11",
+        "version": "11.10.3.66"
+      },
+      {
+        "name": "nvidia-cuda-cupti-cu11",
+        "version": "11.7.101"
+      },
+      {
+        "name": "nvidia-cuda-nvrtc-cu11",
+        "version": "11.7.99"
+      },
+      {
+        "name": "nvidia-cuda-runtime-cu11",
+        "version": "11.7.99"
+      },
+      {
+        "name": "nvidia-cudnn-cu11",
+        "version": "8.5.0.96"
+      },
+      {
+        "name": "nvidia-cufft-cu11",
+        "version": "10.9.0.58"
+      },
+      {
+        "name": "nvidia-curand-cu11",
+        "version": "10.2.10.91"
+      },
+      {
+        "name": "nvidia-cusolver-cu11",
+        "version": "11.4.0.1"
+      },
+      {
+        "name": "nvidia-cusparse-cu11",
+        "version": "11.7.4.91"
+      },
+      {
+        "name": "nvidia-ml-py",
+        "version": "12.535.77"
+      },
+      {
+        "name": "nvidia-nccl-cu11",
+        "version": "2.14.3"
+      },
+      {
+        "name": "nvidia-nvtx-cu11",
+        "version": "11.7.91"
+      },
+      {
+        "name": "ogb",
+        "version": "1.3.6"
+      },
+      {
+        "name": "osqp",
+        "version": "0.6.3"
+      },
+      {
+        "name": "outdated",
+        "version": "0.2.2"
+      },
+      {
+        "name": "pandas",
+        "version": "2.0.3"
+      },
+      {
+        "name": "pillow",
+        "version": "10.0.0"
+      },
+      {
+        "name": "psutil",
+        "version": "5.9.5"
+      },
+      {
+        "name": "pyg-lib",
+        "version": "0.2.0+pt20cu117"
+      },
+      {
+        "name": "pygments",
+        "version": "2.15.1"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.0.9"
+      },
+      {
+        "name": "pytz",
+        "version": "2023.3"
+      },
+      {
+        "name": "pyyaml",
+        "version": "6.0"
+      },
+      {
+        "name": "qdldl",
+        "version": "0.1.7.post0"
+      },
+      {
+        "name": "qpsolvers",
+        "version": "3.4.0"
+      },
+      {
+        "name": "rdflib",
+        "version": "6.3.2"
+      },
+      {
+        "name": "requests",
+        "version": "2.31.0"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.3.0"
+      },
+      {
+        "name": "scipy",
+        "version": "1.10.1"
+      },
+      {
+        "name": "scs",
+        "version": "3.2.3"
+      },
+      {
+        "name": "sympy",
+        "version": "1.12"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.1.0"
+      },
+      {
+        "name": "tomli",
+        "version": "2.0.1"
+      },
+      {
+        "name": "torch",
+        "version": "2.0.0"
+      },
+      {
+        "name": "torch-cluster",
+        "version": "1.6.1+pt20cu117"
+      },
+      {
+        "name": "torch-geometric",
+        "version": "2.3.1"
+      },
+      {
+        "name": "torch-scatter",
+        "version": "2.1.1+pt20cu117"
+      },
+      {
+        "name": "torch-sparse",
+        "version": "0.6.17+pt20cu117"
+      },
+      {
+        "name": "torch-spline-conv",
+        "version": "1.2.2+pt20cu117"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.65.0"
+      },
+      {
+        "name": "triton",
+        "version": "2.0.0"
+      },
+      {
+        "name": "tzdata",
+        "version": "2023.3"
+      },
+      {
+        "name": "unknown",
+        "version": "0.0.0"
+      },
+      {
+        "name": "urllib3",
+        "version": "2.0.3"
+      },
+      {
+        "name": "yacs",
+        "version": "0.1.8"
+      },
+      {
+        "name": "zipp",
+        "version": "3.16.2"
+      }
+    ],
+    "source": "conda",
+    "env_name": "graph"
+  },
+  "seeds": [
+    {
+      "value": "12345",
+      "file": "data.py",
+      "context": "torch.manual_seed(12345"
+    },
+    {
+      "value": "1",
+      "file": "editable_gnn/utils.py",
+      "context": "seed=1"
+    }
+  ],
+  "license": "",
+  "errors": []
+}

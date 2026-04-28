@@ -1,0 +1,130 @@
+{
+  "study_id": "study049",
+  "project": {
+    "title": "Transducing paths in graph classes with unbounded shrubdepth",
+    "lead_organization": "Centre d'Analyse et de Mathématiques Sociales (CNRS, UMR 8557)",
+    "funding": "grant ERCCZ LL-2105, GAČR 22-06454S, European Research Council (ERC) grant agreement No. 803421, German Research Foundation (DFG) project SI 2445/1-1"
+  },
+  "entities": {
+    "SoftwareApplication": [],
+    "Dataset": [],
+    "Method": [
+      {
+        "name": "FO-transduction",
+        "description": "A general formalism for expressing transformations of graphs and relational structures in first-order logic."
+      },
+      {
+        "name": "Shrubdepth",
+        "description": "A graph invariant defining structural complexity based on the height of trees from which a class can be transduced."
+      },
+      {
+        "name": "Low-depth decomposition",
+        "description": "A graph-theoretic technique used to partition vertex sets into parts that induce simple structures like cographs."
+      },
+      {
+        "name": "MSO-transduction",
+        "description": "A formalism for expressing graph transformations in monadic second-order logic."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Patrice Ossona de Mendez",
+        "affiliation": "Centre d'Analyse et de Mathématiques Sociales (CNRS, UMR 8557)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Michał Pilipczuk",
+        "affiliation": "University of Warsaw",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Sebastian Siebertz",
+        "affiliation": "University of Bremen",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Centre d'Analyse et de Mathématiques Sociales (CNRS, UMR 8557)"
+      },
+      {
+        "name": "Charles University"
+      },
+      {
+        "name": "University of Warsaw"
+      },
+      {
+        "name": "University of Bremen"
+      },
+      {
+        "name": "European Research Council (ERC)"
+      },
+      {
+        "name": "Grant Agency of the Czech Republic (GAČR)"
+      },
+      {
+        "name": "German Research Foundation (DFG)"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Theoretical Graph-Theoretic Analysis",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Patrice Ossona de Mendez",
+      "predicate": "hasActivityRole",
+      "object": "Principal Investigator"
+    },
+    {
+      "subject": "Michał Pilipczuk",
+      "predicate": "hasActivityRole",
+      "object": "Principal Investigator"
+    },
+    {
+      "subject": "Sebastian Siebertz",
+      "predicate": "hasActivityRole",
+      "object": "Principal Investigator"
+    },
+    {
+      "subject": "Theoretical Graph-Theoretic Analysis",
+      "predicate": "usedMethod",
+      "object": "FO-transduction"
+    },
+    {
+      "subject": "Theoretical Graph-Theoretic Analysis",
+      "predicate": "usedMethod",
+      "object": "Shrubdepth"
+    },
+    {
+      "subject": "Patrice Ossona de Mendez",
+      "predicate": "executedIn",
+      "object": "Centre d'Analyse et de Mathématiques Sociales (CNRS, UMR 8557)"
+    },
+    {
+      "subject": "Michał Pilipczuk",
+      "predicate": "executedIn",
+      "object": "University of Warsaw"
+    },
+    {
+      "subject": "Sebastian Siebertz",
+      "predicate": "executedIn",
+      "object": "University of Bremen"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

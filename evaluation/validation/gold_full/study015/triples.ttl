@@ -1,0 +1,119 @@
+# RDIP Triples — study015
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study015_Project a rdip:ResearchProject ;
+    rdip:title "A block preconditioner for thermo-poromechanics with frictional deformation of fractures" ;
+    rdip:fundingReference "Center for Modeling of Coupled Subsurface Dynamics" ;
+    .
+
+ex:study015_Org1 a vivo:Organization ;
+    rdfs:label "University of Bergen" .
+ex:study015_Org2 a vivo:Organization ;
+    rdfs:label "Center for Modeling of Coupled Subsurface Dynamics" .
+ex:study015_Project rdip:hasLeadOrganization ex:study015_Org1 .
+
+ex:study015_Person1 a vivo:Person ;
+    rdfs:label "Yury Zabegaev" .
+ex:study015_Project rdip:hasParticipant ex:study015_Person1 .
+ex:study015_Person2 a vivo:Person ;
+    rdfs:label "Inga Berre" .
+ex:study015_Project rdip:hasParticipant ex:study015_Person2 .
+ex:study015_Person3 a vivo:Person ;
+    rdfs:label "Eirik Keilegavlen" .
+ex:study015_Project rdip:hasParticipant ex:study015_Person3 .
+
+ex:study015_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "pandas" ;
+    .
+ex:study015_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "porepy-petsc" ;
+    rdip:version "latest" ;
+    .
+ex:study015_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "PETSc/TAO" ;
+    rdip:version "3.19" ;
+    .
+ex:study015_Sw4 a rdip:SoftwareApplication ;
+    rdip:title "hypre" ;
+    .
+
+ex:study015_Dataset1 a dcat:Dataset ;
+    rdip:title "Numerical experiments of fluid injection into fractured porous media" ;
+    rdip:dataFormat "images" ;
+    rdip:accessLevel "open" ;
+    .
+
+ex:study015_Method1 a rdip:Method ;
+    rdip:title "Fixed-stress approximation" ;
+    rdip:description "An extension to account for both the porous media and fracture subdomains to decouple the momentum balance." ;
+    .
+ex:study015_Method2 a rdip:Method ;
+    rdip:title "Constrained Pressure Residual (CPR)" ;
+    rdip:description "A two-stage approach to treat the coupling between fluid flow and transport." ;
+    .
+ex:study015_Method3 a rdip:Method ;
+    rdip:title "System-AMG approach" ;
+    rdip:description "Applying the Algebraic Multigrid method to the monolithic pressure-temperature submatrix." ;
+    .
+ex:study015_Method4 a rdip:Method ;
+    rdip:title "Discrete fracture-matrix (DFM) modeling" ;
+    rdip:description "An approach where fractures and their intersections are represented explicitly as lower-dimensional geometrical objects." ;
+    .
+
+ex:study015_Param1 a rdip:Parameter ;
+    rdip:parameterName "friction_coefficients" ;
+    rdip:parameterValue "wide range" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+ex:study015_Param2 a rdip:Parameter ;
+    rdip:parameterName "Peclét_number" ;
+    rdip:parameterValue "wide range" ;
+    rdip:parameterDataType "xsd:float" ;
+    .
+
+ex:study015_Env1 a rdip:ComputingEnvironment ;
+    .
+
+ex:study015_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "GMRES iterations" ;
+    rdip:metricValue "scales well" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "Numerical experiments of fluid injection into fractured porous media" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study015_Act1 a rdip:SoftwareDevelopmentActivity ;
+    rdip:title "Mathematical Modeling" ;
+    rdip:isPartOfProject ex:study015_Project ;
+    .
+ex:study015_Project rdip:hasActivity ex:study015_Act1 .
+ex:study015_Act2 a rdip:DataAnalysisActivity ;
+    rdip:title "Numerical Experiments" ;
+    rdip:isPartOfProject ex:study015_Project ;
+    .
+ex:study015_Project rdip:hasActivity ex:study015_Act2 .
+ex:study015_Act3 a rdip:DataAnalysisActivity ;
+    rdip:title "Grid Refinement Experiments" ;
+    rdip:isPartOfProject ex:study015_Project ;
+    .
+ex:study015_Project rdip:hasActivity ex:study015_Act3 .
+
+# ═══ RELATIONS ═══
+ex:study015_Act2 rdip:usedMethod ex:study015_Method1 .
+ex:study015_Act2 rdip:usedMethod ex:study015_Method2 .
+ex:study015_Act2 rdip:usedMethod ex:study015_Method3 .
+ex:study015_Act2 rdip:usedSoftware ex:study015_Sw2 .
+ex:study015_Act3 rdip:generatesResult ex:study015_Result1 .
+ex:study015_Act2 rdip:follows ex:study015_Act1 .
+ex:study015_Act3 rdip:follows ex:study015_Act2 .
+
+# ═══ END (7 resolved, 0 unresolved) ═══

@@ -1,0 +1,76 @@
+{
+  "study_id": "study078",
+  "repo_url": "https://github.com/qqqyang/shuffle-qudio",
+  "software_dependencies": [
+    {
+      "name": "termcolor",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyyaml",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "easydict",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torch",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "torchvision",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "tqdm",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "json",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pennylane",
+      "version": "",
+      "constraint": "",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [
+    {
+      "value": "0",
+      "file": "train_pl_torch.py",
+      "context": "seed=0"
+    },
+    {
+      "value": "201",
+      "file": "utils/vis_vqe_shuffle_time.py",
+      "context": "seed = 201"
+    }
+  ],
+  "license": "",
+  "errors": []
+}

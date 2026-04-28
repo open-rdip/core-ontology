@@ -1,0 +1,252 @@
+{
+  "study_id": "study087",
+  "project": {
+    "title": "Integrative Few-Shot Learning for Classification and Segmentation",
+    "lead_organization": "Pohang University of Science and Technology (POSTECH)",
+    "funding": "National Research Foundation of Korea (NRF) grant (No. 2022R1A2C3012739), Institute of Information & communications Technology Planning & Evaluation (IITP) grant (No. 2019-0-01906, 2021-0-00537, 2021-0-01341, 2022-0-00951)"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "argon2-cffi",
+        "version": "py38h27cfd23_1"
+      },
+      {
+        "name": "async_generator",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "attrs",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "backcall",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "bleach",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "brotlipy",
+        "version": "py38h27cfd23_1003"
+      },
+      {
+        "name": "certifi",
+        "version": "py38h06a4308_0"
+      },
+      {
+        "name": "cffi",
+        "version": "py38h261ae71_0"
+      },
+      {
+        "name": "chardet",
+        "version": "py38h06a4308_1003"
+      },
+      {
+        "name": "click",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "cryptography",
+        "version": "py38hd23ed53_0"
+      },
+      {
+        "name": "cudatoolkit",
+        "version": "h15472ef_8"
+      },
+      {
+        "name": "debugpy",
+        "version": "py38h295c915_0"
+      },
+      {
+        "name": "defusedxml",
+        "version": "pyhd3eb1b0_0"
+      },
+      {
+        "name": "filelock",
+        "version": "pyhd3eb1b0_1"
+      },
+      {
+        "name": "future",
+        "version": "py38_1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COCO-20i",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": "MS COCO"
+      },
+      {
+        "name": "PASCAL-5i",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": "PASCAL VOC 2012"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Attentive Squeeze Network (ASNet)",
+        "description": "A model that leverages deep semantic correlation and global self-attention to construct class-wise foreground maps for multi-label classification and pixel-wise segmentation."
+      },
+      {
+        "name": "Integrative Few-Shot Learning (iFSL)",
+        "description": "A framework for the integrative task of few-shot classification and segmentation that trains a learner to construct class-wise foreground maps."
+      },
+      {
+        "name": "Deep Semantic Correlation",
+        "description": "A method to compute the similarity between support and query features to identify potential object regions."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Dahyun Kang",
+        "affiliation": "Pohang University of Science and Technology (POSTECH)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Minsu Cho",
+        "affiliation": "Pohang University of Science and Technology (POSTECH)",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Pohang University of Science and Technology (POSTECH)"
+      },
+      {
+        "name": "National Research Foundation of Korea (NRF)"
+      },
+      {
+        "name": "Institute of Information & communications Technology Planning & Evaluation (IITP)"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "1e-3",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "8",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "num_epochs",
+        "value": "50",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "weight_decay",
+        "value": "5e-4",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Linux",
+        "gpu": "NVIDIA",
+        "cuda": "h15472ef_8",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "mIoU",
+        "value": "35.8",
+        "split": "test",
+        "dataset": "COCO-20i"
+      },
+      {
+        "metric": "FBIoU",
+        "value": "63.1",
+        "split": "test",
+        "dataset": "COCO-20i"
+      },
+      {
+        "metric": "mIoU",
+        "value": "78.6",
+        "split": "test",
+        "dataset": "PASCAL-5i"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Algorithm Development",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "cudatoolkit"
+        ],
+        "dataset_used": [],
+        "dataset_produced": []
+      },
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "cudatoolkit"
+        ],
+        "dataset_used": [
+          "COCO-20i",
+          "PASCAL-5i"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [],
+        "dataset_used": [
+          "COCO-20i",
+          "PASCAL-5i"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Attentive Squeeze Network (ASNet)",
+      "predicate": "usedMethod",
+      "object": "Deep Semantic Correlation"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "Integrative Few-Shot Learning (iFSL)"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedDataset",
+      "object": "COCO-20i"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedDataset",
+      "object": "PASCAL-5i"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "mIoU"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "FBIoU"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

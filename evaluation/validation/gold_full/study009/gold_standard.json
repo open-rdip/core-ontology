@@ -1,0 +1,245 @@
+{
+  "study_id": "study009",
+  "project": {
+    "title": "HigherHRNet: Scale-Aware Representation Learning for Bottom-Up Human Pose Estimation",
+    "lead_organization": "UIUC",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "mmpose",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "pytorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "cuda",
+        "version": "12.1.1"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COCO",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "COCO2017",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": "COCO"
+      },
+      {
+        "name": "CrowdPose",
+        "format": "null",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "HigherHRNet",
+        "description": "A novel bottom-up human pose estimation method for learning scale-aware representations using high-resolution feature pyramids."
+      },
+      {
+        "name": "Multi-Resolution Supervision",
+        "description": "A strategy to assign training targets of different resolutions to corresponding feature pyramid levels to handle scale variation."
+      },
+      {
+        "name": "Multi-Resolution Heatmap Aggregation",
+        "description": "A strategy used during inference to generate scale-aware high-resolution heatmaps by aggregating multiple resolutions."
+      },
+      {
+        "name": "Associative Embedding",
+        "description": "A grouping method that clusters identity-free keypoints into individuals by grouping keypoints whose tags have small l2 distance."
+      },
+      {
+        "name": "Deconvolution Module",
+        "description": "A module used to generate high quality feature maps whose resolution is two times higher than the input feature maps."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Bowen Cheng",
+        "affiliation": "UIUC",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Bin Xiao",
+        "affiliation": "Microsoft",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Jingdong Wang",
+        "affiliation": "Microsoft",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Honghui Shi",
+        "affiliation": "UIUC",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Thomas S. Huang",
+        "affiliation": "UIUC",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Lei Zhang",
+        "affiliation": "Microsoft",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "UIUC"
+      },
+      {
+        "name": "Microsoft"
+      },
+      {
+        "name": "University of Oregon"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "C",
+        "value": "32",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "C",
+        "value": "48",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "deconvolution_kernel_size",
+        "value": "4x4",
+        "type": "xsd:string"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "21",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "2024",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "1",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 22.04",
+        "gpu": "null",
+        "cuda": "12.1.1",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "AP",
+        "value": "70.5%",
+        "split": "test-dev",
+        "dataset": "COCO2017"
+      },
+      {
+        "metric": "AP",
+        "value": "67.6%",
+        "split": "test",
+        "dataset": "CrowdPose"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Model Training",
+        "type": "DataProcessingActivity",
+        "order": 1,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "COCO"
+        ],
+        "dataset_produced": [
+          "HigherHRNet model"
+        ]
+      },
+      {
+        "name": "Model Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "mmpose"
+        ],
+        "dataset_used": [
+          "COCO2017",
+          "CrowdPose"
+        ],
+        "dataset_produced": [
+          "Evaluation results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "Multi-Resolution Supervision"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "Multi-Resolution Heatmap Aggregation"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "Associative Embedding"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedMethod",
+      "object": "HigherHRNet"
+    },
+    {
+      "subject": "Model Evaluation",
+      "predicate": "generatesResult",
+      "object": "AP"
+    },
+    {
+      "subject": "Model Evaluation",
+      "predicate": "follows",
+      "object": "Model Training"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "hasParameter",
+      "object": "C"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

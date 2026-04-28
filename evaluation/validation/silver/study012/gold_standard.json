@@ -1,0 +1,229 @@
+{
+  "study_id": "study012",
+  "project": {
+    "title": "Panoptic Feature Pyramid Networks",
+    "lead_organization": "Facebook AI Research (FAIR)",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "pytorch",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "mmsegmentation",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "COCO",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Cityscapes",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Panoptic FPN",
+        "description": "A single network that unifies instance and semantic segmentation by endowing Mask R-CNN with a semantic segmentation branch using a shared Feature Pyramid Network (FPN) backbone."
+      },
+      {
+        "name": "Mask R-CNN",
+        "description": "A popular instance segmentation method used as the base for the proposed panoptic framework."
+      },
+      {
+        "name": "Feature Pyramid Network (FPN)",
+        "description": "A backbone architecture that provides multi-scale, high-resolution features for both instance and semantic segmentation heads."
+      },
+      {
+        "name": "Panoptic Segmentation",
+        "description": "A joint task unifying instance segmentation for 'thing' classes and semantic segmentation for 'stuff' classes."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Alexander Kirillov",
+        "affiliation": "Facebook AI Research (FAIR)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ross Girshick",
+        "affiliation": "Facebook AI Research (FAIR)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Kaiming He",
+        "affiliation": "Facebook AI Research (FAIR)",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Piotr Dollár",
+        "affiliation": "Facebook AI Research (FAIR)",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Facebook AI Research (FAIR)"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "learning_rate",
+        "value": "0.02",
+        "type": "xsd:float"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.0001",
+        "type": "xsd:float"
+      },
+      {
+        "name": "momentum",
+        "value": "0.9",
+        "type": "xsd:float"
+      },
+      {
+        "name": "batch_size",
+        "value": "16",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "3",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "304",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "null",
+        "cuda": "null",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "PQ",
+        "value": "40.9",
+        "split": "test",
+        "dataset": "COCO"
+      },
+      {
+        "metric": "PQ",
+        "value": "58.1",
+        "split": "test",
+        "dataset": "Cityscapes"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Backbone Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "COCO"
+        ],
+        "dataset_produced": [
+          "Shared FPN Weights"
+        ]
+      },
+      {
+        "name": "Joint Task Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "pytorch"
+        ],
+        "dataset_used": [
+          "COCO",
+          "Cityscapes"
+        ],
+        "dataset_produced": [
+          "Panoptic FPN Model"
+        ]
+      },
+      {
+        "name": "Panoptic Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "mmsegmentation"
+        ],
+        "dataset_used": [
+          "COCO",
+          "Cityscapes"
+        ],
+        "dataset_produced": [
+          "PQ metrics"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Panoptic FPN",
+      "predicate": "usedMethod",
+      "object": "Feature Pyramid Network (FPN)"
+    },
+    {
+      "subject": "Panoptic FPN",
+      "predicate": "usedMethod",
+      "object": "Mask R-CNN"
+    },
+    {
+      "subject": "Joint Task Training",
+      "predicate": "usedDataset",
+      "object": "COCO"
+    },
+    {
+      "subject": "Joint Task Training",
+      "predicate": "hasParameter",
+      "object": "learning_rate"
+    },
+    {
+      "subject": "Panoptic Evaluation",
+      "predicate": "generatesResult",
+      "object": "PQ"
+    },
+    {
+      "subject": "Joint Task Training",
+      "predicate": "follows",
+      "object": "Backbone Training"
+    },
+    {
+      "subject": "Panoptic Evaluation",
+      "predicate": "follows",
+      "object": "Joint Task Training"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

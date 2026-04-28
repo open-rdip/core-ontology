@@ -1,0 +1,161 @@
+# RDIP Triples — study009
+# Generated from verified gold_standard.json
+
+@prefix rdip:   <https://w3id.org/rdip/> .
+@prefix ex:     <https://w3id.org/rdip/eval/> .
+@prefix vivo:   <http://vivoweb.org/ontology/core#> .
+@prefix bibo:   <http://purl.org/ontology/bibo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ═══ PROJECT ═══
+ex:study009_Project a rdip:ResearchProject ;
+    rdip:title "HigherHRNet: Scale-Aware Representation Learning for Bottom-Up Human Pose Estimation" ;
+    .
+
+ex:study009_Org1 a vivo:Organization ;
+    rdfs:label "UIUC" .
+ex:study009_Org2 a vivo:Organization ;
+    rdfs:label "Microsoft" .
+ex:study009_Org3 a vivo:Organization ;
+    rdfs:label "University of Oregon" .
+ex:study009_Project rdip:hasLeadOrganization ex:study009_Org1 .
+
+ex:study009_Person1 a vivo:Person ;
+    rdfs:label "Bowen Cheng" .
+ex:study009_Project rdip:hasParticipant ex:study009_Person1 .
+ex:study009_Person2 a vivo:Person ;
+    rdfs:label "Bin Xiao" .
+ex:study009_Project rdip:hasParticipant ex:study009_Person2 .
+ex:study009_Person3 a vivo:Person ;
+    rdfs:label "Jingdong Wang" .
+ex:study009_Project rdip:hasParticipant ex:study009_Person3 .
+ex:study009_Person4 a vivo:Person ;
+    rdfs:label "Honghui Shi" .
+ex:study009_Project rdip:hasParticipant ex:study009_Person4 .
+ex:study009_Person5 a vivo:Person ;
+    rdfs:label "Thomas S. Huang" .
+ex:study009_Project rdip:hasParticipant ex:study009_Person5 .
+ex:study009_Person6 a vivo:Person ;
+    rdfs:label "Lei Zhang" .
+ex:study009_Project rdip:hasParticipant ex:study009_Person6 .
+
+ex:study009_Sw1 a rdip:SoftwareApplication ;
+    rdip:title "mmpose" ;
+    .
+ex:study009_Sw2 a rdip:SoftwareApplication ;
+    rdip:title "pytorch" ;
+    .
+ex:study009_Sw3 a rdip:SoftwareApplication ;
+    rdip:title "cuda" ;
+    rdip:version "12.1.1" ;
+    .
+
+ex:study009_Dataset1 a dcat:Dataset ;
+    rdip:title "COCO" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study009_Dataset2 a dcat:Dataset ;
+    rdip:title "COCO2017" ;
+    rdip:accessLevel "open" ;
+    .
+ex:study009_Dataset2 rdip:derivedFrom ex:study009_Dataset1 .
+ex:study009_Dataset3 a dcat:Dataset ;
+    rdip:title "CrowdPose" ;
+    rdip:accessLevel "open" ;
+    .
+
+ex:study009_Method1 a rdip:Method ;
+    rdip:title "HigherHRNet" ;
+    rdip:description "A novel bottom-up human pose estimation method for learning scale-aware representations using high-resolution feature pyramids." ;
+    .
+ex:study009_Method2 a rdip:Method ;
+    rdip:title "Multi-Resolution Supervision" ;
+    rdip:description "A strategy to assign training targets of different resolutions to corresponding feature pyramid levels to handle scale variation." ;
+    .
+ex:study009_Method3 a rdip:Method ;
+    rdip:title "Multi-Resolution Heatmap Aggregation" ;
+    rdip:description "A strategy used during inference to generate scale-aware high-resolution heatmaps by aggregating multiple resolutions." ;
+    .
+ex:study009_Method4 a rdip:Method ;
+    rdip:title "Associative Embedding" ;
+    rdip:description "A grouping method that clusters identity-free keypoints into individuals by grouping keypoints whose tags have small l2 distance." ;
+    .
+ex:study009_Method5 a rdip:Method ;
+    rdip:title "Deconvolution Module" ;
+    rdip:description "A module used to generate high quality feature maps whose resolution is two times higher than the input feature maps." ;
+    .
+
+ex:study009_Param1 a rdip:Parameter ;
+    rdip:parameterName "C" ;
+    rdip:parameterValue "32" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study009_Param2 a rdip:Parameter ;
+    rdip:parameterName "C" ;
+    rdip:parameterValue "48" ;
+    rdip:parameterDataType "xsd:integer" ;
+    .
+ex:study009_Param3 a rdip:Parameter ;
+    rdip:parameterName "deconvolution_kernel_size" ;
+    rdip:parameterValue "4x4" ;
+    rdip:parameterDataType "xsd:string" ;
+    .
+ex:study009_Seed1 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "0" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study009_Seed2 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "21" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study009_Seed3 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "2024" ;
+    rdip:parameterDataType "xsd:integer" .
+ex:study009_Seed4 a rdip:RandomSeed ;
+    rdip:parameterName "random_seed" ;
+    rdip:parameterValue "1" ;
+    rdip:parameterDataType "xsd:integer" .
+
+ex:study009_Env1 a rdip:ComputingEnvironment ;
+    rdip:osVersion "Ubuntu 22.04" ;
+    rdip:cudaVersion "12.1.1" ;
+    .
+
+ex:study009_Result1 a rdip:EvaluationResult ;
+    rdip:metricName "AP" ;
+    rdip:metricValue "70.5%" ;
+    rdip:splitLabel "test-dev" ;
+    rdip:evaluationDataset "COCO2017" ;
+    rdip:metricDataType "xsd:float" .
+ex:study009_Result2 a rdip:EvaluationResult ;
+    rdip:metricName "AP" ;
+    rdip:metricValue "67.6%" ;
+    rdip:splitLabel "test" ;
+    rdip:evaluationDataset "CrowdPose" ;
+    rdip:metricDataType "xsd:float" .
+
+ex:study009_Act1 a rdip:DataProcessingActivity ;
+    rdip:title "Model Training" ;
+    rdip:isPartOfProject ex:study009_Project ;
+    .
+ex:study009_Project rdip:hasActivity ex:study009_Act1 .
+ex:study009_Act2 a rdip:DataAnalysisActivity ;
+    rdip:title "Model Evaluation" ;
+    rdip:isPartOfProject ex:study009_Project ;
+    .
+ex:study009_Project rdip:hasActivity ex:study009_Act2 .
+
+# ═══ RELATIONS ═══
+ex:study009_Act1 rdip:usedMethod ex:study009_Method2 .
+ex:study009_Act1 rdip:usedMethod ex:study009_Method3 .
+ex:study009_Act1 rdip:usedMethod ex:study009_Method4 .
+ex:study009_Act1 rdip:usedMethod ex:study009_Method1 .
+ex:study009_Act2 rdip:generatesResult ex:study009_Result2 .
+ex:study009_Act2 rdip:follows ex:study009_Act1 .
+ex:study009_Act1 rdip:hasParameter ex:study009_Param2 .
+
+# ═══ END (7 resolved, 0 unresolved) ═══

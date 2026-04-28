@@ -1,0 +1,15 @@
+{
+  "study_id": "study020",
+  "repo_url": "https://github.com/yueliukth/csaw-m",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04",
+    "cuda_version": "11.0",
+    "os": "Ubuntu 18.04"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "",
+  "errors": []
+}

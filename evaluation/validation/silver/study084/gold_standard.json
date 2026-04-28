@@ -1,0 +1,295 @@
+{
+  "study_id": "study084",
+  "project": {
+    "title": "Align before Fuse: Vision and Language Representation Learning with Momentum Distillation",
+    "lead_organization": "Salesforce Research",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "DALL-E",
+        "version": "0.1"
+      },
+      {
+        "name": "attrs",
+        "version": "23.1.0"
+      },
+      {
+        "name": "iopath",
+        "version": null
+      },
+      {
+        "name": "ftfy",
+        "version": null
+      },
+      {
+        "name": "regex",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Conceptual Captions",
+        "format": "images and text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "SBU Captions",
+        "format": "images and text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "VG",
+        "format": "images and text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "MSCOCO",
+        "format": "images and text",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "VQA",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "NLVR2",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "SNLI-VE",
+        "format": "JSON",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "ALign Before Fuse (ALBEF)",
+        "description": "A contrastive loss used to align image and text representations before fusing them through cross-modal attention."
+      },
+      {
+        "name": "Momentum Distillation",
+        "description": "A self-training method that learns from pseudo-targets produced by a momentum model to improve learning from noisy web data."
+      },
+      {
+        "name": "Image-Text Contrastive Learning (ITC)",
+        "description": "A method to align the unimodal representations of image and text."
+      },
+      {
+        "name": "Masked Language Modeling (MLM)",
+        "description": "A task that utilizes both the image and the contextual text to predict masked words."
+      },
+      {
+        "name": "Image-Text Matching (ITM)",
+        "description": "A task that predicts whether a pair of image and text is matched or not."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Junnan Li",
+        "affiliation": "Salesforce Research",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Ramprasaath R. Selvaraju",
+        "affiliation": "Salesforce Research",
+        "role": null
+      },
+      {
+        "name": "Akhilesh D. Gotmare",
+        "affiliation": "Salesforce Research",
+        "role": null
+      },
+      {
+        "name": "Shafiq Joty",
+        "affiliation": "Salesforce Research",
+        "role": null
+      },
+      {
+        "name": "Caiming Xiong",
+        "affiliation": "Salesforce Research",
+        "role": null
+      },
+      {
+        "name": "Steven C.H. Hoi",
+        "affiliation": "Salesforce Research",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Salesforce Research"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "batch_size",
+        "value": "512",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "learning_rate",
+        "value": "1e-4",
+        "type": "xsd:float"
+      },
+      {
+        "name": "weight_decay",
+        "value": "0.02",
+        "type": "xsd:float"
+      },
+      {
+        "name": "num_epochs",
+        "value": "30",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "image_resolution",
+        "value": "256x256",
+        "type": "xsd:string"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "random_seed",
+        "value": "42",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "1",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "random_seed",
+        "value": "1234",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": "NVIDIA A100",
+        "cuda": null,
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "test-dev accuracy",
+        "value": "74.54",
+        "split": "test",
+        "dataset": "VQA"
+      },
+      {
+        "metric": "test accuracy",
+        "value": "80.24",
+        "split": "test",
+        "dataset": "NLVR2"
+      },
+      {
+        "metric": "test accuracy",
+        "value": "80.14",
+        "split": "test",
+        "dataset": "SNLI-VE"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Pre-training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [
+          "Conceptual Captions",
+          "SBU Captions",
+          "VG",
+          "MSCOCO"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Downstream Fine-tuning",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [
+          "VQA",
+          "NLVR2",
+          "SNLI-VE"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Performance Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "ALign Before Fuse (ALBEF)",
+      "predicate": "usedMethod",
+      "object": "Momentum Distillation"
+    },
+    {
+      "subject": "ALign Before Fuse (ALBEF)",
+      "predicate": "usedMethod",
+      "object": "Image-Text Contrastive Learning (ITC)"
+    },
+    {
+      "subject": "Pre-training",
+      "predicate": "usedMethod",
+      "object": "ALign Before Fuse (ALBEF)"
+    },
+    {
+      "subject": "Pre-training",
+      "predicate": "usedDataset",
+      "object": "Conceptual Captions"
+    },
+    {
+      "subject": "Downstream Fine-tuning",
+      "predicate": "follows",
+      "object": "Pre-training"
+    },
+    {
+      "subject": "Downstream Fine-tuning",
+      "predicate": "usedDataset",
+      "object": "VQA"
+    },
+    {
+      "subject": "Performance Evaluation",
+      "predicate": "generatesResult",
+      "object": "test-dev accuracy"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

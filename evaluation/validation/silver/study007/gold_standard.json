@@ -1,0 +1,262 @@
+{
+  "study_id": "study007",
+  "project": {
+    "title": "Truncated Emphatic Temporal Difference Methods for Prediction and Control",
+    "lead_organization": "University of Oxford",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "torch",
+        "version": "1.5.1"
+      },
+      {
+        "name": "gym",
+        "version": "0.10.8"
+      },
+      {
+        "name": "tensorflow",
+        "version": "1.15.0"
+      },
+      {
+        "name": "atari-py",
+        "version": "0.1.7"
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.0.0.21"
+      },
+      {
+        "name": "scikit-image",
+        "version": "0.14.2"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.31.1"
+      },
+      {
+        "name": "pandas",
+        "version": "0.24.1"
+      },
+      {
+        "name": "pathlib",
+        "version": "1.0.1"
+      },
+      {
+        "name": "seaborn",
+        "version": "0.9.0"
+      },
+      {
+        "name": "roboschool",
+        "version": "1.0.49"
+      },
+      {
+        "name": "torchmeta",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "torchvision",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "python",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "cuda",
+        "version": "10.0"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Synthetic Markov Decision Processes (MDPs)",
+        "format": "mathematical model",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Baird's counterexample",
+        "format": "mathematical model",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "Arcade Learning Environment",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Truncated Emphatic TD",
+        "description": "An off-policy prediction algorithm using truncated followon traces to reduce variance and enable finite sample analysis."
+      },
+      {
+        "name": "Truncated Emphatic Expected SARSA",
+        "description": "An off-policy control algorithm that employs truncated followon traces for action-value estimation."
+      },
+      {
+        "name": "Projected Truncated Emphatic TD",
+        "description": "A variant of Truncated Emphatic TD that uses a projection operator to maintain parameter boundedness during finite sample analysis."
+      },
+      {
+        "name": "Soft Truncation (ETD(0, beta))",
+        "description": "An existing method for variance reduction in emphatic TD that uses a hyperparameter to trade off bias and variance."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Shangtong Zhang",
+        "affiliation": "University of Oxford",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Shimon Whiteson",
+        "affiliation": "University of Oxford",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Oxford"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "truncation_length_n",
+        "value": "tuned in {0, 2, 4, 8}",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "learning_rate_alpha",
+        "value": "tuned from 0.1 * 2^0 to 0.1 * 2^-19",
+        "type": "xsd:float"
+      },
+      {
+        "name": "beta",
+        "value": "tuned in {0.1, 0.2, 0.4, 0.8}",
+        "type": "xsd:float"
+      },
+      {
+        "name": "discount_factor_gamma",
+        "value": "0.99",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "null",
+        "cuda": "10.0",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Average variance",
+        "value": "7 * 10^3",
+        "split": "test",
+        "dataset": "Stochastic MuJoCo"
+      },
+      {
+        "metric": "Average variance",
+        "value": "1.8 * 10^4",
+        "split": "test",
+        "dataset": "Stochastic MuJoCo"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Algorithm Design",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Truncated Emphatic TD",
+          "Truncated Emphatic Expected SARSA"
+        ]
+      },
+      {
+        "name": "Theoretical Analysis",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Finite sample analysis bounds"
+        ]
+      },
+      {
+        "name": "Empirical Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "torch",
+          "gym",
+          "seaborn"
+        ],
+        "dataset_used": [
+          "Baird's counterexample",
+          "Synthetic MDPs"
+        ],
+        "dataset_produced": [
+          "Learning curves",
+          "Variance comparisons"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Truncated Emphatic TD",
+      "predicate": "usedMethod",
+      "object": "Truncated followon traces"
+    },
+    {
+      "subject": "Truncated Emphatic Expected SARSA",
+      "predicate": "usedMethod",
+      "object": "Truncated followon traces"
+    },
+    {
+      "subject": "Empirical Evaluation",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Empirical Evaluation",
+      "predicate": "usedDataset",
+      "object": "Baird's counterexample"
+    },
+    {
+      "subject": "Empirical Evaluation",
+      "predicate": "generatesResult",
+      "object": "Average variance"
+    },
+    {
+      "subject": "Truncated Emphatic TD",
+      "predicate": "hasParameter",
+      "object": "truncation_length_n"
+    },
+    {
+      "subject": "Empirical Evaluation",
+      "predicate": "follows",
+      "object": "Algorithm Design"
+    },
+    {
+      "subject": "Theoretical Analysis",
+      "predicate": "follows",
+      "object": "Algorithm Design"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

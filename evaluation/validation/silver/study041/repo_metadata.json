@@ -1,0 +1,13 @@
+{
+  "study_id": "study041",
+  "repo_url": "https://github.com/softdevteam/rustgc_paper_experiment",
+  "software_dependencies": [],
+  "environment": {
+    "source": "Dockerfile",
+    "base_image": "debian:bookworm as base"
+  },
+  "conda": {},
+  "seeds": [],
+  "license": "",
+  "errors": []
+}

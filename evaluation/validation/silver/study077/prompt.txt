@@ -1,0 +1,134 @@
+You are an expert research metadata annotator using the RDIP ontology.
+Extract structured metadata from this research paper and its repository.
+
+══════════════════════════════════════
+PAPER METADATA
+══════════════════════════════════════
+Study ID: study077
+Title: AFlow: Automating Agentic Workflow Generation
+arXiv: 2410.10762
+Repository: https://github.com/evoagentx/evoagentx
+
+══════════════════════════════════════
+REPOSITORY METADATA (auto-extracted)
+══════════════════════════════════════
+Software dependencies (from requirements.txt):
+  - pytest
+  - pytest-cov
+  - pytest-mock
+  - pytest-asyncio
+  - pytest-subtests
+  - pytest-json-report
+  - ruff
+  - sympy
+  - overdue
+  - scipy==1.9.0
+  - setuptools
+  - tree_sitter
+  - tree_sitter_python
+  - antlr4-python3-runtime==4.11
+  - tenacity
+  - networkx==3.3
+  - nltk==3.9.1
+  - numpy==1.26.4
+  - openai==1.55.3
+  - litellm==1.75.2
+  - litellm-enterprise==0.1.19
+  - litellm-proxy-extras==0.2.16
+  - dashscope==1.23.4
+  - pydantic==2.9.0
+  - loguru==0.7.3
+  - pandas==2.2.3
+  - matplotlib==3.10.0
+  - datasets==3.4.0
+  - faiss-cpu==1.8.0.post1
+  - textgrad==0.1.8
+  - dspy
+  - fastapi==0.111.0
+  - motor==3.7.0
+  - uvicorn==0.29.0
+  - sqlalchemy==2.0.38
+  - python-jose==3.3.0
+  - passlib==1.7.4
+  - python-multipart==0.0.6
+  - bcrypt==4.0.1
+  - celery==5.3.4
+
+Random seeds found in main code:
+  - seed=42 (in Wonderful_workflow_corpus/invest/stock_chart_tools.py)
+  - seed=43 (in examples/tools/tools_images.py)
+  - seed=10 (in examples/optimization/evoprompt/evoprompt_workflow.py)
+  - seed=8 (in examples/optimization/textgrad/math_textgrad.py)
+
+Random seeds found in test files (may not be experiment seeds):
+  - seed=7 (in tests/test_map_elites_optimizer.py)
+
+Repository license: MIT
+
+══════════════════════════════════════
+PAPER TEXT
+══════════════════════════════════════
+[The paper PDF is attached separately in this conversation]
+
+══════════════════════════════════════
+EXTRACTION TASK
+══════════════════════════════════════
+
+Extract ALL of the following from the attached paper and the repository metadata above.
+Be CONSERVATIVE — only extract what is explicitly stated.
+Mark uncertain items with [UNCERTAIN].
+
+Return ONLY valid JSON in this EXACT format (no markdown fences, no explanation before or after):
+
+{
+  "study_id": "study077",
+  "project": {
+    "title": "...",
+    "lead_organization": "first author's affiliation",
+    "funding": "from acknowledgments section, or null"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {"name": "...", "version": "exact version from repo or paper"}
+    ],
+    "Dataset": [
+      {"name": "...", "format": "CSV|JSON|images|etc", "access": "open|restricted", "role": "used|produced", "derived_from": "parent dataset name or null"}
+    ],
+    "Method": [
+      {"name": "...", "description": "one sentence"}
+    ],
+    "Person": [
+      {"name": "...", "affiliation": "...", "role": "Principal Investigator|Software Engineer|Data Collector|..."}
+    ],
+    "Organization": [
+      {"name": "..."}
+    ],
+    "Parameter": [
+      {"name": "learning_rate|batch_size|num_epochs|etc", "value": "...", "type": "xsd:float|xsd:integer|xsd:string"}
+    ],
+    "RandomSeed": [
+      {"name": "random_seed", "value": "...", "source": "paper|repo"}
+    ],
+    "ComputingEnvironment": [
+      {"os": "...", "gpu": "...", "cuda": "...", "ram": "..."}
+    ],
+    "EvaluationResult": [
+      {"metric": "accuracy|F1|mAP|AUC|etc", "value": "...", "split": "test|val|train", "dataset": "dataset name"}
+    ],
+    "Activity": [
+      {"name": "descriptive name", "type": "DataCollectionActivity|DataProcessingActivity|DataProductionActivity|DataAnalysisActivity|SoftwareDevelopmentActivity", "order": 1, "software_used": ["..."], "dataset_used": ["..."], "dataset_produced": ["..."]}
+    ]
+  },
+  "relations": [
+    {"subject": "entity name", "predicate": "usedSoftware|usedDataset|generatesDataset|usedMethod|hasParameter|executedIn|generatesResult|derivedFrom|follows|softwareDependency|hasActivityRole", "object": "entity name"}
+  ]
+}
+
+IMPORTANT RULES:
+1. Software versions: prefer exact versions from repo (requirements.txt) over paper text.
+2. Include random seeds found in repo metadata above.
+3. Activities must have an ORDER field (1, 2, 3...) showing execution sequence.
+4. For each activity, list which software, datasets, and methods it uses/produces.
+5. Relations must use the EXACT predicate names listed above.
+6. Evaluation metrics: include the EXACT numeric value and which split (test/val/train).
+7. If something is not mentioned, omit it — do NOT fabricate.

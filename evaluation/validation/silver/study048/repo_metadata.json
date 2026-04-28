@@ -1,0 +1,125 @@
+{
+  "study_id": "study048",
+  "repo_url": "https://github.com/ibm/topography-searcher",
+  "software_dependencies": [
+    {
+      "name": "ase",
+      "version": "3.22.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "contourpy",
+      "version": "1.2.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "fonttools",
+      "version": "4.53.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "joblib",
+      "version": "1.4.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.4.5",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.9.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "networkx",
+      "version": "3.3",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "nptyping",
+      "version": "2.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "numpy",
+      "version": "1.26.4",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "packaging",
+      "version": "24.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pillow",
+      "version": "10.3.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.1.2",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "rdkit",
+      "version": "2023.9.6",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "scipy",
+      "version": "1.13.1",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "six",
+      "version": "1.16.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.5.0",
+      "constraint": "==",
+      "source": "requirements.txt"
+    }
+  ],
+  "environment": {},
+  "conda": {},
+  "seeds": [],
+  "license": "MIT",
+  "errors": []
+}

@@ -1,0 +1,192 @@
+{
+  "study_id": "study015",
+  "project": {
+    "title": "A block preconditioner for thermo-poromechanics with frictional deformation of fractures",
+    "lead_organization": "University of Bergen",
+    "funding": "Center for Modeling of Coupled Subsurface Dynamics"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "pandas",
+        "version": "exact version not specified"
+      },
+      {
+        "name": "porepy-petsc",
+        "version": "latest"
+      },
+      {
+        "name": "PETSc/TAO",
+        "version": "3.19"
+      },
+      {
+        "name": "hypre",
+        "version": "exact version not specified"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Numerical experiments of fluid injection into fractured porous media",
+        "format": "images",
+        "access": "open",
+        "role": "produced",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Fixed-stress approximation",
+        "description": "An extension to account for both the porous media and fracture subdomains to decouple the momentum balance."
+      },
+      {
+        "name": "Constrained Pressure Residual (CPR)",
+        "description": "A two-stage approach to treat the coupling between fluid flow and transport."
+      },
+      {
+        "name": "System-AMG approach",
+        "description": "Applying the Algebraic Multigrid method to the monolithic pressure-temperature submatrix."
+      },
+      {
+        "name": "Discrete fracture-matrix (DFM) modeling",
+        "description": "An approach where fractures and their intersections are represented explicitly as lower-dimensional geometrical objects."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Yury Zabegaev",
+        "affiliation": "University of Bergen",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Inga Berre",
+        "affiliation": "University of Bergen",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Eirik Keilegavlen",
+        "affiliation": "University of Bergen",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "University of Bergen"
+      },
+      {
+        "name": "Center for Modeling of Coupled Subsurface Dynamics"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "friction_coefficients",
+        "value": "wide range",
+        "type": "xsd:float"
+      },
+      {
+        "name": "Peclét_number",
+        "value": "wide range",
+        "type": "xsd:float"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "null",
+        "gpu": "null",
+        "cuda": "null",
+        "ram": "null"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "GMRES iterations",
+        "value": "scales well",
+        "split": "test",
+        "dataset": "Numerical experiments of fluid injection into fractured porous media"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Mathematical Modeling",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 1,
+        "software_used": [
+          "porepy-petsc"
+        ],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Discretized system"
+        ]
+      },
+      {
+        "name": "Numerical Experiments",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "porepy-petsc"
+        ],
+        "dataset_used": [
+          "Discretized system"
+        ],
+        "dataset_produced": [
+          "Simulation results"
+        ]
+      },
+      {
+        "name": "Grid Refinement Experiments",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "PETSc/TAO"
+        ],
+        "dataset_used": [
+          "Simulation results"
+        ],
+        "dataset_produced": [
+          "Evaluation results"
+        ]
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Numerical Experiments",
+      "predicate": "usedMethod",
+      "object": "Fixed-stress approximation"
+    },
+    {
+      "subject": "Numerical Experiments",
+      "predicate": "usedMethod",
+      "object": "Constrained Pressure Residual (CPR)"
+    },
+    {
+      "subject": "Numerical Experiments",
+      "predicate": "usedMethod",
+      "object": "System-AMG approach"
+    },
+    {
+      "subject": "Numerical Experiments",
+      "predicate": "usedSoftware",
+      "object": "porepy-petsc"
+    },
+    {
+      "subject": "Grid Refinement Experiments",
+      "predicate": "generatesResult",
+      "object": "GMRES iterations"
+    },
+    {
+      "subject": "Numerical Experiments",
+      "predicate": "follows",
+      "object": "Mathematical Modeling"
+    },
+    {
+      "subject": "Grid Refinement Experiments",
+      "predicate": "follows",
+      "object": "Numerical Experiments"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "thorough"
+}

@@ -1,0 +1,313 @@
+{
+  "study_id": "study073",
+  "project": {
+    "title": "FoundationPose: Unified 6D Pose Estimation and Tracking of Novel Objects",
+    "lead_organization": "NVIDIA",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "python",
+        "version": "3.11"
+      },
+      {
+        "name": "torch",
+        "version": "2.4.1"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.19.1"
+      },
+      {
+        "name": "torchaudio",
+        "version": "2.4.1"
+      },
+      {
+        "name": "xformers",
+        "version": "0.0.28.post1"
+      },
+      {
+        "name": "scikit-image",
+        "version": null
+      },
+      {
+        "name": "omegaconf",
+        "version": null
+      },
+      {
+        "name": "opencv-contrib-python",
+        "version": null
+      },
+      {
+        "name": "imgaug",
+        "version": null
+      },
+      {
+        "name": "ninja",
+        "version": null
+      },
+      {
+        "name": "timm",
+        "version": null
+      },
+      {
+        "name": "albumentations",
+        "version": null
+      },
+      {
+        "name": "jupyterlab",
+        "version": null
+      },
+      {
+        "name": "scipy",
+        "version": null
+      },
+      {
+        "name": "joblib",
+        "version": null
+      },
+      {
+        "name": "scikit-learn",
+        "version": null
+      },
+      {
+        "name": "ruamel.yaml",
+        "version": null
+      },
+      {
+        "name": "trimesh",
+        "version": null
+      },
+      {
+        "name": "pyyaml",
+        "version": null
+      },
+      {
+        "name": "imageio",
+        "version": null
+      },
+      {
+        "name": "open3d",
+        "version": null
+      },
+      {
+        "name": "transformations",
+        "version": null
+      },
+      {
+        "name": "einops",
+        "version": null
+      },
+      {
+        "name": "gdown",
+        "version": null
+      },
+      {
+        "name": "nodejs",
+        "version": null
+      },
+      {
+        "name": "huggingface-hub",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "BOP",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "YCB-Video",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "LINEMOD",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      },
+      {
+        "name": "T-LESS",
+        "format": "images",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "FoundationPose",
+        "description": "A unified foundation model for 6D object pose estimation and tracking supporting both model-based and model-free setups."
+      },
+      {
+        "name": "Neural Implicit Representation",
+        "description": "Used for efficient novel view synthesis when no CAD model is available."
+      },
+      {
+        "name": "Transformer-based architecture",
+        "description": "A novel architecture aided by a large language model and contrastive learning formulation for generalizability."
+      },
+      {
+        "name": "Large-scale synthetic training",
+        "description": "Training methodology utilizing synthetic data to achieve strong generalizability for novel objects."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Bowen Wen",
+        "affiliation": "NVIDIA",
+        "role": null
+      },
+      {
+        "name": "Wei Yang",
+        "affiliation": "NVIDIA",
+        "role": null
+      },
+      {
+        "name": "Jan Kautz",
+        "affiliation": "NVIDIA",
+        "role": null
+      },
+      {
+        "name": "Stan Birchfield",
+        "affiliation": "NVIDIA",
+        "role": null
+      }
+    ],
+    "Organization": [
+      {
+        "name": "NVIDIA"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [
+      {
+        "name": "seed",
+        "value": "0",
+        "source": "repo"
+      },
+      {
+        "name": "seed",
+        "value": "31",
+        "source": "repo"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu 22.04",
+        "gpu": null,
+        "cuda": "12.4.1",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Synthetic Data Generation",
+        "type": "DataProductionActivity",
+        "order": 1,
+        "software_used": [],
+        "dataset_used": [],
+        "dataset_produced": [
+          "Synthetic training data"
+        ]
+      },
+      {
+        "name": "Model Training",
+        "type": "SoftwareDevelopmentActivity",
+        "order": 2,
+        "software_used": [
+          "torch",
+          "torchvision",
+          "xformers"
+        ],
+        "dataset_used": [
+          "Synthetic training data"
+        ],
+        "dataset_produced": [
+          "FoundationPose model"
+        ]
+      },
+      {
+        "name": "Pose Estimation and Evaluation",
+        "type": "DataAnalysisActivity",
+        "order": 3,
+        "software_used": [
+          "open3d",
+          "scipy"
+        ],
+        "dataset_used": [
+          "BOP",
+          "YCB-Video",
+          "LINEMOD",
+          "T-LESS"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "FoundationPose",
+      "predicate": "usedMethod",
+      "object": "Neural Implicit Representation"
+    },
+    {
+      "subject": "FoundationPose",
+      "predicate": "usedMethod",
+      "object": "Transformer-based architecture"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "executedIn",
+      "object": "Ubuntu 22.04"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Pose Estimation and Evaluation",
+      "predicate": "usedDataset",
+      "object": "BOP"
+    },
+    {
+      "subject": "Pose Estimation and Evaluation",
+      "predicate": "usedDataset",
+      "object": "YCB-Video"
+    },
+    {
+      "subject": "Pose Estimation and Evaluation",
+      "predicate": "usedDataset",
+      "object": "LINEMOD"
+    },
+    {
+      "subject": "Pose Estimation and Evaluation",
+      "predicate": "usedDataset",
+      "object": "T-LESS"
+    },
+    {
+      "subject": "scripts/run_demo_batch.py",
+      "predicate": "hasParameter",
+      "object": "seed"
+    },
+    {
+      "subject": "dinov2/dinov2/utils/utils.py",
+      "predicate": "hasParameter",
+      "object": "seed"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

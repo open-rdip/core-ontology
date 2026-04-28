@@ -1,0 +1,178 @@
+{
+  "study_id": "study055",
+  "project": {
+    "title": "Any-Quantile Probabilistic Forecasting of Short-Term Electricity Demand",
+    "lead_organization": "Walmart",
+    "funding": null
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "pytorch-lightning",
+        "version": "1.9.5"
+      },
+      {
+        "name": "hydra-core",
+        "version": "1.3.2"
+      },
+      {
+        "name": "omegaconf",
+        "version": "2.3.0"
+      },
+      {
+        "name": "tensorboard",
+        "version": "2.11.2"
+      },
+      {
+        "name": "torch",
+        "version": "2.3.1"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.18.1"
+      },
+      {
+        "name": "pqdm",
+        "version": null
+      },
+      {
+        "name": "neuralforecast",
+        "version": null
+      },
+      {
+        "name": "datasetsforecast",
+        "version": "0.0.7"
+      },
+      {
+        "name": "jupyter",
+        "version": null
+      },
+      {
+        "name": "statsforecast",
+        "version": "1.4.0"
+      },
+      {
+        "name": "pyarrow",
+        "version": null
+      },
+      {
+        "name": "onedrivedownloader",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "ENTSO-E hourly electricity demand",
+        "format": "CSV",
+        "access": "open",
+        "role": "used",
+        "derived_from": null
+      }
+    ],
+    "Method": [
+      {
+        "name": "Any-Quantile",
+        "description": "A novel general approach for distributional forecasting capable of predicting arbitrary quantiles by parameterizing the quantile function."
+      },
+      {
+        "name": "N-BEATS",
+        "description": "A deep neural architecture based on backward and forward residual links and a very deep stack of fully-connected layers."
+      },
+      {
+        "name": "NHITS",
+        "description": "A neural hierarchical interpolation for time series forecasting model that improves upon N-BEATS with multi-rate data sampling."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Slawek Smyl",
+        "affiliation": "Walmart",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Boris N. Oreshkin",
+        "affiliation": "Amazon",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Paweł Pełka",
+        "affiliation": "Czestochowa University of Technology",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Grzegorz Dudek",
+        "affiliation": "Czestochowa University of Technology",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Walmart"
+      },
+      {
+        "name": "Amazon"
+      },
+      {
+        "name": "Czestochowa University of Technology"
+      }
+    ],
+    "Parameter": [],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": "Ubuntu",
+        "gpu": null,
+        "cuda": "11.8",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Probabilistic Forecasting Experiment",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "torch",
+          "pytorch-lightning",
+          "neuralforecast"
+        ],
+        "dataset_used": [
+          "ENTSO-E hourly electricity demand"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Any-Quantile",
+      "predicate": "usedSoftware",
+      "object": "torch"
+    },
+    {
+      "subject": "Probabilistic Forecasting Experiment",
+      "predicate": "usedMethod",
+      "object": "Any-Quantile"
+    },
+    {
+      "subject": "Probabilistic Forecasting Experiment",
+      "predicate": "usedDataset",
+      "object": "ENTSO-E hourly electricity demand"
+    },
+    {
+      "subject": "Probabilistic Forecasting Experiment",
+      "predicate": "executedIn",
+      "object": "pytorch/pytorch:2.3.1-cuda11.8-cudnn8-runtime"
+    },
+    {
+      "subject": "torch",
+      "predicate": "softwareDependency",
+      "object": "pytorch-lightning"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

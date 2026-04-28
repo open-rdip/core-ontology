@@ -1,0 +1,328 @@
+{
+  "study_id": "study037",
+  "project": {
+    "title": "Conservative Objective Models for Effective Offline Model-Based Optimization",
+    "lead_organization": "UC Berkeley",
+    "funding": "NSF, ONR, and Schmidt Futures"
+  },
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "absl-py",
+        "version": "0.12.0"
+      },
+      {
+        "name": "aiohttp",
+        "version": "3.6.2"
+      },
+      {
+        "name": "aiohttp-cors",
+        "version": "0.7.0"
+      },
+      {
+        "name": "aioredis",
+        "version": "1.3.1"
+      },
+      {
+        "name": "argon2-cffi",
+        "version": "20.1.0"
+      },
+      {
+        "name": "astunparse",
+        "version": "1.6.3"
+      },
+      {
+        "name": "async-timeout",
+        "version": "3.0.1"
+      },
+      {
+        "name": "attrs",
+        "version": "19.3.0"
+      },
+      {
+        "name": "backcall",
+        "version": "0.2.0"
+      },
+      {
+        "name": "beautifulsoup4",
+        "version": "4.9.1"
+      },
+      {
+        "name": "biopython",
+        "version": "1.78"
+      },
+      {
+        "name": "bleach",
+        "version": "3.1.5"
+      },
+      {
+        "name": "blessings",
+        "version": "1.7"
+      },
+      {
+        "name": "boto3",
+        "version": "1.16.19"
+      },
+      {
+        "name": "botocore",
+        "version": "1.19.19"
+      },
+      {
+        "name": "botorch",
+        "version": "0.3.3"
+      },
+      {
+        "name": "brotlipy",
+        "version": "0.7.0"
+      },
+      {
+        "name": "cachetools",
+        "version": "4.1.1"
+      },
+      {
+        "name": "certifi",
+        "version": "2020.6.20"
+      },
+      {
+        "name": "chardet",
+        "version": "3.0.4"
+      },
+      {
+        "name": "click",
+        "version": "7.1.2"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "1.3.0"
+      },
+      {
+        "name": "cma",
+        "version": "3.0.3"
+      },
+      {
+        "name": "colorama",
+        "version": "0.4.3"
+      },
+      {
+        "name": "colorful",
+        "version": "0.5.4"
+      },
+      {
+        "name": "cycler",
+        "version": "0.10.0"
+      },
+      {
+        "name": "Cython",
+        "version": "0.29.21"
+      },
+      {
+        "name": "decorator",
+        "version": "4.4.2"
+      },
+      {
+        "name": "deepchem",
+        "version": "2.5.0"
+      },
+      {
+        "name": "defusedxml",
+        "version": "0.6.0"
+      },
+      {
+        "name": "dm-tree",
+        "version": "0.1.5"
+      },
+      {
+        "name": "docker",
+        "version": "4.3.0"
+      },
+      {
+        "name": "entrypoints",
+        "version": "0.3"
+      },
+      {
+        "name": "fasteners",
+        "version": "0.16"
+      },
+      {
+        "name": "filelock",
+        "version": "3.0.12"
+      },
+      {
+        "name": "flatbuffers",
+        "version": "1.12"
+      },
+      {
+        "name": "future",
+        "version": "0.18.2"
+      },
+      {
+        "name": "gast",
+        "version": "0.3.3"
+      },
+      {
+        "name": "glfw",
+        "version": "1.12.0"
+      },
+      {
+        "name": "google",
+        "version": "3.0.0"
+      },
+      {
+        "name": "python",
+        "version": "3.8"
+      },
+      {
+        "name": "pip",
+        "version": "20.0"
+      },
+      {
+        "name": "conda",
+        "version": "4.7"
+      },
+      {
+        "name": "MuJoCo",
+        "version": null
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "HopperController",
+        "format": "numeric",
+        "access": "open",
+        "role": "used",
+        "derived_from": "design-bench"
+      },
+      {
+        "name": "AntMorphology",
+        "format": "numeric",
+        "access": "open",
+        "role": "used",
+        "derived_from": "design-bench"
+      },
+      {
+        "name": "D’KittyMorphology",
+        "format": "numeric",
+        "access": "open",
+        "role": "used",
+        "derived_from": "design-bench"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Conservative Objective Models",
+        "description": "Learns a model of the objective function that lower bounds the actual value on out-of-distribution inputs to overcome distributional shift."
+      },
+      {
+        "name": "Soft Actor Critic",
+        "description": "Algorithm used to train morphology-conditioned policies for 10 million steps."
+      }
+    ],
+    "Person": [
+      {
+        "name": "Brandon Trabucco",
+        "affiliation": "UC Berkeley",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Aviral Kumar",
+        "affiliation": "UC Berkeley",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Xinyang Geng",
+        "affiliation": "UC Berkeley",
+        "role": "Principal Investigator"
+      },
+      {
+        "name": "Sergey Levine",
+        "affiliation": "UC Berkeley",
+        "role": "Principal Investigator"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "UC Berkeley"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "rollout_length",
+        "value": "1000",
+        "type": "xsd:integer"
+      },
+      {
+        "name": "training_steps",
+        "value": "10000000",
+        "type": "xsd:integer"
+      }
+    ],
+    "RandomSeed": [],
+    "ComputingEnvironment": [
+      {
+        "os": null,
+        "gpu": null,
+        "cuda": "10.1",
+        "ram": null
+      }
+    ],
+    "EvaluationResult": [],
+    "Activity": [
+      {
+        "name": "Policy Training",
+        "type": "DataAnalysisActivity",
+        "order": 1,
+        "software_used": [
+          "MuJoCo"
+        ],
+        "dataset_used": [
+          "AntMorphology",
+          "D’KittyMorphology"
+        ],
+        "dataset_produced": []
+      },
+      {
+        "name": "Design Optimization",
+        "type": "DataAnalysisActivity",
+        "order": 2,
+        "software_used": [
+          "MuJoCo"
+        ],
+        "dataset_used": [
+          "HopperController"
+        ],
+        "dataset_produced": []
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Conservative Objective Models",
+      "predicate": "usedSoftware",
+      "object": "MuJoCo"
+    },
+    {
+      "subject": "Policy Training",
+      "predicate": "usedMethod",
+      "object": "Soft Actor Critic"
+    },
+    {
+      "subject": "Policy Training",
+      "predicate": "hasParameter",
+      "object": "training_steps"
+    },
+    {
+      "subject": "Design Optimization",
+      "predicate": "hasParameter",
+      "object": "rollout_length"
+    },
+    {
+      "subject": "HopperController",
+      "predicate": "derivedFrom",
+      "object": "design-bench"
+    }
+  ],
+  "_status": "VERIFIED",
+  "_verified_by": "First Author",
+  "_verification_date": "2026-04-18",
+  "_verification_depth": "standard"
+}

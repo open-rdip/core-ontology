@@ -1,0 +1,190 @@
+{
+  "entities": {
+    "SoftwareApplication": [
+      {
+        "name": "TransAct",
+        "version": "1.0"
+      },
+      {
+        "name": "PinnerFormer",
+        "version": "1.0"
+      },
+      {
+        "name": "PinSage",
+        "version": "1.0"
+      },
+      {
+        "name": "Pinnability",
+        "version": "Production"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Pinterest Homefeed Dataset",
+        "format": "Proprietary Log Data",
+        "access": "Restricted/Internal"
+      },
+      {
+        "name": "User Action Sequences",
+        "format": "Vector/Embedding",
+        "access": "Internal"
+      }
+    ],
+    "Method": [
+      {
+        "name": "Transformer-based sequential modeling"
+      },
+      {
+        "name": "Realtime-batch hybrid ranking"
+      },
+      {
+        "name": "Early fusion (concatenation)"
+      },
+      {
+        "name": "Random Time Window Masking"
+      }
+    ],
+    "Person": [
+      {
+        "name": "Xue Xia",
+        "role": "Researcher/Lead Author"
+      },
+      {
+        "name": "Pong Eksombatchai",
+        "role": "Researcher"
+      },
+      {
+        "name": "Nikil Pancha",
+        "role": "Researcher"
+      },
+      {
+        "name": "Dhruvil Deven Badani",
+        "role": "Researcher"
+      },
+      {
+        "name": "Po-Wei Wang",
+        "role": "Researcher"
+      },
+      {
+        "name": "Andrew Zhai",
+        "role": "Researcher"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Pinterest"
+      },
+      {
+        "name": "ACM (Association for Computing Machinery)"
+      }
+    ],
+    "Parameter": [
+      {
+        "name": "Sequence Length",
+        "value": "100"
+      },
+      {
+        "name": "Transformer Layers",
+        "value": "2"
+      },
+      {
+        "name": "Hidden Dimension",
+        "value": "32"
+      },
+      {
+        "name": "PinSage Embedding Dimension",
+        "value": "32"
+      }
+    ],
+    "RandomSeed": [
+      {
+        "name": "Not specified",
+        "value": "N/A"
+      }
+    ],
+    "ComputingEnvironment": [
+      {
+        "os": "Not specified",
+        "gpu": "GPU-based serving",
+        "cuda": "Not specified"
+      }
+    ],
+    "EvaluationResult": [
+      {
+        "metric": "Homefeed Repin Volume",
+        "value": "+11.0%",
+        "split": "All Users"
+      },
+      {
+        "metric": "Homefeed Hide Volume",
+        "value": "-10.0%",
+        "split": "All Users"
+      },
+      {
+        "metric": "Overall Time Spent",
+        "value": "+2.0%",
+        "split": "All Users"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Model Training",
+        "type": "prov:Activity"
+      },
+      {
+        "name": "Online A/B Experiment",
+        "type": "prov:Activity"
+      },
+      {
+        "name": "Offline Ablation Study",
+        "type": "prov:Activity"
+      },
+      {
+        "name": "Realtime Action Encoding",
+        "type": "prov:Activity"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "subject": "Model Training",
+      "predicate": "used",
+      "object": "Pinterest Homefeed Dataset"
+    },
+    {
+      "subject": "TransAct",
+      "predicate": "wasGeneratedBy",
+      "object": "Model Training"
+    },
+    {
+      "subject": "Realtime Action Encoding",
+      "predicate": "used",
+      "object": "TransAct"
+    },
+    {
+      "subject": "Model Training",
+      "predicate": "wasAssociatedWith",
+      "object": "Xue Xia"
+    },
+    {
+      "subject": "User Action Sequences",
+      "predicate": "wasDerivedFrom",
+      "object": "Pinterest Homefeed Dataset"
+    },
+    {
+      "subject": "Online A/B Experiment",
+      "predicate": "wasInformedBy",
+      "object": "Offline Ablation Study"
+    },
+    {
+      "subject": "Pinnability",
+      "predicate": "used",
+      "object": "TransAct"
+    },
+    {
+      "subject": "Pinnability",
+      "predicate": "used",
+      "object": "PinnerFormer"
+    }
+  ]
+}
